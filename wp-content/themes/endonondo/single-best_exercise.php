@@ -199,7 +199,7 @@ $featureimg = get_field('fimg_default', 'option');
         <div class="all__container container">
             <h2 class="all__title">All Triceps Exercises</h2>
             <div class="all__flex flex">
-                <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center" data-filter="1">
+                <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center filter-active" data-filter="1">
                     <p class="has-medium-font-size">Trending</p>
                 </div>
                 <div class="all__flex-item all__flex-item--character text-center" data-filter="2">
@@ -214,7 +214,7 @@ $featureimg = get_field('fimg_default', 'option');
             </div>
             <?php
             $posts_per_page = 10;
-            
+
             $paged = isset($_GET['paged']) ? absint($_GET['paged']) : 1;
 
             $meta_keys = ['all_mt_list', 'all_ma_list', 'all_eq_list', 'all_ex_list'];
@@ -341,21 +341,23 @@ $featureimg = get_field('fimg_default', 'option');
                         </div>
                         <?php
                     endwhile;
-                    
                     ?>
                 </div>
                 <div class="pagination-best text-center">
                     <?php
-                    ld_load_ajax($postid,$query_posts);
+                    ld_load_ajax($postid, $query_posts);
                     ?>
                 </div>
                 <?php
                 wp_reset_postdata();
                 ?>
-                <input type="hidden" id="postID" name="postid" value="<?=$postid?>">
+                <input type="hidden" id="postID" name="postid" value="<?= $postid ?>">
                 <?php
             endif;
             ?>
+            <div class="exercise__grid-loading">
+                <div class="exercise__grid-loading-item"></div>
+            </div>
         </div>
     </section>
     <?php
