@@ -380,7 +380,7 @@ function theme_mcs_scripts()
 	wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.7');
 	wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
 	wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
-	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.8.0');
+	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.8.1');
 	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.8.8');
 	wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
 	wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
@@ -571,7 +571,7 @@ function enqueue_load_more_comments_script()
 		'ajax_url' => admin_url('admin-ajax.php'),
 	));
 
-	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.1', true);
 	$php_array = array(
 		'admin_ajax' => admin_url('admin-ajax.php'),
 		'load_post_nonce' => wp_create_nonce('ajax_load_post_nonce'),
@@ -624,8 +624,8 @@ function ld_load_ajax($postid, $custom_query = null, $paged = 1)
 		'current' => max(1, $paged),
 		'total' => $total,
 		'mid_size' => '5',
-		'prev_text' => __('<<', 'ld'),
-		'next_text' => __('>>', 'ld'),
+		'prev_text' => __('<', 'ld'),
+		'next_text' => __('>', 'ld'),
 	));
 	if ($total > 1)
 		echo '</div>';
@@ -710,13 +710,13 @@ function ajax_load_post_func()
 	$where_clause = implode(' AND ', $where_conditions);
 
 	$query = "
-                SELECT e.slug, e.id, e.description, e.name
-                FROM {$wpdb->prefix}exercise AS e
-                LEFT JOIN {$wpdb->prefix}exercise_primary_option AS epo ON e.id = epo.exercise_id
-                LEFT JOIN {$wpdb->prefix}exercise_equipment_option AS eeo ON e.id = eeo.exercise_id
-                WHERE $where_clause
-                GROUP BY e.id
-            ";
+			SELECT e.slug, e.id, e.description, e.name
+			FROM {$wpdb->prefix}exercise AS e
+			LEFT JOIN {$wpdb->prefix}exercise_primary_option AS epo ON e.id = epo.exercise_id
+			LEFT JOIN {$wpdb->prefix}exercise_equipment_option AS eeo ON e.id = eeo.exercise_id
+			WHERE $where_clause
+			GROUP BY e.id
+		";
 
 	$results = $wpdb->get_results($query);
 	$slug_to_exercise = [];
@@ -811,7 +811,6 @@ function ajax_load_post_func()
 				<?php
 		endwhile;
 		?>
-
 			<?php $content = ob_get_clean(); ?>
 			<?php
 			ob_start();

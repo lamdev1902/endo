@@ -1703,6 +1703,36 @@ h2.tag-coming {
     gap: 30px;
 }
 
+.exercise__grid-loading {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    display: none;
+}
+
+.exercise__grid-loading.load {
+    display: block;
+}
+
+.exercise__grid-loading-item {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    top: 40px;
+    z-index: 1;
+    border: 5px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 5px solid var(--primary-color-1);
+    width: 50px;
+    height: 50px;
+    animation: spinner 2s linear infinite;
+}
+ 
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+ }
+
 .exercise__grid--3 {
     grid-template-columns: repeat(3,1fr);
 }
@@ -1731,13 +1761,33 @@ h2.tag-coming {
     flex-direction: column;
     justify-content: flex-end;
     padding: 20px;
+    position: relative;
+}
 
+.exercise__grid-item-top-content-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.exercise__grid-item-top-content-img a {
+    display: block;
+    height: 100%;
+}
+
+.exercise__grid-item-top-content-img a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .exercise__grid-item-top-content-equipment {
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 12px;
+    z-index: 1;
 }
 
 .exercise__grid-item-top-content-equipment p {
@@ -1751,12 +1801,14 @@ h2.tag-coming {
     color: #fff;
     border-left: 2px solid var(--primary-color-1);
     margin-bottom: 12px;
+    z-index: 1;
 }
 
 .exercise__grid-item-top-content-muscle {
     flex-wrap:wrap;
     column-gap:16px;
     row-gap:12px;
+    z-index: 1;
 }
 
 .exercise__grid-item-top-content-muscle > p {
@@ -1788,6 +1840,7 @@ h2.tag-coming {
 .exercise__grid-item-bottom p {
     margin-bottom: 0;
 }
+
 
 .all__flex {
     margin-bottom: 20px;
@@ -1831,4 +1884,33 @@ h2.tag-coming {
 
 .all__flex-item p {
     margin-bottom: 16px;
+}
+
+.paginate_links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.paginate_links .page-numbers {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 15px;
+    border: 1px solid var(--secondary-color-1);
+    color: var(--primary-color-2);
+}
+
+.paginate_links .page-numbers.current {
+    font-weight: 700;
+    border: 1px solid var(--secondary-color-3);
+}
+
+.paginate_links .prev.page-numbers,
+.paginate_links .next.page-numbers {
+    border: none;
+    border: none;
+    font-size: 24px;
+    line-height: 24px;
 }
