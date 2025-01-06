@@ -204,7 +204,7 @@ function atn_enqueue_script()
     null
   );
   wp_enqueue_style('exercise-style', plugin_dir_url(__FILE__) . 'assets/css/exercise-main.css', array(), '1.0.2', 'all');
-  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.5', true);
+  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.6', true);
 }
 
 add_action('admin_enqueue_scripts', 'atn_enqueue_script');
@@ -287,6 +287,8 @@ function custom_render_best_exercise_option_field($post)
   $mt = get_post_meta($post->ID, 'all_mt_list', true) ? explode(',', get_post_meta($post->ID, 'all_mt_list', true)) : [];
   $ma = get_post_meta($post->ID, 'all_ma_list', true) ? explode(',', get_post_meta($post->ID, 'all_ma_list', true)) : [];
   $eq = get_post_meta($post->ID, 'all_eq_list', true) ? explode(',', get_post_meta($post->ID, 'all_eq_list', true)) : [];
+  $ex = get_post_meta($post->ID, 'all_eq_list', true) ? explode(',', get_post_meta($post->ID, 'all_ex_list', true)) : [];
+
 
   $all_exercise_names = $wpdb->get_results(
     "SELECT * From {$wpdb->prefix}exercise",
@@ -349,6 +351,16 @@ function custom_render_best_exercise_option_field($post)
         <?php endforeach; ?>
       </select>
     </div>
+    <div class="exercise">
+      <label for="speEx">Select Exercise:</label>
+      <select id="speEx" name="all_ex_list[]" multiple>
+        <?php foreach ($all_exercise_names as $exercise): ?>
+          <option value="<?php echo esc_attr($exercise['id']); ?>" <?php selected(in_array($exercise['id'], $ex), true); ?>>
+            <?php echo $exercise['name']; ?>
+          </option>
+        <?php endforeach; ?>
+      </select>
+    </div>
     <div class="mt">
       <label for="mt">Select Muscle Type:</label>
       <select id="mt" name="all_mt_list[]" multiple>
@@ -399,7 +411,8 @@ function custom_save_best_exercise_field($post_id)
     'best_exercise_list',
     'all_mt_list',
     'all_ma_list',
-    'all_eq_list'
+    'all_eq_list',
+    'all_ex_list'
   ];
 
   foreach($options as $op) {

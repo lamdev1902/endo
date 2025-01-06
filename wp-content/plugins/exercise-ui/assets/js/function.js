@@ -73,7 +73,7 @@ jQuery(function ($) {
 	});
 
 	jQuery(document).ready(function ($) {
-		$('#bestEx, #mt, #ma, #eq').multiselect(
+		$('#bestEx, #mt, #ma, #eq, #speEx').multiselect(
 			{
 				texts: {
 					placeholder: 'Select item',

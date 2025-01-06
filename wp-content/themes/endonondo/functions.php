@@ -571,7 +571,7 @@ function enqueue_load_more_comments_script()
 		'ajax_url' => admin_url('admin-ajax.php'),
 	));
 
-	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.1', true);
+	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.2', true);
 	$php_array = array(
 		'admin_ajax' => admin_url('admin-ajax.php'),
 		'load_post_nonce' => wp_create_nonce('ajax_load_post_nonce'),
