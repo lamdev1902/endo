@@ -788,7 +788,7 @@ function ajax_load_post_func()
 							<?php if (!empty($equipments)): ?>
 								<div class="exercise__grid-item-top-content-equipment flex">
 									<?php foreach ($equipments as $eit): ?>
-										<p class="pri-color-3"><?= $eit->name ?></p>
+										<p class="pri-color-3 text-special clamp-1"><?= $eit->name ?></p>
 									<?php endforeach; ?>
 								</div>
 							<?php endif; ?>
@@ -805,7 +805,7 @@ function ajax_load_post_func()
 						</div>
 					</div>
 					<div class="exercise__grid-item-bottom">
-						<p><?php echo wp_trim_words($description, 20, '') . '... '; ?></p>
+						<p><?php echo preg_replace('/\.(?!\s)/', '. ', wp_trim_words($description, 100, '')) . '... '; ?></p>
 					</div>
 				</div>
 				<?php
