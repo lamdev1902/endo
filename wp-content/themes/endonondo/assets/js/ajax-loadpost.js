@@ -1,6 +1,11 @@
 (function($) {
     $(document).ready(function() {
         $('.all__flex-item').on('click', function () {
+
+            if($(this).hasClass('filter-active')) {
+                return false;
+            }
+            
 			$('.all__flex-item').removeClass('all__flex-item--active');
 			$(this).addClass('all__flex-item--active');
 
