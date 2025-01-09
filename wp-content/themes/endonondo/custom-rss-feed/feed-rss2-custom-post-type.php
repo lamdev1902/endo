@@ -6,10 +6,7 @@
 
  $args = array(
 	'post_type' => ['informational_posts'],
-	'posts_per_page' => 10,
-	'post_status' => 'publish',
-	'orderby' => 'date',
-	'order' => 'DESC',
+	'p' => 4787
 );
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
 
@@ -211,9 +208,9 @@ do_action('rss_tag_pre', 'rss2');
 						$the_content
 					);
 					$the_content = preg_replace_callback(
-						'/<div class="wp-block-embed__wrapper">\s*https:\/\/www\.youtube\.com\/watch\?v=([\w\-]+)(?:&[^\s<]*)?\s*<\/div>/is',
+						'/<div class="wp-block-embed__wrapper">\s*(?:https:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w\-]+)|https:\/\/youtu\.be\/([\w\-]+))(?:\?[^\s<]*)?\s*<\/div>/is',
 						function ($matches) {
-							$video_id = $matches[1];
+							$video_id = !empty($matches[1]) ? $matches[1] : $matches[2];
 							return '<iframe 
 										width="550" 
 										height="281" 
@@ -226,34 +223,47 @@ do_action('rss_tag_pre', 'rss2');
 						},
 						$the_content
 					);
-					$the_content = preg_replace('/<table\b[^>]*>.*?<\/table>/is', '', $the_content);
+					// $the_content = preg_replace('/<table\b[^>]*>.*?<\/table>/is', '', $the_content);
 					$the_content = preg_replace('/<h4[^>]*>Optimal Sets And Reps<\/h4>/i', '', $the_content);
 					$the_content = preg_replace('/<h4[^>]*><strong>Optimal Sets And Reps<\/strong><\/h4>/i', '', $the_content);
+					// $the_content = preg_replace(
+					// 	'/<div class="wp-block-group medicine-table">.*?<\/div>/is',
+					// 	'',
+					// 	$the_content
+					// );
+					// $the_content = preg_replace(
+					// 	'/<div class="wp-block-group medicine-table no-scroll">.*?<\/div>/is',
+					// 	'', 
+					// 	$the_content
+					// );
+					// $the_content = preg_replace(
+					// 	'/<div class="wp-block-group medicine-table scroll">.*?<\/div>/is',
+					// 	'', 
+					// 	$the_content
+					// );
+					// $the_content = preg_replace(
+					// 	'/<figure class="wp-block-table table-default">.*?<\/figure>/is',
+					// 	'', 
+					// 	$the_content
+					// );
+					// $the_content = preg_replace(
+					// 	'/<figure class="wp-block-table table-custom">.*?<\/figure>/is',
+					// 	'', 
+					// 	$the_content
+					// );
+					$the_content = preg_replace_callback(
+						'/<figure[^>]*>.*?<table.*?>.*?<\/table>.*?<\/figure>/is',
+						function ($matches) {
+							return '';
+						},
+						$the_content
+					);
 					$the_content = preg_replace(
-						'/<div class="wp-block-group medicine-table">.*?<\/div>/is',
+						'/\[anatomir\s+value="[^"]*"\]/i',
 						'',
 						$the_content
 					);
-					$the_content = preg_replace(
-						'/<div class="wp-block-group medicine-table no-scroll">.*?<\/div>/is',
-						'', 
-						$the_content
-					);
-					$the_content = preg_replace(
-						'/<div class="wp-block-group medicine-table scroll">.*?<\/div>/is',
-						'', 
-						$the_content
-					);
-					$the_content = preg_replace(
-						'/<figure class="wp-block-table table-default">.*?<\/figure>/is',
-						'', 
-						$the_content
-					);
-					$the_content = preg_replace(
-						'/<figure class="wp-block-table table-custom">.*?<\/figure>/is',
-						'', 
-						$the_content
-					);
+					
 					$allowed_tags = "<figure><iframe><img><a><b><strong><i><li><left><center><right><del><strike><ol><ul><u><sup><pre><code><sub><hr><h1><h2><h3><h4><h5><h6><big><small><font><p><br><span><div><video><audio><dd><dl>";
 					$the_content = htmlspecialchars_decode($the_content);
 					$the_content = strip_tags($the_content, $allowed_tags);
