@@ -380,8 +380,8 @@ function theme_mcs_scripts()
 	wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.7');
 	wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
 	wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
-	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.8.1');
-	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.8.8');
+	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.8.2');
+	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.8.9');
 	wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
 	wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
 	wp_enqueue_style('style-regular', get_template_directory_uri() . '/assets/fonts/css/regular.css');
@@ -465,6 +465,10 @@ function custom_social_share_buttons_shortcode()
 
 function mytheme_comment($comment, $args, $depth)
 {
+	if($comment->comment_approved == '0') {
+		return false;
+	}
+	
 	if ('div' === $args['style']) {
 		$tag = 'div';
 		$add_below = 'comment';
@@ -566,9 +570,14 @@ add_action('wp_enqueue_scripts', 'enqueue_load_more_comments_script');
 
 function enqueue_load_more_comments_script()
 {
-	wp_enqueue_script('load-more-comments', get_template_directory_uri() . '/assets/js/load-more-comments.js', array('jquery'), null, true);
+	$disallowed_comment_keys_list = get_option('disallowed_keys');
+	$disallowed_comment_keys_array = !empty($disallowed_comment_keys_list) ? explode("\n", $disallowed_comment_keys_list) : [];
+
+	wp_enqueue_script('load-more-comments', get_template_directory_uri() . '/assets/js/load-more-comments.js', array('jquery'), '1.0.1', true);
 	wp_localize_script('load-more-comments', 'ajax_object', array(
 		'ajax_url' => admin_url('admin-ajax.php'),
+		'ajax_nonce' => wp_create_nonce('ajax_comment_nonce'),
+		'disallowed_keys' => $disallowed_comment_keys_array,
 	));
 
 	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.2', true);
@@ -578,6 +587,7 @@ function enqueue_load_more_comments_script()
 	);
 	wp_localize_script('ld-ajaxload', 'ld_array', $php_array);
 }
+
 function custom_default_feed_callback()
 {
 	add_filter('pre_option_rss_use_excerpt', '__return_zero');
@@ -731,7 +741,7 @@ function ajax_load_post_func()
 		];
 	}
 
-	if($filter == 2) {
+	if ($filter == 2) {
 		sort($slugs);
 	}
 
@@ -744,15 +754,15 @@ function ajax_load_post_func()
 		'order' => "DESC"
 	];
 
-	if($filter == 1) {
+	if ($filter == 1) {
 		$args['orderby'] = 'post_views';
 	}
 
-	if($filter == 3) {
+	if ($filter == 3) {
 		$args['orderby'] = 'date';
 	}
 
-	if($filter == 4) {
+	if ($filter == 4) {
 		$args['orderby'] = 'comment_count';
 	}
 
@@ -793,7 +803,7 @@ function ajax_load_post_func()
 								</div>
 							<?php endif; ?>
 							<h3 class="exercise__grid-item-top-content-title">
-								<a class="pri-color-3" href="<?= the_permalink() ?>"><?= $name ?></a>
+								<a target="_blank" class="pri-color-3" href="<?= the_permalink() ?>"><?= $name ?></a>
 							</h3>
 							<?php if (!empty($mts)): ?>
 								<div class="exercise__grid-item-top-content-muscle flex">
@@ -814,7 +824,7 @@ function ajax_load_post_func()
 			<?php $content = ob_get_clean(); ?>
 			<?php
 			ob_start();
-			ld_load_ajax($postid,$query_posts, $paged);
+			ld_load_ajax($postid, $query_posts, $paged);
 			$pagi = ob_get_clean();
 			?>
 		<?php else: ?>
@@ -822,5 +832,28 @@ function ajax_load_post_func()
 		<?php endif; //End news
 	wp_send_json_success(['content' => $content, 'pagi' => $pagi]);
 	die();
+}
+
+add_action('wp_ajax_nopriv_ajax_comment', 'handle_ajax_comment');
+add_action('wp_ajax_ajax_comment', 'handle_ajax_comment');
+
+function handle_ajax_comment() {
+
+    $comment_data = array(
+        'comment_post_ID' => intval($_POST['comment_post_ID']),
+        'comment_author' => sanitize_text_field($_POST['author']),
+        'comment_author_email' => sanitize_email($_POST['email']),
+        'comment_content' => sanitize_textarea_field($_POST['comment']),
+        'comment_type' => '',
+        'comment_parent' => intval($_POST['comment_parent'])
+    );
+
+    $comment_id = wp_new_comment($comment_data);
+
+    if ($comment_id) {
+        wp_send_json_success();
+    } else {
+        wp_send_json_error('Error submitting comment.');
+    }
 }
 ?>

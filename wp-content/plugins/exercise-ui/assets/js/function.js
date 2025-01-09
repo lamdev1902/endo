@@ -73,15 +73,36 @@ jQuery(function ($) {
 	});
 
 	jQuery(document).ready(function ($) {
-		$('#bestEx, #mt, #ma, #eq, #speEx').multiselect(
-			{
+		$('#bestEx, #mt, #ma, #eq, #speEx').each(function() {
+			let selectElement = $(this);
+			let options = selectElement.find('option');
+			
+			options.sort(function(a, b) {
+				return $(b).prop('selected') - $(a).prop('selected');
+			});
+		
+			selectElement.html(options); 
+			selectElement.multiselect({
 				texts: {
 					placeholder: 'Select item',
 					search: 'Find an item'
 				},
 				search: true
+			});
+		});
+
+		$('.clearAll').on('click', function () {
+			var sel = $(this).closest('div').find('select');
+	
+			if (sel.length > 0) {
+				sel.find('option:selected').prop("selected", false);
+	
+				if (sel.hasClass('jqmsLoaded')) {
+					sel.multiselect('reload');
+				}
 			}
-		);
+		});
+
 		$('.muscle-button').on('click', function (e) {
 			e.preventDefault();
 

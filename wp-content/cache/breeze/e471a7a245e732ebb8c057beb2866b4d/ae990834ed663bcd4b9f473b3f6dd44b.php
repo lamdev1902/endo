@@ -1,4 +1,4 @@
-a:2:{s:4:"body";s:98989:"
+a:2:{s:4:"body";s:100291:"
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -21,15 +21,15 @@ a:2:{s:4:"body";s:98989:"
 	<meta property="og:description" content="Transform your body with our back and shoulder workout with dumbbells. Discover 7 effective exercises to build your upper body in 2025." />
 	<meta property="og:url" content="https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells" />
 	<meta property="og:site_name" content="Endomondo" />
-	<meta property="article:modified_time" content="2024-12-10T03:30:47+00:00" />
+	<meta property="article:modified_time" content="2025-01-08T10:03:12+00:00" />
 	<meta property="og:image" content="https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg" />
 	<meta property="og:image:width" content="1250" />
 	<meta property="og:image:height" content="700" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:label1" content="Est. reading time" />
-	<meta name="twitter:data1" content="11 minutes" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells","url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells","name":"7 Best Back & Shoulder Workout With Dumbbells","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#primaryimage"},"image":{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg","datePublished":"2024-09-16T16:32:41+00:00","dateModified":"2024-12-10T03:30:47+00:00","description":"Transform your body with our back and shoulder workout with dumbbells. Discover 7 effective exercises to build your upper body in 2025.","breadcrumb":{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615665298"},{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615677551"},{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615875705"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg","width":1250,"height":700,"caption":"Strengthen your back and shoulders with these targeted exercises. Photo: gerain0812/freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Exercise","item":"https://www.endomondo.com/exercise"},{"@type":"ListItem","position":3,"name":"7 Back &#038; Shoulder Workouts With Dumbbells To Build Your Upper Body 2024"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615665298","position":1,"url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615665298","name":"Why should you do back and shoulder together?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Training the two muscle groups in one session can optimize your workout time, improve muscle development, and promote a balanced physique. ","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615677551","position":2,"url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615677551","name":"Can you do your back and shoulders on the same day?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Yes, combining exercises for a back and shoulder dumbbell workout is an efficient way to build strength, allowing for strategic rest and recovery periods to meet your fitness goals.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615875705","position":3,"url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615875705","name":"Are dumbbell shrugs effective?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Yes, dumbbell shrugs are a safe and effective exercise to target your upper traps and deltoids. Additionally, you can superset the exercise with upright rows to maximize muscle activation of the trapezius and deltoid muscle groups. ","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
+	<meta name="twitter:data1" content="10 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells","url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells","name":"7 Best Back & Shoulder Workout With Dumbbells","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#primaryimage"},"image":{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg","datePublished":"2024-09-16T16:32:41+00:00","dateModified":"2025-01-08T10:03:12+00:00","description":"Transform your body with our back and shoulder workout with dumbbells. Discover 7 effective exercises to build your upper body in 2025.","breadcrumb":{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615665298"},{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615677551"},{"@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615875705"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2024/02/back-and-shoulder-workout-with-dumbbells-img.jpg","width":1250,"height":700,"caption":"Strengthen your back and shoulders with these targeted exercises. Photo: gerain0812/freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Exercise","item":"https://www.endomondo.com/exercise"},{"@type":"ListItem","position":3,"name":"7 Back &#038; Shoulder Workouts With Dumbbells To Build Your Upper Body 2025"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615665298","position":1,"url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615665298","name":"Why should you do back and shoulder together?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Training the two muscle groups in one session can optimize your workout time, improve muscle development, and promote a balanced physique. ","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615677551","position":2,"url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615677551","name":"Can you do your back and shoulders on the same day?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Yes, combining exercises for a back and shoulder dumbbell workout is an efficient way to build strength, allowing for strategic rest and recovery periods to meet your fitness goals.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615875705","position":3,"url":"https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells#faq-question-1688615875705","name":"Are dumbbell shrugs effective?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Yes, dumbbell shrugs are a safe and effective exercise to target your upper traps and deltoids. Additionally, you can superset the exercise with upright rows to maximize muscle activation of the trapezius and deltoid muscle groups. ","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -80,8 +80,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='style-custom-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/custom.css?ver=1.4.7' type='text/css' media='all' />
 <link rel='stylesheet' id='style-base-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/base.css?ver=1.3.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tool-css-css' href='https://www.endomondo.com/wp-content/themes/endonondo/shortcode/calorie/assets/css/tool.css?ver=1.0.5' type='text/css' media='all' />
-<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.0' type='text/css' media='all' />
-<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.8.9' type='text/css' media='all' />
 <link rel='stylesheet' id='style-awesome-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/fontawesome.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-solid-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/solid.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-regular-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/regular.css?ver=6.3.1' type='text/css' media='all' />
@@ -299,7 +299,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 	<div class="container">
 		<div class="single-top">
 			<div class="list-flex flex-center flex-middle">
-				<div id="breadcrumbs" class="breacrump"><span><span><a href="https://www.endomondo.com/">Home</a></span> | <span><a href="https://www.endomondo.com/exercise">Exercise</a></span> | <span class="breadcrumb_last" aria-current="page">7 Back &#038; Shoulder Workouts With Dumbbells To Build Your Upper Body 2024</span></span></div>			</div>
+				<div id="breadcrumbs" class="breacrump"><span><span><a href="https://www.endomondo.com/">Home</a></span> | <span><a href="https://www.endomondo.com/exercise">Exercise</a></span> | <span class="breadcrumb_last" aria-current="page">7 Back &#038; Shoulder Workouts With Dumbbells To Build Your Upper Body 2025</span></span></div>			</div>
 		</div>
 		<div class="single-main list-flex">
 			<aside class="single-sidebar">
@@ -308,55 +308,55 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 		<div class="sg-lastest-list">
 							<div class="sg-lastest-it">
 					<div class="featured image-fit hover-scale">
-						<a href="https://www.endomondo.com/training/calisthenics-vs-pilates">
+						<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
 															<div class="image-fit">
-									<img src="https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo.jpg" alt="">
+									<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
 								</div>
 													</a>
 					</div>
 					<div class="info">
 																			<div class="tag">
-																	<span><a href="https://www.endomondo.com/training">Training</a></span>
+																	<span><a href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 															</div>
 												<p class="has-medium-font-size mr-bottom-20 text-special clamp-1"><a class="pri-color-2"
-								href="https://www.endomondo.com/training/calisthenics-vs-pilates">Calisthenics Vs. Pilates: Which One Is Right For You?</a></p>
-						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/isabel-mayfield">By
-								Isabel Mayfield, BCRPA</a></p>
+								href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a></p>
+						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/tammy-hogan">By
+								Tammy Hogan, PT, BA</a></p>
 													<div class="">
-								<p class="text-special clamp-2 pri-color-2">In the battle between calisthenics vs Pilates, there is no clear winner. Instead, discover the best bodyweight exercise for your goals.</p>
+								<p class="text-special clamp-2 pri-color-2">Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training.</p>
 							</div>
 											</div>
 				</div>
 											<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/phul-workout">Power Hypertrophy Upper Lower (PHUL) Workout Routine</a></p>
+							href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a></p>
+					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
+							href="https://www.endomondo.com/author/steve-theunissen">By Steve Theunissen, PT</a></p>
+					<a href="https://www.endomondo.com/exercise/front-delt-exercises" class="news-link position-absolute"><img
+							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
+				</div>
+								<div class="sg-lastest-it position-relative">
+					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
+							href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
 							href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
-					<a href="https://www.endomondo.com/workouts/phul-workout" class="news-link position-absolute"><img
+					<a href="https://www.endomondo.com/workouts/upper-lower-split" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/beginner-workout-plan-for-women">The Perfect Beginner Workout Plan For Women To Get Started</a></p>
+							href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/tammy-hogan">By Tammy Hogan, PT, BA</a></p>
-					<a href="https://www.endomondo.com/workouts/beginner-workout-plan-for-women" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/cristian-ortega">By Cristian Ortega, PT</a></p>
+					<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/exercise/calisthenics-push-workout">Top 6 Calisthenics Push Workouts For Upper Body Strength</a></p>
+							href="https://www.endomondo.com/workouts/push-pull-legs-routine">Push Pull Legs Routine: The Perfect Workout Split For Balanced Gains</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/ben-dillon">By Ben Dillon, BHSc, PT</a></p>
-					<a href="https://www.endomondo.com/exercise/calisthenics-push-workout" class="news-link position-absolute"><img
-							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
-				</div>
-								<div class="sg-lastest-it position-relative">
-					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/exercise/bodyweight-core-exercises">Top 10 Bodyweight Core Exercises For A Stronger, Toned Midsection</a></p>
-					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/kaelyn-buzzo">By Kaelyn Buzzo, PT</a></p>
-					<a href="https://www.endomondo.com/exercise/bodyweight-core-exercises" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster abcshsd</a></p>
+					<a href="https://www.endomondo.com/workouts/push-pull-legs-routine" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 						</div>
@@ -367,8 +367,8 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 					<div class="name-author">
 						<div class="info">
 							<div class="author-by" itemscope>
-								<time class="updated has-small-font-size" datetime="2024-12-09T19:30:47-08:00"
-									itemprop="dateModified">Updated on									December 09, 2024</time>
+								<time class="updated has-small-font-size" datetime="2025-01-08T02:03:12-08:00"
+									itemprop="dateModified">Updated on									January 08, 2025</time>
 								<span class="has-small-font-size">- Writen by: </span>
 								<span class="has-small-font-size" itemprop="author" itemscope
 									itemtype="https://schema.org/Person"><a class="pri-color-2" target="_blank"
@@ -469,7 +469,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h2 class="wp-block-heading list-start"><strong>Top 7 Back And Shoulder Workout With Dumbbells In 2025</strong></h2>
+<h2 class="wp-block-heading list-start">Top 7 Back And Shoulder Workout With Dumbbells In 2025</h2>
 
 
 
@@ -477,11 +477,14 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h3 class="wp-block-heading" id="1"><strong>Seated Dumbbell Shoulder Press</strong></h3>
+<h3 class="wp-block-heading" id="1">Seated Dumbbell Shoulder Press</h3>
 
 
-<div class="wp-block-image">
-<figure class="aligncenter size-full"><img decoding="async" fetchpriority="high" width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/02/Seated-Dumbbell-Shoulder-Press-2.jpg" alt="Seated Dumbbell Shoulder Press" class="wp-image-11442" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Seated-Dumbbell-Shoulder-Press-2.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Seated-Dumbbell-Shoulder-Press-2-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Seated-Dumbbell-Shoulder-Press-2-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Seated-Dumbbell-Shoulder-Press-2-768x430.jpg 768w" sizes="(max-width: 1250px) 100vw, 1250px" /><figcaption class="wp-element-caption">Seated Dumbbell Shoulder Press Instruction. <span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure></div>
+
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
+<iframe title="Dumbbell Seated Shoulder Press" src="https://player.vimeo.com/video/981799246?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</div><figcaption class="wp-element-caption">Seated Dumbbell Shoulder Press Guide. <span>Video: Aliaksandr Makatserchyk</span></figcaption></figure>
+
 
 
 <p>Seated dumbbell presses are a variation of the standard military press that emphasizes the <a href="https://pubmed.ncbi.nlm.nih.gov/33312291/" target="_blank" rel="noreferrer noopener nofollow">anterior deltoid</a>.<sup>[1]</sup> It’s a great compound movement that simulates pushing and lifting objects overhead and can be a great addition to building strength in your upper arms.</p>
@@ -528,11 +531,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h4 class="wp-block-heading"><strong>Optimal Sets and Reps</strong></h4>
+<p>Reps</p>
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Seated Dumbbell Shoulder Press</figcaption></figure>
 
 
 
@@ -540,12 +543,13 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h3 class="wp-block-heading" id="2"><strong>Standing Dumbbell Lateral Shoulder Raises</strong></h3>
+<h3 class="wp-block-heading" id="2">Standing Dumbbell Lateral Shoulder Raises</h3>
 
 
 
-<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Lateral-Shoulder-Raises-2.jpg" alt="Standing Dumbbell Lateral Shoulder Raises" class="wp-image-11445" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Lateral-Shoulder-Raises-2.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Lateral-Shoulder-Raises-2-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Lateral-Shoulder-Raises-2-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Lateral-Shoulder-Raises-2-768x430.jpg 768w" sizes="(max-width: 1250px) 100vw, 1250px" /><figcaption class="wp-element-caption">Standing Dumbbell Lateral Shoulder Raises Instruction.
-<span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
+<iframe title="Dumbbell Lateral Raises" src="https://player.vimeo.com/video/981404489?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</div><figcaption class="wp-element-caption">Standing Dumbbell Lateral Shoulder Raises Video. <span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
 
 
 
@@ -597,7 +601,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Standing Dumbbell Lateral Shoulder Raises</figcaption></figure>
 
 
 
@@ -609,8 +613,9 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Front-Shoulder-Raises-1.jpg" alt="Standing Dumbbell Front Shoulder Raises" class="wp-image-11448" style="width:840px;height:470px" width="840" height="470" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Front-Shoulder-Raises-1.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Front-Shoulder-Raises-1-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Front-Shoulder-Raises-1-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Front-Shoulder-Raises-1-768x430.jpg 768w" sizes="(max-width: 840px) 100vw, 840px" /><figcaption class="wp-element-caption">Standing Dumbbell Front Shoulder Raises Instruction.
-<span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
+<iframe title="Dumbbell Front Raises" src="https://player.vimeo.com/video/970294847?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</div><figcaption class="wp-element-caption">Standing Dumbbell Front Shoulder Raises Guide. Video<span>: Aliaksandr Makatserchyk</span></figcaption></figure>
 
 
 
@@ -658,7 +663,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Standing Dumbbell Front Shoulder Raises</figcaption></figure>
 
 
 
@@ -666,16 +671,23 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>Instead of worrying about an optimal rep range, focus on challenging yourself and selecting a resistance that brings you close to failure, with about three to four repetitions left in reserve.&nbsp;&nbsp;&nbsp;</p>
+<p>Instead of worrying about an optimal rep range, focus on challenging yourself and selecting a resistance that brings you close to failure, with about three to four repetitions left in reserve.</p>
 
 
 
-<h3 class="wp-block-heading" id="4"><strong>Kneeling Dumbbell One-Arm Row</strong></h3>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio youtube-custom"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="7 DUMBBELL Workouts to Build a STRONG Back and Shoulders!" width="500" height="281" src="https://www.youtube.com/embed/eVvksRdRWt4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div><figcaption class="wp-element-caption">Best Dumbbell Back &amp; Shoulder Exercises. Video: WorkoutEndomondo</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/02/Kneeling-Dumbbell-One-Arm-Row-1.jpg" alt="Kneeling Dumbbell One-Arm Row" class="wp-image-11458" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Kneeling-Dumbbell-One-Arm-Row-1.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Kneeling-Dumbbell-One-Arm-Row-1-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Kneeling-Dumbbell-One-Arm-Row-1-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Kneeling-Dumbbell-One-Arm-Row-1-768x430.jpg 768w" sizes="(max-width: 1250px) 100vw, 1250px" /><figcaption class="wp-element-caption">Kneeling Dumbbell One-Arm Row Instruction.
-<span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
+<h3 class="wp-block-heading" id="4">Dumbbell One-Arm Row</h3>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Dumbbell Single Arm Bent Over Rows" src="https://player.vimeo.com/video/968456912?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</div><figcaption class="wp-element-caption">Dumbbell One-Arm Row Guide. Video: Aliaksandr Makatserchyk</figcaption></figure>
 
 
 
@@ -731,7 +743,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Dumbbell One-Arm Row</figcaption></figure>
 
 
 
@@ -743,8 +755,9 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Shoulder-Shrug-1.jpg" alt="Standing Dumbbell Shoulder Shrug" class="wp-image-11461" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Shoulder-Shrug-1.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Shoulder-Shrug-1-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Shoulder-Shrug-1-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Shoulder-Shrug-1-768x430.jpg 768w" sizes="(max-width: 1250px) 100vw, 1250px" /><figcaption class="wp-element-caption">Standing Dumbbell Shoulder Shrug Instruction.
-<span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Dumbbell Shrug" src="https://player.vimeo.com/video/986502785?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</div><figcaption class="wp-element-caption">Standing Dumbbell Shoulder Shrug Guide. Video: Aliaksandr Makatserchyk</figcaption></figure>
 
 
 
@@ -788,7 +801,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Standing Dumbbell Shoulder Shrug</figcaption></figure>
 
 
 
@@ -800,8 +813,9 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Upright-Row-1.jpg" alt="Standing Dumbbell Upright Row" class="wp-image-11464" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Upright-Row-1.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Upright-Row-1-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Upright-Row-1-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Standing-Dumbbell-Upright-Row-1-768x430.jpg 768w" sizes="(max-width: 1250px) 100vw, 1250px" /><figcaption class="wp-element-caption">Standing Dumbbell Upright Row Instruction.
-<span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
+<figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Dumbbell Upright Row" src="https://player.vimeo.com/video/986540993?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</div><figcaption class="wp-element-caption">Standing Dumbbell Upright Row Guide. <span>Video: Aliaksandr Makatserchyk</span></figcaption></figure>
 
 
 
@@ -853,7 +867,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Standing Dumbbell Upright Row</figcaption></figure>
 
 
 
@@ -862,11 +876,6 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 <h3 class="wp-block-heading" id="7"><strong>Bent-Over Dumbbell Reverse Fly</strong></h3>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/02/Bent-Over-Dumbbell-Reverse-Fly-1.jpg" alt="Bent Over Dumbbell Reverse Fly" class="wp-image-11468" srcset="https://www.endomondo.com/wp-content/uploads/2024/02/Bent-Over-Dumbbell-Reverse-Fly-1.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/02/Bent-Over-Dumbbell-Reverse-Fly-1-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/02/Bent-Over-Dumbbell-Reverse-Fly-1-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/02/Bent-Over-Dumbbell-Reverse-Fly-1-768x430.jpg 768w" sizes="(max-width: 1250px) 100vw, 1250px" /><figcaption class="wp-element-caption">Bent-Over Dumbbell Reverse Fly Instruction.
-<span>Photo: Aliaksandr Makatserchyk</span></figcaption></figure>
 
 
 
@@ -918,7 +927,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table"><table><tbody><tr><td>Training Style</td><td>Sets</td><td>Reps</td></tr><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th>Training Style</th><th>Sets</th><th>Reps</th></tr></thead><tbody><tr><td>Strength Training</td><td>4 &#8211; 6</td><td>3 &#8211; 5</td></tr><tr><td>Hypertrophy</td><td>3 &#8211; 4</td><td>8 &#8211; 12</td></tr><tr><td>Endurance Training</td><td>2 &#8211; 3</td><td>15 &#8211; 20</td></tr><tr><td>Power Training</td><td>3 &#8211; 5</td><td>1 &#8211; 3</td></tr></tbody></table><figcaption class="wp-element-caption">Optimal Sets &amp; Reps of Bent-Over Dumbbell Reverse Fly</figcaption></figure>
 
 
 
@@ -926,7 +935,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h2 class="wp-block-heading list-start"><strong>Benefits Of Back And Shoulder Exercises</strong></h2>
+<h2 class="wp-block-heading list-start">Benefits Of Back And Shoulder Exercises</h2>
 
 
 
@@ -1017,33 +1026,9 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/training/calisthenics-vs-pilates">
+								<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo.jpg" alt="">
-										</div>
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/training">Training</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/training/calisthenics-vs-pilates">Calisthenics Vs. Pilates: Which One Is Right For You?</a>
-								</p>
-								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/isabel-mayfield">By
-										Isabel Mayfield, BCRPA</a>
-								</p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/phul-workout">
-																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
 										</div>
 																	</a>
 							</div>
@@ -1053,35 +1038,59 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/phul-workout">Power Hypertrophy Upper Lower (PHUL) Workout Routine</a>
-								</p>
-								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/erin-lohrenz">By
-										Erin Lohrenz, MPH</a>
-								</p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/beginner-workout-plan-for-women">
-																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/beginner-workout-plan-for-women-endomondo.jpg" alt="">
-										</div>
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/beginner-workout-plan-for-women">The Perfect Beginner Workout Plan For Women To Get Started</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a>
 								</p>
 								<p class="has-small-font-size">
 									<a class="sec-color-3" href="https://www.endomondo.com/author/tammy-hogan">By
 										Tammy Hogan, PT, BA</a>
+								</p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale mr-bottom-16">
+								<a href="https://www.endomondo.com/exercise/front-delt-exercises">
+																			<div class="image-fit">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/07/feature-2025-01-08.jpg" alt="">
+										</div>
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
+									<a class="pri-color-2" href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a>
+								</p>
+								<p class="has-small-font-size">
+									<a class="sec-color-3" href="https://www.endomondo.com/author/steve-theunissen">By
+										Steve Theunissen, PT</a>
+								</p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale mr-bottom-16">
+								<a href="https://www.endomondo.com/workouts/upper-lower-split">
+																			<div class="image-fit">
+											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/upper-lower-split-endomondo.jpg" alt="">
+										</div>
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
+									<a class="pri-color-2" href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a>
+								</p>
+								<p class="has-small-font-size">
+									<a class="sec-color-3" href="https://www.endomondo.com/author/erin-lohrenz">By
+										Erin Lohrenz, MPH</a>
 								</p>
 							</div>
 						</div>
@@ -1171,7 +1180,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
             <p class="has-large-font-size">Help us rate this article</p>
             <input type="hidden" class="rating-feedback" data-empty="fa-regular fa-star" data-filled="fas fa-star" data-fractions="1" />
             <input class="link-post-feedback" value="https://www.endomondo.com/exercise/back-and-shoulder-workout-with-dumbbells" type="hidden">
-            <input class="ip-address" value="2001:4860:7:704::fb" type="hidden">
+            <input class="ip-address" value="2607:fb91:8e10:6b7:3494:d8bb:63af:aa91" type="hidden">
         </div>
         <div class="form-feedback">
             <p class="sec-color-4">Give us feedback in details</p>
@@ -1213,6 +1222,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 <script src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/rating.js?ver=1.0.0"></script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <script type="text/javascript" async src="https://btloader.com/tag?o=5698917485248512&upapi=true&domain=endomondo.com"></script>
 
@@ -1228,16 +1238,16 @@ var wpcf7 = {"api":{"root":"https:\/\/www.endomondo.com\/wp-json\/","namespace":
 <script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/searchable/jquery.multiselect.js' id='searchable-option-list-js-js'></script>
 <script type='text/javascript' id='load-more-comments-js-extra'>
 /* <![CDATA[ */
-var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php"};
+var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"358b71f5a0","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js' id='load-more-comments-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.1' id='load-more-comments-js'></script>
 <script type='text/javascript' id='ld-ajaxload-js-extra'>
 /* <![CDATA[ */
-var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"8b277fc191"};
+var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"9695382f69"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0' id='ld-ajaxload-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.2' id='ld-ajaxload-js'></script>
 <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I&#038;ver=3.0' id='google-recaptcha-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -1253,5 +1263,5 @@ var wpcf7_recaptcha = {"sitekey":"6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I","act
 </script></body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Sun, 05 Jan 2025 03:21:49 GMT -->
-";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:98989;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Sun, 05 Jan 2025 03:21:49 GMT";}}}
+<!-- Cache served by breeze CACHE - Last modified: Thu, 09 Jan 2025 02:49:54 GMT -->
+";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:100291;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Thu, 09 Jan 2025 02:49:54 GMT";}}}

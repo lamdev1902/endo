@@ -683,6 +683,27 @@
         width: 100%;
     }
 
+    /* Comment */
+    .comment-form  {
+        flex-direction: column;
+    }
+
+    .comment-form .user-col, 
+    .comment-form .email-col {
+        width: 100%;
+    }
+
+    .comment-form .user-col input,
+    .comment-form .email-col input {
+        padding: 0 0 0 20px;
+    }
+
+    .comment-form .email-col::before {
+        width: 0;
+        height: 0;
+        position: unset;
+    }
+
     .comment-form .user-col, .comment-form .email-col {
         flex: auto;
         margin-right: 0;
@@ -690,6 +711,15 @@
 
     .comment-form .cmt-col {
         margin-top: 0;
+    }
+
+    .form-submit.flex {
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+    .submit-action.flex {
+        justify-content: center;
     }
 
     /* Best Exercise */
@@ -1207,10 +1237,6 @@
         flex-direction: column;
         align-items: baseline;
         gap: 20px;
-    }
-
-    .comment-form textarea {
-        height: 163px;
     }
 
     #comments .children li {

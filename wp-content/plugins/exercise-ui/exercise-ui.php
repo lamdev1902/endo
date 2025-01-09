@@ -203,8 +203,8 @@ function atn_enqueue_script()
     array(),
     null
   );
-  wp_enqueue_style('exercise-style', plugin_dir_url(__FILE__) . 'assets/css/exercise-main.css', array(), '1.0.2', 'all');
-  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.6', true);
+  wp_enqueue_style('exercise-style', plugin_dir_url(__FILE__) . 'assets/css/exercise-main.css', array(), '1.0.3', 'all');
+  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.7', true);
 }
 
 add_action('admin_enqueue_scripts', 'atn_enqueue_script');
@@ -350,6 +350,7 @@ function custom_render_best_exercise_option_field($post)
           </option>
         <?php endforeach; ?>
       </select>
+      <button class='clearAll'>Clear Best Exercise</button>
     </div>
     <div class="exercise">
       <label for="speEx">Select Exercise:</label>
@@ -360,6 +361,7 @@ function custom_render_best_exercise_option_field($post)
           </option>
         <?php endforeach; ?>
       </select>
+      <button class='clearAll'>Clear Exercise List</button>
     </div>
     <div class="mt">
       <label for="mt">Select Muscle Type:</label>
@@ -370,6 +372,7 @@ function custom_render_best_exercise_option_field($post)
           </option>
         <?php endforeach; ?>
       </select>
+      <button class='clearAll'>Clear Muscle Type</button>
     </div>
     <div class="ma">
       <label for="ma">Select Muscle Anatomy:</label>
@@ -380,6 +383,7 @@ function custom_render_best_exercise_option_field($post)
           </option>
         <?php endforeach; ?>
       </select>
+      <button class='clearAll'>Clear Muscle Anatomy</button>
     </div>
     <div class="eq">
       <label for="eq">Select Equipment:</label>
@@ -391,6 +395,7 @@ function custom_render_best_exercise_option_field($post)
           </option>
         <?php endforeach; ?>
       </select>
+      <button class='clearAll'>Clear Equipment</button>
     </div>
   </div>
   <?php

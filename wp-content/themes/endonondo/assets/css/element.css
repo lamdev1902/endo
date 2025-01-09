@@ -1444,10 +1444,7 @@ h2.tag-coming {
     display: flex;
     flex-direction: column;
     width: 48%;
-}
-
-.comment-form .user-col {
-    margin-right: 4%;
+    border-top-left-radius: 8px;
 }
 
 .comment-form .email-col {
@@ -1455,7 +1452,7 @@ h2.tag-coming {
 }
 
 .comment-form .cmt-col {
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .comment-form .comment-form-author,
@@ -1470,18 +1467,20 @@ h2.tag-coming {
 .comment-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    border: 1px solid var(--secondary-color-1);
+    border-radius: 8px;
+    padding-bottom: 20px;
 }
 
 .comment-form .user-col,
 .comment-form .email-col {
     flex: 1;
+    border-bottom: 1px solid var(--secondary-color-1);
+    color: var(--secondary-color-2);
 }
-
 .comment-form .cmt-col,
 .comment-form .comment-form-cookies-consent {
     flex-basis: 100%;
-    margin-bottom: 0;
 }
 
 .comment-form .cmt-col {
@@ -1491,10 +1490,23 @@ h2.tag-coming {
 
 .comment-form .user-col {
     order: 0;
+    border-top-left-radius: 8px;
+    position: relative;
 }
 
 .comment-form .email-col {
     order: 1;
+    border-top-right-radius: 8px;
+    position: relative;
+}
+
+.comment-form .email-col::before {
+    content: "";
+    position: absolute;
+    border-left: 2px solid;
+    height: 40%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .comment-form .comment-form-cookies-consent {
@@ -1515,18 +1527,28 @@ h2.tag-coming {
 .comment-form div input,
 .comment-form textarea {
     width: 100%;
-    border: 1px solid var(--secondary-color-1);
+    border: none;
     color: #000;
 }
 
 .comment-form div input {
     height: 48px;
-    padding-left: 12px;
+    background-color: #F8F8F8;
+}
+
+.comment-form .user-col input {
+    border-top-left-radius: 8px;
+    padding: 0 5px 0 20px;
+}
+
+.comment-form .email-col input {
+    border-top-right-radius: 8px;
+    padding: 0 20px 0 10px;
 }
 
 .comment-form textarea {
-    padding: 12px;
-    height: 192px;
+    padding: 20px;
+    field-sizing: content;
 }
 
 .comment-form .form-submit .btn {
@@ -1536,9 +1558,16 @@ h2.tag-coming {
     font-weight: 500;
     border: none;
     border-radius: none;
-    line-height: 48px;
+    line-height: 38px;
     text-align: center;
-    width: 176px;
+    width: 130px;
+    max-height: 38px;
+}
+
+.comment-form .form-submit .btn.btn-secondary {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
 }
 
 #comments .commentlist>li {
@@ -1649,6 +1678,10 @@ h2.tag-coming {
     margin: 0 auto;
 }
 
+.comment-respond form {
+    margin-bottom: 20px;
+}
+
 #write-comment {
     margin-bottom: 20px;
 }
@@ -1683,6 +1716,73 @@ h2.tag-coming {
     top: 0;
     right: -12px;
     font-size: 18px;
+}
+
+.error-section {
+    width: 100%;
+}
+
+.form-submit.flex {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.submit-action.flex {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.cmt-wait,
+.cmt-err,
+.cmt-succ {
+    font-size: 14px;
+    font-weight: 400;
+    position:relative;
+    padding-left: 22px;
+    line-height: 20px;
+}
+
+.cmt-err {
+    color: #F50000;
+}
+
+.cmt-err::before {
+    content: url(../images/cmt-error.svg);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0px;
+}
+
+.cmt-succ {
+    color: var(--primary-color-1);
+}
+
+.cmt-succ::before {
+    content: url(../images/cmt-success.svg);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0px;
+}
+
+#cancel-comment-reply-link {
+    opacity: 0;
+}
+
+#write-comment .cancle-btn {
+    display: none;
+}
+
+ul.commentlist .cancle-btn {
+    display: block;
 }
 
 /* Hero */
@@ -1784,8 +1884,7 @@ h2.tag-coming {
 }
 
 .exercise__grid-item-top-content-equipment {
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 4px;
     margin-bottom: 12px;
     z-index: 1;
 }

@@ -480,3 +480,11 @@ label {
     margin-top: 0;
     font-weight: 500;
 }
+
+.clearAll {
+    width: fit-content;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
