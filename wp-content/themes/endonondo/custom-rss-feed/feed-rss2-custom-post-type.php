@@ -4,14 +4,13 @@
  *
  */
 
-$args = array(
+ $args = array(
 	'post_type' => ['informational_posts'],
 	'posts_per_page' => 10,
 	'post_status' => 'publish',
 	'orderby' => 'date',
 	'order' => 'DESC',
 );
-
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
 
 header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
@@ -197,7 +196,7 @@ do_action('rss_tag_pre', 'rss2');
 					<?php }
 					$the_content = get_the_content();
 					$the_content = preg_replace_callback(
-						'/<div class="wp-block-embed__wrapper">\s*https:\/\/vimeo\.com\/(\d+)\s*<\/div>/is',
+						'/<div class="wp-block-embed__wrapper">\s*https:\/\/vimeo\.com\/(\d+)(?:\?[^\s<]*)?\s*<\/div>/is',
 						function ($matches) {
 							$video_id = $matches[1]; 
 							return '<iframe 
@@ -206,6 +205,22 @@ do_action('rss_tag_pre', 'rss2');
 										height="281" 
 										frameborder="0" 
 										allow="autoplay; fullscreen; picture-in-picture" 
+										allowfullscreen>
+									</iframe>';
+						},
+						$the_content
+					);
+					$the_content = preg_replace_callback(
+						'/<div class="wp-block-embed__wrapper">\s*https:\/\/www\.youtube\.com\/watch\?v=([\w\-]+)(?:&[^\s<]*)?\s*<\/div>/is',
+						function ($matches) {
+							$video_id = $matches[1];
+							return '<iframe 
+										width="550" 
+										height="281" 
+										src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" 
+										title="YouTube video player" 
+										frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 										allowfullscreen>
 									</iframe>';
 						},
@@ -231,6 +246,11 @@ do_action('rss_tag_pre', 'rss2');
 					);
 					$the_content = preg_replace(
 						'/<figure class="wp-block-table table-default">.*?<\/figure>/is',
+						'', 
+						$the_content
+					);
+					$the_content = preg_replace(
+						'/<figure class="wp-block-table table-custom">.*?<\/figure>/is',
 						'', 
 						$the_content
 					);
