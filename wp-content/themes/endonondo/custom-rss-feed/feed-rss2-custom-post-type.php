@@ -6,7 +6,10 @@
 
  $args = array(
 	'post_type' => ['informational_posts'],
-	'p' => 4787
+	'posts_per_page' => 10,
+	'post_status' => 'publish',
+	'orderby' => 'date',
+	'order' => 'DESC',
 );
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
 
