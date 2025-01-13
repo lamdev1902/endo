@@ -11,16 +11,17 @@
 
             var filter = $(this).data('filter');
 
+            $('.all__flex-item').removeClass('filter-active');
+
             if(filter == 3) {
                 $('.single-main').get(0).scrollIntoView({
                     behavior: 'smooth', 
                     block: 'start'
                 });
-                $(this).addClass('filter-active');
+                $(this).addClass('filter-active-3');
                 return false;
             }
 
-            $('.all__flex-item').removeClass('filter-active');
             $(this).addClass('filter-active');
             var id = $('.best-ajax-section #postID').val();
 
