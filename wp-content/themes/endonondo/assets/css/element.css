@@ -2114,3 +2114,11 @@ ul.commentlist .cancle-btn {
 .top-best .page-top-white.mb-top-black {
     background-color: transparent;
 }
+
+.best-exercise .exc-author {
+    padding-bottom: 30px;
+}
+
+.best-exercise .author-info p{
+    margin-bottom: 0;
+}

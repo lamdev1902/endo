@@ -490,7 +490,7 @@ $featureimg = get_field('fimg_default', 'option');
     }
     ?>
     <div class="single-main exc-author">
-        <aside class="single-sidebar ">
+        <aside class="">
             <div class="container">
                 <div class="author-about exc-container">
                     <h3 class="pri-color-2">About the Author</h3>
