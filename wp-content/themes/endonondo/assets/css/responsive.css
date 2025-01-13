@@ -737,6 +737,43 @@
     table tbody td:first-child {
         width: 155px !important;
     }
+
+    .best-exercise .best {
+        top: 78%;
+    }
+
+    .best-exercise .best .exercise__grid-item-top-content-video {
+        max-height: 170px;
+    }
+
+    .best-exercise .best .exercise__grid-item-top-content-video video, 
+    .best-exercise .best .exercise__grid-item-top-content-video iframe {
+        width: 312px;
+        height: 175px;
+    }
+
+    .exercise__grid-item-top-content-2-column.flex {
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .best-exercise .all .exercise__grid-item-top-content-video iframe,
+    .best-exercise .all .exercise__grid-item-top-content-video video {
+        width: 100%;
+        height: 195px;
+    }
+
+
+    .best-exercise .all {
+        padding: 150px 0 20px 0;
+    }
+
+    .exercise__grid-item-top-content-equipment {
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -1268,18 +1305,41 @@
     }
 
     /* Best Exercise */
-    .hero,.best,.all {
-        margin-bottom: 20px;
-    } 
+
+    .best__container {
+        padding: 0 !important;
+    }
 
     .exercise__grid--3 {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
         column-gap: 30px;
         row-gap: 20px;
     }
 
-    .exercise__grid-item-top--2 {
-        height: 238px;
+    .best {
+        top: 68%;
+    }
+
+    .best h2 {
+        padding: 0 6.8%;
+    }
+    .best .exercise__grid-item-top-content-video {
+        max-height: 350px;
+    }
+
+    .best .exercise__grid-item-top-content-video video, 
+    .best .exercise__grid-item-top-content-video iframe {
+        width: 620px;
+        height: 350px;
+    }
+
+    .all {
+        padding: 320px 0 20px 0;
+    }
+    
+
+    .exercise__grid-item-bottom {
+        margin-bottom: 10px;
     }
 
     .medicine-table .wp-block-table table thead tr,

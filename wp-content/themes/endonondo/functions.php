@@ -376,12 +376,12 @@ function theme_mcs_scripts()
 	wp_enqueue_style('style-slick', get_template_directory_uri() . '/assets/js/slick/slick.css');
 	wp_enqueue_style('style-slick-theme', get_template_directory_uri() . '/assets/js/slick/slick-theme.css');
 	wp_enqueue_style('style-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper-bundle.min.css');
-	wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.7.3');
+	wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.7.4');
 	wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.7');
 	wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
 	wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
-	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.8.4');
-	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.8.9');
+	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.8.5');
+	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.9.0');
 	wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
 	wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
 	wp_enqueue_style('style-regular', get_template_directory_uri() . '/assets/fonts/css/regular.css');
@@ -861,7 +861,7 @@ function ajax_load_post_func()
 				<div class="exercise__grid-item">
 					<div class="exercise__grid-item-top exercise__grid-item-top--2">
 						<h3 class="exercise__grid-item-top-content-title exercise__grid-item-top-content-title--nobd pri-color-2">
-							<?= $name ?>
+							<a target="_blank" class="pri-color-2" href="<?= the_permalink() ?>"><?= $name ?></a>
 						</h3>
 						<div class="exercise__grid-item-top-content">
 							<div class="exercise__grid-item-top-content-video">
@@ -898,6 +898,7 @@ function ajax_load_post_func()
 						</div>
 					</div>
 					<div class="exercise__grid-item-bottom exercise__grid-item-bottom--no-bg">
+						<h4>How to do</h4>
 						<?php if (!empty($contents)): ?>
 							<?= $contents[0]['content'] ?>
 						<?php endif; ?>

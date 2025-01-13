@@ -564,7 +564,7 @@ $post_type = $post->post_type;
     <?php
     $author_id = get_post_field('post_author', $postid);
 
-    $author_name = get_the_author_meta('nickname', $author_id);
+    $author_name = get_the_author_meta('display_name', $author_id);
     $author_url = get_author_posts_url($author_id);
 
     $avt = '';
