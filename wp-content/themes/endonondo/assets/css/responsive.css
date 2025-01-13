@@ -774,6 +774,10 @@
     .exercise__grid-item-top-content-equipment {
         margin-bottom: 10px;
     }
+
+    .home-main.best-exercise {
+        background: url(../images/home/bg.png) #101010 no-repeat -210px 0px / 600px;
+    }
 }
 
 

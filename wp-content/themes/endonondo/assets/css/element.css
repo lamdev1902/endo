@@ -2103,3 +2103,11 @@ ul.commentlist .cancle-btn {
 .best-exercise .single-main {
     color: #101010;
 }
+
+.best-exercise .top-best .social a img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(1314%) hue-rotate(262deg) brightness(111%) contrast(106%);
+}
+
+.top-best .page-top-white.mb-top-black {
+    background-color: transparent;
+}
