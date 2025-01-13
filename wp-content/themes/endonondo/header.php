@@ -116,10 +116,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	<?php global $template;?>
 	<div id="wapper" class="<?php if (is_front_page()) {
 		echo 'home-main color-white';
-	} else {
+	}elseif (basename($template) == 'single-best_exercise.php')  {
+		echo 'home-main best-exercise color-white';
+	}
+	else {
 		echo '';
 	} ?>">
 		<header id="header" class="position-relative">

@@ -45,7 +45,7 @@ jQuery(document).ready(function ($) {
             },
             "email": {
                 required: "Field is required.",
-                email: "Your comment cannot be submitted. Please try again.",
+                email: "Please add an appropriate email.",
                 noUrl: "Your comment cannot be submitted. Please try again.",
             },
             "comment": {

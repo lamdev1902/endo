@@ -11,6 +11,7 @@
 	'orderby' => 'date',
 	'order' => 'DESC',
 );
+
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
 
 header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
