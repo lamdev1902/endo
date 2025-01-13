@@ -16,6 +16,7 @@
                     behavior: 'smooth', 
                     block: 'start'
                 });
+                $(this).addClass('filter-active');
                 return false;
             }
 

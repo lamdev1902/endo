@@ -361,7 +361,7 @@ $featureimg = get_field('fimg_default', 'option');
                                             <?php endif; ?>
                                             <?php if (!empty($mts)): ?>
                                                 <div class="exercise__grid-item-top-content-muscle flex">
-                                                    <p class="pri-color-2">Muscle: </p>
+                                                    <p class="pri-color-2">Muscle Worked: </p>
                                                     <?php foreach ($mts as $tit): ?>
                                                         <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?>
                                                         </p>
