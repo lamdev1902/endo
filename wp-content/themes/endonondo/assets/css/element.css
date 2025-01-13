@@ -1877,6 +1877,9 @@ ul.commentlist .cancle-btn {
 .exercise__grid-item-top-content {
     width: 100%;
     height: 100%;
+}
+
+.best .exercise__grid-item-top-content {
     max-height: 194px;
 }
 
