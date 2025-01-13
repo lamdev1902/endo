@@ -2057,6 +2057,11 @@ ul.commentlist .cancle-btn {
 .all__flex-item p::before {
     position: absolute;
     left: -30px;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7478%) hue-rotate(143deg) brightness(105%) contrast(99%);
+}
+
+.all__flex-item.filter-active p::before {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(95%) saturate(376%) hue-rotate(33deg) brightness(98%) contrast(94%);
 }
 
 .all__flex-item p {
