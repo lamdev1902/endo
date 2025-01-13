@@ -1865,26 +1865,37 @@ ul.commentlist .cancle-btn {
     100% { transform: rotate(360deg); }
  }
 
-.exercise__grid--3 {
-    grid-template-columns: repeat(3,1fr);
-}
 
 .exercise__grid--1 {
     grid-template-columns: repeat(1,1fr);
 }
 
+.exercise__flex--3 .slick-slide {
+    margin: 0 10px;
+}
+
+.exercise__flex--3 .slick-list {
+    margin-left: -10px; 
+    margin-right: -10px;
+}
+
+.exercise__grid-3 {
+    
+}
 
 .exercise__grid-item-top-content {
     width: 100%;
     height: 100%;
 }
 
-.best .exercise__grid-item-top-content {
-    max-height: 194px;
-}
+
 
 .exercise__grid-item-top-content-video {
     margin-bottom: 0;
+}
+
+.best .exercise__grid-item-top-content-video {
+    max-height: 194px;
 }
 
 .all .exercise__grid-item-top-content-video {
@@ -1911,16 +1922,17 @@ ul.commentlist .cancle-btn {
 }
 
 .exercise__grid-item-top-content-equipment {
-    gap: 4px;
+    gap: 6px;
     z-index: 1;
+    flex-wrap: wrap;
 }
 
 .exercise__grid-item-top-content-equipment p {
     margin-bottom: 0;
 }
 
-.exercise__grid-item-top-content-equipment p:nth-child(n+2) {
-    padding: 0 6px;
+.exercise__grid-item-top-content-equipment p:nth-child(n+3) {
+    padding: 0 0 0 6px;
 }
 
 .exercise__grid-item-top-content-title {
@@ -1963,11 +1975,11 @@ ul.commentlist .cancle-btn {
 }
 
 .exercise__grid-item-top-content-2-column .exercise__grid-item-top-content-muscle {
-    gap: 4px;
+    gap: 6px;
 }
 
-.exercise__grid-item-top-content-2-column .exercise__grid-item-top-content-muscle p:nth-child(n+2){
-    padding: 0 6px;
+.exercise__grid-item-top-content-2-column .exercise__grid-item-top-content-muscle p:nth-child(n+3){
+    padding: 0 0 0 6px;
 }
 
 .exercise__grid-item-top-content-muscle > p.exercise__grid-item-top-content--text:nth-of-type(n + 2)::after {
@@ -1982,14 +1994,12 @@ ul.commentlist .cancle-btn {
 .exercise__grid-item-top-content-muscle > .exercise__grid-item-top-content--text:nth-of-type(n + 3)::before,
 .exercise__grid-item-top-content-equipment > .exercise__grid-item-top-content--text:nth-of-type(n + 3)::before {
     position: absolute;
-    content: "";
-    left: -3px;
-    color: var(--primary-color-1);
+    content: "|";
+    left: -2px;
     top: 50%;
     width: 1px;
-    height: 60%;
+    height: 100%;
     transform: translateY(-50%);
-    background: var(--secondary-color-3);
 }
 
 .exercise__grid-item-bottom {
@@ -2084,4 +2094,12 @@ ul.commentlist .cancle-btn {
 
 .best-exercise .single-main .sg-resources  {
     margin-top: 0;
+}
+
+.best-exercise .single-main .single-sidebar {
+    margin-top: 0;
+}
+
+.best-exercise .single-main {
+    color: #101010;
 }

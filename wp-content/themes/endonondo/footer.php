@@ -133,7 +133,7 @@ if (in_array(get_post_type(), $post_type) == true)
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.js"></script>
 <script type="text/javascript"
 	src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js?v=1.2.4"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js?v=1.2.5"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/rating.js?ver=1.0.0"></script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>

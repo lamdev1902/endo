@@ -36,39 +36,85 @@ jQuery(function ($) {
 
 
 	jQuery(document).ready(function ($) {
-		$('#postCmt').click(function(e){
+		function initializeSlick() {
+			if ($(window).width() <= 834 && $('.exercise__flex--3').length) {
+				if (!$('.exercise__flex--3').hasClass('slick-initialized')) {
+					$('.exercise__flex--3').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: false,
+						arrows: false,
+						infinite: true,
+						centerMode: true,
+						centerPadding: '110px',
+						responsive: [
+							{
+								breakpoint: 480,
+								settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									dots: false,
+									arrows: false,
+									infinite: true,
+									centerMode: true,
+									centerPadding: '40px',
+								}
+							}
+						]
+					});
+				}
+			} else {
+				if ($('.exercise__flex--3').hasClass('slick-initialized')) {
+					$('.exercise__flex--3').slick('unslick');
+				}
+			}
+
+			if ($(window).width() <= 480 && $('.all__flex').length) {
+				$('.all__flex').slick({
+					slidesToShow: 2, 
+					slidesToScroll: 1,
+					dots: false,
+					arrows: false,
+					infinite: false, 
+				});
+			}
+		}
+
+		initializeSlick();
+
+		$('#postCmt').click(function (e) {
 			e.preventDefault();
 			$(".form-grid").toggleClass('hide');
 		});
 
-		$(".single-main .sg-resources > h3").on('click', function() {
+		$(".single-main .sg-resources > h3").on('click', function () {
 			$(this).siblings("ol").slideToggle();
 			$(this).toggleClass("up");
 		});
 
 		var popupOpened = false;
-	
+
 		if ($('body').hasClass('home') || $('body').hasClass('single')) {
-	
+
 			var popupCookie = getCookie('popupOpened');
-	
+
 			if (!popupCookie) {
 				$(window).on('scroll', function () {
 					if (!popupOpened) {
 						var scrollPosition = $(window).scrollTop() + $(window).height();
 						var totalBodyHeight = $('body').prop('scrollHeight');
-	
+
 						if (scrollPosition >= totalBodyHeight * 0.7) {
 							popupOpened = true;
 							$('#popup-email').fadeIn();
-	
+
 							setCookie('popupOpened', 'true', 1);
 						}
 					}
 				});
 			}
 		}
-	
+
 		function getCookie(name) {
 			var nameEQ = name + "=";
 			var ca = document.cookie.split(';');
@@ -79,15 +125,15 @@ jQuery(function ($) {
 			}
 			return null;
 		}
-	
+
 		function setCookie(name, value, days) {
 			var d = new Date();
-			d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000)); 
+			d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
 			var expires = "expires=" + d.toUTCString();
 			document.cookie = name + "=" + value + ";" + expires + ";path=/";
 		}
 	});
-	
+
 
 
 	$('.hd-search a').click(function () {

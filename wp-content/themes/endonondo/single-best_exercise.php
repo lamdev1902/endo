@@ -63,7 +63,7 @@ $featureimg = get_field('fimg_default', 'option');
             </div>
             <div class="hero__container container">
                 <div class="text-center special-width">
-                    <h1><?= the_title() ?></h1>
+                    <h1 class="pri-color-3"><?= the_title() ?></h1>
                     <?php $aname = get_field('user_nshort', 'user_' . $upid);
                     if (!$aname || $aname == '')
                         $aname = get_the_author();
@@ -71,7 +71,7 @@ $featureimg = get_field('fimg_default', 'option');
                     <div class="single-author mr-bottom-20">
                         <div class="name-author">
                             <div class="info">
-                                <div class="author-by" itemscope>
+                                <div class="author-by pri-color-3" itemscope>
                                     <time class="updated has-small-font-size"
                                         datetime="<?php the_modified_date('c'); ?>" itemprop="dateModified"><?php
                                           if (get_the_modified_date('U') !== get_the_date('U')) {
@@ -81,8 +81,8 @@ $featureimg = get_field('fimg_default', 'option');
                                           }
                                           ?>
                                         <?php the_modified_date('F d, Y'); ?></time>
-                                    <span class="has-small-font-size">- Writen by: </span>
-                                    <span class="has-small-font-size" itemprop="author" itemscope
+                                    <span class="has-small-font-size pri-color-3">- Writen by: </span>
+                                    <span class="has-small-font-size pri-color-3" itemprop="author" itemscope
                                         itemtype="https://schema.org/Person"><a class="pri-color-3" target="_blank"
                                             href="<?php echo $author_url; ?>"
                                             title="<?php echo __('View all posts by', 'hc_theme'); ?> <?php the_author(); ?>"
@@ -144,7 +144,7 @@ $featureimg = get_field('fimg_default', 'option');
                     $bestTitle = get_field('best_title', $postid);
                     ?>
                     <h2 class="best__title pri-color-3"><?= $bestTitle ?: 'Best Exercise' ?></h2>
-                    <div class="exercise__grid exercise__grid--3 grid">
+                    <div class="exercise__grid exercise__flex--3 flex">
                         <?php
                         $listBest = explode(',', $listBest);
                         foreach ($listBest as $id):
@@ -177,7 +177,8 @@ $featureimg = get_field('fimg_default', 'option');
                                     </div>
                                 </div>
                                 <div class="exercise__grid-item-bottom">
-                                    <h3 class="exercise__grid-item-top-content-title"><a class="pri-color-2 text-special clamp-1" target="_blank"
+                                    <h3 class="exercise__grid-item-top-content-title"><a
+                                            class="pri-color-2 text-special clamp-1" target="_blank"
                                             href="<?= home_url('/exercise/' . $exercise[0]->slug) ?>"><?= $exercise[0]->name ?></a>
                                     </h3>
                                     <?php if (!empty($muscle_type)): ?>
@@ -198,8 +199,10 @@ $featureimg = get_field('fimg_default', 'option');
 
     <section class="all best-ajax-section">
         <div class="all__container container exc-container">
-            <h2 class="all__title pri-color-2 text-center"><?=get_field('all_exercise_title', $postid) ?: 'All Triceps Exercises'?></h2>
-            <p class="pri-color-2"><?=get_field('all_exercise_description', $postid);?></p>
+            <h2 class="all__title pri-color-2 text-center">
+                <?= get_field('all_exercise_title', $postid) ?: 'All Triceps Exercises' ?>
+            </h2>
+            <p class="pri-color-2"><?= get_field('all_exercise_description', $postid); ?></p>
             <div class="all__flex flex">
                 <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center filter-active"
                     data-filter="1">
@@ -314,7 +317,8 @@ $featureimg = get_field('fimg_default', 'option');
                             );
 
                             $contents = $wpdb->get_results($wpdb->prepare(
-                                "Select content From {$wpdb->prefix}exercise_content WHERE exercise_id = %d AND content_type = 1",$exercise_id
+                                "Select content From {$wpdb->prefix}exercise_content WHERE exercise_id = %d AND content_type = 1",
+                                $exercise_id
                             ), ARRAY_A);
 
                             $iframe = '';
@@ -336,7 +340,7 @@ $featureimg = get_field('fimg_default', 'option');
                             <div class="exercise__grid-item-top exercise__grid-item-top--2">
                                 <h3
                                     class="exercise__grid-item-top-content-title exercise__grid-item-top-content-title--nobd pri-color-2">
-                                    <?= $name ?>
+                                    <a target="_blank" class="pri-color-2" href="<?= the_permalink() ?>"><?= $name ?></a>
                                 </h3>
                                 <div class="exercise__grid-item-top-content">
                                     <div class="exercise__grid-item-top-content-video">
@@ -373,6 +377,7 @@ $featureimg = get_field('fimg_default', 'option');
                                 </div>
                             </div>
                             <div class="exercise__grid-item-bottom exercise__grid-item-bottom--no-bg">
+                                <h4>How to do</h4>
                                 <?php if (!empty($contents)): ?>
                                     <?= $contents[0]['content'] ?>
                                 <?php endif; ?>
@@ -457,7 +462,7 @@ $featureimg = get_field('fimg_default', 'option');
     <?php
     $author_id = get_post_field('post_author', $postid);
 
-    $author_name = get_the_author_meta('nickname', $author_id);
+    $author_name = get_the_author_meta('display_name', $author_id);
     $author_url = get_author_posts_url($author_id);
 
     $avt = '';
