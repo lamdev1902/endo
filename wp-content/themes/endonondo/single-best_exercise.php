@@ -177,7 +177,7 @@ $featureimg = get_field('fimg_default', 'option');
                                     </div>
                                 </div>
                                 <div class="exercise__grid-item-bottom">
-                                    <h3 class="exercise__grid-item-top-content-title"><a class="pri-color-2" target="_blank"
+                                    <h3 class="exercise__grid-item-top-content-title"><a class="pri-color-2 text-special clamp-1" target="_blank"
                                             href="<?= home_url('/exercise/' . $exercise[0]->slug) ?>"><?= $exercise[0]->name ?></a>
                                     </h3>
                                     <?php if (!empty($muscle_type)): ?>
@@ -198,7 +198,8 @@ $featureimg = get_field('fimg_default', 'option');
 
     <section class="all best-ajax-section">
         <div class="all__container container exc-container">
-            <h2 class="all__title pri-color-2">All Triceps Exercises</h2>
+            <h2 class="all__title pri-color-2 text-center"><?=get_field('all_exercise_title', $postid) ?: 'All Triceps Exercises'?></h2>
+            <p class="pri-color-2"><?=get_field('all_exercise_description', $postid);?></p>
             <div class="all__flex flex">
                 <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center filter-active"
                     data-filter="1">
