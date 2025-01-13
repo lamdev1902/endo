@@ -10,6 +10,15 @@
 			$(this).addClass('all__flex-item--active');
 
             var filter = $(this).data('filter');
+
+            if(filter == 3) {
+                $('.single-main').get(0).scrollIntoView({
+                    behavior: 'smooth', 
+                    block: 'start'
+                });
+                return false;
+            }
+
             $('.all__flex-item').removeClass('filter-active');
             $(this).addClass('filter-active');
             var id = $('.best-ajax-section #postID').val();
@@ -26,13 +35,13 @@
                 },
                 context: this,
                 beforeSend: function(){
-                    $(".best-ajax-section .exercise__grid--2").empty();
+                    $(".best-ajax-section .exercise__grid--1").empty();
                     $('.paginate_links').remove();
                     $('.exercise__grid-loading').addClass('load');
                 },
                 success: function(response) {
                     if(response.success) {
-                        $(".best-ajax-section .exercise__grid--2").append($(response.data.content));
+                        $(".best-ajax-section .exercise__grid--1").append($(response.data.content));
                         $(".best-ajax-section .pagination-best").append($(response.data.pagi));
                     }
                     $('.exercise__grid-loading').removeClass('load');

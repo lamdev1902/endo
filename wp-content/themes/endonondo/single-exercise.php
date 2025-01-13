@@ -97,7 +97,6 @@ $post_type = $post->post_type;
                                     function onPlayerReady(event) {
                                         var YTP = event.target;
                                         YTP.playVideo();
-                                        // Đảm bảo controls và info bị ẩn
                                         setTimeout(function () {
                                             YTP.setOption("controls", 0);
                                             YTP.setOption("modestbranding", 1);

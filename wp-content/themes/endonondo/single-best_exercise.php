@@ -47,136 +47,137 @@ $featureimg = get_field('fimg_default', 'option');
 
 ?>
 <main id="content">
-    <?php
-    $heroCalculator = get_field('hero_description', $postid);
-    ?>
-    <section class="hero mb">
-        <div class="page-top-white mb-top-black">
-            <div class="container">
-                <?php
-                if (function_exists('yoast_breadcrumb')) {
-                    yoast_breadcrumb('<div id="breadcrumbs" class="breacrump">', '</div>');
-                }
-                ?>
+    <div class="top-best">
+        <?php
+        $heroCalculator = get_field('hero_description', $postid);
+        ?>
+        <section class="hero mb">
+            <div class="page-top-white mb-top-black">
+                <div class="container">
+                    <?php
+                    if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('<div id="breadcrumbs" class="breacrump">', '</div>');
+                    }
+                    ?>
+                </div>
             </div>
-        </div>
-        <div class="hero__container container">
-            <div class="text-center special-width">
-                <h1><?= the_title() ?></h1>
-                <?php $aname = get_field('user_nshort', 'user_' . $upid);
-                if (!$aname || $aname == '')
-                    $aname = get_the_author();
-                ?>
-                <div class="single-author mr-bottom-20">
-                    <div class="name-author">
-                        <div class="info">
-                            <div class="author-by" itemscope>
-                                <time class="updated has-small-font-size" datetime="<?php the_modified_date('c'); ?>"
-                                    itemprop="dateModified"><?php
-                                    if (get_the_modified_date('U') !== get_the_date('U')) {
-                                        echo __('Updated on', 'hc_theme');
-                                    } else {
-                                        echo __('Published', 'hc_theme');
-                                    }
-                                    ?>
-                                    <?php the_modified_date('F d, Y'); ?></time>
-                                <span class="has-small-font-size">- Writen by: </span>
-                                <span class="has-small-font-size" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person"><a class="pri-color-2" target="_blank"
-                                        href="<?php echo $author_url; ?>"
-                                        title="<?php echo __('View all posts by', 'hc_theme'); ?> <?php the_author(); ?>"
-                                        rel="author" itemprop="url"><span class="ncustom has-small-font-size"
-                                            itemprop="name"><?php echo $aname; ?></span></a></span>
-                                <?php
-                                $medically_reviewed = get_field('select_author', $postid);
-                                if ($medically_reviewed) { ?>
-                                    <span class="has-small-font-size"> - Reviewed by</span>
-                                    <span class="has-small-font-size">
-                                        <?php foreach ($medically_reviewed as $m => $mr) {
-                                            $anamer = get_field('user_nshort', 'user_' . $mr['ID']);
-                                            if (!$anamer || $anamer == '')
-                                                $anamer = $mr['display_name'];
-                                            ?>
-                                            <a target="_blank" class="pri-color-2" style="text-decoration: underline"
-                                                href="<?php echo get_author_posts_url($mr['ID']); ?>"><?php if ($m > 0)
-                                                       echo ' ,'; ?><?php echo $anamer; ?></a>
-                                        <?php } ?>
-                                    </span>
-                                <?php } ?>
-                                <?php
-                                if ($enable_fcgroup): ?>
-                                    <?php if ($enable_fcgroup == '1') { ?>
-                                        <span id="at-box"><img
-                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/author.svg"
-                                                alt="Fact checked"></span>
-                                    <?php } elseif ($enable_fcgroup == '2') { ?>
-                                        <span id="eb-box"><img
-                                                src="<?php echo get_template_directory_uri(); ?>/assets/images/eb.svg"
-                                                alt="Fact checked"></span>
+            <div class="hero__container container">
+                <div class="text-center special-width">
+                    <h1><?= the_title() ?></h1>
+                    <?php $aname = get_field('user_nshort', 'user_' . $upid);
+                    if (!$aname || $aname == '')
+                        $aname = get_the_author();
+                    ?>
+                    <div class="single-author mr-bottom-20">
+                        <div class="name-author">
+                            <div class="info">
+                                <div class="author-by" itemscope>
+                                    <time class="updated has-small-font-size"
+                                        datetime="<?php the_modified_date('c'); ?>" itemprop="dateModified"><?php
+                                          if (get_the_modified_date('U') !== get_the_date('U')) {
+                                              echo __('Updated on', 'hc_theme');
+                                          } else {
+                                              echo __('Published', 'hc_theme');
+                                          }
+                                          ?>
+                                        <?php the_modified_date('F d, Y'); ?></time>
+                                    <span class="has-small-font-size">- Writen by: </span>
+                                    <span class="has-small-font-size" itemprop="author" itemscope
+                                        itemtype="https://schema.org/Person"><a class="pri-color-3" target="_blank"
+                                            href="<?php echo $author_url; ?>"
+                                            title="<?php echo __('View all posts by', 'hc_theme'); ?> <?php the_author(); ?>"
+                                            rel="author" itemprop="url"><span class="ncustom has-small-font-size"
+                                                itemprop="name"><?php echo $aname; ?></span></a></span>
+                                    <?php
+                                    $medically_reviewed = get_field('select_author', $postid);
+                                    if ($medically_reviewed) { ?>
+                                        <span class="has-small-font-size"> - Reviewed by</span>
+                                        <span class="has-small-font-size">
+                                            <?php foreach ($medically_reviewed as $m => $mr) {
+                                                $anamer = get_field('user_nshort', 'user_' . $mr['ID']);
+                                                if (!$anamer || $anamer == '')
+                                                    $anamer = $mr['display_name'];
+                                                ?>
+                                                <a target="_blank" class="pri-color-3" style="text-decoration: underline"
+                                                    href="<?php echo get_author_posts_url($mr['ID']); ?>"><?php if ($m > 0)
+                                                           echo ' ,'; ?><?php echo $anamer; ?></a>
+                                            <?php } ?>
+                                        </span>
                                     <?php } ?>
-                                <?php endif; ?>
+                                    <?php
+                                    if ($enable_fcgroup): ?>
+                                        <?php if ($enable_fcgroup == '1') { ?>
+                                            <span id="at-box"><img
+                                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/author.svg"
+                                                    alt="Fact checked"></span>
+                                        <?php } elseif ($enable_fcgroup == '2') { ?>
+                                            <span id="eb-box"><img
+                                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/eb.svg"
+                                                    alt="Fact checked"></span>
+                                        <?php } ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <?php
-                $socials = get_field('follow_social', 'option');
-                if ($socials):
-                    ?>
-                    <div class="social hero__social flex mr-bottom-20 text-center">
-                        <p class="has-small-font-size" style="margin-bottom: 0">Follow us: </p>
-                        <?php foreach ($socials as $social): ?>
-                            <a target="_blank" href="<?php echo $social['link']; ?>"><img alt="<?= $social['icon']['alt']; ?>"
-                                    src="<?= $social['icon']['url']; ?>" /></a>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <p><?= $heroCalculator ?></p>
-        </div>
-    </section>
-
-    <?php if ($listBest): ?>
-        <section class="best">
-            <div class="best__container container">
-                <?php
-                    $bestTitle = get_field('best_title', $postid);
-                ?>
-                <h2 class="best__title"><?= $bestTitle ?: 'Best Exercise'?></h2>
-                <div class="exercise__grid exercise__grid--3 grid">
                     <?php
-                    $listBest = explode(',', $listBest);
-                    foreach ($listBest as $id):
-                        $exercise = $wpdb->get_results(
-                            "SELECT * From {$wpdb->prefix}exercise WHERE id = $id"
-                        );
-
-                        $equipment_names = $wpdb->get_results($wpdb->prepare($queryE, $id));
-
-                        $muscle_type = $wpdb->get_results($wpdb->prepare($queryM, $id));
-
-                        $post = url_to_postid(home_url('/exercise/' . $exercise[0]->slug));
-
-                        if ($post) {
-                            $featureimg = wp_get_attachment_url(get_post_thumbnail_id($post));
-                        }
+                    $socials = get_field('follow_social', 'option');
+                    if ($socials):
                         ?>
-                        <div class="exercise__grid-item">
-                            <div class="exercise__grid-item-top exercise__grid-item-top--3">
-                                <div class="exercise__grid-item-top-content">
-                                    <div class="exercise__grid-item-top-content-img">
-                                        <a target="_blank" href="<?= home_url('/exercise/' . $exercise[0]->slug) ?>">
-                                            <img src="<?= $featureimg ?>" alt="">
-                                        </a>
-                                    </div>
-                                    <?php if (!empty($equipment_names)): ?>
-                                        <div class="exercise__grid-item-top-content-equipment flex">
-                                            <?php foreach ($equipment_names as $eit): ?>
-                                                <p class="pri-color-3 text-special clamp-1"><?= $eit->name ?></p>
-                                            <?php endforeach; ?>
+                        <div class="social hero__social flex mr-bottom-20 text-center">
+                            <p class="has-small-font-size pri-color-3" style="margin-bottom: 0">Follow us: </p>
+                            <?php foreach ($socials as $social): ?>
+                                <a target="_blank" href="<?php echo $social['link']; ?>"><img
+                                        alt="<?= $social['icon']['alt']; ?>" src="<?= $social['icon']['url']; ?>" /></a>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <p class="pri-color-3 text-center"><?= $heroCalculator ?></p>
+            </div>
+        </section>
+
+        <?php if ($listBest): ?>
+            <section class="best">
+                <div class="best__container container">
+                    <?php
+                    $bestTitle = get_field('best_title', $postid);
+                    ?>
+                    <h2 class="best__title pri-color-3"><?= $bestTitle ?: 'Best Exercise' ?></h2>
+                    <div class="exercise__grid exercise__grid--3 grid">
+                        <?php
+                        $listBest = explode(',', $listBest);
+                        foreach ($listBest as $id):
+                            $exercise = $wpdb->get_results(
+                                $wpdb->prepare("SELECT * FROM {$wpdb->prefix}exercise WHERE id = %d", $id)
+                            );
+
+                            $iframe = '';
+                            if (!empty($exercise[0])) {
+                                $iframe = get_video($exercise[0]);
+                            }
+                            $equipment_names = $wpdb->get_results($wpdb->prepare($queryE, $id));
+
+                            $muscle_type = $wpdb->get_results($wpdb->prepare($queryM, $id));
+
+                            $post = url_to_postid(home_url('/exercise/' . $exercise[0]->slug));
+
+                            if ($post) {
+                                $featureimg = wp_get_attachment_url(get_post_thumbnail_id($post));
+                            }
+                            ?>
+                            <div class="exercise__grid-item">
+                                <div class="exercise__grid-item-top exercise__grid-item-top--3">
+                                    <div class="exercise__grid-item-top-content">
+                                        <div class="exercise__grid-item-top-content-video">
+                                            <?php if ($iframe): ?>
+                                                <?= $iframe ?>
+                                            <?php endif; ?>
                                         </div>
-                                    <?php endif; ?>
-                                    <h3 class="exercise__grid-item-top-content-title"><a class="pri-color-3" target="_blank"
+                                    </div>
+                                </div>
+                                <div class="exercise__grid-item-bottom">
+                                    <h3 class="exercise__grid-item-top-content-title"><a class="pri-color-2" target="_blank"
                                             href="<?= home_url('/exercise/' . $exercise[0]->slug) ?>"><?= $exercise[0]->name ?></a>
                                     </h3>
                                     <?php if (!empty($muscle_type)): ?>
@@ -188,31 +189,29 @@ $featureimg = get_field('fimg_default', 'option');
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <div class="exercise__grid-item-bottom">
-                                <p><?php echo preg_replace('/\.(?!\s)/', '. ', wp_trim_words($exercise[0]->description, 100, '')) . '... '; ?></p>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-            </div>
-        </section>
-    <?php endif; ?>
+            </section>
+        <?php endif; ?>
+    </div>
 
     <section class="all best-ajax-section">
-        <div class="all__container container">
-            <h2 class="all__title">All Triceps Exercises</h2>
+        <div class="all__container container exc-container">
+            <h2 class="all__title pri-color-2">All Triceps Exercises</h2>
             <div class="all__flex flex">
-                <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center filter-active" data-filter="1">
-                    <p class="has-medium-font-size">Trending</p>
+                <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center filter-active"
+                    data-filter="1">
+                    <p class="has-medium-font-size pri-color-2">Trending</p>
                 </div>
                 <div class="all__flex-item all__flex-item--character text-center" data-filter="2">
-                    <p class="has-medium-font-size">A-Z</p>
+                    <p class="has-medium-font-size pri-color-2">A-Z</p>
                 </div>
                 <div class="all__flex-item all__flex-item--analysis text-center" data-filter="3">
-                    <p class="has-medium-font-size">Analysis</p>
+                    <p class="has-medium-font-size pri-color-2">Analysis</p>
                 </div>
                 <div class="all__flex-item all__flex-item--discusstion text-center" data-filter="4">
-                    <p class="has-medium-font-size">Discussion</p>
+                    <p class="has-medium-font-size pri-color-2">Discussion</p>
                 </div>
             </div>
             <?php
@@ -294,16 +293,37 @@ $featureimg = get_field('fimg_default', 'option');
             $query_posts = new WP_Query($args);
             if ($query_posts->have_posts()):
                 ?>
-                <div class="exercise__grid exercise__grid--2 grid mr-bottom-20">
+                <div class="exercise__grid exercise__grid--1 grid mr-bottom-20">
                     <?php
                     while ($query_posts->have_posts()):
                         $query_posts->the_post();
+
                         $slug = get_post_field('post_name');
 
                         $exercise_info = isset($slug_to_exercise[$slug]) ? $slug_to_exercise[$slug] : null;
 
                         $exercise_id = $exercise_info ? $exercise_info['id'] : '';
+
+                        $iframe = '';
+
+                        $contents = '';
+                        if ($exercise_id) {
+                            $exercise = $wpdb->get_results(
+                                $wpdb->prepare("SELECT * FROM {$wpdb->prefix}exercise WHERE id = %d", $exercise_id)
+                            );
+
+                            $contents = $wpdb->get_results($wpdb->prepare(
+                                "Select content From {$wpdb->prefix}exercise_content WHERE exercise_id = %d AND content_type = 1",$exercise_id
+                            ), ARRAY_A);
+
+                            $iframe = '';
+                            if (!empty($exercise[0])) {
+                                $iframe = get_video($exercise[0], true);
+                            }
+                        }
+
                         $name = $exercise_info ? $exercise_info['name'] : '';
+
                         $description = $exercise_info ? $exercise_info['description'] : '';
 
                         $equipments = $wpdb->get_results($wpdb->prepare($queryE, $exercise_id));
@@ -313,42 +333,52 @@ $featureimg = get_field('fimg_default', 'option');
                         ?>
                         <div class="exercise__grid-item">
                             <div class="exercise__grid-item-top exercise__grid-item-top--2">
+                                <h3
+                                    class="exercise__grid-item-top-content-title exercise__grid-item-top-content-title--nobd pri-color-2">
+                                    <?= $name ?>
+                                </h3>
                                 <div class="exercise__grid-item-top-content">
-                                    <div class="exercise__grid-item-top-content-img">
-                                        <a target="_blank" href="<?= the_permalink(); ?>">
-                                            <img src="<?= $featureimg ?>" alt="">
-                                        </a>
+                                    <div class="exercise__grid-item-top-content-video">
+                                        <?php if ($iframe): ?>
+                                            <?= $iframe ?>
+                                        <?php endif; ?>
                                     </div>
-                                    <?php if (!empty($equipments)): ?>
-                                        <div class="exercise__grid-item-top-content-equipment flex">
-                                            <?php foreach ($equipments as $eit): ?>
-                                                <p class="pri-color-3 text-special clamp-1"><?= $eit->name ?></p>
-                                            <?php endforeach; ?>
+                                    <div class="exercise__grid-item-top-content-2-column flex">
+                                        <div class="exercise__grid-item-top-content-em">
+                                            <?php if (!empty($equipments)): ?>
+                                                <div class="exercise__grid-item-top-content-equipment flex">
+                                                    <p class="pri-color-2">Equipment: </p>
+                                                    <?php foreach ($equipments as $eit): ?>
+                                                        <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?>
+                                                        </p>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if (!empty($mts)): ?>
+                                                <div class="exercise__grid-item-top-content-muscle flex">
+                                                    <p class="pri-color-2">Muscle: </p>
+                                                    <?php foreach ($mts as $tit): ?>
+                                                        <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?>
+                                                        </p>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
-                                    <?php endif; ?>
-                                    <h3 class="exercise__grid-item-top-content-title">
-                                        <a target="_blank" class="pri-color-3" href="<?= the_permalink() ?>"><?= $name ?></a>
-                                    </h3>
-                                    <?php if (!empty($mts)): ?>
-                                        <div class="exercise__grid-item-top-content-muscle flex">
-                                            <?php foreach ($mts as $tit): ?>
-                                                <p><?= $tit->name ?></p>
-                                            <?php endforeach; ?>
+                                        <div class="exercise__grid-item-top-content-action">
+                                            <a target="_blank" class="pri-color-3" href="<?= the_permalink() ?>">View
+                                                Exercise</a>
                                         </div>
-                                    <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="exercise__grid-item-bottom">
-                                <p><?php echo preg_replace('/\.(?!\s)/', '. ', wp_trim_words($description, 100, '')) . '... '; ?></p>
+                            <div class="exercise__grid-item-bottom exercise__grid-item-bottom--no-bg">
+                                <?php if (!empty($contents)): ?>
+                                    <?= $contents[0]['content'] ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <?php
                     endwhile;
-                    ?>
-                </div>
-                <div class="pagination-best text-center">
-                    <?php
-                    ld_load_ajax($postid, $query_posts);
                     ?>
                 </div>
                 <?php
@@ -410,7 +440,7 @@ $featureimg = get_field('fimg_default', 'option');
                 if (get_field('enable_source', 'option') == true) {
                     ?>
                     <div class="sg-resources mr-bottom-20 pd-main">
-                        <h3>Resources</h3>
+                        <h3 class="pri-color-2">Resources</h3>
                         <div class="intro">
                             <?= get_field('source_intro', 'option'); ?>
                         </div>
@@ -457,7 +487,7 @@ $featureimg = get_field('fimg_default', 'option');
         <aside class="single-sidebar ">
             <div class="container">
                 <div class="author-about exc-container">
-                    <h3>About the Author</h3>
+                    <h3 class="pri-color-2">About the Author</h3>
                     <div class="author-write">
                         <div class="author-link">
                             <?php
@@ -492,8 +522,10 @@ $featureimg = get_field('fimg_default', 'option');
         </aside>
     </div>
     <?php if (comments_open()): ?>
-        <div class="container">
-            <?php comments_template(); ?>
+        <div class="comments-section">
+            <div class="container">
+                <?php comments_template(); ?>
+            </div>
         </div>
     <?php endif; ?>
 </main>
