@@ -580,7 +580,7 @@ function enqueue_load_more_comments_script()
 		'disallowed_keys' => $disallowed_comment_keys_array,
 	));
 
-	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.5', true);
+	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.6', true);
 	$php_array = array(
 		'admin_ajax' => admin_url('admin-ajax.php'),
 		'load_post_nonce' => wp_create_nonce('ajax_load_post_nonce'),

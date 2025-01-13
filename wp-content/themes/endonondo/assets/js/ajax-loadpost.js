@@ -18,7 +18,7 @@
                     behavior: 'smooth', 
                     block: 'start'
                 });
-                $(this).addClass('filter-active-3');
+                $(this).addClass('filter-active');
                 return false;
             }
 
