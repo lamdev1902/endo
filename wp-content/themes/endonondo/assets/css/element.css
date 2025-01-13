@@ -1879,16 +1879,14 @@ ul.commentlist .cancle-btn {
     margin-right: -10px;
 }
 
-.exercise__grid-3 {
-    
+.exercise__grid-item {
+    flex: 1;
 }
 
 .exercise__grid-item-top-content {
     width: 100%;
     height: 100%;
 }
-
-
 
 .exercise__grid-item-top-content-video {
     margin-bottom: 0;
