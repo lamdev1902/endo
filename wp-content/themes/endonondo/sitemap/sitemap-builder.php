@@ -164,7 +164,7 @@ class GoogleSitemapGeneratorStandardBuilder {
 	                FROM wp_posts
 	                LEFT JOIN wp_icl_translations ON wp_posts.ID = wp_icl_translations.element_id
 	                WHERE wp_icl_translations.language_code = '{$language_code}'
-	                AND post_type IN ('post','page','single_reviews','round_up','informational_posts','coupon','exercise','tool_post')
+	                AND post_type IN ('post','page','single_reviews','round_up','informational_posts','coupon','exercise','tool_post', 'best_exercise')
 	                AND post_status = 'publish'";
 	 
 	    $postCount = $wpdb->get_var( $query );
@@ -183,7 +183,7 @@ class GoogleSitemapGeneratorStandardBuilder {
 				}
 			} else {
 				$args = array(
-					'post_type' => array('post','page','single_reviews','round_up','informational_posts','coupon','exercise','tool_post'),
+					'post_type' => array('post','page','single_reviews','round_up','informational_posts','coupon','exercise','tool_post', 'best_exercise'),
 					'suppress_filters' => false,
 					'posts_per_page' => $numpagi,
 					'offset' => $offset
@@ -495,7 +495,7 @@ class GoogleSitemapGeneratorStandardBuilder {
 		                FROM wp_posts
 		                LEFT JOIN wp_icl_translations ON wp_posts.ID = wp_icl_translations.element_id
 		                WHERE wp_icl_translations.language_code = '{$language_code}'
-		                AND post_type IN ('post','page','single_reviews','round_up','informational_posts','coupon','exercise')
+		                AND post_type IN ('post','page','single_reviews','round_up','informational_posts','coupon','exercise', 'best_exercise')
 		                AND post_status = 'publish'";
 		 
 		    $postCount = $wpdb->get_var( $query );

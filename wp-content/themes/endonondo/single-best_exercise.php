@@ -121,6 +121,27 @@ $featureimg = get_field('fimg_default', 'option');
                         </div>
                     </div>
                     <?php
+                    if ($enable_fcgroup) {
+                        if ($enable_fcgroup == '1') { ?>
+                            <div class="fact-check ">
+                                <div class="fact-label at">
+                                    <p class="has-large-font-size"><?php echo __("Author's opinion", 'hc_theme'); ?></p>
+                                    <span class="fact-close"></span>
+                                    <?php the_field('fccontent', 'option'); ?>
+                                </div>
+                            </div>
+                        <?php } elseif ($enable_fcgroup == '2') { ?>
+                            <div class="fact-check">
+                                <div class="fact-label eb">
+                                    <p class="has-large-font-size"><?php echo __("Evidence Based", 'hc_theme'); ?></p>
+                                    <span class="fact-close"></span>
+                                    <?php the_field('evidence_based', 'option'); ?>
+                                </div>
+                            </div>
+                        <?php }
+                    }
+                    ?>
+                    <?php
                     $socials = get_field('follow_social', 'option');
                     if ($socials):
                         ?>
