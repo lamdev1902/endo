@@ -420,7 +420,7 @@ $featureimg = get_field('fimg_default', 'option');
 
                                                             if ($link):
                                                                 ?>
-                                                                <p class="sec-color-3 exercise__grid-item-top-content--text"><a target="_blank" href="<?= $link ?>"><?= $tit->name ?></a></p>
+                                                                <p class="sec-color-3 exercise__grid-item-top-content--text"><a class="sec-color-3" target="_blank" href="<?= $link ?>"><?= $tit->name ?></a></p>
                                                             <?php else: ?>
                                                                 <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>
                                                             <?php endif; ?>
