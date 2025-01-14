@@ -37,6 +37,7 @@ class Exercise_Equipment extends Manage_Exercise
             'id' => 'ID',
             'name' => 'Name',
             'image' => 'Image',
+            'slug' => 'Slug',
             'description' => 'Description',
             'active' => 'Active',
             'created_at' => 'Create At',
@@ -89,6 +90,7 @@ class Exercise_Equipment extends Manage_Exercise
             case 'id':
             case 'name':
             case 'image':
+            case 'slug':
             case 'description':
             case 'active':
             case 'created_at':
@@ -177,11 +179,12 @@ class Exercise_Equipment extends Manage_Exercise
                 $header_row = array(
                     0 => 'ID',
                     1 => 'Name',
-                    4 => 'Image',
-                    5 => 'Description',
-                    6 => 'Active',
-                    7 => 'Created At',
-                    8 => 'Update At',
+                    2 => 'Image',
+                    3 => 'Slug',
+                    4 => 'Description',
+                    5 => 'Active',
+                    6 => 'Created At',
+                    7 => 'Update At',
                 );
 
                 fputcsv($fp, $header_row);
@@ -195,6 +198,7 @@ class Exercise_Equipment extends Manage_Exercise
                             $Record['id'],
                             $Record['name'],
                             $Record['image'],
+                            $Record['slug'],
                             $Record['description'],
                             $Record['active'],
                             $Record['created_at'],
@@ -229,11 +233,12 @@ class Exercise_Equipment extends Manage_Exercise
                     $header_row = array(
                         0 => 'ID',
                         1 => 'Name',
-                        4 => 'Image',
-                        5 => 'Description',
-                        6 => 'Active',
-                        7 => 'Created At',
-                        8 => 'Update At',
+                        2 => 'Image',
+                        3 => 'Slug',
+                        4 => 'Description',
+                        5 => 'Active',
+                        6 => 'Created At',
+                        7 => 'Update At',
                     );
 
                     //write the header
@@ -248,6 +253,7 @@ class Exercise_Equipment extends Manage_Exercise
                                 $Record['id'],
                                 $Record['name'],
                                 $Record['image'],
+                                $Record['slug'],
                                 $Record['description'],
                                 $Record['active'],
                                 $Record['created_at'],
@@ -399,6 +405,7 @@ class Exercise_Equipment extends Manage_Exercise
         $img = !empty($data->image) ? $data->image : '';
         $description = !empty($data->description) ? $data->description : '';
         $status = !empty($data->active) ? $data->active : 1;
+        $slug = !empty($data->slug) ? $data->slug : '';
         ?>
         <div id="overlay">
             <div class="cv-spinner">
@@ -440,6 +447,14 @@ class Exercise_Equipment extends Manage_Exercise
                             <span class="remove-exercise-img">x</span>
                             <img src="<?= $img ?>" class="exercise-img" />
                             <input type="hidden" name="equipment[image]" class="exercise-image" value="<?= $img ?>" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="field-label">
+                            <label for="slug">Slug</label>
+                        </div>
+                        <div class="field-item">
+                            <input type="text" name="equipment[slug]" id="slug" value="<?= $slug ?>">
                         </div>
                     </div>
                     <div class="field">

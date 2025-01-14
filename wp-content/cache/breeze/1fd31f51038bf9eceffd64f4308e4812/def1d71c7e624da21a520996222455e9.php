@@ -1,4 +1,4 @@
-a:2:{s:4:"body";s:90623:"
+a:2:{s:4:"body";s:91164:"
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -68,12 +68,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='style-slick-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-slick-theme-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick-theme.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-swiper-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.css?ver=6.3.1' type='text/css' media='all' />
-<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.4' type='text/css' media='all' />
 <link rel='stylesheet' id='style-custom-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/custom.css?ver=1.4.7' type='text/css' media='all' />
 <link rel='stylesheet' id='style-base-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/base.css?ver=1.3.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tool-css-css' href='https://www.endomondo.com/wp-content/themes/endonondo/shortcode/calorie/assets/css/tool.css?ver=1.0.5' type='text/css' media='all' />
-<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-awesome-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/fontawesome.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-solid-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/solid.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-regular-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/regular.css?ver=6.3.1' type='text/css' media='all' />
@@ -169,8 +169,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </script></head>
 
 <body class="home page-template page-template-template page-template-home page-template-templatehome-php page page-id-7">
-
-	<div id="wapper" class="home-main color-white">
+		<div id="wapper" class="home-main color-white">
 		<header id="header" class="position-relative">
 			<div class="container">
 				<div class="list-flex flex-middle flex-center">
@@ -285,7 +284,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 																					<a target="_blank" href="https://www.pinterest.com/endomondo/"><img
 													src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 													alt="pinterest" /></a>
-																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img
+																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img
 													src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 													alt="newsbreak" /></a>
 																		</div>
@@ -305,12 +304,12 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 				<div class="top-big list-flex">
 											<div class="info">
 							<p class="has-x-large-font-size text-special clamp-2 mr-bottom-20 pri-color-3"><a class="pri-color-3"
-									href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a></p>
-							<p class="sec-color-2">This 3-day full body workout is an efficient way to build strength and hypertrophy. It hits the major muscle groups with high-volume training, getting results without spending excessive&hellip;</p>
+									href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">I Did Bicep Push-Ups Every Day For 30 Days — You’ll Be Surprised By The Results</a></p>
+							<p class="sec-color-2">Calisthenics is my go-to training method. It requires little to no equipment, has a short set-up time, and improves body composition. It&#8217;s well-suited to my travel lifestyle as&hellip;</p>
 						</div>
 						<div class="featured image-fit hover-scale">
-														<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
-																	<img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="3 day full body workout" decoding="async" fetchpriority="high" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" />															</a>
+														<a href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">
+																	<img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="bicep push-up benefits after a month" decoding="async" fetchpriority="high" srcset="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" />															</a>
 						</div>
 										</div>
 				<div class="news-right">
@@ -318,37 +317,37 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 					<div class="top-list">
 													<div class="top-it mr-bottom-20 position-relative">
 								<p class="has-medium-font-size mr-bottom-16 text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a></p>
-								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/steve-theunissen">By
-										Steve Theunissen, PT</a></p>
-								<a href="https://www.endomondo.com/exercise/front-delt-exercises" class="news-link author position-absolute">
+										class="pri-color-3" href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a></p>
+								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/jessica-forster">By
+										Jessica Forster</a></p>
+								<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout" class="news-link author position-absolute">
 									<img src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right.svg" alt="">
 								</a>
 							</div>
 														<div class="top-it mr-bottom-20 position-relative">
 								<p class="has-medium-font-size mr-bottom-16 text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a></p>
-								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/erin-lohrenz">By
-										Erin Lohrenz, MPH</a></p>
-								<a href="https://www.endomondo.com/workouts/upper-lower-split" class="news-link author position-absolute">
+										class="pri-color-3" href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a></p>
+								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/chris-marshall">By
+										Chris Marshall, MSc, PT</a></p>
+								<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results" class="news-link author position-absolute">
 									<img src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right.svg" alt="">
 								</a>
 							</div>
 														<div class="top-it mr-bottom-20 position-relative">
 								<p class="has-medium-font-size mr-bottom-16 text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a></p>
+										class="pri-color-3" href="https://www.endomondo.com/exercise/bodyweight-leg-exercises">Get Stronger Legs Anywhere With These 7 Bodyweight Exercises</a></p>
+								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/emily-post">By
+										Emily Post, PhD, CPT, CSCS</a></p>
+								<a href="https://www.endomondo.com/exercise/bodyweight-leg-exercises" class="news-link author position-absolute">
+									<img src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right.svg" alt="">
+								</a>
+							</div>
+														<div class="top-it mr-bottom-20 position-relative">
+								<p class="has-medium-font-size mr-bottom-16 text-special clamp-2 ellipsis pri-color-3"><a
+										class="pri-color-3" href="https://www.endomondo.com/exercise/lower-back-calisthenics">6 Best Calisthenics Exercises For A Stronger, Healthier Lower Back</a></p>
 								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/cristian-ortega">By
 										Cristian Ortega, PT</a></p>
-								<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split" class="news-link author position-absolute">
-									<img src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right.svg" alt="">
-								</a>
-							</div>
-														<div class="top-it mr-bottom-20 position-relative">
-								<p class="has-medium-font-size mr-bottom-16 text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/workouts/push-pull-legs-routine">Push Pull Legs Routine: The Perfect Workout Split For Balanced Gains</a></p>
-								<p class="author"><a class="sec-color-3" href="https://www.endomondo.com/author/jessica-forster">By
-										Jessica Forster abcshsd</a></p>
-								<a href="https://www.endomondo.com/workouts/push-pull-legs-routine" class="news-link author position-absolute">
+								<a href="https://www.endomondo.com/exercise/lower-back-calisthenics" class="news-link author position-absolute">
 									<img src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right.svg" alt="">
 								</a>
 							</div>
@@ -381,7 +380,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 								src="https://www.endomondo.com/wp-content/uploads/2024/01/instagram-2-1.svg" /></a>
 											<a target="_blank" href="https://www.pinterest.com/endomondo/"><img alt="pinterest"
 								src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg" /></a>
-											<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img alt="newsbreak"
+											<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img alt="newsbreak"
 								src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg" /></a>
 								</div>
 			<div class="feature-collections bg-white color-black">
@@ -391,7 +390,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													<div class="it swiper-slide">
 								<div class="feature-box">
 									<div class="image image-fit hover-scale">
-										<a href="https://www.endomondo.com/exercise/burpees"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="burpees" decoding="async" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
+										<a href="https://www.endomondo.com/exercise/supine-kettlebell-arm-bar"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/supine-kettlebell-arm-bar-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="supine kettlebell arm bar" decoding="async" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/supine-kettlebell-arm-bar-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/supine-kettlebell-arm-bar-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/supine-kettlebell-arm-bar-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/supine-kettlebell-arm-bar-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/supine-kettlebell-arm-bar-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
 									</div>
 									<div class="info">
 																															<div class="tag">
@@ -399,17 +398,17 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 															href="https://www.endomondo.com/exercise">Exercise</a></span>
 																							</div>
 																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
-												href="https://www.endomondo.com/exercise/burpees">Your Go-To Burpee Guide: Video Guide, Tips &amp; Variations</a></p>
+												href="https://www.endomondo.com/exercise/supine-kettlebell-arm-bar">Supine Kettlebell Arm Bar Video Guide &amp; Expert Tips</a></p>
 										<p class="has-small-font-size"><a class="sec-color-3"
-												href="https://www.endomondo.com/author/emily-post">By
-												Emily Post, PhD, CPT, CSCS</a></p>
+												href="https://www.endomondo.com/author/kaelyn-buzzo">By
+												Kaelyn Buzzo, PT</a></p>
 									</div>
 								</div>
 							</div>
 														<div class="it swiper-slide">
 								<div class="feature-box">
 									<div class="image image-fit hover-scale">
-										<a href="https://www.endomondo.com/training/calisthenics-vs-pilates"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="calisthenics vs pilates" decoding="async" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
+										<a href="https://www.endomondo.com/training/handstand-push-up-benefits-after-a-month"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/handstand-push-up-benefits-after-a-month-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="handstand push-up benefits after a month" decoding="async" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/handstand-push-up-benefits-after-a-month-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/handstand-push-up-benefits-after-a-month-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/handstand-push-up-benefits-after-a-month-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/handstand-push-up-benefits-after-a-month-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/handstand-push-up-benefits-after-a-month-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
 									</div>
 									<div class="info">
 																															<div class="tag">
@@ -417,25 +416,25 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 															href="https://www.endomondo.com/training">Training</a></span>
 																							</div>
 																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
-												href="https://www.endomondo.com/training/calisthenics-vs-pilates">Calisthenics Vs. Pilates: Which One Is Right For You?</a></p>
+												href="https://www.endomondo.com/training/handstand-push-up-benefits-after-a-month">I Did Handstand Push-Ups Every Day For A Month — What I Observed</a></p>
 										<p class="has-small-font-size"><a class="sec-color-3"
-												href="https://www.endomondo.com/author/isabel-mayfield">By
-												Isabel Mayfield, BCRPA</a></p>
+												href="https://www.endomondo.com/author/chris-marshall">By
+												Chris Marshall, MSc, PT</a></p>
 									</div>
 								</div>
 							</div>
 														<div class="it swiper-slide">
 								<div class="feature-box">
 									<div class="image image-fit hover-scale">
-										<a href="https://www.endomondo.com/exercise/reverse-snow-angels"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="reverse snow angels" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
+										<a href="https://www.endomondo.com/workouts/calisthenics-workout-plan"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/11/feature-2024-11-21.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="calisthenics workout plan" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2024/11/feature-2024-11-21.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/11/feature-2024-11-21-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/11/feature-2024-11-21-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/11/feature-2024-11-21-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2024/11/feature-2024-11-21-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
 									</div>
 									<div class="info">
 																															<div class="tag">
 																									<span><a
-															href="https://www.endomondo.com/exercise">Exercise</a></span>
+															href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																							</div>
 																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
-												href="https://www.endomondo.com/exercise/reverse-snow-angels">How To Perform Reverse Snow Angels With Proper Techniques</a></p>
+												href="https://www.endomondo.com/workouts/calisthenics-workout-plan">Transform Your Body With This Calisthenics Workout Plan</a></p>
 										<p class="has-small-font-size"><a class="sec-color-3"
 												href="https://www.endomondo.com/author/danielle-parent">By
 												Danielle Parent, DPT</a></p>
@@ -445,7 +444,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 														<div class="it swiper-slide">
 								<div class="feature-box">
 									<div class="image image-fit hover-scale">
-										<a href="https://www.endomondo.com/workouts/phul-workout"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="phul workout" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
+										<a href="https://www.endomondo.com/workouts/arnold-split"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="arnold split" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
 									</div>
 									<div class="info">
 																															<div class="tag">
@@ -453,7 +452,25 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 															href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																							</div>
 																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
-												href="https://www.endomondo.com/workouts/phul-workout">Power Hypertrophy Upper Lower (PHUL) Workout Routine</a></p>
+												href="https://www.endomondo.com/workouts/arnold-split">Arnold Split 2025: Full 6-Day Workout Plan For Muscle Mass</a></p>
+										<p class="has-small-font-size"><a class="sec-color-3"
+												href="https://www.endomondo.com/author/garett-reid">By
+												Garett Reid, MS, CSCS, CISSN</a></p>
+									</div>
+								</div>
+							</div>
+														<div class="it swiper-slide">
+								<div class="feature-box">
+									<div class="image image-fit hover-scale">
+										<a href="https://www.endomondo.com/workouts/at-home-workouts"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/12/at-home-workouts-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="at home workouts" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2024/12/at-home-workouts-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/12/at-home-workouts-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/12/at-home-workouts-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/12/at-home-workouts-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2024/12/at-home-workouts-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
+									</div>
+									<div class="info">
+																															<div class="tag">
+																									<span><a
+															href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																							</div>
+																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
+												href="https://www.endomondo.com/workouts/at-home-workouts">30 Exercises For The Best At-Home Workout Routine For All Levels</a></p>
 										<p class="has-small-font-size"><a class="sec-color-3"
 												href="https://www.endomondo.com/author/erin-lohrenz">By
 												Erin Lohrenz, MPH</a></p>
@@ -463,36 +480,18 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 														<div class="it swiper-slide">
 								<div class="feature-box">
 									<div class="image image-fit hover-scale">
-										<a href="https://www.endomondo.com/exercise/wall-tricep-press"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="wall tricep press" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
+										<a href="https://www.endomondo.com/workouts/300-workout"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/300-Workout-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="300 Workout" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/300-Workout-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/300-Workout-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/300-Workout-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/300-Workout-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/300-Workout-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
 									</div>
 									<div class="info">
 																															<div class="tag">
 																									<span><a
-															href="https://www.endomondo.com/exercise">Exercise</a></span>
+															href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																							</div>
 																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
-												href="https://www.endomondo.com/exercise/wall-tricep-press">Wall Tricep Press Video Guide, Expert Tips &amp; Variations</a></p>
+												href="https://www.endomondo.com/workouts/300-workout">The 300 Workout: Test Your Limits With This Grueling Routine</a></p>
 										<p class="has-small-font-size"><a class="sec-color-3"
-												href="https://www.endomondo.com/author/jessica-forster">By
-												Jessica Forster abcshsd</a></p>
-									</div>
-								</div>
-							</div>
-														<div class="it swiper-slide">
-								<div class="feature-box">
-									<div class="image image-fit hover-scale">
-										<a href="https://www.endomondo.com/exercise/clamshells"><img width="1250" height="700" src="https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="clamshells" decoding="async" loading="lazy" srcset="https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo.jpg 1250w, https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo-300x168.jpg 300w, https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo-1024x573.jpg 1024w, https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo-768x430.jpg 768w, https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo-150x84.jpg 150w" sizes="(max-width: 1250px) 100vw, 1250px" /></a>
-									</div>
-									<div class="info">
-																															<div class="tag">
-																									<span><a
-															href="https://www.endomondo.com/exercise">Exercise</a></span>
-																							</div>
-																				<p class="has-medium-font-size text-special clamp-2 ellipsis"><a class="pri-color-2"
-												href="https://www.endomondo.com/exercise/clamshells">Clamshells Guide: How-To Video, Tips, Benefits &amp; Alternatives</a></p>
-										<p class="has-small-font-size"><a class="sec-color-3"
-												href="https://www.endomondo.com/author/isabel-mayfield">By
-												Isabel Mayfield, BCRPA</a></p>
+												href="https://www.endomondo.com/author/liv">By
+												Liv Banks-Strong, PT</a></p>
 									</div>
 								</div>
 							</div>
@@ -508,44 +507,6 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 			<h2 class="pri-color-3">Latest news</h2>
 			<div class="lastest-list">
 									<div class="lastest-it">
-						<div class="lastest-box list-flex">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/news/mr-olympia-winners">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/10/feature-2025-01-02-1.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/news">News</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/news/mr-olympia-winners">Mr. Olympia Hall of Fame: A Complete List Of The Winners (1965 – Now)</a></p>
-								<p class="has-small-font-size author"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="lastest-it">
-						<div class="lastest-box list-flex">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/news/chris-bumstead">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/11/feature-2025-01-02.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/news">News</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/news/chris-bumstead">Who Is Chris Bumstead? A Look At His Legacy</a></p>
-								<p class="has-small-font-size author"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="lastest-it">
 						<div class="lastest-box list-flex">
 							<div class="featured image-fit hover-scale">
 																<a href="https://www.endomondo.com/news/arnold-classic-2025-preview">
@@ -567,8 +528,8 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 										<div class="lastest-it">
 						<div class="lastest-box list-flex">
 							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/workouts/2025-new-year-fitness-challenge">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-31.jpg" alt="">
+																<a href="https://www.endomondo.com/workouts/hypertrophy-workout">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/hypertrophy-workout-endomondo.jpg" alt="">
 																	</a>
 							</div>
 							<div class="info">
@@ -577,17 +538,17 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/workouts/2025-new-year-fitness-challenge">2025 New Year Fitness Challenge: 31 Days To Transform Your Body</a></p>
+										class="pri-color-3" href="https://www.endomondo.com/workouts/hypertrophy-workout">The Ultimate Hypertrophy Workout For Maximum Muscle Growth</a></p>
 								<p class="has-small-font-size author"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
+										href="https://www.endomondo.com/author/tara-mitchell">By Tara Mitchell, DPT</a></p>
 							</div>
 						</div>
 					</div>
 										<div class="lastest-it">
 						<div class="lastest-box list-flex">
 							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/training/new-year-fitness-resolution">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/new-year-fitness-resolution-endomondo.jpg" alt="">
+																<a href="https://www.endomondo.com/training/push-up-burpees-benefits-after-a-month">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/push-up-burpees-benefits-after-a-month-endomondo.jpg" alt="">
 																	</a>
 							</div>
 							<div class="info">
@@ -596,9 +557,47 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/training">Training</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special clamp-2 ellipsis pri-color-3"><a
-										class="pri-color-3" href="https://www.endomondo.com/training/new-year-fitness-resolution">10 New Year Fitness Resolution Ideas &amp; How To Stick To Them</a></p>
+										class="pri-color-3" href="https://www.endomondo.com/training/push-up-burpees-benefits-after-a-month">I Did Push-Up Burpees Every Day For A Month — You Won’t Believe What Happened</a></p>
 								<p class="has-small-font-size author"><a class="sec-color-3"
 										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="lastest-it">
+						<div class="lastest-box list-flex">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2 ellipsis pri-color-3"><a
+										class="pri-color-3" href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a></p>
+								<p class="has-small-font-size author"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/tammy-hogan">By Tammy Hogan, PT, BA</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="lastest-it">
+						<div class="lastest-box list-flex">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/front-delt-exercises">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2024/07/feature-2025-01-08.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2 ellipsis pri-color-3"><a
+										class="pri-color-3" href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a></p>
+								<p class="has-small-font-size author"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/steve-theunissen">By Steve Theunissen, PT</a></p>
 							</div>
 						</div>
 					</div>
@@ -614,103 +613,8 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/news/samson-dauda">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/10/feature-2024-12-08.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/news">News</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/news/samson-dauda">Meet Samson Dauda &amp; His Journey To Mr. Olympia 2024</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/news/mr-olympia-winners">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/10/feature-2025-01-02-1.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/news">News</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/news/mr-olympia-winners">Mr. Olympia Hall of Fame: A Complete List Of The Winners (1965 – Now)</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/news/chris-bumstead">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/11/feature-2025-01-02.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/news">News</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/news/chris-bumstead">Who Is Chris Bumstead? A Look At His Legacy</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/news/arnold-classic-2025-preview">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-14.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/news">News</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/news/arnold-classic-2025-preview">What To Expect At The 2025 Arnold Classic Bodybuilding Show</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/exercise/kneeling-band-lat-pulldown">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/kneeling-band-lat-pulldown-endomondo.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/exercise">Exercise</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/exercise/kneeling-band-lat-pulldown">How To Do Kneeling Band Lat Pulldown The Right Way</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/ben-dillon">By Ben Dillon, BHSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/workouts/2025-new-year-fitness-challenge">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-31.jpg" alt="">
+																<a href="https://www.endomondo.com/workouts/upper-lower-split">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/upper-lower-split-endomondo.jpg" alt="">
 																	</a>
 							</div>
 							<div class="info">
@@ -719,83 +623,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/workouts/2025-new-year-fitness-challenge">2025 New Year Fitness Challenge: 31 Days To Transform Your Body</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/training/new-year-fitness-resolution">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/new-year-fitness-resolution-endomondo.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/training">Training</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/training/new-year-fitness-resolution">10 New Year Fitness Resolution Ideas &amp; How To Stick To Them</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/exercise/push-up-burpees">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/push-up-burpees-endomondo.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/exercise">Exercise</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/exercise/push-up-burpees">How To Perform Push-Up Burpees For The Best Results</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/tammy-hogan">By Tammy Hogan, PT, BA</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/exercise/at-home-back-workout">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/09/at-home-back-workout-endomondo.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/exercise">Exercise</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/exercise/at-home-back-workout">10 Best At-Home Back Workouts To Improve Strength &amp; Posture</a></p>
-								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/kaelyn-buzzo">By Kaelyn Buzzo, PT</a></p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/exercise/dumbbell-single-arm-tricep-extension">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/Dumbbell-Single-Arm-Tricep-Extension-endomondo.jpg" alt="">
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/exercise">Exercise</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/exercise/dumbbell-single-arm-tricep-extension">Dumbbell Single Arm Tricep Extension Video Guide &amp; Tips</a></p>
+										href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a></p>
 								<p class="has-small-font-size"><a class="sec-color-3"
 										href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
 							</div>
@@ -804,27 +632,46 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 										<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/exercise/dumbbell-rear-lateral-raise-with-head-support">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/dumbbell-rear-lateral-raise-with-head-support-endomondo.jpg" alt="">
+																<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-dumbell-workout-split-endomondo.jpg" alt="">
 																	</a>
 							</div>
 							<div class="info">
 																									<div class="tag mr-bottom-16">
 																					<span><a
-													href="https://www.endomondo.com/exercise">Exercise</a></span>
+													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/exercise/dumbbell-rear-lateral-raise-with-head-support">Dumbbell Rear Lateral Raise With Head Support Exercise Guide</a></p>
+										href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a></p>
 								<p class="has-small-font-size"><a class="sec-color-3"
-										href="https://www.endomondo.com/author/kaelyn-buzzo">By Kaelyn Buzzo, PT</a></p>
+										href="https://www.endomondo.com/author/cristian-ortega">By Cristian Ortega, PT</a></p>
 							</div>
 						</div>
 					</div>
 										<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale">
-																<a href="https://www.endomondo.com/exercise/kettlebell-plank-drag">
-																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/kettlebell-plank-drag-endomondo.jpg" alt="">
+																<a href="https://www.endomondo.com/workouts/push-pull-legs-routine">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/push-pull-legs-routine-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/workouts/push-pull-legs-routine">Push Pull Legs Routine: The Perfect Workout Split For Balanced Gains</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/burpees">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/burpees-endomondo.jpg" alt="">
 																	</a>
 							</div>
 							<div class="info">
@@ -833,7 +680,159 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/exercise">Exercise</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
-										href="https://www.endomondo.com/exercise/kettlebell-plank-drag">Kettlebell Plank Drag 101: How-To Video &amp; Tips From Expert</a></p>
+										href="https://www.endomondo.com/exercise/burpees">Your Go-To Burpee Guide: Video Guide, Tips &amp; Variations</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/emily-post">By Emily Post, PhD, CPT, CSCS</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/training/calisthenics-vs-pilates">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/calisthenics-vs-pilates-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/training">Training</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/training/calisthenics-vs-pilates">Calisthenics Vs. Pilates: Which One Is Right For You?</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/isabel-mayfield">By Isabel Mayfield, BCRPA</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/reverse-snow-angels">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/reverse-snow-angels-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/exercise/reverse-snow-angels">How To Perform Reverse Snow Angels With Proper Techniques</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/danielle-parent">By Danielle Parent, DPT</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/workouts/phul-workout">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/phul-workout-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/workouts/phul-workout">Power Hypertrophy Upper Lower (PHUL) Workout Routine</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/wall-tricep-press">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2024/12/wall-tricep-press-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/exercise/wall-tricep-press">Wall Tricep Press Video Guide, Expert Tips &amp; Variations</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/clamshells">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/clamshells-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/exercise/clamshells">Clamshells Guide: How-To Video, Tips, Benefits &amp; Alternatives</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/isabel-mayfield">By Isabel Mayfield, BCRPA</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/side-lying-hip-abduction">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/side-lying-hip-abduction-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/exercise/side-lying-hip-abduction">Side-Lying Hip Abduction Video Guide, Tips &amp; Variations</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/exercise/single-leg-wall-sit">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/single-leg-wall-sit-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/exercise/single-leg-wall-sit">How To Do Single-Leg Wall Sit With Expert Tips</a></p>
+								<p class="has-small-font-size"><a class="sec-color-3"
+										href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale">
+																<a href="https://www.endomondo.com/workouts/beginner-workout-plan-for-women">
+																			<img src="https://www.endomondo.com/wp-content/uploads/2025/01/beginner-workout-plan-for-women-endomondo.jpg" alt="">
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special clamp-2"><a class="pri-color-2"
+										href="https://www.endomondo.com/workouts/beginner-workout-plan-for-women">The Perfect Beginner Workout Plan For Women To Get Started</a></p>
 								<p class="has-small-font-size"><a class="sec-color-3"
 										href="https://www.endomondo.com/author/tammy-hogan">By Tammy Hogan, PT, BA</a></p>
 							</div>
@@ -904,7 +903,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									alt="instagram" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 									alt="pinterest" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 									alt="newsbreak" /></a>
 										</div>
 				<div class="ft-form">
@@ -970,7 +969,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
             <p class="has-large-font-size">Help us rate this article</p>
             <input type="hidden" class="rating-feedback" data-empty="fa-regular fa-star" data-filled="fas fa-star" data-fractions="1" />
             <input class="link-post-feedback" value="https://www.endomondo.com/" type="hidden">
-            <input class="ip-address" value="73.43.43.40" type="hidden">
+            <input class="ip-address" value="175.37.61.178" type="hidden">
         </div>
         <div class="form-feedback">
             <p class="sec-color-4">Give us feedback in details</p>
@@ -1008,7 +1007,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </div><script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.js"></script>
 <script type="text/javascript"
 	src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.4"></script>
+<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.5"></script>
 <script src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/rating.js?ver=1.0.0"></script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -1028,16 +1027,16 @@ var wpcf7 = {"api":{"root":"https:\/\/www.endomondo.com\/wp-json\/","namespace":
 <script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/searchable/jquery.multiselect.js' id='searchable-option-list-js-js'></script>
 <script type='text/javascript' id='load-more-comments-js-extra'>
 /* <![CDATA[ */
-var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"358b71f5a0","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
+var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"9427bf148d","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.1' id='load-more-comments-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.2' id='load-more-comments-js'></script>
 <script type='text/javascript' id='ld-ajaxload-js-extra'>
 /* <![CDATA[ */
-var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"9695382f69"};
+var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"094366822c"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.2' id='ld-ajaxload-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.6' id='ld-ajaxload-js'></script>
 <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I&#038;ver=3.0' id='google-recaptcha-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -1053,5 +1052,5 @@ var wpcf7_recaptcha = {"sitekey":"6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I","act
 </script></body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Thu, 09 Jan 2025 02:41:27 GMT -->
-";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:90623;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Thu, 09 Jan 2025 02:41:27 GMT";}}}
+<!-- Cache served by breeze CACHE - Last modified: Tue, 14 Jan 2025 06:35:44 GMT -->
+";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:91164;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Tue, 14 Jan 2025 06:35:44 GMT";}}}

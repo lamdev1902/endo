@@ -29,6 +29,7 @@ class Muscle_type extends Manage_Exercise
             'cb' => '<input type="checkbox"/>',
             'id' => 'ID',
             'name' => 'Name',
+            'slug' => 'Slug',
             'created_at' => 'Create At',
         );
 
@@ -105,8 +106,9 @@ class Muscle_type extends Manage_Exercise
             case 'id':
                 return $item[$column_name];
             case 'name':
+            case 'slug':
                 return '<span class="inline-edit">' . $item[$column_name] . '</span>' .
-                        '<input type="text" class="inline-edit-input" data-ajax="update_muscle_type" value="' . $item[$column_name] . '" style="display:none;" />';
+                        '<input type="text" data-original-value="'. $item[$column_name] .'" class="inline-edit-input" data-ajax="update_muscle_type" value="' . $item[$column_name] . '" style="display:none;" />';
             case 'created_at':
                 return $item[$column_name];
             default:
@@ -304,6 +306,7 @@ class Muscle_type extends Manage_Exercise
         $title = $action == 'edit' ? "Edit" : "Add";
 
         $name = !empty($data->name) ? $data->name : '';
+        $slug = !empty($data->slug) ? $data->slug : '';
         ?>
         <div class="exercice-form-section">
             <h1 class="wp-heading-inline">
@@ -327,6 +330,9 @@ class Muscle_type extends Manage_Exercise
                         </div>
                         <div class="field-item">
                             <input type="text" name="muscle_type[name]" id="name" value="<?= $name ?>">
+                        </div>
+                        <div class="field-item">
+                            <input type="text" name="muscle_type[slug]" id="slug" value="<?= $slug ?>">
                         </div>
                     </div>
                     <input type="hidden" name="id" value="<?= $id ?>" />
@@ -387,6 +393,18 @@ function update_muscle_type() {
     $column = sanitize_text_field($_POST['column']);
     $value = sanitize_text_field($_POST['value']);
 
+    if($column == 'slug') {
+        if($value) {
+            $postid = $wpdb->get_var(
+                $wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $value)
+            );
+    
+            if(!$postid) {
+                wp_send_json_error();
+                wp_die();
+            }
+        }
+    }
     $wpdb->update($table_name, array($column => $value), array('id' => $id));
 
     wp_send_json_success();

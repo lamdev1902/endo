@@ -36,6 +36,7 @@ class Exercise_Installer
                 CREATE TABLE {$wpdb->prefix}exercise_muscle_type (
                     id smallint NOT NULL AUTO_INCREMENT,
                     name varchar(255) NOT NULL,
+                    slug varchar(255),
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                     PRIMARY KEY (id)
@@ -67,6 +68,7 @@ class Exercise_Installer
                     id smallint NOT NULL AUTO_INCREMENT,
                     name varchar(255) NOT NULL,
                     image varchar(255),
+                    slug varchar(255),
                     description text,
                     active tinyint NOT NULL DEFAULT 1,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

@@ -1,4 +1,4 @@
-a:2:{s:4:"body";s:111127:"
+a:2:{s:4:"body";s:114540:"
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -21,7 +21,7 @@ a:2:{s:4:"body";s:111127:"
 	<meta property="og:description" content="Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training." />
 	<meta property="og:url" content="https://www.endomondo.com/workouts/3-day-full-body-workout" />
 	<meta property="og:site_name" content="Endomondo" />
-	<meta property="article:modified_time" content="2025-01-08T08:17:11+00:00" />
+	<meta property="article:modified_time" content="2025-01-10T04:50:31+00:00" />
 	<meta property="og:image" content="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" />
 	<meta property="og:image:width" content="1250" />
 	<meta property="og:image:height" content="700" />
@@ -29,7 +29,7 @@ a:2:{s:4:"body";s:111127:"
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:label1" content="Est. reading time" />
 	<meta name="twitter:data1" content="9 minutes" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout","url":"https://www.endomondo.com/workouts/3-day-full-body-workout","name":"Transform Your Fitness With This 3-Day Full Body Workout","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#primaryimage"},"image":{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg","datePublished":"2025-01-08T08:17:08+00:00","dateModified":"2025-01-08T08:17:11+00:00","description":"Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training.","breadcrumb":{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1623393125914"},{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311906843"},{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311907688"},{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311908184"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/workouts/3-day-full-body-workout"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg","width":1250,"height":700,"caption":"The 3-day full body workout can help increase muscle mass and decrease fat mass. Photo: user15160105/Freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Workout Programs","item":"https://www.endomondo.com/workouts"},{"@type":"ListItem","position":3,"name":"3-Day Full Body Workout"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1623393125914","position":1,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1623393125914","name":"Are 3-day full-body workouts effective?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"3-day full-body workouts are effective because <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6303131/\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">training volume</a> is more important than training frequency. Sufficient volume is achievable by performing 1–3 exercises per muscle group with multiple sets.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311906843","position":2,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311906843","name":"Can you get ripped on a 3-day split?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Achieving a ripped aesthetic involves a combination of training and diet. Building muscle mass with a 3-day is a realistic goal. For the muscle definition to be visible, proper nutrition is needed to manage the overlying body fat.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311907688","position":3,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311907688","name":"Is a 3-day or 4-day split better?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"As training volume is more important than training frequency, results can be obtained with a 3 or 4-day split. A 4-day split is more suitable for hypertrophy goals that necessitate high-volume training.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311908184","position":4,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311908184","name":"Can I train full body 3 days in a row?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Targeted muscle groups need <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6719818/\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">48–72 hours of recovery time</a> between workouts. It is recommended to leave at least one rest day between full-body workouts. Consecutive training days are appropriate for workout splits.","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout","url":"https://www.endomondo.com/workouts/3-day-full-body-workout","name":"Transform Your Fitness With This 3-Day Full Body Workout","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#primaryimage"},"image":{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg","datePublished":"2025-01-08T08:17:08+00:00","dateModified":"2025-01-10T04:50:31+00:00","description":"Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training.","breadcrumb":{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1623393125914"},{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311906843"},{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311907688"},{"@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311908184"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/workouts/3-day-full-body-workout"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg","width":1250,"height":700,"caption":"The 3-day full body workout can help increase muscle mass and decrease fat mass. Photo: user15160105/Freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Workout Programs","item":"https://www.endomondo.com/workouts"},{"@type":"ListItem","position":3,"name":"3-Day Full Body Workout"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1623393125914","position":1,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1623393125914","name":"Are 3-day full-body workouts effective?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"3-day full-body workouts are effective because <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6303131/\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">training volume</a> is more important than training frequency. Sufficient volume is achievable by performing 1–3 exercises per muscle group with multiple sets.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311906843","position":2,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311906843","name":"Can you get ripped on a 3-day split?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Achieving a ripped aesthetic involves a combination of training and diet. Building muscle mass with a 3-day is a realistic goal. For the muscle definition to be visible, proper nutrition is needed to manage the overlying body fat.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311907688","position":3,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311907688","name":"Is a 3-day or 4-day split better?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"As training volume is more important than training frequency, results can be obtained with a 3 or 4-day split. A 4-day split is more suitable for hypertrophy goals that necessitate high-volume training.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311908184","position":4,"url":"https://www.endomondo.com/workouts/3-day-full-body-workout#faq-question-1736311908184","name":"Can I train full body 3 days in a row?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Targeted muscle groups need <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6719818/\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">48–72 hours of recovery time</a> between workouts. It is recommended to leave at least one rest day between full-body workouts. Consecutive training days are appropriate for workout splits.","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -76,12 +76,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='style-slick-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-slick-theme-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick-theme.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-swiper-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.css?ver=6.3.1' type='text/css' media='all' />
-<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.4' type='text/css' media='all' />
 <link rel='stylesheet' id='style-custom-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/custom.css?ver=1.4.7' type='text/css' media='all' />
 <link rel='stylesheet' id='style-base-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/base.css?ver=1.3.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tool-css-css' href='https://www.endomondo.com/wp-content/themes/endonondo/shortcode/calorie/assets/css/tool.css?ver=1.0.5' type='text/css' media='all' />
-<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-awesome-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/fontawesome.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-solid-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/solid.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-regular-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/regular.css?ver=6.3.1' type='text/css' media='all' />
@@ -166,8 +166,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </head>
 
 <body class="informational_posts-template-default single single-informational_posts postid-35422">
-
-	<div id="wapper" class="">
+		<div id="wapper" class="">
 		<header id="header" class="position-relative">
 			<div class="container">
 				<div class="list-flex flex-middle flex-center">
@@ -282,7 +281,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 																					<a target="_blank" href="https://www.pinterest.com/endomondo/"><img
 													src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 													alt="pinterest" /></a>
-																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img
+																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img
 													src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 													alt="newsbreak" /></a>
 																		</div>
@@ -308,55 +307,55 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 		<div class="sg-lastest-list">
 							<div class="sg-lastest-it">
 					<div class="featured image-fit hover-scale">
-						<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
+						<a href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">
 															<div class="image-fit">
-									<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
+									<img src="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" alt="">
 								</div>
 													</a>
 					</div>
 					<div class="info">
 																			<div class="tag">
-																	<span><a href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																	<span><a href="https://www.endomondo.com/training">Training</a></span>
 															</div>
 												<p class="has-medium-font-size mr-bottom-20 text-special clamp-1"><a class="pri-color-2"
-								href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a></p>
-						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/tammy-hogan">By
-								Tammy Hogan, PT, BA</a></p>
+								href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">I Did Bicep Push-Ups Every Day For 30 Days — You’ll Be Surprised By The Results</a></p>
+						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/chris-marshall">By
+								Chris Marshall, MSc, PT</a></p>
 													<div class="">
-								<p class="text-special clamp-2 pri-color-2">Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training.</p>
+								<p class="text-special clamp-2 pri-color-2">These are my top five bicep push-up benefits after a month of performing them. Find out about my experiences and thoughts throughout.</p>
 							</div>
 											</div>
 				</div>
 											<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a></p>
+							href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/steve-theunissen">By Steve Theunissen, PT</a></p>
-					<a href="https://www.endomondo.com/exercise/front-delt-exercises" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster</a></p>
+					<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a></p>
+							href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
-					<a href="https://www.endomondo.com/workouts/upper-lower-split" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
+					<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a></p>
+							href="https://www.endomondo.com/exercise/bodyweight-leg-exercises">Get Stronger Legs Anywhere With These 7 Bodyweight Exercises</a></p>
+					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
+							href="https://www.endomondo.com/author/emily-post">By Emily Post, PhD, CPT, CSCS</a></p>
+					<a href="https://www.endomondo.com/exercise/bodyweight-leg-exercises" class="news-link position-absolute"><img
+							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
+				</div>
+								<div class="sg-lastest-it position-relative">
+					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
+							href="https://www.endomondo.com/exercise/lower-back-calisthenics">6 Best Calisthenics Exercises For A Stronger, Healthier Lower Back</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
 							href="https://www.endomondo.com/author/cristian-ortega">By Cristian Ortega, PT</a></p>
-					<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split" class="news-link position-absolute"><img
-							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
-				</div>
-								<div class="sg-lastest-it position-relative">
-					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/push-pull-legs-routine">Push Pull Legs Routine: The Perfect Workout Split For Balanced Gains</a></p>
-					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster abcshsd</a></p>
-					<a href="https://www.endomondo.com/workouts/push-pull-legs-routine" class="news-link position-absolute"><img
+					<a href="https://www.endomondo.com/exercise/lower-back-calisthenics" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 						</div>
@@ -367,8 +366,8 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 					<div class="name-author">
 						<div class="info">
 							<div class="author-by" itemscope>
-								<time class="updated has-small-font-size" datetime="2025-01-08T00:17:11-08:00"
-									itemprop="dateModified">Updated on									January 08, 2025</time>
+								<time class="updated has-small-font-size" datetime="2025-01-09T20:50:31-08:00"
+									itemprop="dateModified">Updated on									January 09, 2025</time>
 								<span class="has-small-font-size">- Writen by: </span>
 								<span class="has-small-font-size" itemprop="author" itemscope
 									itemtype="https://schema.org/Person"><a class="pri-color-2" target="_blank"
@@ -406,7 +405,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									src="https://www.endomondo.com/wp-content/uploads/2024/01/instagram-2-1.svg" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img alt="pinterest"
 									src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img alt="newsbreak"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img alt="newsbreak"
 									src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg" /></a>
 										</div>
 				<article class="sg-custom">
@@ -515,7 +514,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 <div class="wp-block-group medicine-table no-scroll is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
-<figure class="wp-block-table table-custom h-title table-border" style="font-size:16px;font-style:normal;font-weight:500"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Exercise</p></th><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Sets</p></th><th>Reps</th><th>Duration</th><th>Rest (between sets)</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center">Squat</td><td class="has-text-align-center" data-align="center">5 sets</td><td>5 reps</td><td></td><td>2–3 minutes</td></tr><tr><td class="has-text-align-center" data-align="center">Dumbbell Bench</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Dumbbell Row</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Seated Dumbbell Press</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Lunge</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Dumbbell Curl</td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Standing Barbell Tricep Extension</td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Calf Raise</td><td class="has-text-align-center" data-align="center">3 sets</td><td>12 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Plank</td><td class="has-text-align-center" data-align="center">3 sets</td><td></td><td>20 seconds</td><td>45–60 seconds</td></tr></tbody></table><figcaption class="wp-element-caption">Day 1</figcaption></figure>
+<figure class="wp-block-table table-custom h-title table-border" style="font-size:16px;font-style:normal;font-weight:500"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Exercise</p></th><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Sets</p></th><th>Reps</th><th>Duration</th><th>Rest (between sets)</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/barbell-squat" target="_blank" rel="noreferrer noopener">Squat</a></td><td class="has-text-align-center" data-align="center">5 sets</td><td>5 reps</td><td></td><td>2–3 minutes</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-bench-press" target="_blank" rel="noreferrer noopener">Dumbbell Bench Press</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-single-arm-bent-over-row" target="_blank" rel="noreferrer noopener">Dumbbell Row</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-seated-shoulder-press" target="_blank" rel="noreferrer noopener">Seated Dumbbell Press</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-lunge" target="_blank" rel="noreferrer noopener">Lunge</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-bicep-curl" target="_blank" rel="noreferrer noopener">Dumbbell Curl</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/barbell-overhead-tricep-extension" target="_blank" rel="noreferrer noopener">Standing Barbell Tricep Extension</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-standing-calf-raise">Calf Raise</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>12 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/plank-guide" target="_blank" rel="noreferrer noopener">Plank</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td></td><td>20 seconds</td><td>45–60 seconds</td></tr></tbody></table><figcaption class="wp-element-caption">Full-Body Workout Day 1</figcaption></figure>
 </div></div>
 
 
@@ -536,7 +535,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-custom h-title table-border" style="font-size:16px;font-style:normal;font-weight:500"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Exercise</p></th><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Sets</p></th><th>Reps</th><th>Duration</th><th>Rest (between sets)</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center">Bench Press</td><td class="has-text-align-center" data-align="center">5 sets</td><td>5 reps</td><td></td><td>2–3 minutes</td></tr><tr><td class="has-text-align-center" data-align="center">Machine Pec Deck</td><td class="has-text-align-center" data-align="center">3 sets</td><td>12 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Leg Extension</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Leg Curl</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Pull-Up</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Seated Lateral Raise</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Dumbbell Hammer Curl</td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Rope Extension</td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Plank</td><td class="has-text-align-center" data-align="center">5 sets</td><td></td><td>20 seconds</td><td>45–60 seconds</td></tr></tbody></table><figcaption class="wp-element-caption">Day 2</figcaption></figure>
+<figure class="wp-block-table table-custom h-title table-border" style="font-size:16px;font-style:normal;font-weight:500"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Exercise</p></th><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Sets</p></th><th>Reps</th><th>Duration</th><th>Rest (between sets)</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/barbell-bench-press" target="_blank" rel="noreferrer noopener">Bench Press</a></td><td class="has-text-align-center" data-align="center">5 sets</td><td>5 reps</td><td></td><td>2–3 minutes</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/cable-chest-fly" target="_blank" rel="noreferrer noopener">Machine Pec Deck</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>12 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/leg-extension-machine">Leg Extension</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/lying-leg-curl-machine" target="_blank" rel="noreferrer noopener">Leg Curl</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/pull-up" target="_blank" rel="noreferrer noopener">Pull-Up</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-seated-lateral-raise" target="_blank" rel="noreferrer noopener">Seated L</a><a href="https://www.endomondo.com/exercise/dumbbell-seated-lateral-raise">ateral Raise</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-hammer-curl" target="_blank" rel="noreferrer noopener">Dumbbell Hammer Curl</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/rope-tricep-extension" target="_blank" rel="noreferrer noopener">Rope Extension</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 reps</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/plank-guide" target="_blank" rel="noreferrer noopener">Pla</a><a href="https://www.endomondo.com/exercise/plank-guide">nk</a></td><td class="has-text-align-center" data-align="center">5 sets</td><td></td><td>20 seconds</td><td>45–60 seconds</td></tr></tbody></table><figcaption class="wp-element-caption">Full-Body Workout Day 2</figcaption></figure>
 
 
 
@@ -574,15 +573,15 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>Core strength has also been found to <a href="https://www.researchgate.net/publication/361295400_A_Study_on_the_Importance_of_Core_Strength_and_Coordination_Balance_during_Basketball_Based_on_Biomechanics" target="_blank" rel="noreferrer noopener nofollow">improve balance and sports performance</a> in basketball. </p>
+<p>Core strength has also been found to <a href="https://www.researchgate.net/publication/361295400_A_Study_on_the_Importance_of_Core_Strength_and_Coordination_Balance_during_Basketball_Based_on_Biomechanics" target="_blank" rel="noreferrer noopener nofollow">improve balance and sports performance</a> in basketball.&nbsp;</p>
 
 
 
-<p><a href="https://www.researchgate.net/publication/372732322_Prone_plank_test_base_core_muscle_strength_contribution_to_anticipate_the_risk_of_ankle_injury_for_soccer_player" target="_blank" rel="noreferrer noopener nofollow">Better core strength</a> as tested by the plank can reduce ankle injuries. </p>
+<p><a href="https://www.researchgate.net/publication/372732322_Prone_plank_test_base_core_muscle_strength_contribution_to_anticipate_the_risk_of_ankle_injury_for_soccer_player" target="_blank" rel="noreferrer noopener nofollow">Better core strength</a> as tested by the plank can reduce ankle injuries.&nbsp;</p>
 
 
 
-<figure class="wp-block-table table-custom h-title table-border" style="font-size:16px;font-style:normal;font-weight:500"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Exercise</p></th><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Sets</p></th><th>Reps</th><th>Duration</th><th>Rest (between sets)</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center">Deadlift</td><td class="has-text-align-center" data-align="center">5 sets</td><td>5 sets</td><td></td><td>2–3 minutes</td></tr><tr><td class="has-text-align-center" data-align="center">Incline Dumbbell Press</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Lateral Raise</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Pulldown</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Leg Press</td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">EZ Bar Curl</td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Skull Crusher</td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Dumbbell Shrug</td><td class="has-text-align-center" data-align="center">3 sets</td><td>12 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center">Plank</td><td class="has-text-align-center" data-align="center">5 sets</td><td></td><td>20 seconds</td><td>45–60 seconds</td></tr></tbody></table><figcaption class="wp-element-caption">Day 3</figcaption></figure>
+<figure class="wp-block-table table-custom h-title table-border" style="font-size:16px;font-style:normal;font-weight:500"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Exercise</p></th><th class="has-text-align-center" data-align="center"><p class="pri-color-1">Sets</p></th><th>Reps</th><th>Duration</th><th>Rest (between sets)</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/barbell-deadlift" target="_blank" rel="noreferrer noopener">Deadlift</a></td><td class="has-text-align-center" data-align="center">5 sets</td><td>5 sets</td><td></td><td>2–3 minutes</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/incline-dumbbell-bench-press" target="_blank" rel="noreferrer noopener">Incline Dumbbell Press</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-lateral-raise" target="_blank" rel="noreferrer noopener">Lateral Raise</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/lat-pulldown" target="_blank" rel="noreferrer noopener">Pulldown</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/leg-press" target="_blank" rel="noreferrer noopener">Leg Press</a></td><td class="has-text-align-center" data-align="center">4 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/ez-bar-preacher-curl" target="_blank" rel="noreferrer noopener">EZ Bar Curl</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-skull-crusher" target="_blank" rel="noreferrer noopener">Skull Crusher</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>10 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/dumbbell-shrug" target="_blank" rel="noreferrer noopener">Dumbbell Shrug</a></td><td class="has-text-align-center" data-align="center">3 sets</td><td>12 sets</td><td></td><td>45–60 seconds</td></tr><tr><td class="has-text-align-center" data-align="center"><a href="https://www.endomondo.com/exercise/plank-guide" target="_blank" rel="noreferrer noopener">Plank</a></td><td class="has-text-align-center" data-align="center">5 sets</td><td></td><td>20 seconds</td><td>45–60 seconds</td></tr></tbody></table><figcaption class="wp-element-caption">Full-Body Workout Day 3</figcaption></figure>
 
 
 
@@ -594,7 +593,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h3 class="wp-block-heading">Builds Muscle Hypertrophy </h3>
+<h3 class="wp-block-heading">Builds Muscle Hypertrophy&nbsp;</h3>
 
 
 
@@ -614,7 +613,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h3 class="wp-block-heading">Reduces Age-Related Disease Risk </h3>
+<h3 class="wp-block-heading">Reduces Age-Related Disease Risk&nbsp;</h3>
 
 
 
@@ -638,7 +637,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>One study found that nine months of resistance training resulted in a <a href="https://pubmed.ncbi.nlm.nih.gov/25293431/" target="_blank" rel="noreferrer noopener nofollow">5% increase in the body’s resting metabolism</a>. This means the body burns 5% more calories in a resting state after completing the resistance training program. </p>
+<p>One study found that nine months of resistance training resulted in a <a href="https://pubmed.ncbi.nlm.nih.gov/25293431/" target="_blank" rel="noreferrer noopener nofollow">5% increase in the body’s resting metabolism</a>. This means the body burns 5% more calories in a resting state after completing the resistance training program.&nbsp;</p>
 
 
 
@@ -646,11 +645,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>Research on weight loss shows that exercise training can reduce visceral fat, the fat around the internal organs. This type of fat is linked with a higher <a href="https://onlinelibrary.wiley.com/doi/10.1155/2022/8350527" target="_blank" rel="noreferrer noopener nofollow">risk of serious health conditions</a> like coronary artery disease.  Exercise training is <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/obr.12406" target="_blank" rel="noreferrer noopener nofollow">superior at decreasing visceral fat</a> compared to fat loss from dieting.</p>
+<p>Research on weight loss shows that exercise training can reduce visceral fat, the fat around the internal organs. This type of fat is linked with a higher <a href="https://onlinelibrary.wiley.com/doi/10.1155/2022/8350527" target="_blank" rel="noreferrer noopener nofollow">risk of serious health conditions</a> like coronary artery disease.&nbsp; Exercise training is <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/obr.12406" target="_blank" rel="noreferrer noopener nofollow">superior at decreasing visceral fat</a> compared to fat loss from dieting.</p>
 
 
 
-<h2 class="wp-block-heading">Training Tips To Keep In Mind </h2>
+<h2 class="wp-block-heading">Training Tips To Keep In Mind&nbsp;</h2>
 
 
 
@@ -768,9 +767,33 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/exercise/front-delt-exercises">
+								<a href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2024/07/feature-2025-01-08.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" alt="">
+										</div>
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/training">Training</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
+									<a class="pri-color-2" href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">I Did Bicep Push-Ups Every Day For 30 Days — You’ll Be Surprised By The Results</a>
+								</p>
+								<p class="has-small-font-size">
+									<a class="sec-color-3" href="https://www.endomondo.com/author/chris-marshall">By
+										Chris Marshall, MSc, PT</a>
+								</p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale mr-bottom-16">
+								<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">
+																			<div class="image-fit">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/12/full-body-bodyweight-workout-endomondo.jpg" alt="">
 										</div>
 																	</a>
 							</div>
@@ -780,11 +803,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/exercise">Exercise</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/steve-theunissen">By
-										Steve Theunissen, PT</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/jessica-forster">By
+										Jessica Forster</a>
 								</p>
 							</div>
 						</div>
@@ -792,47 +815,23 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 										<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/upper-lower-split">
+								<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/upper-lower-split-endomondo.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/09/feature-2024-09-24-2-1.jpg" alt="">
 										</div>
 																	</a>
 							</div>
 							<div class="info">
 																									<div class="tag mr-bottom-16">
 																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+													href="https://www.endomondo.com/training">Training</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/erin-lohrenz">By
-										Erin Lohrenz, MPH</a>
-								</p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">
-																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-dumbell-workout-split-endomondo.jpg" alt="">
-										</div>
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a>
-								</p>
-								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/cristian-ortega">By
-										Cristian Ortega, PT</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/chris-marshall">By
+										Chris Marshall, MSc, PT</a>
 								</p>
 							</div>
 						</div>
@@ -856,7 +855,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									alt="instagram" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 									alt="pinterest" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 									alt="newsbreak" /></a>
 										</div>
 				<div class="ft-form">
@@ -922,7 +921,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
             <p class="has-large-font-size">Help us rate this article</p>
             <input type="hidden" class="rating-feedback" data-empty="fa-regular fa-star" data-filled="fas fa-star" data-fractions="1" />
             <input class="link-post-feedback" value="https://www.endomondo.com/workouts/3-day-full-body-workout" type="hidden">
-            <input class="ip-address" value="2600:1f14:748:2302:1cea:691f:5c70:b92c" type="hidden">
+            <input class="ip-address" value="98.83.164.15" type="hidden">
         </div>
         <div class="form-feedback">
             <p class="sec-color-4">Give us feedback in details</p>
@@ -960,7 +959,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </div><script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.js"></script>
 <script type="text/javascript"
 	src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.4"></script>
+<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.5"></script>
 <script src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/rating.js?ver=1.0.0"></script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -980,16 +979,16 @@ var wpcf7 = {"api":{"root":"https:\/\/www.endomondo.com\/wp-json\/","namespace":
 <script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/searchable/jquery.multiselect.js' id='searchable-option-list-js-js'></script>
 <script type='text/javascript' id='load-more-comments-js-extra'>
 /* <![CDATA[ */
-var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"358b71f5a0","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
+var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"9427bf148d","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.1' id='load-more-comments-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.2' id='load-more-comments-js'></script>
 <script type='text/javascript' id='ld-ajaxload-js-extra'>
 /* <![CDATA[ */
-var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"9695382f69"};
+var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"094366822c"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.2' id='ld-ajaxload-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.6' id='ld-ajaxload-js'></script>
 <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I&#038;ver=3.0' id='google-recaptcha-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -1005,5 +1004,5 @@ var wpcf7_recaptcha = {"sitekey":"6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I","act
 </script></body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Thu, 09 Jan 2025 02:41:45 GMT -->
-";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:111127;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Thu, 09 Jan 2025 02:41:45 GMT";}}}
+<!-- Cache served by breeze CACHE - Last modified: Tue, 14 Jan 2025 06:38:29 GMT -->
+";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:114540;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Tue, 14 Jan 2025 06:38:29 GMT";}}}

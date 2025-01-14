@@ -73,15 +73,15 @@ jQuery(function ($) {
 	});
 
 	jQuery(document).ready(function ($) {
-		$('#bestEx, #mt, #ma, #eq, #speEx').each(function() {
+		$('#bestEx, #mt, #ma, #eq, #speEx').each(function () {
 			let selectElement = $(this);
 			let options = selectElement.find('option');
-			
-			options.sort(function(a, b) {
+
+			options.sort(function (a, b) {
 				return $(b).prop('selected') - $(a).prop('selected');
 			});
-		
-			selectElement.html(options); 
+
+			selectElement.html(options);
 			selectElement.multiselect({
 				texts: {
 					placeholder: 'Select item',
@@ -93,10 +93,10 @@ jQuery(function ($) {
 
 		$('.clearAll').on('click', function () {
 			var sel = $(this).closest('div').find('select');
-	
+
 			if (sel.length > 0) {
 				sel.find('option:selected').prop("selected", false);
-	
+
 				if (sel.hasClass('jqmsLoaded')) {
 					sel.multiselect('reload');
 				}
@@ -600,7 +600,7 @@ jQuery(function ($) {
 		$(document).on('click', '.section-btn', function (e) {
 			e.preventDefault();
 
-			$button = $(this); 
+			$button = $(this);
 
 			var id = [];
 
@@ -1049,21 +1049,32 @@ jQuery(function ($) {
 			}
 		});
 
-		$('.inline-edit').click(function () {
-			var $this = $(this);
+		$('td[data-column="slug"]').click(function () {
+			var $this = $(this).find('.inline-edit');
 			$this.hide();
 			$this.siblings('.inline-edit-input').show().focus();
 		});
 
+		let isAjaxRunning = false;
+
 		$('.inline-edit-input').blur(function () {
 			var $this = $(this);
 			var value = $this.val();
+			var originalValue = $this.data('original-value');
 			var id = $this.closest('tr').data('id');
 			var column = $this.closest('td').data('column');
 			var func = $this.data('ajax');
 
-			$this.hide();
-			$this.siblings('.inline-edit').text(value).show();
+			if (value === originalValue) {
+				$this.hide();
+				$this.siblings('.inline-edit').text(value).show();
+				return;
+			}
+			if (isAjaxRunning) {
+				return;
+			}
+
+			isAjaxRunning = true;
 
 			$.post(
 				ajaxurl,
@@ -1074,17 +1085,25 @@ jQuery(function ($) {
 					value: value,
 				},
 				function (response) {
-                    if (response) {
-                        if(response.success) {
-                            alert("Update success");
-                        }else {
-							alert("Update error");
+					if (response) {
+						if (response.success) {
+							$this.hide();
+							$this.siblings('.inline-edit').text(value).show();
+							alert("Update success");
+						} else {
+							alert("Slug does not exist");
+							$this.hide();
+							$this.siblings('.inline-edit').text('').show();
 						}
-                    }else {
-						alert("Update error");
+					} else {
+						alert("Slug does not exist");
+						$this.hide();
+						$this.siblings('.inline-edit').text('').show();
 					}
-                }
-			);
+				}
+			).always(function () {
+				isAjaxRunning = false;
+			});
 		});
 
 		setCheckboxSelectLabels();
@@ -1108,7 +1127,7 @@ jQuery(function ($) {
 
 	});
 
-var weekIndex = 1;
+	var weekIndex = 1;
 
 	$('#add-week').click(function () {
 		// Start index after the initial row
@@ -1274,27 +1293,27 @@ var weekIndex = 1;
 		}
 	});
 
-	$(document).on('click', '.remove-day', function() {
-        var $tr = $(this).closest('tr');
+	$(document).on('click', '.remove-day', function () {
+		var $tr = $(this).closest('tr');
 
-        $tr.find('*').each(function() {
-            $.each(this.attributes, function() {
-                if (this.name.startsWith('data-')) {
-                    $(this.ownerElement).removeAttr(this.name);
-                }
-            });
-        });
+		$tr.find('*').each(function () {
+			$.each(this.attributes, function () {
+				if (this.name.startsWith('data-')) {
+					$(this.ownerElement).removeAttr(this.name);
+				}
+			});
+		});
 
-        $tr.find('input').each(function(index) {
-            if (index !== 0) {
-                $(this).val('');
-            }
-        });
+		$tr.find('input').each(function (index) {
+			if (index !== 0) {
+				$(this).val('');
+			}
+		});
 
-        $tr.find('select').each(function() {
-            $(this).prop('selectedIndex', 0);
-        });
-    });
+		$tr.find('select').each(function () {
+			$(this).prop('selectedIndex', 0);
+		});
+	});
 
 
 	function updateWeekNumbers() {

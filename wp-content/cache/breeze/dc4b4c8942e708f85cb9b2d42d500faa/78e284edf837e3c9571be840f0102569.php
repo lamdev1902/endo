@@ -1,4 +1,4 @@
-a:2:{s:4:"body";s:100017:"
+a:2:{s:4:"body";s:105048:"
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -21,7 +21,7 @@ a:2:{s:4:"body";s:100017:"
 	<meta property="og:description" content="The Arnold split is a six-day training split designed to build serious muscle mass. You’ll learn its benefits plus tips on using it in 2025." />
 	<meta property="og:url" content="https://www.endomondo.com/workouts/arnold-split" />
 	<meta property="og:site_name" content="Endomondo" />
-	<meta property="article:modified_time" content="2025-01-02T02:35:41+00:00" />
+	<meta property="article:modified_time" content="2025-01-10T07:45:00+00:00" />
 	<meta property="og:image" content="https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg" />
 	<meta property="og:image:width" content="1250" />
 	<meta property="og:image:height" content="700" />
@@ -29,7 +29,7 @@ a:2:{s:4:"body";s:100017:"
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:label1" content="Est. reading time" />
 	<meta name="twitter:data1" content="12 minutes" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/workouts/arnold-split","url":"https://www.endomondo.com/workouts/arnold-split","name":"Arnold Split 2025: Full 6-Day Workout Plan For Muscle Mass","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/workouts/arnold-split#primaryimage"},"image":{"@id":"https://www.endomondo.com/workouts/arnold-split#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg","datePublished":"2024-12-10T03:32:37+00:00","dateModified":"2025-01-02T02:35:41+00:00","description":"The Arnold split is a six-day training split designed to build serious muscle mass. You’ll learn its benefits plus tips on using it in 2025.","breadcrumb":{"@id":"https://www.endomondo.com/workouts/arnold-split#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523477226"},{"@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523486457"},{"@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523496223"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/workouts/arnold-split"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/workouts/arnold-split#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg","width":1250,"height":700,"caption":"The Arnold Split will help you break through plateaus and add slabs of lean muscle mass on your frame. Photo: Wavebreak Media/Freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/workouts/arnold-split#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Workout Programs","item":"https://www.endomondo.com/workouts"},{"@type":"ListItem","position":3,"name":"Arnold Split"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523477226","position":1,"url":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523477226","name":"Is the Arnold split more effective?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"The Arnold split is very effective for intermediate and advanced athletes. That said, it’s hard to say if it’s more effective than other splits as there are too many factors to consider.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523486457","position":2,"url":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523486457","name":"What was Arnold’s six-day split?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Arnold’s six-day workout split is a six-day split that rotates through three groups of muscle.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523496223","position":3,"url":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523496223","name":"Is the Arnold split good for building muscle?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"The Arnold workout split provides a lot of volume which is the key factor in building muscle.","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/workouts/arnold-split","url":"https://www.endomondo.com/workouts/arnold-split","name":"Arnold Split 2025: Full 6-Day Workout Plan For Muscle Mass","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/workouts/arnold-split#primaryimage"},"image":{"@id":"https://www.endomondo.com/workouts/arnold-split#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg","datePublished":"2025-01-10T07:44:58+00:00","dateModified":"2025-01-10T07:45:00+00:00","description":"The Arnold split is a six-day training split designed to build serious muscle mass. You’ll learn its benefits plus tips on using it in 2025.","breadcrumb":{"@id":"https://www.endomondo.com/workouts/arnold-split#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523477226"},{"@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523486457"},{"@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523496223"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/workouts/arnold-split"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/workouts/arnold-split#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/feature-2024-12-10.jpg","width":1250,"height":700,"caption":"The Arnold Split will help you break through plateaus and add slabs of lean muscle mass on your frame. Photo: Wavebreak Media/Freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/workouts/arnold-split#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Workout Programs","item":"https://www.endomondo.com/workouts"},{"@type":"ListItem","position":3,"name":"Arnold Split"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523477226","position":1,"url":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523477226","name":"Is the Arnold split more effective?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"The Arnold split is very effective for intermediate and advanced athletes. That said, it’s hard to say if it’s more effective than other splits as there are too many factors to consider.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523486457","position":2,"url":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523486457","name":"What was Arnold’s six-day split?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Arnold’s six-day workout split is a six-day split that rotates through three groups of muscle.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523496223","position":3,"url":"https://www.endomondo.com/workouts/arnold-split#faq-question-1702523496223","name":"Is the Arnold split good for building muscle?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"The Arnold workout split provides a lot of volume which is the key factor in building muscle.","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -77,12 +77,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='style-slick-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-slick-theme-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick-theme.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-swiper-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.css?ver=6.3.1' type='text/css' media='all' />
-<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.4' type='text/css' media='all' />
 <link rel='stylesheet' id='style-custom-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/custom.css?ver=1.4.7' type='text/css' media='all' />
 <link rel='stylesheet' id='style-base-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/base.css?ver=1.3.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tool-css-css' href='https://www.endomondo.com/wp-content/themes/endonondo/shortcode/calorie/assets/css/tool.css?ver=1.0.5' type='text/css' media='all' />
-<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-awesome-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/fontawesome.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-solid-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/solid.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-regular-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/regular.css?ver=6.3.1' type='text/css' media='all' />
@@ -167,8 +167,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </head>
 
 <body class="informational_posts-template-default single single-informational_posts postid-4352">
-
-	<div id="wapper" class="">
+		<div id="wapper" class="">
 		<header id="header" class="position-relative">
 			<div class="container">
 				<div class="list-flex flex-middle flex-center">
@@ -283,7 +282,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 																					<a target="_blank" href="https://www.pinterest.com/endomondo/"><img
 													src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 													alt="pinterest" /></a>
-																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img
+																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img
 													src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 													alt="newsbreak" /></a>
 																		</div>
@@ -309,55 +308,55 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 		<div class="sg-lastest-list">
 							<div class="sg-lastest-it">
 					<div class="featured image-fit hover-scale">
-						<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
+						<a href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">
 															<div class="image-fit">
-									<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
+									<img src="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" alt="">
 								</div>
 													</a>
 					</div>
 					<div class="info">
 																			<div class="tag">
-																	<span><a href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																	<span><a href="https://www.endomondo.com/training">Training</a></span>
 															</div>
 												<p class="has-medium-font-size mr-bottom-20 text-special clamp-1"><a class="pri-color-2"
-								href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a></p>
-						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/tammy-hogan">By
-								Tammy Hogan, PT, BA</a></p>
+								href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">I Did Bicep Push-Ups Every Day For 30 Days — You’ll Be Surprised By The Results</a></p>
+						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/chris-marshall">By
+								Chris Marshall, MSc, PT</a></p>
 													<div class="">
-								<p class="text-special clamp-2 pri-color-2">Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training.</p>
+								<p class="text-special clamp-2 pri-color-2">These are my top five bicep push-up benefits after a month of performing them. Find out about my experiences and thoughts throughout.</p>
 							</div>
 											</div>
 				</div>
 											<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a></p>
+							href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/steve-theunissen">By Steve Theunissen, PT</a></p>
-					<a href="https://www.endomondo.com/exercise/front-delt-exercises" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster</a></p>
+					<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a></p>
+							href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
-					<a href="https://www.endomondo.com/workouts/upper-lower-split" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
+					<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a></p>
+							href="https://www.endomondo.com/exercise/bodyweight-leg-exercises">Get Stronger Legs Anywhere With These 7 Bodyweight Exercises</a></p>
+					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
+							href="https://www.endomondo.com/author/emily-post">By Emily Post, PhD, CPT, CSCS</a></p>
+					<a href="https://www.endomondo.com/exercise/bodyweight-leg-exercises" class="news-link position-absolute"><img
+							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
+				</div>
+								<div class="sg-lastest-it position-relative">
+					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
+							href="https://www.endomondo.com/exercise/lower-back-calisthenics">6 Best Calisthenics Exercises For A Stronger, Healthier Lower Back</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
 							href="https://www.endomondo.com/author/cristian-ortega">By Cristian Ortega, PT</a></p>
-					<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split" class="news-link position-absolute"><img
-							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
-				</div>
-								<div class="sg-lastest-it position-relative">
-					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/push-pull-legs-routine">Push Pull Legs Routine: The Perfect Workout Split For Balanced Gains</a></p>
-					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster abcshsd</a></p>
-					<a href="https://www.endomondo.com/workouts/push-pull-legs-routine" class="news-link position-absolute"><img
+					<a href="https://www.endomondo.com/exercise/lower-back-calisthenics" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 						</div>
@@ -368,8 +367,8 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 					<div class="name-author">
 						<div class="info">
 							<div class="author-by" itemscope>
-								<time class="updated has-small-font-size" datetime="2025-01-01T18:35:41-08:00"
-									itemprop="dateModified">Updated on									January 01, 2025</time>
+								<time class="updated has-small-font-size" datetime="2025-01-09T23:45:00-08:00"
+									itemprop="dateModified">Updated on									January 09, 2025</time>
 								<span class="has-small-font-size">- Writen by: </span>
 								<span class="has-small-font-size" itemprop="author" itemscope
 									itemtype="https://schema.org/Person"><a class="pri-color-2" target="_blank"
@@ -407,7 +406,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									src="https://www.endomondo.com/wp-content/uploads/2024/01/instagram-2-1.svg" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img alt="pinterest"
 									src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img alt="newsbreak"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img alt="newsbreak"
 									src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg" /></a>
 										</div>
 				<article class="sg-custom">
@@ -489,7 +488,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td>Bench Press</td><td>4 x 8-12</td></tr><tr><td>Incline Dumbbell Press</td><td>4 x 8-12</td></tr><tr><td>Pull-Ups</td><td>4 sets to failure</td></tr><tr><td>Bent-Over Rows</td><td>4 x 8-12</td></tr><tr><td>Dumbbell Flyes</td><td>3 x 10-15</td></tr><tr><td>Lat Pull-Downs (Wide Grip)</td><td>4 x 10-12</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 1 </figcaption></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td><a href="https://www.endomondo.com/exercise/barbell-bench-press" target="_blank" rel="noreferrer noopener">Bench Press</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/incline-dumbbell-bench-press" target="_blank" rel="noreferrer noopener">Incline Dumbbell Press</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/pull-up" target="_blank" rel="noreferrer noopener">Pull-Ups</a></td><td>4 sets to failure</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-bent-over-row" target="_blank" rel="noreferrer noopener">Bent-Over Rows</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-chest-fly" target="_blank" rel="noreferrer noopener">Dumbbell Flyes</a></td><td>3 x 10-15</td></tr><tr><td><a href="https://www.endomondo.com/exercise/lat-pulldown" target="_blank" rel="noreferrer noopener">Lat Pull-Downs </a>(Wide Grip)</td><td>4 x 10-12</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 1 </figcaption></figure>
 
 
 
@@ -505,7 +504,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td>Seated Dumbbell Press</td><td>4 x 8-12</td></tr><tr><td>Cable Lateral raise</td><td>4 x 10-15</td></tr><tr><td>Barbell Curls</td><td>4 x 8-12</td></tr><tr><td>Tricep Dips</td><td>4 sets to failure</td></tr><tr><td>Hammer Curls</td><td>3 x 10-12</td></tr><tr><td>Skull Crushers</td><td>3 x 8-12</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 2</figcaption></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-seated-shoulder-press" target="_blank" rel="noreferrer noopener">Seated Dumbbell Press</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/cable-lateral-raise" target="_blank" rel="noreferrer noopener">Cable Lateral raise</a></td><td>4 x 10-15</td></tr><tr><td><a href="https://www.endomondo.com/exercise/barbell-biceps-curl" target="_blank" rel="noreferrer noopener">Barbell Curls</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/triceps-dips" target="_blank" rel="noreferrer noopener">Tricep D</a><a href="https://www.endomondo.com/exercise/triceps-dips">ips</a></td><td>4 sets to failure</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-hammer-curl" target="_blank" rel="noreferrer noopener">Hammer Curls</a></td><td>3 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-skull-crusher" target="_blank" rel="noreferrer noopener">Skull Crushers</a></td><td>3 x 8-12</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 2</figcaption></figure>
 
 
 
@@ -517,7 +516,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong> </th></tr></thead><tbody><tr><td>Squat</td><td>4 x 8-12</td></tr><tr><td>Lunges</td><td>3 x 10-15</td></tr><tr><td>Stiff-Legged Deadlifts</td><td>4 x 10-12</td></tr><tr><td>Standing Calf Raises</td><td>4 x 15-20</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 3</figcaption></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong> </th></tr></thead><tbody><tr><td><a href="https://www.endomondo.com/exercise/barbell-squat" target="_blank" rel="noreferrer noopener">Squat</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-lunge" target="_blank" rel="noreferrer noopener">Lunges</a></td><td>3 x 10-15</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-stiff-leg-deadlift" target="_blank" rel="noreferrer noopener">Stiff-Legged Deadlifts</a></td><td>4 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-standing-calf-raise" target="_blank" rel="noreferrer noopener">Sta</a>`<a href="https://www.endomondo.com/exercise/dumbbell-standing-calf-raise" target="_blank" rel="noreferrer noopener">nding Calf Raises</a></td><td>4 x 15-20</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 3</figcaption></figure>
 
 
 
@@ -537,7 +536,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td>Deadlift</td><td>3 x 6-10</td></tr><tr><td>Decline Bench Press</td><td>4 x 8-12</td></tr><tr><td>Chest Dips</td><td>4 sets to failure</td></tr><tr><td>One-Arm Dumbbell Rows</td><td>4 x 8-12</td></tr><tr><td>Seated Cable Rows</td><td>4 x 10-12</td></tr><tr><td>Cable Flyes</td><td>3 x 10-15</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 4</figcaption></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td><a href="https://www.endomondo.com/exercise/barbell-deadlift" target="_blank" rel="noreferrer noopener">Deadlift</a></td><td>3 x 6-10</td></tr><tr><td><a href="https://www.endomondo.com/exercise/barbell-decline-bench-press" target="_blank" rel="noreferrer noopener">Decline Bench Press</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/chest-dip" target="_blank" rel="noreferrer noopener">Chest Dips</a></td><td>4 sets to failure</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-single-arm-bent-over-row" target="_blank" rel="noreferrer noopener">One-Arm Dumbbell Rows</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/seated-cable-row" target="_blank" rel="noreferrer noopener">Seated Cable Rows</a></td><td>4 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/cable-chest-fly" target="_blank" rel="noreferrer noopener">Cable Flyes</a></td><td>3 x 10-15</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 4</figcaption></figure>
 
 
 
@@ -559,7 +558,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td>Arnold Press</td><td>4 x 8-12</td></tr><tr><td>Front Raises</td><td>4 x 10-12</td></tr><tr><td>Reverse Curls</td><td>4 x 8-12</td></tr><tr><td>Tricep Overhead Extension</td><td>4 x 8-12</td></tr><tr><td>Concentration Curls</td><td>3 x 10-12</td></tr><tr><td>Tricep Pushdowns</td><td>3 x 10-12</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 5</figcaption></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong></th></tr></thead><tbody><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-arnold-press" target="_blank" rel="noreferrer noopener">Arnold Press</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-front-raise" target="_blank" rel="noreferrer noopener">Front Raises</a></td><td>4 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/barbell-reverse-curl" target="_blank" rel="noreferrer noopener">Reverse Curls</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/barbell-overhead-tricep-extension" target="_blank" rel="noreferrer noopener">Tricep Overhead Extension</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-concentration-curl" target="_blank" rel="noreferrer noopener">Concentration Curls</a></td><td>3 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/cable-tricep-pushdown" target="_blank" rel="noreferrer noopener">Tricep Pushdowns</a></td><td>3 x 10-12</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 5</figcaption></figure>
 
 
 
@@ -579,7 +578,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong> </th></tr></thead><tbody><tr><td>Leg Press</td><td>4 x 10-15</td></tr><tr><td>Romanian Deadlifts</td><td>4 x 8-12</td></tr><tr><td>Bulgarian Split Squats</td><td>3 x 10-12</td></tr><tr><td>Leg Curls</td><td>4 x 10-12</td></tr><tr><td>Seated Calf Raises</td><td>4 x 15-20</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 6</figcaption></figure>
+<figure class="wp-block-table table-default"><table><thead><tr><th><strong>Exercise</strong></th><th><strong>Sets x Reps</strong> </th></tr></thead><tbody><tr><td><a href="https://www.endomondo.com/exercise/cable-tricep-pushdown" target="_blank" rel="noreferrer noopener">Leg Press</a></td><td>4 x 10-15</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-romanian-deadlift" target="_blank" rel="noreferrer noopener">Romanian Deadlifts</a></td><td>4 x 8-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/dumbbell-bulgarian-split-squat" target="_blank" rel="noreferrer noopener">Bulgarian Split Squats</a></td><td>3 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/lying-leg-curl-machine" target="_blank" rel="noreferrer noopener">Leg Curls</a></td><td>4 x 10-12</td></tr><tr><td><a href="https://www.endomondo.com/exercise/seated-calf-raise-machine" target="_blank" rel="noreferrer noopener">Seated Calf Raises</a></td><td>4 x 15-20</td></tr></tbody></table><figcaption class="wp-element-caption">Arnold Split Day 6</figcaption></figure>
 
 
 
@@ -876,19 +875,19 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 <div id="comments">
 	<div id="write-comment">
 		<div class="section-header flex">
-			<p id="add-comment-title" class="h1 has-medium-font-size">0 Comments</p>
+			<p id="add-comment-title" class="h1 has-medium-font-size">1 Comments</p>
 		</div>
 		<div class="grid form-grid">
 			<div class="grid-item large--three-fifths push--large--one-fifth">
 					<div id="respond" class="comment-respond">
 		<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/workouts/arnold-split#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.endomondo.com/wp-comments-post.php" method="post" id="comment-form" class="comment-form"><div class="cmt-col"><p class="comment-form-comment"><textarea style="resize: none;" placeholder="Add Comment" id="comment" name="comment" aria-required="true"></textarea></p></div><input name="wpml_language_code" type="hidden" value="en" /><div class="user-col"><p class="comment-form-author"><input placeholder="Name*: " id="author" name="author" type="text" value="" size="30" aria-required='true' required /></p></div>
 <div class="email-col"><p class="comment-form-email"><input placeholder="Email*:" id="email" name="email" type="text" value="" size="30" aria-required='true' required /></p></div>
-	<script>document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("cf-turnstile-c-3753822834");e&&!e.innerHTML.trim()&&(turnstile.remove("#cf-turnstile-c-3753822834"),turnstile.render("#cf-turnstile-c-3753822834",{sitekey:"0x4AAAAAAA36SXtFLiwbt_yM"}))}));</script>
+	<script>document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("cf-turnstile-c-3608719302");e&&!e.innerHTML.trim()&&(turnstile.remove("#cf-turnstile-c-3608719302"),turnstile.render("#cf-turnstile-c-3608719302",{sitekey:"0x4AAAAAAA36SXtFLiwbt_yM"}))}));</script>
 	<div class="form-submit flex">
 						<div class="error-section"></div>
 						<div class="submit-action flex">
 							<a rel="nofollow" href="#" class="btn btn-secondary cancle-btn">Cancel</a>
-							<span id="cf-turnstile-c-3753822834" class="cf-turnstile cf-turnstile-comments" data-action="wordpress-comment" data-callback="" data-sitekey="0x4AAAAAAA36SXtFLiwbt_yM" data-theme="auto" data-language="auto" data-appearance="always" data-size="normal" data-retry="auto" data-retry-interval="1000"></span><br class="cf-turnstile-br cf-turnstile-br-comments"><input name="submit" type="submit" id="submit" class="btn btn-primary" value="Submit" /><script type="text/javascript">document.addEventListener("DOMContentLoaded", function() { document.body.addEventListener("click", function(event) { if (event.target.matches(".comment-reply-link, #cancel-comment-reply-link")) { turnstile.reset(".comment-form .cf-turnstile"); } }); });</script> <input type='hidden' name='comment_post_ID' value='4352' id='comment_post_ID' />
+							<span id="cf-turnstile-c-3608719302" class="cf-turnstile cf-turnstile-comments" data-action="wordpress-comment" data-callback="" data-sitekey="0x4AAAAAAA36SXtFLiwbt_yM" data-theme="auto" data-language="auto" data-appearance="always" data-size="normal" data-retry="auto" data-retry-interval="1000"></span><br class="cf-turnstile-br cf-turnstile-br-comments"><input name="submit" type="submit" id="submit" class="btn btn-primary" value="Submit" /><script type="text/javascript">document.addEventListener("DOMContentLoaded", function() { document.body.addEventListener("click", function(event) { if (event.target.matches(".comment-reply-link, #cancel-comment-reply-link")) { turnstile.reset(".comment-form .cf-turnstile"); } }); });</script> <input type='hidden' name='comment_post_ID' value='4352' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
 
 						</div>
@@ -897,7 +896,20 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 		</div>
 	</div>
 	<ul class="commentlist">
-			</ul>
+			<li 	class="comment even thread-even depth-1"		id="comment-99">			<div id="div-comment-99" class="comment-body">			<div class="flex section-header">
+				<div class="comment-author vcard"><cite class="fn">Alex</cite>				</div>				<div class="comment-meta commentmetadata">
+					<a href="https://www.endomondo.com/workouts/arnold-split#comment-99">
+						<p class="has-ssmall-font-size">January 12, 2025 at 11:40 pm</p>
+					</a>				</div>
+			</div>
+
+			<div class="cmt-box">
+				<p>Love this one</p>
+			</div>
+		</div>
+					<div class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-99' data-commentid="99" data-postid="4352" data-belowelement="div-comment-99" data-respondelement="respond" data-replyto="Reply to Alex" aria-label='Reply to Alex'>Reply</a>			</div>
+		</li><!-- #comment-## -->
+	</ul>
 
 	
 	
@@ -908,23 +920,23 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
+								<a href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" alt="">
 										</div>
 																	</a>
 							</div>
 							<div class="info">
 																									<div class="tag mr-bottom-16">
 																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+													href="https://www.endomondo.com/training">Training</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">I Did Bicep Push-Ups Every Day For 30 Days — You’ll Be Surprised By The Results</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/tammy-hogan">By
-										Tammy Hogan, PT, BA</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/chris-marshall">By
+										Chris Marshall, MSc, PT</a>
 								</p>
 							</div>
 						</div>
@@ -932,9 +944,9 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 										<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/exercise/front-delt-exercises">
+								<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2024/07/feature-2025-01-08.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/12/full-body-bodyweight-workout-endomondo.jpg" alt="">
 										</div>
 																	</a>
 							</div>
@@ -944,11 +956,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/exercise">Exercise</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/steve-theunissen">By
-										Steve Theunissen, PT</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/jessica-forster">By
+										Jessica Forster</a>
 								</p>
 							</div>
 						</div>
@@ -956,23 +968,23 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 										<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/upper-lower-split">
+								<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/upper-lower-split-endomondo.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/09/feature-2024-09-24-2-1.jpg" alt="">
 										</div>
 																	</a>
 							</div>
 							<div class="info">
 																									<div class="tag mr-bottom-16">
 																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+													href="https://www.endomondo.com/training">Training</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/erin-lohrenz">By
-										Erin Lohrenz, MPH</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/chris-marshall">By
+										Chris Marshall, MSc, PT</a>
 								</p>
 							</div>
 						</div>
@@ -996,7 +1008,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									alt="instagram" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 									alt="pinterest" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 									alt="newsbreak" /></a>
 										</div>
 				<div class="ft-form">
@@ -1062,7 +1074,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
             <p class="has-large-font-size">Help us rate this article</p>
             <input type="hidden" class="rating-feedback" data-empty="fa-regular fa-star" data-filled="fas fa-star" data-fractions="1" />
             <input class="link-post-feedback" value="https://www.endomondo.com/workouts/arnold-split" type="hidden">
-            <input class="ip-address" value="2600:6c54:42f0:1f20:7510:1d73:c0ae:674b" type="hidden">
+            <input class="ip-address" value="2600:8800:4ce0:3e00:8808:1c74:b1e2:45aa" type="hidden">
         </div>
         <div class="form-feedback">
             <p class="sec-color-4">Give us feedback in details</p>
@@ -1100,7 +1112,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </div><script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.js"></script>
 <script type="text/javascript"
 	src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.4"></script>
+<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.5"></script>
 <script src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/rating.js?ver=1.0.0"></script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -1120,16 +1132,16 @@ var wpcf7 = {"api":{"root":"https:\/\/www.endomondo.com\/wp-json\/","namespace":
 <script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/searchable/jquery.multiselect.js' id='searchable-option-list-js-js'></script>
 <script type='text/javascript' id='load-more-comments-js-extra'>
 /* <![CDATA[ */
-var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"358b71f5a0","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
+var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"9427bf148d","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.1' id='load-more-comments-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.2' id='load-more-comments-js'></script>
 <script type='text/javascript' id='ld-ajaxload-js-extra'>
 /* <![CDATA[ */
-var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"9695382f69"};
+var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"094366822c"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.2' id='ld-ajaxload-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.6' id='ld-ajaxload-js'></script>
 <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I&#038;ver=3.0' id='google-recaptcha-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -1146,5 +1158,5 @@ var wpcf7_recaptcha = {"sitekey":"6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I","act
 </script></body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Thu, 09 Jan 2025 02:41:29 GMT -->
-";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:100017;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Thu, 09 Jan 2025 02:41:29 GMT";}}}
+<!-- Cache served by breeze CACHE - Last modified: Tue, 14 Jan 2025 06:36:24 GMT -->
+";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:105048;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Tue, 14 Jan 2025 06:36:24 GMT";}}}

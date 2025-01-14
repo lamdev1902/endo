@@ -1,4 +1,4 @@
-a:2:{s:4:"body";s:101480:"
+a:2:{s:4:"body";s:101788:"
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -21,7 +21,7 @@ a:2:{s:4:"body";s:101480:"
 	<meta property="og:description" content="These are my top five bicep push-up benefits after a month of performing them. Find out about my experiences and thoughts throughout." />
 	<meta property="og:url" content="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month" />
 	<meta property="og:site_name" content="Endomondo" />
-	<meta property="article:modified_time" content="2025-01-03T03:14:56+00:00" />
+	<meta property="article:modified_time" content="2025-01-14T02:37:15+00:00" />
 	<meta property="og:image" content="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" />
 	<meta property="og:image:width" content="1250" />
 	<meta property="og:image:height" content="700" />
@@ -29,7 +29,7 @@ a:2:{s:4:"body";s:101480:"
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:label1" content="Est. reading time" />
 	<meta name="twitter:data1" content="10 minutes" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month","url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month","name":"I Did Bicep Push-Ups For A Month — Here Are The Results","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#primaryimage"},"image":{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg","datePublished":"2024-12-30T09:04:07+00:00","dateModified":"2025-01-03T03:14:56+00:00","description":"These are my top five bicep push-up benefits after a month of performing them. Find out about my experiences and thoughts throughout.","breadcrumb":{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1623393125914"},{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416090"},{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416533"},{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547417146"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg","width":1250,"height":700,"caption":"The bicep push-up isolates the biceps while working the chest and shoulders. Photo: romeo22/Freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Training","item":"https://www.endomondo.com/training"},{"@type":"ListItem","position":3,"name":"Bicep Push-Up Benefits After A Month"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1623393125914","position":1,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1623393125914","name":"Do bicep push-ups really work?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Bicep push-ups are a great way to work the biceps brachii muscles while improving general fitness and function. They work well as a simple bodyweight exercise when performed correctly.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416090","position":2,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416090","name":"Is the bicep push-up safe for beginners?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"The bicep push-up can be performed by beginners once the traditional movement has been perfected. This can be assessed on an individual case basis.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416533","position":3,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416533","name":"How can I avoid injury while doing bicep push-ups?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Make sure to follow the correct technique cues and expert tips for safer performance. Perform a suitable warm-up before your workout and don’t forget to manage volume appropriately.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547417146","position":4,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547417146","name":"What are some common mistakes to avoid while doing bicep push-ups?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Common mistakes include flaring your elbows, letting your hips sag, and tucking your neck. Others include letting your chest touch the floor and moving your feet.","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","FAQPage"],"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month","url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month","name":"I Did Bicep Push-Ups For A Month — Here Are The Results","isPartOf":{"@id":"https://www.endomondo.com/#website"},"primaryImageOfPage":{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#primaryimage"},"image":{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#primaryimage"},"thumbnailUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg","datePublished":"2025-01-14T02:37:14+00:00","dateModified":"2025-01-14T02:37:15+00:00","description":"These are my top five bicep push-up benefits after a month of performing them. Find out about my experiences and thoughts throughout.","breadcrumb":{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#breadcrumb"},"mainEntity":[{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1623393125914"},{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416090"},{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416533"},{"@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547417146"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#primaryimage","url":"https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg","contentUrl":"https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg","width":1250,"height":700,"caption":"The bicep push-up isolates the biceps while working the chest and shoulders. Photo: romeo22/Freepik"},{"@type":"BreadcrumbList","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.endomondo.com/"},{"@type":"ListItem","position":2,"name":"Training","item":"https://www.endomondo.com/training"},{"@type":"ListItem","position":3,"name":"Bicep Push-Up Benefits After A Month"}]},{"@type":"WebSite","@id":"https://www.endomondo.com/#website","url":"https://www.endomondo.com/","name":"Endomondo","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.endomondo.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1623393125914","position":1,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1623393125914","name":"Do bicep push-ups really work?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Bicep push-ups are a great way to work the biceps brachii muscles while improving general fitness and function. They work well as a simple bodyweight exercise when performed correctly.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416090","position":2,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416090","name":"Is the bicep push-up safe for beginners?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"The bicep push-up can be performed by beginners once the traditional movement has been perfected. This can be assessed on an individual case basis.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416533","position":3,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547416533","name":"How can I avoid injury while doing bicep push-ups?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Make sure to follow the correct technique cues and expert tips for safer performance. Perform a suitable warm-up before your workout and don’t forget to manage volume appropriately.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547417146","position":4,"url":"https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month#faq-question-1735547417146","name":"What are some common mistakes to avoid while doing bicep push-ups?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Common mistakes include flaring your elbows, letting your hips sag, and tucking your neck. Others include letting your chest touch the floor and moving your feet.","inLanguage":"en-US"},"inLanguage":"en-US"}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -77,12 +77,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='style-slick-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-slick-theme-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick-theme.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-swiper-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.css?ver=6.3.1' type='text/css' media='all' />
-<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='style-main-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/main.css?ver=1.7.4' type='text/css' media='all' />
 <link rel='stylesheet' id='style-custom-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/custom.css?ver=1.4.7' type='text/css' media='all' />
 <link rel='stylesheet' id='style-base-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/base.css?ver=1.3.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tool-css-css' href='https://www.endomondo.com/wp-content/themes/endonondo/shortcode/calorie/assets/css/tool.css?ver=1.0.5' type='text/css' media='all' />
-<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-element-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/element.css?ver=1.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='style-responsive-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/css/responsive.css?ver=1.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-awesome-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/fontawesome.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-solid-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/solid.css?ver=6.3.1' type='text/css' media='all' />
 <link rel='stylesheet' id='style-regular-css' href='https://www.endomondo.com/wp-content/themes/endonondo/assets/fonts/css/regular.css?ver=6.3.1' type='text/css' media='all' />
@@ -167,8 +167,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </head>
 
 <body class="informational_posts-template-default single single-informational_posts postid-34967">
-
-	<div id="wapper" class="">
+		<div id="wapper" class="">
 		<header id="header" class="position-relative">
 			<div class="container">
 				<div class="list-flex flex-middle flex-center">
@@ -283,7 +282,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 																					<a target="_blank" href="https://www.pinterest.com/endomondo/"><img
 													src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 													alt="pinterest" /></a>
-																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img
+																					<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img
 													src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 													alt="newsbreak" /></a>
 																		</div>
@@ -309,55 +308,55 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 		<div class="sg-lastest-list">
 							<div class="sg-lastest-it">
 					<div class="featured image-fit hover-scale">
-						<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
+						<a href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">
 															<div class="image-fit">
-									<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
+									<img src="https://www.endomondo.com/wp-content/uploads/2024/12/bicep-push-up-benefits-after-a-month-endomondo.jpg" alt="">
 								</div>
 													</a>
 					</div>
 					<div class="info">
 																			<div class="tag">
-																	<span><a href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+																	<span><a href="https://www.endomondo.com/training">Training</a></span>
 															</div>
 												<p class="has-medium-font-size mr-bottom-20 text-special clamp-1"><a class="pri-color-2"
-								href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a></p>
-						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/tammy-hogan">By
-								Tammy Hogan, PT, BA</a></p>
+								href="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month">I Did Bicep Push-Ups Every Day For 30 Days — You’ll Be Surprised By The Results</a></p>
+						<p class="has-small-font-size"><a class="sec-color-3" target="_blank" href="https://www.endomondo.com/author/chris-marshall">By
+								Chris Marshall, MSc, PT</a></p>
 													<div class="">
-								<p class="text-special clamp-2 pri-color-2">Get exercise and programming tips for this 3 day full body workout. Learn the health and fitness benefits of resistance training.</p>
+								<p class="text-special clamp-2 pri-color-2">These are my top five bicep push-up benefits after a month of performing them. Find out about my experiences and thoughts throughout.</p>
 							</div>
 											</div>
 				</div>
 											<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a></p>
+							href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/steve-theunissen">By Steve Theunissen, PT</a></p>
-					<a href="https://www.endomondo.com/exercise/front-delt-exercises" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster</a></p>
+					<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a></p>
+							href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/erin-lohrenz">By Erin Lohrenz, MPH</a></p>
-					<a href="https://www.endomondo.com/workouts/upper-lower-split" class="news-link position-absolute"><img
+							href="https://www.endomondo.com/author/chris-marshall">By Chris Marshall, MSc, PT</a></p>
+					<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 								<div class="sg-lastest-it position-relative">
 					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split">Transform Yourself With This 3-Day Dumbbell Workout Split</a></p>
+							href="https://www.endomondo.com/exercise/bodyweight-leg-exercises">Get Stronger Legs Anywhere With These 7 Bodyweight Exercises</a></p>
+					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
+							href="https://www.endomondo.com/author/emily-post">By Emily Post, PhD, CPT, CSCS</a></p>
+					<a href="https://www.endomondo.com/exercise/bodyweight-leg-exercises" class="news-link position-absolute"><img
+							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
+				</div>
+								<div class="sg-lastest-it position-relative">
+					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
+							href="https://www.endomondo.com/exercise/lower-back-calisthenics">6 Best Calisthenics Exercises For A Stronger, Healthier Lower Back</a></p>
 					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
 							href="https://www.endomondo.com/author/cristian-ortega">By Cristian Ortega, PT</a></p>
-					<a href="https://www.endomondo.com/workouts/3-day-dumbell-workout-split" class="news-link position-absolute"><img
-							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
-				</div>
-								<div class="sg-lastest-it position-relative">
-					<p class="has-medium-font-size mr-bottom-20 text-special clamp-2"><a class="pri-color-2"
-							href="https://www.endomondo.com/workouts/push-pull-legs-routine">Push Pull Legs Routine: The Perfect Workout Split For Balanced Gains</a></p>
-					<p class="has-small-font-size mr-bottom-20"><a class="sec-color-2"
-							href="https://www.endomondo.com/author/jessica-forster">By Jessica Forster abcshsd</a></p>
-					<a href="https://www.endomondo.com/workouts/push-pull-legs-routine" class="news-link position-absolute"><img
+					<a href="https://www.endomondo.com/exercise/lower-back-calisthenics" class="news-link position-absolute"><img
 							src="https://www.endomondo.com/wp-content/themes/endonondo/assets/images/right-black.svg" alt=""></a>
 				</div>
 						</div>
@@ -368,8 +367,8 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 					<div class="name-author">
 						<div class="info">
 							<div class="author-by" itemscope>
-								<time class="updated has-small-font-size" datetime="2025-01-02T19:14:56-08:00"
-									itemprop="dateModified">Updated on									January 02, 2025</time>
+								<time class="updated has-small-font-size" datetime="2025-01-13T18:37:15-08:00"
+									itemprop="dateModified">Updated on									January 13, 2025</time>
 								<span class="has-small-font-size">- Writen by: </span>
 								<span class="has-small-font-size" itemprop="author" itemscope
 									itemtype="https://schema.org/Person"><a class="pri-color-2" target="_blank"
@@ -402,7 +401,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									src="https://www.endomondo.com/wp-content/uploads/2024/01/instagram-2-1.svg" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img alt="pinterest"
 									src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img alt="newsbreak"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img alt="newsbreak"
 									src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg" /></a>
 										</div>
 				<article class="sg-custom">
@@ -420,11 +419,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>I&#8217;ve always used push-up variations for the bulk of my training routine. In a separate article, I’ve looked at the <a href="https://www.endomondo.com/training/benfits-of-doing-push-up-everday-a-week" target="_blank" rel="noreferrer noopener">benefits of doing push-ups every day for a week</a>. </p>
+<p>I&#8217;ve always used push-up variations for the bulk of my training routine. In a separate article, I’ve looked at the <a href="https://www.endomondo.com/training/benfits-of-doing-push-up-everday-a-week" target="_blank" rel="noreferrer noopener">benefits of doing push-ups every day for a week</a>.&nbsp;</p>
 
 
 
-<p>Following this success, I’m going to be performing <a href="https://www.endomondo.com/exercise/reverse-push-up" target="_blank" rel="noreferrer noopener">bicep push-ups</a> every day for a month. I’ll perform them over a month with a high training volume and see if I notice any differences. </p>
+<p>Following this success, I’m going to be performing <a href="https://www.endomondo.com/exercise/reverse-push-up" target="_blank" rel="noreferrer noopener">bicep push-ups</a> every day for a month. I’ll perform them over a month with a high training volume and see if I notice any differences.&nbsp;</p>
 
 
 
@@ -446,11 +445,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<li><a href="#It-Helped-With-My-Postural-Awareness">It helped with my postural awareness. </a></li>
+<li><a href="#It-Helped-With-My-Postural-Awareness">It helped with my postural awareness.&nbsp;</a></li>
 
 
 
-<li><a href="#My-Joints-Felt-Stronger">My joints felt stronger. </a></li>
+<li><a href="#My-Joints-Felt-Stronger">My joints felt stronger.&nbsp;</a></li>
 
 
 
@@ -484,7 +483,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>Before I started the challenge, I wanted to get used to the general movement. I did a quick <a href="https://www.researchgate.net/publication/350401898_Warming-Up_for_Resistance_Training_and_Muscular_Performance_A_Narrative_Review" target="_blank" rel="noreferrer noopener nofollow">warm-up</a> consisting of a treadmill run and dynamic upper-body stretches. </p>
+<p>Before I started the challenge, I wanted to get used to the general movement. I did a quick <a href="https://www.researchgate.net/publication/350401898_Warming-Up_for_Resistance_Training_and_Muscular_Performance_A_Narrative_Review" target="_blank" rel="noreferrer noopener nofollow">warm-up</a> consisting of a treadmill run and dynamic upper-body stretches.&nbsp;</p>
 
 
 
@@ -500,7 +499,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h3 class="wp-block-heading">Week 2 </h3>
+<h3 class="wp-block-heading">Week 2&nbsp;</h3>
 
 
 
@@ -512,7 +511,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>With no real struggles in week one, I’ve decided to increase my volume to three sets of 25 repetitions. I feel like this will provide the right amount of <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9528903/" target="_blank" rel="noreferrer noopener nofollow">progressive overload</a> needed to push myself to the next level. I’ll keep the weekly workout frequency the same, performing the sessions to fit around my traveling schedule. </p>
+<p>With no real struggles in week one, I’ve decided to increase my volume to three sets of 25 repetitions. I feel like this will provide the right amount of <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9528903/" target="_blank" rel="noreferrer noopener nofollow">progressive overload</a> needed to push myself to the next level. I’ll keep the weekly workout frequency the same, performing the sessions to fit around my traveling schedule.&nbsp;</p>
 
 
 
@@ -520,7 +519,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h3 class="wp-block-heading">Week 3 </h3>
+<h3 class="wp-block-heading">Week 3&nbsp;</h3>
 
 
 
@@ -540,7 +539,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>For the last week, I&#8217;m going to keep the volume the same but add a weighted vest to provide a bigger intensity for <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4562558/#:~:text=It%20appears%20that%20high-intensity,a%20short-term%20training%20period." target="_blank" rel="noreferrer noopener nofollow">muscular strength</a>. My goal for the last week is to perform three sets of 25 repetitions. </p>
+<p>For the last week, I&#8217;m going to keep the volume the same but add a weighted vest to provide a bigger intensity for <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4562558/#:~:text=It%20appears%20that%20high-intensity,a%20short-term%20training%20period." target="_blank" rel="noreferrer noopener nofollow">muscular strength</a>. My goal for the last week is to perform three sets of 25 repetitions.&nbsp;</p>
 
 
 
@@ -568,7 +567,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<h2 class="wp-block-heading list-start">Results And Key Changes </h2>
+<h2 class="wp-block-heading list-start">Results And Key Changes&nbsp;</h2>
 
 
 
@@ -604,7 +603,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>As I’ve mentioned in other articles, my <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6166197/" target="_blank" rel="noreferrer noopener nofollow">posture</a> is something I always try to focus on. Years of seated work mean I have to make sure I’m not putting too much pressure on my back. </p>
+<p>As I’ve mentioned in other articles, my <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6166197/" target="_blank" rel="noreferrer noopener nofollow">posture</a> is something I always try to focus on. Years of seated work mean I have to make sure I’m not putting too much pressure on my back.&nbsp;</p>
 
 
 
@@ -636,7 +635,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p><a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2022.882195/full" target="_blank" rel="noreferrer noopener nofollow">Functional fitness</a> refers to doing exercises that improve performance in everyday tasks. Good functional fitness means you’re able to execute basic movement patterns with good mobility. </p>
+<p><a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2022.882195/full" target="_blank" rel="noreferrer noopener nofollow">Functional fitness</a> refers to doing exercises that improve performance in everyday tasks. Good functional fitness means you’re able to execute basic movement patterns with good mobility.&nbsp;</p>
 
 
 
@@ -656,7 +655,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7545035/" target="_blank" rel="noreferrer noopener nofollow">Metabolism</a> is an important process that’s constantly taking place in the body. It breaks down nutrients, rebuilds, and repairs body tissues, and helps to remove toxins. Increasing it can make these processes more efficient. </p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7545035/" target="_blank" rel="noreferrer noopener nofollow">Metabolism</a> is an important process that’s constantly taking place in the body. It breaks down nutrients, rebuilds, and repairs body tissues, and helps to remove toxins. Increasing it can make these processes more efficient.&nbsp;</p>
 
 
 
@@ -672,12 +671,12 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<p>Now that you’ve learned about my experiences and benefits, here are the <a href="https://www.mdpi.com/2411-5142/9/1/9" target="_blank" rel="noreferrer noopener nofollow">technique cues</a> I used throughout the challenge. Using the correct exercise technique is important to ensure target muscle focus. </p>
+<p>Now that you’ve learned about my experiences and benefits, here are the <a href="https://www.mdpi.com/2411-5142/9/1/9" target="_blank" rel="noreferrer noopener nofollow">technique cues</a> I used throughout the challenge. Using the correct exercise technique is important to ensure target muscle focus.&nbsp;</p>
 
 
 
 <figure class="wp-block-embed is-type-video is-provider-vimeo wp-block-embed-vimeo wp-embed-aspect-16-9 wp-has-aspect-ratio vimeo-custom"><div class="wp-block-embed__wrapper">
-<iframe title="Reverse Push-Up" src="https://player.vimeo.com/video/1015534446?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"></iframe>
+<iframe title="Reverse Push-Up" src="https://player.vimeo.com/video/1015534446?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
 </div><figcaption class="wp-element-caption">Bicep Push-Up Guide. Video: Aliaksandr Makatserchyk</figcaption></figure>
 
 
@@ -721,7 +720,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 <ul>
-<li><strong>Keep Your Elbows Tucked In — </strong>Keeping your elbows tucked into your sides ensures target focus on the <a href="https://www.ncbi.nlm.nih.gov/books/NBK519538/#:~:text=Structure%20and%20Function&amp;text=The%20biceps%20brachii%20is%20primarily,the%20shoulder%20joint's%20dynamic%20stability." target="_blank" rel="noreferrer noopener nofollow">biceps brachii</a>. Focus on their position for both phases of the movement. Stop and reassess your form if you notice your elbows flaring. </li>
+<li><strong>Keep Your Elbows Tucked In — </strong>Keeping your elbows tucked into your sides ensures target focus on the <a href="https://www.ncbi.nlm.nih.gov/books/NBK519538/#:~:text=Structure%20and%20Function&amp;text=The%20biceps%20brachii%20is%20primarily,the%20shoulder%20joint's%20dynamic%20stability." target="_blank" rel="noreferrer noopener nofollow">biceps brachii</a>. Focus on their position for both phases of the movement. Stop and reassess your form if you notice your elbows flaring.&nbsp;</li>
 
 
 
@@ -729,7 +728,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 
 
 
-<li><strong>Perform A Suitable Warm-Up — </strong>The wrist position increases the amount of wrist stress compared to the normal push-up. Approximately <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8038891/" target="_blank" rel="noreferrer noopener nofollow">20.4%</a> of CrossFit athletes reported a hand or wrist injury. Ensure you perform some dynamic wrist stretches before your push-ups. </li>
+<li><strong>Perform A Suitable Warm-Up — </strong>The wrist position increases the amount of wrist stress compared to the normal push-up. Approximately <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8038891/" target="_blank" rel="noreferrer noopener nofollow">20.4%</a> of CrossFit athletes reported a hand or wrist injury. Ensure you perform some dynamic wrist stretches before your push-ups.&nbsp;</li>
 
 
 
@@ -819,12 +818,12 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 					<div id="respond" class="comment-respond">
 		<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/training/bicep-push-up-benefits-after-a-month#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.endomondo.com/wp-comments-post.php" method="post" id="comment-form" class="comment-form"><div class="cmt-col"><p class="comment-form-comment"><textarea style="resize: none;" placeholder="Add Comment" id="comment" name="comment" aria-required="true"></textarea></p></div><input name="wpml_language_code" type="hidden" value="en" /><div class="user-col"><p class="comment-form-author"><input placeholder="Name*: " id="author" name="author" type="text" value="" size="30" aria-required='true' required /></p></div>
 <div class="email-col"><p class="comment-form-email"><input placeholder="Email*:" id="email" name="email" type="text" value="" size="30" aria-required='true' required /></p></div>
-	<script>document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("cf-turnstile-c-261468134");e&&!e.innerHTML.trim()&&(turnstile.remove("#cf-turnstile-c-261468134"),turnstile.render("#cf-turnstile-c-261468134",{sitekey:"0x4AAAAAAA36SXtFLiwbt_yM"}))}));</script>
+	<script>document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("cf-turnstile-c-4270516314");e&&!e.innerHTML.trim()&&(turnstile.remove("#cf-turnstile-c-4270516314"),turnstile.render("#cf-turnstile-c-4270516314",{sitekey:"0x4AAAAAAA36SXtFLiwbt_yM"}))}));</script>
 	<div class="form-submit flex">
 						<div class="error-section"></div>
 						<div class="submit-action flex">
 							<a rel="nofollow" href="#" class="btn btn-secondary cancle-btn">Cancel</a>
-							<span id="cf-turnstile-c-261468134" class="cf-turnstile cf-turnstile-comments" data-action="wordpress-comment" data-callback="" data-sitekey="0x4AAAAAAA36SXtFLiwbt_yM" data-theme="auto" data-language="auto" data-appearance="always" data-size="normal" data-retry="auto" data-retry-interval="1000"></span><br class="cf-turnstile-br cf-turnstile-br-comments"><input name="submit" type="submit" id="submit" class="btn btn-primary" value="Submit" /><script type="text/javascript">document.addEventListener("DOMContentLoaded", function() { document.body.addEventListener("click", function(event) { if (event.target.matches(".comment-reply-link, #cancel-comment-reply-link")) { turnstile.reset(".comment-form .cf-turnstile"); } }); });</script> <input type='hidden' name='comment_post_ID' value='34967' id='comment_post_ID' />
+							<span id="cf-turnstile-c-4270516314" class="cf-turnstile cf-turnstile-comments" data-action="wordpress-comment" data-callback="" data-sitekey="0x4AAAAAAA36SXtFLiwbt_yM" data-theme="auto" data-language="auto" data-appearance="always" data-size="normal" data-retry="auto" data-retry-interval="1000"></span><br class="cf-turnstile-br cf-turnstile-br-comments"><input name="submit" type="submit" id="submit" class="btn btn-primary" value="Submit" /><script type="text/javascript">document.addEventListener("DOMContentLoaded", function() { document.body.addEventListener("click", function(event) { if (event.target.matches(".comment-reply-link, #cancel-comment-reply-link")) { turnstile.reset(".comment-form .cf-turnstile"); } }); });</script> <input type='hidden' name='comment_post_ID' value='34967' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
 
 						</div>
@@ -844,33 +843,9 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/3-day-full-body-workout">
+								<a href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/3-day-full-body-workout-endomondo.jpg" alt="">
-										</div>
-																	</a>
-							</div>
-							<div class="info">
-																									<div class="tag mr-bottom-16">
-																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
-																			</div>
-																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/3-day-full-body-workout">Maximize Your Time With This 3-Day Full Body Training Plan</a>
-								</p>
-								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/tammy-hogan">By
-										Tammy Hogan, PT, BA</a>
-								</p>
-							</div>
-						</div>
-					</div>
-										<div class="news-it">
-						<div class="news-box">
-							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/exercise/front-delt-exercises">
-																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2024/07/feature-2025-01-08.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/12/full-body-bodyweight-workout-endomondo.jpg" alt="">
 										</div>
 																	</a>
 							</div>
@@ -880,11 +855,11 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 													href="https://www.endomondo.com/exercise">Exercise</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/exercise/front-delt-exercises">10 Front Delt Exercises To Build Strength &#038; Size In 2025</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/exercise/full-body-bodyweight-workout">Top 8 Exercises For A Full Body Bodyweight Workout According To A Personal Trainer</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/steve-theunissen">By
-										Steve Theunissen, PT</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/jessica-forster">By
+										Jessica Forster</a>
 								</p>
 							</div>
 						</div>
@@ -892,23 +867,47 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 										<div class="news-it">
 						<div class="news-box">
 							<div class="featured image-fit hover-scale mr-bottom-16">
-								<a href="https://www.endomondo.com/workouts/upper-lower-split">
+								<a href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">
 																			<div class="image-fit">
-											<img src="https://www.endomondo.com/wp-content/uploads/2025/01/upper-lower-split-endomondo.jpg" alt="">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/09/feature-2024-09-24-2-1.jpg" alt="">
 										</div>
 																	</a>
 							</div>
 							<div class="info">
 																									<div class="tag mr-bottom-16">
 																					<span><a
-													href="https://www.endomondo.com/workouts">Workout Programs</a></span>
+													href="https://www.endomondo.com/training">Training</a></span>
 																			</div>
 																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
-									<a class="pri-color-2" href="https://www.endomondo.com/workouts/upper-lower-split">Upper Lower Split: A Beginner-Friendly Guide To Effective Training</a>
+									<a class="pri-color-2" href="https://www.endomondo.com/training/how-many-push-ups-a-day-to-see-results">Here’s How Many Push Ups You Should Do Daily To See Results In 30 Days</a>
 								</p>
 								<p class="has-small-font-size">
-									<a class="sec-color-3" href="https://www.endomondo.com/author/erin-lohrenz">By
-										Erin Lohrenz, MPH</a>
+									<a class="sec-color-3" href="https://www.endomondo.com/author/chris-marshall">By
+										Chris Marshall, MSc, PT</a>
+								</p>
+							</div>
+						</div>
+					</div>
+										<div class="news-it">
+						<div class="news-box">
+							<div class="featured image-fit hover-scale mr-bottom-16">
+								<a href="https://www.endomondo.com/exercise/bodyweight-leg-exercises">
+																			<div class="image-fit">
+											<img src="https://www.endomondo.com/wp-content/uploads/2024/11/bodyweight-leg-exercises-endomondo-1.jpg" alt="">
+										</div>
+																	</a>
+							</div>
+							<div class="info">
+																									<div class="tag mr-bottom-16">
+																					<span><a
+													href="https://www.endomondo.com/exercise">Exercise</a></span>
+																			</div>
+																<p class="has-medium-font-size text-special mr-bottom-16 clamp-2">
+									<a class="pri-color-2" href="https://www.endomondo.com/exercise/bodyweight-leg-exercises">Get Stronger Legs Anywhere With These 7 Bodyweight Exercises</a>
+								</p>
+								<p class="has-small-font-size">
+									<a class="sec-color-3" href="https://www.endomondo.com/author/emily-post">By
+										Emily Post, PhD, CPT, CSCS</a>
 								</p>
 							</div>
 						</div>
@@ -932,7 +931,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 									alt="instagram" /></a>
 													<a target="_blank" href="https://www.pinterest.com/endomondo/"><img src="https://www.endomondo.com/wp-content/uploads/2024/01/pinterest-1.svg"
 									alt="pinterest" /></a>
-													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-305644568"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
+													<a target="_blank" href="https://www.newsbreak.com/m/endomondo-306392510"><img src="https://www.endomondo.com/wp-content/uploads/2025/01/svgexport-2-2-1.svg"
 									alt="newsbreak" /></a>
 										</div>
 				<div class="ft-form">
@@ -998,7 +997,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
             <p class="has-large-font-size">Help us rate this article</p>
             <input type="hidden" class="rating-feedback" data-empty="fa-regular fa-star" data-filled="fas fa-star" data-fractions="1" />
             <input class="link-post-feedback" value="https://www.endomondo.com/training/bicep-push-up-benefits-after-a-month" type="hidden">
-            <input class="ip-address" value="2600:1700:6e2:e200:e9ea:f311:d8e9:cdb" type="hidden">
+            <input class="ip-address" value="66.249.65.32" type="hidden">
         </div>
         <div class="form-feedback">
             <p class="sec-color-4">Give us feedback in details</p>
@@ -1036,7 +1035,7 @@ var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":
 </div><script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/slick/slick.js"></script>
 <script type="text/javascript"
 	src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.4"></script>
+<script type="text/javascript" src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/custom.js?v=1.2.5"></script>
 <script src="https://www.endomondo.com/wp-content/themes/endonondo/assets/js/rating.js?ver=1.0.0"></script>
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -1056,16 +1055,16 @@ var wpcf7 = {"api":{"root":"https:\/\/www.endomondo.com\/wp-json\/","namespace":
 <script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/searchable/jquery.multiselect.js' id='searchable-option-list-js-js'></script>
 <script type='text/javascript' id='load-more-comments-js-extra'>
 /* <![CDATA[ */
-var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"358b71f5a0","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
+var ajax_object = {"ajax_url":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","ajax_nonce":"9427bf148d","disallowed_keys":["buy","free","discount","deal","offer","exclusive","porn","fuck","fucking","f***","f*ck","f---k","shit","shitting","s***","sh*t","asshole","a**hole","a**","a$$","bitch","b****","b!tch","b!***","damn","damnit","d*mn","bastard","b@stard","crap","dick","d1ck","d*ck","pussy","p*ssy","pu$$y","cunt","c*nt","c**t","cock","c0ck","c*ck","boobs","tits","t1ts","penis","vagina","nigger","n***er","n1gger","chink","gook","spic","fag","f****t","dyke","homo","kike","infidel","heathen","retard","r*****","tranny","kill yourself","kys","die","stupid","moron","whore","slut","hoe","f@ck","sh!t","a$$hole","b1tch","bloody","bugger","bollocks","wanker","tosser","drongo","bogan","shithead","lazy","nazi","racist","supremacy","genocide","slavery","terrorist","jihad","convert","zionist","antifa","maga","brexit","trump","biden","liberal","conservative","communist","marxist","fascist","socialist","feminazi","alt-right","whitepower","blackpower","kill","hate","lynch","homophobe","transphobe","bigot","misogynist","misandrist","sexist","ableist","islamist","fundamentalist","evangelist","extremist","radical","anarchy","propaganda","lies","corruption","scam","fraud","hoax","fake","election","dictator","dictatorship","coup","revolt","insurrection","rebellion","resistance","militia","patriot","freedom","freedomfighter","war","civilwar","racism","antisemitism","xenophobia","antiimmigrant","immigrant","illegal","refugee","holocaust","apartheid","segregation","discrimination","persecution","http","https","www",".abc",".net",".org",".biz",".xyz",".info",".ru",".io",".cc",".tk",".ph",".in",".cn",".bitly","tinyurl","goo.gl","earnmoney","freemoney","clickhere","buycheap","cheapprices","discountcode","promocode","limitedoffer","specialoffer","freedownload","freegift","prize","claimreward","lotterywinner","investmentplan","cryptoinvest","bitcoin","forex","trading","donate","paypal","cashapp","venmo","wiretransfer","pharmacy","onlineshop","sexy","dating","adult","casino","gamble","poker","betting","winbig","luckywinner","exclusiveoffer","signupnow","loginhere","verifyaccount","resetpassword","accountalert","supportteam","contactus","callnow","helpline","helpdesk","surveyreward","freemembership","unlocknow","softwarecrack","torrent","pirated","hacktool","cheatcode","modapk","adfree","watchfree","livestream","downloadnow","unblock","vpnservice","proxy","anonymous","ddos","malware","spyware","phishing","virus","trojan","ransomware","securityalert","suspicious","unsecure","blackmarket","darkweb"]};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.1' id='load-more-comments-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/load-more-comments.js?ver=1.0.2' id='load-more-comments-js'></script>
 <script type='text/javascript' id='ld-ajaxload-js-extra'>
 /* <![CDATA[ */
-var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"9695382f69"};
+var ld_array = {"admin_ajax":"https:\/\/www.endomondo.com\/wp-admin\/admin-ajax.php","load_post_nonce":"094366822c"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.2' id='ld-ajaxload-js'></script>
+<script type='text/javascript' src='https://www.endomondo.com/wp-content/themes/endonondo/assets/js/ajax-loadpost.js?ver=1.0.6' id='ld-ajaxload-js'></script>
 <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I&#038;ver=3.0' id='google-recaptcha-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://www.endomondo.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -1082,5 +1081,5 @@ var wpcf7_recaptcha = {"sitekey":"6LduETAqAAAAAI6kTSSSo-lFUejHtFNvhc91L13I","act
 </script></body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Thu, 09 Jan 2025 02:46:45 GMT -->
-";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:101480;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Thu, 09 Jan 2025 02:46:45 GMT";}}}
+<!-- Cache served by breeze CACHE - Last modified: Tue, 14 Jan 2025 06:36:47 GMT -->
+";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:14:"Content-Length";s:5:"value";i:101788;}i:1;a:2:{s:4:"name";s:12:"Content-Type";s:5:"value";s:24:"text/html; charset=utf-8";}i:2;a:2:{s:4:"name";s:13:"Last-Modified";s:5:"value";s:29:"Tue, 14 Jan 2025 06:36:47 GMT";}}}
