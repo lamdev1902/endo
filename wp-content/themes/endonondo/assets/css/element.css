@@ -1811,8 +1811,8 @@ ul.commentlist .cancle-btn {
 .best {
     position: absolute;
     width: 100%;
-    top: 330px;
     left: 50%;
+    bottom: -39%;
     transform: translateX(-50%);
 }
 

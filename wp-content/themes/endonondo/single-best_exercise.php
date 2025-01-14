@@ -220,7 +220,7 @@ $featureimg = get_field('fimg_default', 'option');
                                                     if ($link):
                                                         ?>
                                                         <p>
-                                                            <a target="_blank" href="<?= $link ?>"><?= $tit->name ?></a>
+                                                            <a class="pri-color-2" target="_blank" href="<?= $link ?>"><?= $tit->name ?></a>
                                                         </p>
                                                     <?php else: ?>
                                                         <p><?= $tit->name ?></p>
@@ -360,7 +360,7 @@ $featureimg = get_field('fimg_default', 'option');
                             );
 
                             $contents = $wpdb->get_results($wpdb->prepare(
-                                "Select content From {$wpdb->prefix}exercise_content WHERE exercise_id = %d AND content_type = 1",
+                                "Select content From {$wpdb->prefix}exercise_content WHERE exercise_id = %d AND content_type = 0",
                                 $exercise_id
                             ), ARRAY_A);
 
@@ -482,45 +482,6 @@ $featureimg = get_field('fimg_default', 'option');
             </div>
         </div>
     </section>
-    <?php
-    $app = get_field('intro_app', $postid);
-    if (!empty($app[0])):
-        $app = $app[0];
-        $storeLink = !empty($app['store']) ? $app['store'] : '';
-        $explore = !empty($app['explore']) ? $app['explore'] : '';
-        $store = $storeLink ?: '';
-        $logo = get_field('enfit_logo', 'option');
-        ?>
-
-        <section class="app mb">
-            <div class="app__container container">
-                <div class="app__content">
-                    <?php if ($logo): ?>
-                        <div class="app__content-logo">
-                            <img src="<?= $logo ?>" alt="">
-                        </div>
-                    <?php endif; ?>
-                    <?php if (!empty($app['title'])): ?>
-                        <h1><?= $app['title'] ?></h1>
-                    <?php endif; ?>
-                    <?php if (!empty($app['description'])): ?>
-                        <p><?= $app['description'] ?></p>
-                    <?php endif; ?>
-                    <div class="app__content-action enfit-action mr-bottom-20 flex">
-                        <?php if ($explore): ?>
-                            <a href="<?= $explore ?>" id="">Explore Now</a>
-                        <?php endif; ?>
-                        <?php if ($store): ?>
-                            <a target="_blank" href="<?= $store ?>" class="home-store">
-                                <img src="<?= get_template_directory_uri() . '/assets/images/enfit/store.svg' ?>" alt="">
-                            </a>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php endif; ?>
-
     <section class="exc-section-content single-main">
         <div class="container">
             <div class="exc-container bd-bot">

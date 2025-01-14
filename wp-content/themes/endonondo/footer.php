@@ -1,5 +1,4 @@
 <?php
-/*
 $app = get_field('intro_app', 'option');
 if (!empty($app[0])):
 	$app = $app[0];
@@ -55,7 +54,6 @@ if (!empty($app[0])):
 		</div>
 	</section>
 <?php endif; ?>
-*/
 ?>
 <footer id="footer">
 	<div class="ft-top">
