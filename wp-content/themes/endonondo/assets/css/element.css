@@ -1933,6 +1933,10 @@ ul.commentlist .cancle-btn {
     padding: 0 0 0 6px;
 }
 
+.exercise__grid-item-top-content-equipment p:hover > a {
+    color: var(--primary-color-1) !important;
+}
+
 .exercise__grid-item-top-content-title {
     padding-left: 10px;
     color: #fff;
