@@ -4,7 +4,6 @@ $intro = get_field('intro_app', 'option');
 $storeLink = get_field('ads_store', 'option');
 $explore = !empty($intro[0]['explore']) ? $intro[0]['explore'] : '';
 $store = $storeLink ?: '';
-/*
 if ($ads):
     ?>
     <div class="ads_list">
@@ -40,5 +39,3 @@ if ($ads):
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
-*/
-?>

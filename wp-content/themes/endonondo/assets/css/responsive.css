@@ -684,11 +684,11 @@
     }
 
     /* Comment */
-    .comment-form  {
+    .comment-form {
         flex-direction: column;
     }
 
-    .comment-form .user-col, 
+    .comment-form .user-col,
     .comment-form .email-col {
         width: 100%;
     }
@@ -704,7 +704,8 @@
         position: unset;
     }
 
-    .comment-form .user-col, .comment-form .email-col {
+    .comment-form .user-col,
+    .comment-form .email-col {
         flex: auto;
         margin-right: 0;
     }
@@ -725,7 +726,7 @@
     /* Best Exercise */
     .exercise__grid--3.grid,
     .exercise__grid--2.grid {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         row-gap: 30px;
     }
 
@@ -733,23 +734,33 @@
     table tbody td:first-child {
         box-shadow: 3px 0px 8.5px 0px rgba(0, 0, 0, 0.06);
     }
+
     table thead th:first-child,
     table tbody td:first-child {
         width: 155px !important;
     }
 
     .best-exercise .best {
-        top: 78%;
+        bottom: -29%;
     }
 
     .best-exercise .best .exercise__grid-item-top-content-video {
         max-height: 170px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
     }
 
-    .best-exercise .best .exercise__grid-item-top-content-video video, 
+    .best-exercise .best .exercise__grid-item-top-content-video video,
     .best-exercise .best .exercise__grid-item-top-content-video iframe {
-        width: 312px;
-        height: 175px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .exercise__grid-item-top-content-2-column.flex {
@@ -780,6 +791,17 @@
     }
 }
 
+@media (max-width: 390px) {
+    .best-exercise .best {
+        bottom: -26%;
+    }
+}
+
+@media (max-width: 375px) {
+    .best-exercise .best {
+        bottom: -24%;
+    }
+}
 
 @media (min-width: 481px) and (max-width: 834px) {
     .container {
@@ -1226,7 +1248,7 @@
     .filter-section .clear {
         padding: 0;
     }
-    
+
     #previewSlick .slick-list {
         padding-top: 40px !important;
         padding-bottom: 40px !important;
@@ -1291,7 +1313,7 @@
     #comments .seeAll a {
         line-height: 42px;
         font-size: 15px;
-    }    
+    }
 
     footer#footer .ft-top {
         padding: 32px 0 0;
@@ -1304,7 +1326,7 @@
 
     footer#footer .ft-bottom .menu-menu-footer-container ul {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
@@ -1315,23 +1337,24 @@
     }
 
     .exercise__grid--3 {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 30px;
         row-gap: 20px;
     }
 
     .best {
-        top: 68%;
+        bottom: -64%;
     }
 
     .best h2 {
         padding: 0 6.8%;
     }
+
     .best .exercise__grid-item-top-content-video {
         max-height: 350px;
     }
 
-    .best .exercise__grid-item-top-content-video video, 
+    .best .exercise__grid-item-top-content-video video,
     .best .exercise__grid-item-top-content-video iframe {
         width: 620px;
         height: 350px;
@@ -1340,7 +1363,7 @@
     .all {
         padding: 320px 0 20px 0;
     }
-    
+
 
     .exercise__grid-item-bottom {
         margin-bottom: 10px;
@@ -1350,7 +1373,7 @@
     .medicine-table .wp-block-table table tbody tr {
         display: flex;
     }
-    
+
     .medicine-table .wp-block-table table thead tr th,
     .medicine-table .wp-block-table table tbody tr td {
         display: flex;
