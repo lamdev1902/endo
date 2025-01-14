@@ -26,7 +26,7 @@ $post_type = $post->post_type;
 $listBest = get_post_meta($postid, 'best_exercise_list', true);
 
 $queryE = "
-    SELECT DISTINCT ee.name 
+    SELECT DISTINCT ee.name, ee.slug
     FROM {$wpdb->prefix}exercise_equipment_option AS eeo
     INNER JOIN {$wpdb->prefix}exercise_equipment AS ee
     ON eeo.equipment_id = ee.id
@@ -34,7 +34,7 @@ $queryE = "
 ";
 
 $queryM = "
-    SELECT DISTINCT mt.name
+    SELECT DISTINCT mt.name, mt.slug
     FROM {$wpdb->prefix}exercise_primary_option AS epo
     INNER JOIN {$wpdb->prefix}exercise_muscle_anatomy AS ma
     ON epo.muscle_id = ma.id
@@ -184,7 +184,29 @@ $featureimg = get_field('fimg_default', 'option');
                                     <?php if (!empty($muscle_type)): ?>
                                         <div class="exercise__grid-item-top-content-muscle flex">
                                             <?php foreach ($muscle_type as $tit): ?>
-                                                <p><?= $tit->name ?></p>
+                                                <?php if ($tit->slug): ?>
+                                                    <?php
+                                                    $post_id = $wpdb->get_var(
+                                                        $wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $tit->slug)
+                                                    );
+
+                                                    $link = '';
+
+                                                    if ($post_id) {
+                                                        $link = get_permalink($post_id);
+                                                    }
+
+                                                    if ($link):
+                                                        ?>
+                                                        <p>
+                                                            <a target="_blank" href="<?= $link ?>"><?= $tit->name ?></a>
+                                                        </p>
+                                                    <?php else: ?>
+                                                        <p><?= $tit->name ?></p>
+                                                    <?php endif; ?>
+                                                <?php else: ?>
+                                                    <p><?= $tit->name ?></p>
+                                                <?php endif; ?>
                                             <?php endforeach; ?>
                                         </div>
                                     <?php endif; ?>
@@ -354,8 +376,29 @@ $featureimg = get_field('fimg_default', 'option');
                                                 <div class="exercise__grid-item-top-content-equipment flex">
                                                     <p class="pri-color-2">Equipment: </p>
                                                     <?php foreach ($equipments as $eit): ?>
-                                                        <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?>
-                                                        </p>
+                                                        <?php if ($eit->slug): ?>
+                                                            <?php
+                                                            $post_id = $wpdb->get_var(
+                                                                $wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $eit->slug)
+                                                            );
+
+                                                            $link = '';
+
+                                                            if ($post_id) {
+                                                                $link = get_permalink($post_id);
+                                                            }
+
+                                                            if ($link):
+                                                                ?>                                                                    
+                                                                <p class=" exercise__grid-item-top-content--text">
+                                                                    <a class="sec-color-3" target="_blank" href="<?= $link ?>"><?= $eit->name ?></a>
+                                                                </p>
+                                                            <?php else: ?>
+                                                                <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?></p>
+                                                            <?php endif; ?>
+                                                        <?php else: ?>
+                                                            <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?></p>
+                                                        <?php endif; ?>
                                                     <?php endforeach; ?>
                                                 </div>
                                             <?php endif; ?>
@@ -363,8 +406,27 @@ $featureimg = get_field('fimg_default', 'option');
                                                 <div class="exercise__grid-item-top-content-muscle flex">
                                                     <p class="pri-color-2">Muscle Worked: </p>
                                                     <?php foreach ($mts as $tit): ?>
-                                                        <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?>
-                                                        </p>
+                                                        <?php if ($tit->slug): ?>
+                                                            <?php
+                                                            $post_id = $wpdb->get_var(
+                                                                $wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $tit->slug)
+                                                            );
+
+                                                            $link = '';
+
+                                                            if ($post_id) {
+                                                                $link = get_permalink($post_id);
+                                                            }
+
+                                                            if ($link):
+                                                                ?>
+                                                                <p class="sec-color-3 exercise__grid-item-top-content--text"><a target="_blank" href="<?= $link ?>"><?= $tit->name ?></a></p>
+                                                            <?php else: ?>
+                                                                <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>
+                                                            <?php endif; ?>
+                                                        <?php else: ?>
+                                                            <p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>                                                        
+                                                        <?php endif; ?>
                                                     <?php endforeach; ?>
                                                 </div>
                                             <?php endif; ?>
