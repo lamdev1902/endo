@@ -643,52 +643,52 @@ function ld_load_ajax($postid, $custom_query = null, $paged = 1)
 function get_video($exercise = [], $grid1 = false)
 {
 
-    $width = 347;
-    $height = 194;
+	$width = 347;
+	$height = 194;
 
-    if ($grid1) {
-        $width = 776;
-        $height = 438;
-    }
-    $arrVideo = array();
-    if ($exercise) {
-        $arrVideo = array(
-            $exercise->video_white_male,
-            $exercise->video_green,
-            $exercise->video_transparent,
-        );
-    }
+	if ($grid1) {
+		$width = 776;
+		$height = 438;
+	}
+	$arrVideo = array();
+	if ($exercise) {
+		$arrVideo = array(
+			$exercise->video_white_male,
+			$exercise->video_green,
+			$exercise->video_transparent,
+		);
+	}
 
-    $iframe = '';
-    $video = '';
-    foreach ($arrVideo as $vid) {
-        if ($vid) {
-            $video = $vid;
-        }
-    }
+	$iframe = '';
+	$video = '';
+	foreach ($arrVideo as $vid) {
+		if ($vid) {
+			$video = $vid;
+		}
+	}
 
-    if ($video) {
+	if ($video) {
 
-        $video_id = get_vimeo($video);
+		$video_id = get_vimeo($video);
 
-        if ($video_id) {
-            $iframe = sprintf(
-                '<iframe src="https://player.vimeo.com/video/%s?controls=1" width="%d" height="%d" frameborder="0" allow="autoplay;muted;"></iframe>',
-                htmlspecialchars($video_id),
-                $width,
-                $height
-            );
-        }
-    }
+		if ($video_id) {
+			$iframe = sprintf(
+				'<iframe src="https://player.vimeo.com/video/%s?controls=1" width="%d" height="%d" frameborder="0" allow="autoplay;muted;"></iframe>',
+				htmlspecialchars($video_id),
+				$width,
+				$height
+			);
+		}
+	}
 
-    return $iframe;
+	return $iframe;
 }
 function get_vimeo($url)
 {
-    if (preg_match('/playback\/(\d+)\//', $url, $matches)) {
-        return $matches[1];
-    }
-    return false;
+	if (preg_match('/playback\/(\d+)\//', $url, $matches)) {
+		return $matches[1];
+	}
+	return false;
 }
 
 add_action('wp_ajax_ajax_load_post', 'ajax_load_post_func');
@@ -704,7 +704,7 @@ function ajax_load_post_func()
 	$filter = $_POST['filter'] ? $_POST['filter'] : 1;
 
 	$queryE = "
-    SELECT DISTINCT ee.name 
+    SELECT DISTINCT ee.name, ee.slug
     FROM {$wpdb->prefix}exercise_equipment_option AS eeo
     INNER JOIN {$wpdb->prefix}exercise_equipment AS ee
     ON eeo.equipment_id = ee.id
@@ -712,7 +712,7 @@ function ajax_load_post_func()
 	";
 
 	$queryM = "
-		SELECT DISTINCT mt.name
+		SELECT DISTINCT mt.name, mt.slug
 		FROM {$wpdb->prefix}exercise_primary_option AS epo
 		INNER JOIN {$wpdb->prefix}exercise_muscle_anatomy AS ma
 		ON epo.muscle_id = ma.id
@@ -875,8 +875,29 @@ function ajax_load_post_func()
 										<div class="exercise__grid-item-top-content-equipment flex">
 											<p class="pri-color-2">Equipment: </p>
 											<?php foreach ($equipments as $eit): ?>
-												<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?>
-												</p>
+												<?php if ($eit->slug): ?>
+													<?php
+													$post_id = $wpdb->get_var(
+														$wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $eit->slug)
+													);
+
+													$link = '';
+
+													if ($post_id) {
+														$link = get_permalink($post_id);
+													}
+
+													if ($link):
+														?>
+														<p class=" exercise__grid-item-top-content--text">
+															<a class="sec-color-3" target="_blank" href="<?= $link ?>"><?= $eit->name ?></a>
+														</p>
+													<?php else: ?>
+														<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?></p>
+													<?php endif; ?>
+												<?php else: ?>
+													<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?></p>
+												<?php endif; ?>
 											<?php endforeach; ?>
 										</div>
 									<?php endif; ?>
@@ -884,8 +905,28 @@ function ajax_load_post_func()
 										<div class="exercise__grid-item-top-content-muscle flex">
 											<p class="pri-color-2">Muscle: </p>
 											<?php foreach ($mts as $tit): ?>
-												<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?>
-												</p>
+												<?php if ($tit->slug): ?>
+													<?php
+													$post_id = $wpdb->get_var(
+														$wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $tit->slug)
+													);
+
+													$link = '';
+
+													if ($post_id) {
+														$link = get_permalink($post_id);
+													}
+
+													if ($link):
+														?>
+														<p class="sec-color-3 exercise__grid-item-top-content--text"><a class="sec-color-3" target="_blank"
+																href="<?= $link ?>"><?= $tit->name ?></a></p>
+													<?php else: ?>
+														<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>
+													<?php endif; ?>
+												<?php else: ?>
+													<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>
+												<?php endif; ?>
 											<?php endforeach; ?>
 										</div>
 									<?php endif; ?>
