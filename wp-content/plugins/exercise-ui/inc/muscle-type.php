@@ -52,7 +52,7 @@ class Muscle_type extends Manage_Exercise
         $this->process_bulk_action();
 
         /* pagination */
-        $per_page = $this->get_items_per_page('muscle_type_per_page', 15);
+        $per_page = $this->get_items_per_page('muscle_type_per_page', 30);
         $current_page = $this->get_pagenum();
         $total_items = count($this->muscle_type_data);
 
