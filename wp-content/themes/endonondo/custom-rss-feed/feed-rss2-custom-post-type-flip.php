@@ -29,10 +29,7 @@ echo '<?xml version="1.0" encoding="' . esc_attr(get_option('blog_charset')) . '
  */
 do_action('rss_tag_pre', 'rss2');
 ?>
-<rss version="2.0" xmlns:nb="https://www.newsbreak.com/" xmlns:content="http://purl.org/rss/1.0/modules/content/"
-    xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-    xmlns:slash="http://purl.org/rss/1.0/modules/slash/" <?php
+<rss version="2.0" <?php
     /**
      * Fires at the end of the RSS root to add namespaces.
      *v
