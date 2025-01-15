@@ -608,7 +608,7 @@ function change_default_feed_slug()
 	remove_action('do_feed_rss', 'do_feed_rss', 10, 1);
 	remove_action('do_feed_atom', 'do_feed_atom', 10, 1);
 
-	add_feed('fb-feed', 'custom_default_feed_callback');
+	add_feed('nb-feed', 'custom_default_feed_callback');
 }
 add_action('init', 'change_default_feed_slug');
 
