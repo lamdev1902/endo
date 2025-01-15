@@ -380,7 +380,7 @@ function theme_mcs_scripts()
 	wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.7');
 	wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
 	wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
-	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.9.1');
+	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.9.2');
 	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.9.2');
 	wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
 	wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
@@ -608,7 +608,7 @@ function change_default_feed_slug()
 	remove_action('do_feed_rss', 'do_feed_rss', 10, 1);
 	remove_action('do_feed_atom', 'do_feed_atom', 10, 1);
 
-	add_feed('nb-feed', 'custom_default_feed_callback');
+	add_feed('fb-feed', 'custom_default_feed_callback');
 }
 add_action('init', 'change_default_feed_slug');
 
@@ -765,6 +765,15 @@ function ajax_load_post_func()
 			$eq_ids_str = implode(',', array_map('intval', $eq_ids));
 			$where_conditions[] = "eeo.equipment_id IN ($eq_ids_str)";
 		}
+	}
+
+
+	$listbest = get_post_meta($postid, 'best_exercise_list', true);
+
+	if (!empty($listbest)) {
+		$listbest_cleaned = implode(',', array_map('intval', explode(',', $listbest)));
+	
+		$where_conditions[] = "e.id NOT IN ($listbest_cleaned)";
 	}
 
 	$where_clause = implode(' AND ', $where_conditions);

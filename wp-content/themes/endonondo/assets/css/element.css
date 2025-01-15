@@ -1571,8 +1571,9 @@ h2.tag-coming {
 }
 
 #comments .commentlist>li {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--secondary-color-1);
+    margin-bottom: 0;
 }
 
 #comments .commentlist>li>.children {
@@ -1683,7 +1684,11 @@ h2.tag-coming {
 }
 
 #write-comment {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.commentlist {
+    margin-bottom: 0;
 }
 
 .form-grid.hide {
@@ -1761,12 +1766,21 @@ h2.tag-coming {
     top: 0px;
 }
 
-.cmt-succ {
+.cmt-succ,
+.cmt-wait {
     color: var(--primary-color-1);
 }
 
 .cmt-succ::before {
     content: url(../images/cmt-success.svg);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0px;
+}
+
+.cmt-wait::before {
+    content: url(../images/submitting.svg);
     position: absolute;
     left: 0;
     height: 100%;

@@ -54,7 +54,6 @@ if (!empty($app[0])):
 		</div>
 	</section>
 <?php endif; ?>
-?>
 <footer id="footer">
 	<div class="ft-top">
 		<div class="container list-flex flex-two">
