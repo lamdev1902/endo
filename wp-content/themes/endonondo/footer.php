@@ -14,7 +14,7 @@ if (!empty($app[0])):
 	$storeLink = get_field('footer_store', 'option');
 	$explore = !empty($app['explore']) ? $app['explore'] : '';
 	$store = $storeLink ?: '';
-	?>
+?>
 
 	<section class="app-section mb">
 		<div class="container">
@@ -41,7 +41,7 @@ if (!empty($app[0])):
 				<?php
 				$socials = get_field('follow_social', 'option');
 				if ($socials):
-					?>
+				?>
 					<div class="social flex">
 						<p class="has-small-font-size pri-color-2" style="margin-bottom: 0">Follow us: </p>
 						<?php foreach ($socials as $social): ?>
@@ -65,10 +65,10 @@ if (!empty($app[0])):
 					$social = get_field('social', 'option');
 					if ($social) {
 						foreach ($social as $social) {
-							?>
+					?>
 							<a target="_blank" href="<?php echo $social['link']; ?>"><img src="<?= $social['icon']['url']; ?>"
 									alt="<?= $social['icon']['alt']; ?>" /></a>
-						<?php }
+					<?php }
 					} ?>
 				</div>
 				<div class="ft-form">
@@ -127,14 +127,15 @@ $post_type = get_field('cra_with_cpt', 'option');
 if (in_array(get_post_type(), $post_type) == true)
 	include "hcfunction/customer-feedback.php";
 ?>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.js"></script>
+
 <script type="text/javascript"
 	src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js?v=1.2.5"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/rating.js?ver=1.0.0"></script>
+
+
 <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <?php
 $pty = get_post_type();
@@ -221,12 +222,17 @@ $args = array(
 $the_query = new WP_Query($args);
 while ($the_query->have_posts()):
 	$the_query->the_post();
-	?>
+?>
 	<div class="ads-script"><?php echo get_field('emcode', $post->ID, false, false); ?></div>
-	<?php
+<?php
 endwhile;
 wp_reset_query();
 ?>
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.5.0.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/chart.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js?v=1.2.4"></script>
 <?php wp_footer(); ?>
 </body>
 

@@ -1,0 +1,623 @@
+# Copyright (C) 2024 site-reviews-notifications
+# This file is distributed under the same license as the site-reviews-notifications package.
+msgid ""
+msgstr ""
+"Project-Id-Version: site-reviews-notifications\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Gemini Labs <support@geminilabs.io>\n"
+"Last-Translator: Paul Ryley <paul@geminilabs.io>\n"
+"Project-Id-Version: undefined\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: config/settings.php:9
+msgctxt "setting label (admin-text)"
+msgid "From Name"
+msgstr ""
+
+#: config/settings.php:11
+msgctxt "admin-text"
+msgid "The \"From\" name (the display name, also known as the email Sender name) tells your recipients who sent them the message. The available placeholder tags are: %s"
+msgstr ""
+
+#: config/settings.php:19
+msgctxt "setting label (admin-text)"
+msgid "From Email"
+msgstr ""
+
+#: config/settings.php:21
+msgctxt "admin-text"
+msgid "This is the email address that notifications will be sent from. The available placeholder tags are: %s"
+msgstr ""
+
+#: config/settings.php:29
+msgctxt "setting label (admin-text)"
+msgid "Reply-To Email"
+msgstr ""
+
+#: config/settings.php:31
+msgctxt "admin-text"
+msgid "This is the email address that you want reply messages sent to, this can be different from the \"From\" email. The available placeholder tags are: %s"
+msgstr ""
+
+#: config/settings.php:40
+msgctxt "setting label (admin-text)"
+msgid "Header Image URL"
+msgstr ""
+
+#: config/settings.php:42
+msgctxt "setting description (admin-text)"
+msgid "This image will be shown above the email, usually you will want this to be your business or website logo."
+msgstr ""
+
+#: config/settings.php:49
+msgctxt "setting label (admin-text)"
+msgid "Footer Text"
+msgstr ""
+
+#: config/settings.php:51
+msgctxt "admin-text"
+msgid "This text is shown at the bottom of the email. The available placeholder tags are: %s"
+msgstr ""
+
+#: config/settings.php:59
+msgctxt "setting label (admin-text)"
+msgid "Brand Colour"
+msgstr ""
+
+#: config/settings.php:61
+msgctxt "setting description (admin-text)"
+msgid "This colour is used for the header background, links, etc."
+msgstr ""
+
+#: config/settings.php:67
+msgctxt "setting label (admin-text)"
+msgid "Background Colour"
+msgstr ""
+
+#: config/settings.php:69
+msgctxt "setting description (admin-text)"
+msgid "This colour is used for the background of the email."
+msgstr ""
+
+#: config/settings.php:75
+msgctxt "setting label (admin-text)"
+msgid "Body Background Colour"
+msgstr ""
+
+#: config/settings.php:77
+msgctxt "setting description (admin-text)"
+msgid "This colour is used for the backgound of the message body."
+msgstr ""
+
+#: config/settings.php:83
+msgctxt "setting label (admin-text)"
+msgid "Body Link Colour"
+msgstr ""
+
+#: config/settings.php:85
+msgctxt "setting description (admin-text)"
+msgid "This colour is used for links inside the message body."
+msgstr ""
+
+#: config/settings.php:91
+msgctxt "setting label (admin-text)"
+msgid "Body Text Colour"
+msgstr ""
+
+#: config/settings.php:93
+msgctxt "setting description (admin-text)"
+msgid "This colour is used for the text of the message body."
+msgstr ""
+
+#: config/woocommerce.php:16
+msgctxt "admin-text"
+msgid "The condition to use in order to schedule the review reminder"
+msgstr ""
+
+#: config/woocommerce.php:18
+msgctxt "admin-text"
+msgid "Order is Completed"
+msgstr ""
+
+#: config/woocommerce.php:19
+msgctxt "admin-text"
+msgid "Order is Processing"
+msgstr ""
+
+#: config/woocommerce.php:21
+msgctxt "admin-text"
+msgid "Trigger when"
+msgstr ""
+
+#: config/woocommerce.php:25
+msgctxt "admin-text"
+msgid "day(s) after trigger"
+msgstr ""
+
+#: config/woocommerce.php:31
+msgctxt "admin-text"
+msgid "The period of days in the future to schedule the review reminder"
+msgstr ""
+
+#: config/woocommerce.php:32
+msgctxt "admin-text"
+msgid "Send the email"
+msgstr ""
+
+#: config/woocommerce.php:38
+msgctxt "admin-text"
+msgid "Select product categories"
+msgstr ""
+
+#: config/woocommerce.php:42
+msgctxt "admin-text"
+msgid "Restrict review reminders to products in these categories."
+msgstr ""
+
+#: config/woocommerce.php:45
+msgctxt "admin-text"
+msgid "Restrict emails to"
+msgstr ""
+
+#: config/woocommerce.php:51
+msgctxt "admin-text"
+msgid "Send a reminder to customers who place orders using guest checkout."
+msgstr ""
+
+#: config/woocommerce.php:52
+msgctxt "admin-text"
+msgid "Send reminders to customers who used the guest checkout?"
+msgstr ""
+
+#: config/woocommerce.php:53
+msgctxt "admin-text"
+msgid "Send to guests"
+msgstr ""
+
+#: config/woocommerce.php:59
+msgctxt "admin-text"
+msgid "This is useful for reminders as it ensures the status of the order hasn't changed since the initial trigger."
+msgstr ""
+
+#: config/woocommerce.php:60
+msgctxt "admin-text"
+msgid "Recheck order status before the email is sent?"
+msgstr ""
+
+#: config/woocommerce.php:61
+msgctxt "admin-text"
+msgid "Recheck order status"
+msgstr ""
+
+#: views/settings.php:14
+msgctxt "admin-text"
+msgid "If you %senable%s the WooCommerce Reviews integration, you will be able to schedule review reminders for product orders."
+msgstr ""
+
+#: views/settings.php:9
+msgctxt "admin-text"
+msgid "Schedule review reminders for product orders on the WooCommerce %sEmails%s settings page."
+msgstr ""
+
+#: views/settings.php:27
+msgctxt "admin-text"
+msgid "Notification"
+msgstr ""
+
+#: views/settings.php:30
+msgctxt "admin-text"
+msgid "Schedule"
+msgstr ""
+
+#: views/settings.php:33
+msgctxt "admin-text"
+msgid "Recipient"
+msgstr ""
+
+#: views/settings.php:39
+msgctxt "admin-text"
+msgid "Add Notification"
+msgstr ""
+
+#: views/templates.php:10
+msgctxt "admin-text"
+msgid "Add a new condition"
+msgstr ""
+
+#: views/templates.php:38
+msgctxt "admin-text"
+msgid "Remove this condition"
+msgstr ""
+
+#: views/templates.php:47
+msgctxt "admin-text"
+msgid "Save"
+msgstr ""
+
+#: views/templates.php:48
+msgctxt "admin-text"
+msgid "Delete"
+msgstr ""
+
+#: views/templates.php:52
+msgctxt "admin-text"
+msgid "Sending, please wait..."
+msgstr ""
+
+#: views/templates.php:53
+msgctxt "admin-text"
+msgid "Send Test Email"
+msgstr ""
+
+#: views/templates.php:65, plugin/Controllers/Controller.php:134
+msgctxt "admin-text"
+msgid "Send Conditions"
+msgstr ""
+
+#: views/templates.php:77, plugin/Controllers/Controller.php:135
+msgctxt "admin-text"
+msgid "Enabled"
+msgstr ""
+
+#: views/templates.php:99, views/templates.php:113, views/templates.php:153
+msgctxt "admin-text"
+msgid "The available placeholder tags are: %s"
+msgstr ""
+
+#: views/templates.php:100
+msgctxt "admin-text"
+msgid "Email Heading"
+msgstr ""
+
+#: views/templates.php:114, plugin/Controllers/Controller.php:138
+msgctxt "admin-text"
+msgid "Email Message"
+msgstr ""
+
+#: views/templates.php:126, plugin/Controllers/Controller.php:139
+msgctxt "admin-text"
+msgid "Recipients"
+msgstr ""
+
+#: views/templates.php:137, plugin/Controllers/Controller.php:140
+msgctxt "admin-text"
+msgid "Send Schedule"
+msgstr ""
+
+#: views/templates.php:154, plugin/Controllers/Controller.php:141
+msgctxt "admin-text"
+msgid "Email Subject"
+msgstr ""
+
+#: views/templates.php:167
+msgctxt "admin-text"
+msgid "Each notification has a Unique ID (UID), this UID can be used in filter hooks to target specific notifications."
+msgstr ""
+
+#: views/templates.php:168
+msgctxt "admin-text"
+msgid "Notification ID"
+msgstr ""
+
+#: views/templates.php:180
+msgctxt "admin-text"
+msgid "Select a recipient or type an email and press ENTER."
+msgstr ""
+
+#: views/templates.php:192
+msgctxt "admin-text"
+msgid "Remove entry"
+msgstr ""
+
+#: views/templates.php:204
+msgctxt "admin-text"
+msgid "Edit notification"
+msgstr ""
+
+#: views/templates.php:205
+msgctxt "admin-text"
+msgid "No Subject"
+msgstr ""
+
+#: views/templates.php:224
+msgctxt "admin-text"
+msgid "Click the <strong>Add Notification</strong> button to add a new notification."
+msgstr ""
+
+#: plugin/Controllers/Controller.php:62
+msgctxt "admin-text"
+msgid "Send always"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:63
+msgctxt "admin-text"
+msgid "Send when all of the conditions pass"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:64
+msgctxt "admin-text"
+msgid "Send when any of the conditions pass"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:67
+msgctxt "admin-text"
+msgid "Assigned Post Author ID"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:68
+msgctxt "admin-text"
+msgid "Assigned Post ID"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:69
+msgctxt "admin-text"
+msgid "Assigned Post Type"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:70
+msgctxt "admin-text"
+msgid "Assigned User ID"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:71
+msgctxt "admin-text"
+msgid "Category ID"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:72
+msgctxt "admin-text"
+msgid "Rating"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:73
+msgctxt "admin-text"
+msgid "Review"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:74, plugin/Controllers/Controller.php:130
+msgctxt "admin-text"
+msgid "Reviewer"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:77
+msgctxt "admin-text"
+msgid "Contains"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:78
+msgctxt "admin-text"
+msgid "Equals"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:79
+msgctxt "admin-text"
+msgid "Greater Than"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:80
+msgctxt "admin-text"
+msgid "Less Than"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:81
+msgctxt "admin-text"
+msgid "Not"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:118
+msgctxt "admin-text"
+msgid "was approved"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:119
+msgctxt "admin-text"
+msgid "is guest user"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:120
+msgctxt "admin-text"
+msgid "is logged in"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:121
+msgctxt "admin-text"
+msgid "was unapproved"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:122
+msgctxt "admin-text"
+msgid "was responded to"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:123
+msgctxt "admin-text"
+msgid "was verified"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:127
+msgctxt "admin-text"
+msgid "Administrator"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:128
+msgctxt "admin-text"
+msgid "Assigned Post Author"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:129
+msgctxt "admin-text"
+msgid "Assigned User"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:136
+msgctxt "admin-text"
+msgid "Notification Name"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:137
+msgctxt "admin-text"
+msgid "Email Header"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:144
+msgctxt "admin-text"
+msgid "The %s field must be between %d and %d"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:145
+msgctxt "admin-text"
+msgid "The %s field requires at least one condition"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:146
+msgctxt "admin-text"
+msgid "The %s field must be a number"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:147
+msgctxt "admin-text"
+msgid "The %s field is required"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:148
+msgctxt "admin-text"
+msgid "The %s field must be unique"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:151
+msgctxt "admin-text"
+msgid "Send immediately"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:152
+msgctxt "admin-text"
+msgid "Send after 1 day"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:153
+msgctxt "admin-text"
+msgid "Send after 2 days"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:154
+msgctxt "admin-text"
+msgid "Send after 3 days"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:155
+msgctxt "admin-text"
+msgid "Send after 4 days"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:156
+msgctxt "admin-text"
+msgid "Send after 5 days"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:157
+msgctxt "admin-text"
+msgid "Send after 6 days"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:158
+msgctxt "admin-text"
+msgid "Send after 1 week"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:159
+msgctxt "admin-text"
+msgid "Send after 2 weeks"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:160
+msgctxt "admin-text"
+msgid "Send after 3 weeks"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:161
+msgctxt "admin-text"
+msgid "Send after 4 weeks"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:369
+msgctxt "admin-text"
+msgid "You need to have at least one review to send a test notification."
+msgstr ""
+
+#: plugin/Controllers/Controller.php:357
+msgctxt "admin-text"
+msgid "The email was sent to %s"
+msgstr ""
+
+#: plugin/Controllers/Controller.php:364
+msgctxt "admin-text"
+msgid "The email could not be sent. Please check the %s for more information."
+msgstr ""
+
+#: plugin/Controllers/Controller.php:365
+msgctxt "admin-text"
+msgid "Console"
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/Controller.php:88
+msgctxt "admin-text"
+msgid "A review reminder was not scheduled due to a custom filter hook."
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/Controller.php:100
+msgctxt "admin-text"
+msgid "A review reminder was scheduled for %s at %s."
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/Controller.php:96
+msgctxt "admin-text"
+msgid "A review reminder could not be scheduled."
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:21
+msgctxt "admin-text"
+msgid "Review reminder emails are sent to the customer to remind them to rate their order."
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:31
+msgctxt "admin-text"
+msgid "Review Reminder (Site Reviews)"
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:137
+msgid "Hi {customer_name},"
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:138
+msgid "Thanks for shopping with us! What do you think of your purchase? We'd love to hear your feedback."
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:147
+msgid "Share your thoughts! 📣"
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:155
+msgid "{site_title}: Rate Your Purchase"
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:179
+msgctxt "admin-text"
+msgid "Email content"
+msgstr ""
+
+#: plugin/Integrations/WooCommerce/ReminderEmail.php:181
+msgctxt "admin-text"
+msgid "If you enable this notification, it's very important that you allow customers to give their consent during the checkout process. You will also need to update your Terms and Conditions page (in some countries this is a legal requirement)."
+msgstr ""
+
+#: views/integrations/woocommerce/notices/enable-reviews.php:6
+msgctxt "<a>Enable product reviews</a> (admin-text)"
+msgid "%sEnable product reviews%s in the WooCommerce settings to use the Review Reminder email notification."
+msgstr ""
