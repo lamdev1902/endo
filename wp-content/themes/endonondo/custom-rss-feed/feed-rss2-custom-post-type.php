@@ -45,7 +45,7 @@ do_action('rss_tag_pre', 'rss2');
 		<title>Endomondo</title>
 		<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 		<link><?= home_url(); ?></link>
-		<description><?php bloginfo_rss('description'); ?></description>
+		<description><?= get_field('rss_description', 'option') ?></description>
 		<lastBuildDate>
 			<?php echo get_feed_build_date('r'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</lastBuildDate>

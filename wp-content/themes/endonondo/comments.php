@@ -74,10 +74,11 @@ $aria_req = $req ? " aria-required='true'" : '';
 			</div>
 		</div>
 	</div>
+	<?php if (comments_open() && get_comments_number() > 0 && post_type_supports(get_post_type(), 'comments')): ?>
 	<ul class="commentlist">
 		<?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
 	</ul>
-
+	<?php endif;?>
 	<?php if (comments_open() && get_comments_number() > 2 && post_type_supports(get_post_type(), 'comments')): ?>
 		<div class="seeAll">
 			<a href="#" id="seeCmt" data-post-id="<?php echo get_the_ID(); ?>" data-page="2">See all comments</a>

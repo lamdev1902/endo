@@ -305,6 +305,11 @@ $featureimg = get_field('fimg_default', 'option');
                 }
             }
 
+            if (!empty($listBest)) {
+                $listbest_str = implode(',', array_map('intval', $listBest));
+                $where_conditions[] = "e.id NOT IN ($listbest_str)";
+            }
+
             $where_clause = implode(' AND ', $where_conditions);
 
             $query = "
@@ -337,6 +342,7 @@ $featureimg = get_field('fimg_default', 'option');
                 'post_name__in' => $slugs,
                 'orderby' => 'post_views'
             ];
+            
             $query_posts = new WP_Query($args);
             if ($query_posts->have_posts()):
                 ?>
