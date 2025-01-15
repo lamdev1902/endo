@@ -683,27 +683,6 @@
         width: 100%;
     }
 
-    /* Comment */
-    .comment-form  {
-        flex-direction: column;
-    }
-
-    .comment-form .user-col, 
-    .comment-form .email-col {
-        width: 100%;
-    }
-
-    .comment-form .user-col input,
-    .comment-form .email-col input {
-        padding: 0 0 0 20px;
-    }
-
-    .comment-form .email-col::before {
-        width: 0;
-        height: 0;
-        position: unset;
-    }
-
     .comment-form .user-col, .comment-form .email-col {
         flex: auto;
         margin-right: 0;
@@ -711,72 +690,6 @@
 
     .comment-form .cmt-col {
         margin-top: 0;
-    }
-
-    .form-submit.flex {
-        flex-direction: column-reverse;
-        gap: 5px;
-    }
-
-    .submit-action.flex {
-        justify-content: center;
-    }
-
-    /* Best Exercise */
-    .exercise__grid--3.grid,
-    .exercise__grid--2.grid {
-        grid-template-columns: repeat(1,1fr);
-        row-gap: 30px;
-    }
-
-    table thead th:first-child,
-    table tbody td:first-child {
-        box-shadow: 3px 0px 8.5px 0px rgba(0, 0, 0, 0.06);
-    }
-    table thead th:first-child,
-    table tbody td:first-child {
-        width: 155px !important;
-    }
-
-    .best-exercise .best {
-        top: 78%;
-    }
-
-    .best-exercise .best .exercise__grid-item-top-content-video {
-        max-height: 170px;
-    }
-
-    .best-exercise .best .exercise__grid-item-top-content-video video, 
-    .best-exercise .best .exercise__grid-item-top-content-video iframe {
-        width: 312px;
-        height: 175px;
-    }
-
-    .exercise__grid-item-top-content-2-column.flex {
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .best-exercise .all .exercise__grid-item-top-content-video iframe,
-    .best-exercise .all .exercise__grid-item-top-content-video video {
-        width: 100%;
-        height: 195px;
-    }
-
-
-    .best-exercise .all {
-        padding: 150px 0 20px 0;
-    }
-
-    .exercise__grid-item-top-content-equipment {
-        margin-bottom: 10px;
-    }
-
-    .home-main.best-exercise {
-        background: url(../images/home/bg.png) #101010 no-repeat -210px 0px / 600px;
     }
 }
 
@@ -905,6 +818,11 @@
     .wp-block-table table thead th,
     .wp-block-table table tbody td {
         display: inline-block;
+        width: 188px;
+    }
+
+    table thead th:first-child,
+    table tbody td:first-child {
         width: 188px;
     }
 }
@@ -1280,6 +1198,10 @@
         gap: 20px;
     }
 
+    .comment-form textarea {
+        height: 163px;
+    }
+
     #comments .children li {
         margin-left: 0;
     }
@@ -1307,58 +1229,6 @@
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
     }
-
-    /* Best Exercise */
-
-    .best__container {
-        padding: 0 !important;
-    }
-
-    .exercise__grid--3 {
-        grid-template-columns: repeat(1,1fr);
-        column-gap: 30px;
-        row-gap: 20px;
-    }
-
-    .best {
-        top: 68%;
-    }
-
-    .best h2 {
-        padding: 0 6.8%;
-    }
-    .best .exercise__grid-item-top-content-video {
-        max-height: 350px;
-    }
-
-    .best .exercise__grid-item-top-content-video video, 
-    .best .exercise__grid-item-top-content-video iframe {
-        width: 620px;
-        height: 350px;
-    }
-
-    .all {
-        padding: 320px 0 20px 0;
-    }
-    
-
-    .exercise__grid-item-bottom {
-        margin-bottom: 10px;
-    }
-
-    .medicine-table .wp-block-table table thead tr,
-    .medicine-table .wp-block-table table tbody tr {
-        display: flex;
-    }
-    
-    .medicine-table .wp-block-table table thead tr th,
-    .medicine-table .wp-block-table table tbody tr td {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

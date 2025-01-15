@@ -1,0 +1,1440 @@
+# Copyright (C) 2024 site-reviews-forms
+# This file is distributed under the same license as the site-reviews-forms package.
+msgid ""
+msgstr ""
+"Project-Id-Version: site-reviews-forms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Gemini Labs <support@geminilabs.io>\n"
+"Last-Translator: Paul Ryley <paul@geminilabs.io>\n"
+"Project-Id-Version: undefined\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: compatibility.php:47
+msgctxt "admin-text"
+msgid "Create Review Forms"
+msgstr ""
+
+#: compatibility.php:48
+msgctxt "admin-text"
+msgid "Delete Others' Review Forms"
+msgstr ""
+
+#: compatibility.php:49
+msgctxt "admin-text"
+msgid "Delete Review Forms"
+msgstr ""
+
+#: compatibility.php:50
+msgctxt "admin-text"
+msgid "Delete Private Review Forms"
+msgstr ""
+
+#: compatibility.php:51
+msgctxt "admin-text"
+msgid "Delete Published Review Forms"
+msgstr ""
+
+#: compatibility.php:52
+msgctxt "admin-text"
+msgid "Edit Others' Review Forms"
+msgstr ""
+
+#: compatibility.php:53
+msgctxt "admin-text"
+msgid "Edit Review Forms"
+msgstr ""
+
+#: compatibility.php:54
+msgctxt "admin-text"
+msgid "Edit Private Review Forms"
+msgstr ""
+
+#: compatibility.php:55
+msgctxt "admin-text"
+msgid "Edit Published Review Forms"
+msgstr ""
+
+#: compatibility.php:56
+msgctxt "admin-text"
+msgid "Publish Review Forms"
+msgstr ""
+
+#: compatibility.php:57
+msgctxt "admin-text"
+msgid "Read Private Review Forms"
+msgstr ""
+
+#: config/settings.php:7
+msgctxt "setting label (admin-text)"
+msgid "Field Descriptions"
+msgstr ""
+
+#: config/settings.php:9
+msgctxt "setting option (admin-text)"
+msgid "Display under the label"
+msgstr ""
+
+#: config/settings.php:10
+msgctxt "setting option (admin-text)"
+msgid "Display under the field"
+msgstr ""
+
+#: config/settings.php:13
+msgctxt "setting tooltip (admin-text)"
+msgid "Where do you want to display the field descriptions?"
+msgstr ""
+
+#: config/settings.php:19
+msgctxt "setting label (admin-text)"
+msgid "Select Boxes"
+msgstr ""
+
+#: config/settings.php:21
+msgctxt "setting option (admin-text)"
+msgid "Use the native Select Boxes"
+msgstr ""
+
+#: config/settings.php:22
+msgctxt "setting option (admin-text)"
+msgid "Use Choices.js (experimental)"
+msgstr ""
+
+#: config/settings.php:25
+msgctxt "setting tooltip (admin-text)"
+msgid "Would you like to use a javascript library to style the Select boxes?"
+msgstr ""
+
+#: config/settings.php:33
+msgctxt "setting label (admin-text)"
+msgid "Load Library Assets?"
+msgstr ""
+
+#: config/settings.php:35
+msgctxt "setting tooltip (admin-text)"
+msgid "Would you like to load the javascript and CSS of the selected library? If your theme is already using the library, you may want to disable this."
+msgstr ""
+
+#: config/settings.php:39, config/settings.php:48, config/settings.php:57
+msgctxt "screen width (admin-text)"
+msgid "pixels"
+msgstr ""
+
+#: config/settings.php:41
+msgctxt "admin-text"
+msgid "Screen Width: Large"
+msgstr ""
+
+#: config/settings.php:44
+msgctxt "admin-text"
+msgid "Set the minimum width of the large screen size used in the Field Width option of custom fields."
+msgstr ""
+
+#: config/settings.php:50
+msgctxt "admin-text"
+msgid "Screen Width: Medium"
+msgstr ""
+
+#: config/settings.php:53
+msgctxt "admin-text"
+msgid "Set the minimum width of the medium screen size used in the Field Width option of custom fields."
+msgstr ""
+
+#: config/settings.php:59
+msgctxt "admin-text"
+msgid "Screen Width: Small"
+msgstr ""
+
+#: config/settings.php:62
+msgctxt "admin-text"
+msgid "Set the minimum width of the small size used in the Field Width option of custom fields."
+msgstr ""
+
+#: plugin/ColumnFilterForm.php:13
+msgctxt "admin-text"
+msgid "Filter by review form"
+msgstr ""
+
+#: plugin/ColumnFilterForm.php:19
+msgctxt "admin-text"
+msgid "Any review form"
+msgstr ""
+
+#: plugin/ColumnFilterForm.php:20
+msgctxt "admin-text"
+msgid "No review form"
+msgstr ""
+
+#: plugin/FormFields.php:99
+msgctxt "admin-text"
+msgid "Custom Form"
+msgstr ""
+
+#: plugin/FormFields.php:101
+msgctxt "admin-text"
+msgid "Default Form"
+msgstr ""
+
+#: views/documentation.php:30
+msgctxt "admin-text"
+msgid "If you assigning reviews to multiple Post IDs, then you probably also want to make sure that the %s setting is set to \"Strict Assignment\"."
+msgstr ""
+
+#: views/import.php:5
+msgctxt "Review Forms (admin-text)"
+msgid "Import %s"
+msgstr ""
+
+#: views/import.php:12
+msgctxt "admin-text"
+msgid "Upload an export (.json) file to import review forms into this site."
+msgstr ""
+
+#: views/import.php:19
+msgctxt "admin-text"
+msgid "Duplicate Forms"
+msgstr ""
+
+#: views/import.php:22
+msgctxt "admin-text"
+msgid "What should happen if an existing form is found with an identical slug to an imported form?"
+msgstr ""
+
+#: views/import.php:28
+msgctxt "admin-text"
+msgid "Ignore duplicate form: import as a new form and leave the existing form unchanged."
+msgstr ""
+
+#: views/import.php:34
+msgctxt "admin-text"
+msgid "Replace existing form: overwrite the existing form with the imported form."
+msgstr ""
+
+#: views/import.php:40
+msgctxt "admin-text"
+msgid "Do not import any duplicate forms."
+msgstr ""
+
+#: views/import.php:45
+msgctxt "admin-text"
+msgid "Upload File"
+msgstr ""
+
+#: views/import.php:48
+msgctxt "%s: size in bytes (admin-text)"
+msgid "Choose an export (.json) file to upload (maximum size: %s)."
+msgstr ""
+
+#: views/import.php:55
+msgctxt "admin-text"
+msgid "Upload file and import"
+msgstr ""
+
+#: views/metabox-fields.php:7, views/metabox-fields.php:8, plugin/Metaboxes/FieldsMetabox.php:18
+msgctxt "admin-text"
+msgid "Form Fields"
+msgstr ""
+
+#: views/metabox-fields.php:17
+msgctxt "admin-text"
+msgid "Click the <strong>Add Field</strong> button to add a field to the form."
+msgstr ""
+
+#: views/metabox-fields.php:24, views/metabox-fields.php:26
+msgctxt "admin-text"
+msgid "Collapse All Fields"
+msgstr ""
+
+#: views/metabox-fields.php:28, views/metabox-fields.php:30
+msgctxt "admin-text"
+msgid "Expand All Fields"
+msgstr ""
+
+#: views/metabox-fields.php:33
+msgctxt "admin-text"
+msgid "Add Field"
+msgstr ""
+
+#: views/metabox-help.php:5
+msgctxt "admin-text"
+msgid "If you are using the Blocks or Elementor Widgets then select the Review Form in the block/widget options."
+msgstr ""
+
+#: views/metabox-help.php:9
+msgctxt "admin-text"
+msgid "Display this Review Form:"
+msgstr ""
+
+#: views/metabox-help.php:11
+msgctxt "admin-text"
+msgid "Use the <code>form</code> option with the [site_reviews_form] shortcode to use this custom form."
+msgstr ""
+
+#: views/metabox-help.php:19
+msgctxt "admin-text"
+msgid "Display reviews with this Review Template:"
+msgstr ""
+
+#: views/metabox-help.php:21
+msgctxt "admin-text"
+msgid "Use the <code>form</code> option with the [site_reviews] shortcode to display your reviews using the Review Template of this custom form."
+msgstr ""
+
+#: views/metabox-template-tags.php:5
+msgctxt "admin-text"
+msgid "These template tags are reserved by Site Reviews. You can add them to the Review Template, but they cannot be used in your custom fields."
+msgstr ""
+
+#: views/metabox-template.php:7
+msgctxt "admin-text"
+msgid "Enter the Template Tags of your fields here."
+msgstr ""
+
+#: views/metabox-template.php:8
+msgctxt "admin-text"
+msgid "Saving an empty template will restore the default one used by Site Reviews."
+msgstr ""
+
+#: views/templates.php:10
+msgctxt "admin-text"
+msgid "Add a new condition"
+msgstr ""
+
+#: views/templates.php:16
+msgctxt "admin-text"
+msgid "Select a field name."
+msgstr ""
+
+#: views/templates.php:24
+msgctxt "admin-text"
+msgid "Select a field condition."
+msgstr ""
+
+#: views/templates.php:33
+msgctxt "admin-text"
+msgid "Select a conditional value."
+msgstr ""
+
+#: views/templates.php:42
+msgctxt "admin-text"
+msgid "Enter a conditional value."
+msgstr ""
+
+#: views/templates.php:46
+msgctxt "admin-text"
+msgid "Remove this condition"
+msgstr ""
+
+#: views/templates.php:56
+msgctxt "admin-text"
+msgid "Edit field"
+msgstr ""
+
+#: views/templates.php:63
+msgctxt "admin-text"
+msgid "Remove this field?"
+msgstr ""
+
+#: views/templates.php:63
+msgctxt "admin-text"
+msgid "Yes"
+msgstr ""
+
+#: views/templates.php:81
+msgctxt "admin-text"
+msgid "General"
+msgstr ""
+
+#: views/templates.php:84
+msgctxt "admin-text"
+msgid "Presentation"
+msgstr ""
+
+#: views/templates.php:87
+msgctxt "admin-text"
+msgid "Validation"
+msgstr ""
+
+#: views/templates.php:90
+msgctxt "admin-text"
+msgid "Conditions"
+msgstr ""
+
+#: views/templates.php:103, plugin/Controllers/FieldController.php:58
+msgctxt "admin-text"
+msgid "Display Field"
+msgstr ""
+
+#: views/templates.php:119, plugin/Controllers/FieldController.php:60
+msgctxt "admin-text"
+msgid "Display Value As"
+msgstr ""
+
+#: views/templates.php:125
+msgctxt "admin-text"
+msgid "Enter a custom date format"
+msgstr ""
+
+#: views/templates.php:125
+msgctxt "admin-text"
+msgid "documentation on date and time formatting"
+msgstr ""
+
+#: views/templates.php:129
+msgctxt "admin-text"
+msgid "How the field value is displayed in the review."
+msgstr ""
+
+#: views/templates.php:144
+msgctxt "admin-text"
+msgid "Link Text"
+msgstr ""
+
+#: views/templates.php:149
+msgctxt "admin-text"
+msgid "The default link text is the URL."
+msgstr ""
+
+#: views/templates.php:159
+msgctxt "admin-text"
+msgid "Hidden"
+msgstr ""
+
+#: views/templates.php:163
+msgctxt "admin-text"
+msgid "Do you want this field to be hidden?"
+msgstr ""
+
+#: views/templates.php:176, plugin/Controllers/FieldController.php:59
+msgctxt "admin-text"
+msgid "Field Description"
+msgstr ""
+
+#: views/templates.php:179
+msgctxt "admin-text"
+msgid "Field descriptions are displayed below the field label."
+msgstr ""
+
+#: views/templates.php:187, plugin/Controllers/FieldController.php:61
+msgctxt "admin-text"
+msgid "Field Label"
+msgstr ""
+
+#: views/templates.php:190
+msgctxt "admin-text"
+msgid "The Field Label is displayed in the form above the field. If this is a hidden field type, then you can use the label to describe the field but it will not be shown in the form."
+msgstr ""
+
+#: views/templates.php:198, plugin/Controllers/FieldController.php:62
+msgctxt "admin-text"
+msgid "Range Labels"
+msgstr ""
+
+#: views/templates.php:202
+msgctxt "admin-text"
+msgid "This label is displayed immediately above the range field on the left."
+msgstr ""
+
+#: views/templates.php:203
+msgctxt "admin-text"
+msgid "Label 1"
+msgstr ""
+
+#: views/templates.php:205
+msgctxt "admin-text"
+msgid "This label is displayed immediately above the range field in the middle."
+msgstr ""
+
+#: views/templates.php:206
+msgctxt "admin-text"
+msgid "Label 2"
+msgstr ""
+
+#: views/templates.php:208
+msgctxt "admin-text"
+msgid "This label is displayed immediately above the range field on the right."
+msgstr ""
+
+#: views/templates.php:209
+msgctxt "admin-text"
+msgid "Label 3"
+msgstr ""
+
+#: views/templates.php:219
+msgctxt "admin-text"
+msgid "Maximum Length"
+msgstr ""
+
+#: views/templates.php:223
+msgctxt "admin-text"
+msgid "The maximum number of required characters. Enter <code>0</code> for no maxium."
+msgstr ""
+
+#: views/templates.php:223, views/templates.php:236
+msgctxt "admin-text"
+msgid "characters"
+msgstr ""
+
+#: views/templates.php:232
+msgctxt "admin-text"
+msgid "Minimum Length"
+msgstr ""
+
+#: views/templates.php:236
+msgctxt "admin-text"
+msgid "The minimum number of required characters. Enter <code>0</code> for no minimum."
+msgstr ""
+
+#: views/templates.php:245, plugin/Controllers/FieldController.php:63, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:19
+msgctxt "admin-text"
+msgid "Field Name"
+msgstr ""
+
+#: views/templates.php:248
+msgctxt "admin-text"
+msgid "The Field Name is the custom field key that is used to save the value to the database. It should be a single alphabetic (a-z) lowercase word with no spaces. Underscores are allowed."
+msgstr ""
+
+#: views/templates.php:256, plugin/Controllers/FieldController.php:64
+msgctxt "admin-text"
+msgid "Field Options"
+msgstr ""
+
+#: views/templates.php:260
+msgctxt "admin-text"
+msgid "Option 1"
+msgstr ""
+
+#: views/templates.php:261
+msgctxt "admin-text"
+msgid "Option 2"
+msgstr ""
+
+#: views/templates.php:262
+msgctxt "admin-text"
+msgid "Option 3"
+msgstr ""
+
+#: views/templates.php:262
+msgctxt "admin-text"
+msgid "Enter each range option on a new line. Each range option you enter will automatically be given a numeric value starting with 1.<br><br>If you want to make a field conditional on the selected value of a range field, make sure to use the numeric value in the condition (i.e. use \"1\" for the first option, \"2\" for the second option, \"3\" for the third option, etc.)."
+msgstr ""
+
+#: views/templates.php:264
+msgctxt "admin-text"
+msgid "value"
+msgstr ""
+
+#: views/templates.php:264
+msgctxt "admin-text"
+msgid "label"
+msgstr ""
+
+#: views/templates.php:264
+msgctxt "admin-text"
+msgid "Enter each option on a new line. For more control, you can specify a separate value and label like this:<br><br>red : Red<br>green : Green<br>blue : Blue"
+msgstr ""
+
+#: views/templates.php:273
+msgctxt "admin-text"
+msgid "Field Placeholder"
+msgstr ""
+
+#: views/templates.php:276
+msgctxt "admin-text"
+msgid "The placeholder text provides a brief hint to what kind of information is expected in the field."
+msgstr ""
+
+#: views/templates.php:284
+msgctxt "admin-text"
+msgid "Post Types"
+msgstr ""
+
+#: views/templates.php:295, plugin/Controllers/FieldController.php:67
+msgctxt "admin-text"
+msgid "Required"
+msgstr ""
+
+#: views/templates.php:299
+msgctxt "admin-text"
+msgid "Do you want this field to be required?"
+msgstr ""
+
+#: views/templates.php:312, plugin/Controllers/FieldController.php:68
+msgctxt "admin-text"
+msgid "Field Width"
+msgstr ""
+
+#: views/templates.php:318
+msgctxt "admin-text"
+msgid "Select the default field width."
+msgstr ""
+
+#: views/templates.php:319
+msgctxt "admin-text"
+msgid "Select the field width for small screen sizes which are at least %spx wide."
+msgstr ""
+
+#: views/templates.php:320
+msgctxt "admin-text"
+msgid "Select the field width for medium screen sizes which are at least %spx wide."
+msgstr ""
+
+#: views/templates.php:321
+msgctxt "admin-text"
+msgid "Select the field width for large screen sizes  which are at least %spx wide)."
+msgstr ""
+
+#: views/templates.php:344
+msgctxt "admin-text"
+msgid "User Roles"
+msgstr ""
+
+#: views/templates.php:358
+msgctxt "admin-text"
+msgid "Save Field"
+msgstr ""
+
+#: views/templates.php:367, plugin/Controllers/FieldController.php:70
+msgctxt "admin-text"
+msgid "Template Tag"
+msgstr ""
+
+#: views/templates.php:370
+msgctxt "admin-text"
+msgid "The Template Tag is used to display the field value in the review template, it should be a single alphabetic (a-z) lowercase word with no spaces. Underscores are allowed."
+msgstr ""
+
+#: views/templates.php:378, plugin/Controllers/FieldController.php:71
+msgctxt "admin-text"
+msgid "Template Tag Label"
+msgstr ""
+
+#: views/templates.php:381
+msgctxt "admin-text"
+msgid "The Template Tag Label is displayed with the template tag in the Review Template. It can be used to describe the value being displayed in the review"
+msgstr ""
+
+#: views/templates.php:389
+msgctxt "admin-text"
+msgid "Categories"
+msgstr ""
+
+#: views/templates.php:400, plugin/Controllers/FieldController.php:73
+msgctxt "admin-text"
+msgid "Field Type"
+msgstr ""
+
+#: views/templates.php:403
+msgctxt "admin-text"
+msgid "\"Review Fields\" can only be used once in the form."
+msgstr ""
+
+#: views/templates.php:404
+msgctxt "admin-text"
+msgid "Custom Fields"
+msgstr ""
+
+#: views/templates.php:411
+msgctxt "admin-text"
+msgid "Review Fields"
+msgstr ""
+
+#: views/templates.php:426
+msgctxt "admin-text"
+msgid "Users"
+msgstr ""
+
+#: views/templates.php:437, plugin/Controllers/FieldController.php:75
+msgctxt "admin-text"
+msgid "Default Value"
+msgstr ""
+
+#: views/templates.php:440
+msgctxt "admin-text"
+msgid "Leave this blank if you do not want the field to have a default value."
+msgstr ""
+
+#: views/templates.php:448
+msgctxt "admin-text"
+msgid "Select a value"
+msgstr ""
+
+#: views/templates.php:460
+msgctxt "admin-text"
+msgid "Remove entry"
+msgstr ""
+
+#: views/templates.php:467
+msgctxt "admin-text"
+msgid "This is the template tag for the field."
+msgstr ""
+
+#: plugin/Blocks/SiteReviewsFieldBlock.php:97
+msgctxt "admin-text"
+msgid "Select the custom field you want to use."
+msgstr ""
+
+#: plugin/Blocks/SiteReviewsFieldBlock.php:95
+msgctxt "admin-text"
+msgid "The form you selected has no custom rating or range fields."
+msgstr ""
+
+#: plugin/Blocks/SiteReviewsFieldBlock.php:86
+msgctxt "admin-text"
+msgid "Select a custom review form in the block settings."
+msgstr ""
+
+#: plugin/Commands/Import.php:68
+msgctxt "admin-text"
+msgid "No forms were found to import."
+msgstr ""
+
+#: plugin/Commands/Import.php:75
+msgctxt "admin-text"
+msgid "%d form imported"
+msgid_plural "%d forms imported"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin/Commands/Import.php:79
+msgctxt "admin-text"
+msgid "%d form skipped"
+msgid_plural "%d forms skipped"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin/Commands/Import.php:83
+msgctxt "admin-text"
+msgid "%d form updated"
+msgid_plural "%d forms updated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin/Commands/Import.php:90
+msgctxt "admin-text"
+msgid "%s form was found"
+msgid_plural "%s forms were found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin/Commands/Import.php:139
+msgctxt "admin-text"
+msgid "Duplicate forms were skipped."
+msgstr ""
+
+#: plugin/Commands/Import.php:179
+msgctxt "Review Forms (admin-text)"
+msgid "The file you uploaded is not a %s import file."
+msgstr ""
+
+#: plugin/Commands/Import.php:185
+msgctxt "Review Forms (admin-text)"
+msgid "The file you uploaded requires a newer version of %s."
+msgstr ""
+
+#: plugin/Controllers/ExportController.php:26, plugin/Controllers/ExportController.php:46
+msgctxt "admin-text"
+msgid "Export"
+msgstr ""
+
+#: plugin/Controllers/ExportController.php:44
+msgctxt "admin-text"
+msgid "Export this form"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:42
+msgctxt "admin-text"
+msgid "Always"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:43
+msgctxt "admin-text"
+msgid "When all of the conditions pass"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:44
+msgctxt "admin-text"
+msgid "When any of the conditions pass"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:47
+msgctxt "admin-text"
+msgid "Contains"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:48
+msgctxt "admin-text"
+msgid "Equals"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:49
+msgctxt "admin-text"
+msgid "Greater Than"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:50
+msgctxt "admin-text"
+msgid "Less Than"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:51
+msgctxt "admin-text"
+msgid "Not"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:65
+msgctxt "admin-text"
+msgid "Placeholder"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:66
+msgctxt "admin-text"
+msgid "Post Type"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:69
+msgctxt "admin-text"
+msgid "User Role"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:72
+msgctxt "admin-text"
+msgid "Category"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:74
+msgctxt "admin-text"
+msgid "User"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:78
+msgctxt "admin-text"
+msgid "The %s must be between %d and %d"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:79
+msgctxt "admin-text"
+msgid "The %s requires at least one condition"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:80
+msgctxt "admin-text"
+msgid "The %s must be a number"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:81
+msgctxt "admin-text"
+msgid "The %s is required"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:82
+msgctxt "admin-text"
+msgid "The \"%s\" value is reserved"
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:83
+msgctxt "admin-text"
+msgid "The %s must be an alphabetic (a-z) lowercase word with no spaces. Underscores are allowed."
+msgstr ""
+
+#: plugin/Controllers/FieldController.php:84
+msgctxt "admin-text"
+msgid "The %s must be unique"
+msgstr ""
+
+#: plugin/Controllers/ImportController.php:35
+msgctxt "admin-text"
+msgid "Import"
+msgstr ""
+
+#: plugin/Controllers/ImportController.php:50
+msgctxt "admin-text"
+msgid "You do not have permission to import files."
+msgstr ""
+
+#: plugin/Controllers/ImportController.php:65
+msgctxt "admin-text"
+msgid "Import review forms from a JSON export file."
+msgstr ""
+
+#: plugin/Controllers/ListTableController.php:55
+msgctxt "Form table columns (admin-text)"
+msgid "Slug"
+msgstr ""
+
+#: plugin/Controllers/ListTableController.php:56
+msgctxt "Form table columns (admin-text)"
+msgid "Fields"
+msgstr ""
+
+#: plugin/Controllers/ListTableController.php:57
+msgctxt "Form table columns (admin-text)"
+msgid "Reviews"
+msgstr ""
+
+#: plugin/Controllers/ListTableController.php:96
+msgctxt "admin-text"
+msgid "The form ID is %d"
+msgstr ""
+
+#: plugin/Controllers/ListTableController.php:97
+msgctxt "%d: Post ID (admin-text)"
+msgid "ID: %d"
+msgstr ""
+
+#: plugin/Controllers/RestApiController.php:19
+msgctxt "admin-text"
+msgid "Render the review with a specific custom form (ID) review template; only works with the rendered parameter."
+msgstr ""
+
+#: plugin/Controllers/RestApiController.php:32
+msgctxt "admin-text"
+msgid "Use rating values of a custom rating field; use the custom rating Field Name as the value. "
+msgstr ""
+
+#: plugin/Controllers/RestController.php:48
+msgctxt "admin-text"
+msgid "You must be logged in to access this route."
+msgstr ""
+
+#: plugin/Controllers/RestController.php:139
+msgctxt "admin-text"
+msgid "Logged In User"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:19, plugin/Defaults/PostTypeLabelDefaults.php:20
+msgctxt "Add New Post (admin-text)"
+msgid "Add New Form"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:21
+msgctxt "All Posts (admin-text)"
+msgid "All Forms"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:22
+msgctxt "Post Archives (admin-text)"
+msgid "Review Form Archives"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:23
+msgctxt "Edit Post (admin-text)"
+msgid "Edit Review Form"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:24
+msgctxt "Insert into Post (admin-text)"
+msgid "Insert into Form"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:25
+msgctxt "admin-text"
+msgid "Review Forms"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:26
+msgctxt "New Post (admin-text)"
+msgid "New Form"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:27
+msgctxt "No Posts found (admin-text)"
+msgid "No Review Forms found"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:28
+msgctxt "No Posts found in Trash (admin-text)"
+msgid "No Review Forms found in Trash"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:29
+msgctxt "Search Posts (admin-text)"
+msgid "Search Forms"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:30, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:15
+msgctxt "admin-text"
+msgid "Review Form"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:31
+msgctxt "Uploaded to this Post (admin-text)"
+msgid "Uploaded to this Form"
+msgstr ""
+
+#: plugin/Defaults/PostTypeLabelDefaults.php:32
+msgctxt "View Post (admin-text)"
+msgid "View Review Form"
+msgstr ""
+
+#: plugin/Fields/CustomCheckbox.php:30
+msgctxt "admin-text"
+msgid "Custom: Checkbox"
+msgstr ""
+
+#: plugin/Fields/CustomDate.php:21
+msgctxt "admin-text"
+msgid "Custom: Date"
+msgstr ""
+
+#: plugin/Fields/CustomEmail.php:29
+msgctxt "admin-text"
+msgid "Custom: Email"
+msgstr ""
+
+#: plugin/Fields/CustomHidden.php:9
+msgctxt "admin-text"
+msgid "Custom: Hidden"
+msgstr ""
+
+#: plugin/Fields/CustomNumber.php:14
+msgctxt "admin-text"
+msgid "Custom: Number"
+msgstr ""
+
+#: plugin/Fields/CustomRadio.php:14
+msgctxt "admin-text"
+msgid "Custom: Radio"
+msgstr ""
+
+#: plugin/Fields/CustomRange.php:14
+msgctxt "admin-text"
+msgid "Custom: Range"
+msgstr ""
+
+#: plugin/Fields/CustomRating.php:24
+msgctxt "admin-text"
+msgid "Custom: Rating"
+msgstr ""
+
+#: plugin/Fields/CustomSelect.php:14
+msgctxt "admin-text"
+msgid "Custom: Select"
+msgstr ""
+
+#: plugin/Fields/CustomTel.php:29
+msgctxt "admin-text"
+msgid "Custom: Telephone"
+msgstr ""
+
+#: plugin/Fields/CustomText.php:14
+msgctxt "admin-text"
+msgid "Custom: Text"
+msgstr ""
+
+#: plugin/Fields/CustomTextarea.php:31
+msgctxt "admin-text"
+msgid "Custom: Textarea"
+msgstr ""
+
+#: plugin/Fields/CustomToggle.php:30
+msgctxt "admin-text"
+msgid "Custom: Toggle"
+msgstr ""
+
+#: plugin/Fields/CustomUrl.php:30
+msgctxt "admin-text"
+msgid "Custom: URL"
+msgstr ""
+
+#: plugin/Fields/ReviewAssignedPosts.php:17
+msgctxt "admin-text"
+msgid "Review: Assigned Posts"
+msgstr ""
+
+#: plugin/Fields/ReviewAssignedTerms.php:17
+msgctxt "admin-text"
+msgid "Review: Categories"
+msgstr ""
+
+#: plugin/Fields/ReviewAssignedUsers.php:17
+msgctxt "admin-text"
+msgid "Review: Assigned Users"
+msgstr ""
+
+#: plugin/Fields/ReviewContent.php:17
+msgctxt "admin-text"
+msgid "Review: Content"
+msgstr ""
+
+#: plugin/Fields/ReviewEmail.php:17
+msgctxt "admin-text"
+msgid "Review: Email"
+msgstr ""
+
+#: plugin/Fields/ReviewImages.php:17
+msgctxt "admin-text"
+msgid "Review: Images"
+msgstr ""
+
+#: plugin/Fields/ReviewName.php:17
+msgctxt "admin-text"
+msgid "Review: Name"
+msgstr ""
+
+#: plugin/Fields/ReviewRating.php:27
+msgctxt "admin-text"
+msgid "Review: Rating"
+msgstr ""
+
+#: plugin/Fields/ReviewTerms.php:17
+msgctxt "admin-text"
+msgid "Review: Terms"
+msgstr ""
+
+#: plugin/Fields/ReviewTitle.php:17
+msgctxt "admin-text"
+msgid "Review: Title"
+msgstr ""
+
+#: plugin/Metaboxes/HelpMetabox.php:17
+msgctxt "admin-text"
+msgid "How to Use"
+msgstr ""
+
+#: plugin/Metaboxes/TemplateMetabox.php:18
+msgctxt "admin-text"
+msgid "Review Template"
+msgstr ""
+
+#: plugin/Metaboxes/TemplateTagsMetabox.php:17
+msgctxt "admin-text"
+msgid "Reserved Tags"
+msgstr ""
+
+#: plugin/Shortcodes/SiteReviewsFieldShortcode.php:109
+msgctxt "admin-text"
+msgid "Hide if no values are found"
+msgstr ""
+
+#: plugin/Shortcodes/SiteReviewsFieldShortcode.php:110
+msgctxt "admin-text"
+msgid "Hide label"
+msgstr ""
+
+#: plugin/Shortcodes/SiteReviewsFieldShortcode.php:111
+msgctxt "admin-text"
+msgid "Hide labels"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:13
+msgctxt "admin-text"
+msgid "All settings are optional."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:18
+msgctxt "admin-text"
+msgid "Title"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:20
+msgctxt "admin-text"
+msgid "Enter a custom shortcode title."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:23
+msgctxt "admin-text"
+msgid "Which type of review would you like to use?"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:24
+msgctxt "admin-text"
+msgid "Limit reviews to this category."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:26
+msgctxt "admin-text"
+msgid "Assigned Posts"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:28
+msgctxt "admin-text"
+msgid "Limit reviews to those assigned to a Post ID. You may also enter \"%s\" to use the Post ID of the current page."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:32
+msgctxt "admin-text"
+msgid "Assigned Users"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:34
+msgctxt "admin-text"
+msgid "Limit reviews to those assigned to a User ID. You may also enter \"%s\" to use the ID of the logged-in user."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:38
+msgctxt "admin-text"
+msgid "Schema"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:41
+msgctxt "admin-text"
+msgid "Enable rich snippets"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:42
+msgctxt "admin-text"
+msgid "Disable rich snippets"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:44
+msgctxt "admin-text"
+msgid "Rich snippets are disabled by default."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:48
+msgctxt "admin-text"
+msgid "Classes"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:50
+msgctxt "admin-text"
+msgid "Add custom CSS classes to the shortcode."
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:56
+msgctxt "admin-text"
+msgid "Hide"
+msgstr ""
+
+#: plugin/Tinymce/SiteReviewsFieldTinymce.php:66, plugin/Widgets/SiteReviewsFieldWidget.php:23, plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:35, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:153
+msgctxt "admin-text"
+msgid "Field Summary"
+msgstr ""
+
+#: plugin/Widgets/SiteReviewsFieldWidget.php:18
+msgctxt "admin-text"
+msgid "Site Reviews: Display a summary of a custom field."
+msgstr ""
+
+#: plugin/Integrations/Elementor/Controller.php:56
+msgctxt "admin-text"
+msgid "Use a Custom Form"
+msgstr ""
+
+#: plugin/Integrations/Elementor/Controller.php:54
+msgctxt "admin-text"
+msgid "Use a Custom Form Review Template"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:43
+msgctxt "admin-text"
+msgid "Label"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:48
+msgctxt "admin-text"
+msgid "Labels"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:53
+msgctxt "admin-text"
+msgid "Value"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:66
+msgctxt "admin-text"
+msgid "Select a review form that has a custom rating or range field."
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:71
+msgctxt "admin-text"
+msgid "Select the Custom Form"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:82
+msgctxt "admin-text"
+msgid "Select the Field Name"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:93
+msgctxt "admin-text"
+msgid "The review form you selected has no custom rating or range fields."
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:98, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:27
+msgctxt "admin-text"
+msgid "Limit Reviews to an Assigned Page"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:105, plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:128, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:39, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:67
+msgctxt "admin-text"
+msgid "Separate values with a comma."
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:107
+msgctxt "admin-text"
+msgid "Enter the Post IDs"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:113, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:51
+msgctxt "admin-text"
+msgid "Limit Reviews to an Assigned Category"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:121, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:54
+msgctxt "admin-text"
+msgid "Limit Reviews to an Assigned User"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:130
+msgctxt "admin-text"
+msgid "Enter the User IDs"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:136
+msgctxt "admin-text"
+msgid "Limit Reviews to terms"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:139, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:86
+msgctxt "admin-text"
+msgid "Terms were accepted"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:140, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:87
+msgctxt "admin-text"
+msgid "Terms were not accepted"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:164, plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:217, plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:284
+msgctxt "admin-text"
+msgid "Color"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:179, plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:232, plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:296
+msgctxt "admin-text"
+msgid "Gap"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:273
+msgctxt "admin-text"
+msgid "Background Color"
+msgstr ""
+
+#: plugin/Integrations/Elementor/ElementorFieldSummaryWidget.php:315
+msgctxt "admin-text"
+msgid "Height"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/Controller.php:16, plugin/Integrations/FusionBuilder/Controller.php:28
+msgctxt "admin-text"
+msgid "Use a Custom Review Form Template"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/Controller.php:40
+msgctxt "admin-text"
+msgid "Use a Custom Review Form"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:16
+msgctxt "admin-text"
+msgid "Select the custom review form."
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:20
+msgctxt "admin-text"
+msgid "Enter the field name of your custom form."
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:30, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:56, plugin/Integrations/FusionBuilder/FusionFieldSummary.php:129
+msgctxt "admin-text"
+msgid "Select or Leave Blank"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:32
+msgctxt "admin-text"
+msgid "Specific Post ID"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:33
+msgctxt "admin-text"
+msgid "The Current Page"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:34
+msgctxt "admin-text"
+msgid "The Parent Page"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:38
+msgctxt "admin-text"
+msgid "Assigned Post IDs"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:59
+msgctxt "admin-text"
+msgid "Specific User ID"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:60
+msgctxt "admin-text"
+msgid "The Logged-in user"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:61
+msgctxt "admin-text"
+msgid "The Page author"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:62
+msgctxt "admin-text"
+msgid "The Profile user (BuddyPress/Ultimate Member)"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:66
+msgctxt "admin-text"
+msgid "Assigned User IDs"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:81
+msgctxt "admin-text"
+msgid "Limit Reviews to Terms?"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:85
+msgctxt "admin-text"
+msgid "No"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:93
+msgctxt "admin-text"
+msgid "Hide Fields"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:95
+msgctxt "admin-text"
+msgid "Select Fields to Hide"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:100
+msgctxt "admin-text"
+msgid "CSS Class"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:101
+msgctxt "admin-text"
+msgid "Add a class to the wrapping HTML element."
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:107
+msgctxt "admin-text"
+msgid "CSS ID"
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:108
+msgctxt "admin-text"
+msgid "Add an ID to the wrapping HTML element."
+msgstr ""
+
+#: plugin/Integrations/FusionBuilder/FusionFieldSummary.php:118
+msgctxt "admin-text"
+msgid "- Use Default Form -"
+msgstr ""

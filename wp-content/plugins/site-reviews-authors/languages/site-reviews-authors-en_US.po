@@ -1,0 +1,254 @@
+# Copyright (C) 2024 site-reviews-authors
+# This file is distributed under the same license as the site-reviews-authors package.
+msgid ""
+msgstr ""
+"Project-Id-Version: undefined\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Gemini Labs <support@geminilabs.io>\n"
+"Last-Translator: Paul Ryley <paul@geminilabs.io>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Keywordslist: "
+"__;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_"
+"attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Searchpath-0: .\n"
+"X-Poedit-Searchpathexcluded-0: *.js\n"
+"X-Poedit-Sourcecharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+
+#: plugin/Controller.php:47, plugin/Controller.php:97, plugin/Validators/PermissionValidator.php:31
+msgid "You do not have permission to delete the review."
+msgstr "You do not have permission to delete the review."
+
+#: plugin/Controller.php:62, plugin/Controller.php:122, plugin/Validators/PermissionValidator.php:34
+msgid "You do not have permission to respond to the review."
+msgstr "You do not have permission to respond to the review."
+
+#: plugin/Controller.php:77, plugin/Controller.php:153, plugin/Validators/PermissionValidator.php:37
+msgid "You do not have permission to update the review."
+msgstr "You do not have permission to update the review."
+
+#: plugin/Controller.php:92, plugin/Controller.php:117, plugin/Controller.php:148
+msgid "The review could not be found."
+msgstr "The review could not be found."
+
+#: plugin/Controller.php:105
+msgid "Delete Review <span>ID: %d</span>"
+msgstr "Delete Review <span>ID: %d</span>"
+
+#: plugin/Controller.php:136
+msgid "Responding To Review <span>ID: %d</span>"
+msgstr "Responding To Review <span>ID: %d</span>"
+
+#: plugin/Controller.php:167
+msgid "Editing Review <span>ID: %d</span>"
+msgstr "Editing Review <span>ID: %d</span>"
+
+#: config/forms/delete-form.php:5
+msgid "Please explain why"
+msgstr "Please explain why"
+
+#: config/forms/delete-form.php:11
+msgid "I confirm that I want to delete the review."
+msgstr "I confirm that I want to delete the review."
+
+#: config/forms/respond-form.php:5
+msgid "Your Response"
+msgstr "Your Response"
+
+#: plugin/Commands/DeleteReview.php:48
+msgid "Success"
+msgstr "Success"
+
+#: plugin/Commands/DeleteReview.php:52
+msgid "The review was deleted."
+msgstr "The review was deleted."
+
+#: plugin/Commands/DeleteReview.php:89
+msgid ""
+"The review could not be deleted and the error has been logged. Please "
+"notify the site administrator."
+msgstr ""
+"The review could not be deleted and the error has been logged. Please "
+"notify the site administrator."
+
+#: plugin/Commands/RespondToReview.php:95
+msgid ""
+"Your response could not be saved and the error has been logged. Please "
+"notify the site administrator."
+msgstr ""
+"Your response could not be saved and the error has been logged. Please "
+"notify the site administrator."
+
+#: plugin/Commands/UpdateReview.php:77
+msgid "Thank you!"
+msgstr "Thank you!"
+
+#: plugin/Commands/UpdateReview.php:143
+msgid ""
+"Your review could not be updated and the error has been logged. Please "
+"notify the site administrator."
+msgstr ""
+"Your review could not be updated and the error has been logged. Please "
+"notify the site administrator."
+
+#: plugin/Commands/UpdateReview.php:151
+msgid "The review has been updated!"
+msgstr "The review has been updated!"
+
+#: plugin/Commands/UpdateReview.php:152
+msgid "The review has been updated and is pending approval."
+msgstr "The review has been updated and is pending approval."
+
+#: plugin/Forms/DeleteReviewForm.php:16
+msgid "Delete review"
+msgstr "Delete review"
+
+#: plugin/Forms/DeleteReviewForm.php:17
+msgid "Deleting, please wait..."
+msgstr "Deleting, please wait..."
+
+#: plugin/Forms/RespondToReviewForm.php:16
+msgid "Respond"
+msgstr "Respond"
+
+#: plugin/Forms/RespondToReviewForm.php:17
+msgid "Responding, please wait..."
+msgstr "Responding, please wait..."
+
+#: plugin/Forms/UpdateReviewForm.php:19
+msgid "Update review"
+msgstr "Update review"
+
+#: plugin/Forms/UpdateReviewForm.php:20
+msgid "Updating, please wait..."
+msgstr "Updating, please wait..."
+
+#: plugin/Validators/HoneypotValidator.php:19
+msgid "There was a problem. Please refresh the page and try again."
+msgstr "There was a problem. Please refresh the page and try again."
+
+#: plugin/Validators/HoneypotValidator.php:17
+msgid "The review could not be responded to. Please refresh the page and try again."
+msgstr "The review could not be responded to. Please refresh the page and try again."
+
+#: plugin/Validators/HoneypotValidator.php:15
+msgid "The review could not be deleted. Please refresh the page and try again."
+msgstr "The review could not be deleted. Please refresh the page and try again."
+
+#: plugin/Validators/HoneypotValidator.php:13
+msgid "The review could not be updated. Please refresh the page and try again."
+msgstr "The review could not be updated. Please refresh the page and try again."
+
+#: plugin/Validators/ReviewValidator.php:21
+msgid "Cannot find the review to delete (ID: %s)."
+msgstr "Cannot find the review to delete (ID: %s)."
+
+#: plugin/Validators/ReviewValidator.php:26
+msgid "Cannot find the review to respond to (ID: %s)."
+msgstr "Cannot find the review to respond to (ID: %s)."
+
+#: plugin/Validators/ReviewValidator.php:31
+msgid "Cannot find the review to update (ID: %s)."
+msgstr "Cannot find the review to update (ID: %s)."
+
+#: config/settings.php:14
+msgctxt "admin-text"
+msgid "Allow Review Deletion"
+msgstr "Allow Review Deletion"
+
+#: config/settings.php:16
+msgctxt "admin-text"
+msgid "This will allow review authors to delete their reviews on the frontend."
+msgstr "This will allow review authors to delete their reviews on the frontend."
+
+#: config/settings.php:25
+msgctxt "admin-text"
+msgid "Review Deletion Roles"
+msgstr "Review Deletion Roles"
+
+#: config/settings.php:28
+msgctxt "admin-text"
+msgid "Choose which user roles are allowed to delete reviews on the frontend."
+msgstr "Choose which user roles are allowed to delete reviews on the frontend."
+
+#: config/settings.php:34
+msgctxt "admin-text"
+msgid "Allow Review Editing"
+msgstr "Allow Review Editing"
+
+#: config/settings.php:36
+msgctxt "admin-text"
+msgid "This will allow review authors to edit their reviews on the frontend."
+msgstr "This will allow review authors to edit their reviews on the frontend."
+
+#: config/settings.php:45
+msgctxt "admin-text"
+msgid "Review Editing Roles"
+msgstr "Review Editing Roles"
+
+#: config/settings.php:48
+msgctxt "admin-text"
+msgid "Choose which user roles are allowed to edit reviews on the frontend."
+msgstr "Choose which user roles are allowed to edit reviews on the frontend."
+
+#: config/settings.php:54
+msgctxt "admin-text"
+msgid "Allow Review Responses"
+msgstr "Allow Review Responses"
+
+#: config/settings.php:56
+msgctxt "admin-text"
+msgid ""
+"This will allow users with specific roles to respond to reviews on the "
+"frontend."
+msgstr ""
+"This will allow users with specific roles to respond to reviews on the "
+"frontend."
+
+#: config/settings.php:65
+msgctxt "admin-text"
+msgid "Review Responses Roles"
+msgstr "Review Responses Roles"
+
+#: config/settings.php:68
+msgctxt "admin-text"
+msgid "Choose which user roles are allowed to respond to reviews on the frontend."
+msgstr "Choose which user roles are allowed to respond to reviews on the frontend."
+
+#: plugin/Controller.php:202
+msgctxt "admin-text"
+msgid "Hide the delete link"
+msgstr "Hide the delete link"
+
+#: plugin/Controller.php:203
+msgctxt "admin-text"
+msgid "Hide the edit link"
+msgstr "Hide the edit link"
+
+#: plugin/Controller.php:204
+msgctxt "admin-text"
+msgid "Hide the respond link"
+msgstr "Hide the respond link"
+
+#: plugin/Controller.php:261
+msgctxt "admin-text"
+msgid "Deleted by %s."
+msgstr "Deleted by %s."
+
+#: plugin/Tags/ReviewDeleteUrlTag.php:29
+msgctxt "admin-text"
+msgid "Delete"
+msgstr "Delete"
+
+#: plugin/Tags/ReviewEditUrlTag.php:30
+msgctxt "admin-text"
+msgid "Edit"
+msgstr "Edit"
+
+#: plugin/Tags/ReviewRespondUrlTag.php:29
+msgctxt "admin-text"
+msgid "Respond"
+msgstr "Respond"

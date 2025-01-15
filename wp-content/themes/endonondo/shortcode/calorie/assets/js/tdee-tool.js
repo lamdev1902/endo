@@ -44,7 +44,7 @@ jQuery(function($) {
 				}
 			});
 			$.ajax({
-			 url:'https://www.endomondo.com/',
+			 url:'https://wordpress-1308981-5133182.cloudwaysapps.com/',
 			  type: 'GET', 
 			  cache: false,
 			  dataType: "json",

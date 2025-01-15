@@ -1,0 +1,284 @@
+# Copyright (C) 2024 WPClever
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPC Buy Now Button for WooCommerce 2.1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpc-buy-now-button\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-12-02T09:54:17+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: wpc-buy-now-button\n"
+
+#. Plugin Name of the plugin
+msgid "WPC Buy Now Button for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wpclever.net/"
+msgstr ""
+
+#. Description of the plugin
+msgid "WPC Buy Now Button is the ultimate time-saving plugin that helps customers skip the cart page and get redirected right straight to the checkout step."
+msgstr ""
+
+#. Author of the plugin
+msgid "WPClever"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpclever.net"
+msgstr ""
+
+#: wpc-buy-now-button.php:199
+#: wpc-buy-now-button.php:223
+#: wpc-buy-now-button.php:523
+msgid "Buy now"
+msgstr ""
+
+#: wpc-buy-now-button.php:278
+#: wpc-buy-now-button.php:341
+msgid "Settings"
+msgstr ""
+
+#: wpc-buy-now-button.php:279
+#: wpc-buy-now-button.php:347
+msgid "Premium Version"
+msgstr ""
+
+#: wpc-buy-now-button.php:295
+msgid "Community support"
+msgstr ""
+
+#: wpc-buy-now-button.php:313
+#: wpc-buy-now-button.php:323
+msgid "WPC Buy Now Button"
+msgstr ""
+
+#: wpc-buy-now-button.php:313
+msgid "Buy Now Button"
+msgstr ""
+
+#: wpc-buy-now-button.php:323
+msgid "Premium"
+msgstr ""
+
+#. translators: stars
+#: wpc-buy-now-button.php:326
+msgid "Thank you for using our plugin! If you are satisfied, please reward it a full five-star %s rating."
+msgstr ""
+
+#: wpc-buy-now-button.php:328
+msgid "Reviews"
+msgstr ""
+
+#: wpc-buy-now-button.php:329
+msgid "Changelog"
+msgstr ""
+
+#: wpc-buy-now-button.php:330
+msgid "Discussion"
+msgstr ""
+
+#: wpc-buy-now-button.php:335
+msgid "Settings updated."
+msgstr ""
+
+#: wpc-buy-now-button.php:344
+msgid "Localization"
+msgstr ""
+
+#: wpc-buy-now-button.php:350
+msgid "Essential Kit"
+msgstr ""
+
+#: wpc-buy-now-button.php:359
+#: wpc-buy-now-button.php:514
+msgid "General"
+msgstr ""
+
+#: wpc-buy-now-button.php:360
+msgid "General settings."
+msgstr ""
+
+#: wpc-buy-now-button.php:363
+msgid "Button position on archive"
+msgstr ""
+
+#: wpc-buy-now-button.php:371
+msgid "After title"
+msgstr ""
+
+#: wpc-buy-now-button.php:372
+msgid "After rating"
+msgstr ""
+
+#: wpc-buy-now-button.php:373
+msgid "After price"
+msgstr ""
+
+#: wpc-buy-now-button.php:374
+#: wpc-buy-now-button.php:390
+msgid "Before add to cart button"
+msgstr ""
+
+#: wpc-buy-now-button.php:375
+#: wpc-buy-now-button.php:391
+msgid "After add to cart button"
+msgstr ""
+
+#: wpc-buy-now-button.php:376
+#: wpc-buy-now-button.php:392
+msgid "None (hide it)"
+msgstr ""
+
+#. translators: shortcode
+#: wpc-buy-now-button.php:378
+#: wpc-buy-now-button.php:394
+msgid "You also can use the shortcode %s"
+msgstr ""
+
+#: wpc-buy-now-button.php:382
+msgid "Button position on single"
+msgstr ""
+
+#: wpc-buy-now-button.php:398
+msgid "Parameter"
+msgstr ""
+
+#. translators: parameter
+#: wpc-buy-now-button.php:403
+msgid "Parameter for the Buy Now button or link. Default %s"
+msgstr ""
+
+#: wpc-buy-now-button.php:407
+msgid "Categories"
+msgstr ""
+
+#: wpc-buy-now-button.php:423
+msgid "All categories"
+msgstr ""
+
+#: wpc-buy-now-button.php:428
+msgid "Only show the Buy Now button for products in selected categories."
+msgstr ""
+
+#: wpc-buy-now-button.php:432
+msgid "Hide add-to-cart button"
+msgstr ""
+
+#: wpc-buy-now-button.php:436
+#: wpc-buy-now-button.php:447
+#: wpc-buy-now-button.php:497
+msgid "Yes"
+msgstr ""
+
+#: wpc-buy-now-button.php:437
+#: wpc-buy-now-button.php:448
+#: wpc-buy-now-button.php:498
+msgid "No"
+msgstr ""
+
+#: wpc-buy-now-button.php:439
+msgid "Hide the default add-to-cart button on products that already has Buy Now button."
+msgstr ""
+
+#: wpc-buy-now-button.php:443
+msgid "Reset cart"
+msgstr ""
+
+#: wpc-buy-now-button.php:450
+msgid "Reset the cart before doing buy now."
+msgstr ""
+
+#: wpc-buy-now-button.php:454
+msgid "Action"
+msgstr ""
+
+#: wpc-buy-now-button.php:456
+msgid "Choose action after doing buy now."
+msgstr ""
+
+#: wpc-buy-now-button.php:460
+msgid "Redirect to Checkout page"
+msgstr ""
+
+#: wpc-buy-now-button.php:461
+msgid "Redirect to Cart page"
+msgstr ""
+
+#: wpc-buy-now-button.php:462
+msgid "Redirect to Custom page"
+msgstr ""
+
+#: wpc-buy-now-button.php:463
+msgid "Open Instant Checkout popup (premium)"
+msgstr ""
+
+#: wpc-buy-now-button.php:464
+msgid "Open WPC Fly Cart popup (premium)"
+msgstr ""
+
+#: wpc-buy-now-button.php:471
+#: wpc-buy-now-button.php:528
+msgid "Instant Checkout"
+msgstr ""
+
+#: wpc-buy-now-button.php:480
+msgid "Position"
+msgstr ""
+
+#: wpc-buy-now-button.php:484
+msgid "Right"
+msgstr ""
+
+#: wpc-buy-now-button.php:485
+msgid "Left"
+msgstr ""
+
+#: wpc-buy-now-button.php:486
+msgid "Top"
+msgstr ""
+
+#: wpc-buy-now-button.php:487
+msgid "Bottom"
+msgstr ""
+
+#: wpc-buy-now-button.php:488
+msgid "Center"
+msgstr ""
+
+#: wpc-buy-now-button.php:493
+msgid "Use perfect-scrollbar"
+msgstr ""
+
+#. translators: link
+#: wpc-buy-now-button.php:500
+msgid "Read more about %s"
+msgstr ""
+
+#: wpc-buy-now-button.php:516
+#: wpc-buy-now-button.php:530
+msgid "Leave blank to use the default text and its equivalent translation in multiple languages."
+msgstr ""
+
+#: wpc-buy-now-button.php:520
+msgid "Button text"
+msgstr ""
+
+#: wpc-buy-now-button.php:534
+msgid "Heading"
+msgstr ""
+
+#: wpc-buy-now-button.php:537
+msgid "Checkout"
+msgstr ""
+
+#: wpc-buy-now-button.php:542
+#: wpc-buy-now-button.php:545
+msgid "Close"
+msgstr ""

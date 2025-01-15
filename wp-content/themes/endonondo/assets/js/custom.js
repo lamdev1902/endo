@@ -36,52 +36,6 @@ jQuery(function ($) {
 
 
 	jQuery(document).ready(function ($) {
-		function initializeSlick() {
-			if ($(window).width() <= 834 && $('.exercise__flex--3').length) {
-				if (!$('.exercise__flex--3').hasClass('slick-initialized')) {
-					$('.exercise__flex--3').slick({
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						dots: false,
-						arrows: false,
-						infinite: true,
-						centerMode: true,
-						centerPadding: '110px',
-						responsive: [
-							{
-								breakpoint: 480,
-								settings: {
-									slidesToShow: 1,
-									slidesToScroll: 1,
-									dots: false,
-									arrows: false,
-									infinite: true,
-									centerMode: true,
-									centerPadding: '40px',
-								}
-							}
-						]
-					});
-				}
-			} else {
-				if ($('.exercise__flex--3').hasClass('slick-initialized')) {
-					$('.exercise__flex--3').slick('unslick');
-				}
-			}
-
-			if ($(window).width() <= 480 && $('.all__flex').length) {
-				$('.all__flex').slick({
-					slidesToShow: 2, 
-					slidesToScroll: 1,
-					dots: false,
-					arrows: false,
-					infinite: false, 
-				});
-			}
-		}
-
-		initializeSlick();
-
 		$('#postCmt').click(function (e) {
 			e.preventDefault();
 			$(".form-grid").toggleClass('hide');
@@ -414,8 +368,8 @@ jQuery(function ($) {
 				var numberOfColumns = $headers.length;
 
 				if (numberOfColumns <= 3) {
-					var tableWidth = $table.outerWidth(true);
-					var columnWidth = (tableWidth - 1) / numberOfColumns;
+					var tableWidth = $table.width();
+					var columnWidth = tableWidth / numberOfColumns;
 
 					$headers.css('width', columnWidth + 'px');
 					$cells.css('width', columnWidth + 'px');
@@ -450,12 +404,12 @@ function customer_review_leea() {
 		$('.form-customer-feedback .customer-ftoggle').addClass('ani-left');
 		$('html').css('overflow', 'auto');
 	});
-	$('.rating-feedback').rating({
-		maxRating: 5,
-		initialRating: 3,
-		readonly: false,
-		step: 1,
-	});
+	// $('.rating-feedback').rating({
+	// 	maxRating: 5,
+	// 	initialRating: 3,
+	// 	readonly: false,
+	// 	step: 1,
+	// });
 	$('.rating-feedback').change(function () {
 		$('.form-feedback').show();
 		$('.form-hidden-rating').val($('.rating-feedback').val());
@@ -495,4 +449,30 @@ function customer_review_leea() {
 		$('.form-customer-feedback .mailsent').show();
 		$('.form-customer-feedback .form-feedback, .form-customer-feedback .star-rating').hide();
 	}, false);
+
+
 }
+
+jQuery(document).ready(function ($) {
+	$('.quantity').each(function () {
+		var $this = $(this);
+		$this.prepend('<input type="button" value="-" class="minus button wp-element-button">');
+		$this.append('<input type="button" value="+" class="plus button wp-element-button">');
+	});
+
+	$(document).on('click', '.minus', function () {
+		var $input = $(this).siblings('input.qty');
+		var value = parseInt($input.val());
+		if (!isNaN(value) && value > 1) {
+			$input.val(value - 1).change();
+		}
+	});
+
+	$(document).on('click', '.plus', function () {
+		var $input = $(this).siblings('input.qty');
+		var value = parseInt($input.val());
+		if (!isNaN(value)) {
+			$input.val(value + 1).change();
+		}
+	});
+});

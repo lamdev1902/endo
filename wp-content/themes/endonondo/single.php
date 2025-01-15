@@ -3,7 +3,7 @@ $postid = get_the_ID();
 $post_terms = wp_get_post_terms($postid, 'category');
 $author_id = get_post_field('post_author', $postid);
 $upid = get_post_field('post_author', $postid);
-$author_name = get_the_author_meta('display_name', $author_id);
+$author_name = get_the_author_meta('nickname', $author_id);
 $author_url = get_author_posts_url($author_id);
 $user_info = get_userdata($author_id);
 
@@ -232,11 +232,6 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 				</article>
 			</div>
 		</div>
-		<?php if (comments_open()): ?>
-			<div class="container">
-				<?php comments_template(); ?>
-			</div>
-		<?php endif; ?>
 		<aside class="sg-other">
 			<h2 class="text-center">Read More</h2>
 			<div class="news-list grid grid-feature">
@@ -250,7 +245,7 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 				while ($the_query->have_posts()):
 					$the_query->the_post();
 					$post_author_id = get_post_field('post_author', $post->ID);
-					$post_display_name = get_the_author_meta('display_name', $post_author_id);
+					$post_display_name = get_the_author_meta('nickname', $post_author_id);
 					$post_author_url = get_author_posts_url($post_author_id);
 					?>
 					<div class="news-it">
@@ -299,5 +294,10 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 			</div>
 		</aside>
 	</div>
+	<?php if (comments_open()): ?>
+        <div class="container">
+            <?php comments_template(); ?>
+        </div>
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?>

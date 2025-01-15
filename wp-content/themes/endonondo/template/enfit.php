@@ -15,7 +15,7 @@ $app = get_field('intro_app', 'option');
                     <img src="<?= get_template_directory_uri() . '/assets/images/enfit/workout.svg' ?>" alt="">
                     <strong>#1 Fitness and Sport App!</strong>
                 </h2>
-                <h1>Home Wokrout - No Equipment? Enfit Has You Covered!</h1>
+                <h1>No Gym? No Problem. Enfit Has You Covered!</h1>
             </div>
             <div class="first__coming--img">
                 <div class="container">

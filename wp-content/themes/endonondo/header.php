@@ -116,13 +116,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<?php global $template;?>
+
 	<div id="wapper" class="<?php if (is_front_page()) {
 		echo 'home-main color-white';
-	}elseif (basename($template) == 'single-best_exercise.php')  {
-		echo 'home-main best-exercise';
-	}
-	else {
+	} else {
 		echo '';
 	} ?>">
 		<header id="header" class="position-relative">
@@ -201,7 +198,7 @@
 									} ?>
 								</div>
 
-								<p class="note has-small-font-size"><i>* <a href="https://www.endomondo.com/privacy-policy">Your privacy</a> is important to
+								<p class="note has-small-font-size"><i>* <a href="https://wordpress-1308981-5133182.cloudwaysapps.com/privacy-policy">Your privacy</a> is important to
 										us</i></p>
 							</div>
 						</div>

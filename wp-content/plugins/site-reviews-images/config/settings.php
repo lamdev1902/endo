@@ -1,0 +1,80 @@
+<?php
+
+return [
+    'settings.addons.images.mime_types' => [
+        'class' => 'regular-text',
+        'default' => ['image/jpeg', 'image/png', 'image/webp'],
+        'label' => _x('Allowed Image Types', 'setting label (admin-text)', 'site-reviews-images'),
+        'options' => [
+            'image/avif' => _x('AVIF files (WordPress v6.5+)', 'setting option (admin-text)', 'site-reviews-images'),
+            'image/jpeg' => _x('JPG files', 'setting option (admin-text)', 'site-reviews-images'),
+            'image/png' => _x('PNG files', 'setting option (admin-text)', 'site-reviews-images'),
+            'image/webp' => _x('WEBP files', 'setting option (admin-text)', 'site-reviews-images'),
+        ],
+        'sanitizer' => 'array-string',
+        'tooltip' => _x('Restrict uploaded images to specific image file types', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'checkbox',
+    ],
+    'settings.addons.images.deletion' => [
+        'default' => 'no',
+        'label' => _x('Delete Images with Review', 'setting label (admin-text)', 'site-reviews-images'),
+        'sanitizer' => 'text',
+        'tooltip' => _x('Delete attached images when a review is permanently deleted', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'yes_no',
+    ],
+    'settings.addons.images.disable_modal' => [
+        'default' => 'no',
+        'label' => _x('Disable Image Modal', 'setting label (admin-text)', 'site-reviews-images'),
+        'sanitizer' => 'text',
+        'tooltip' => _x('Disable the image modal used for viewing images. For example, if you are using the Elementor Lightbox to view images you may wish to disable the modal.', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'yes_no',
+    ],
+    'settings.addons.images.modal' => [
+        'default' => 'modal',
+        'depends_on' => [
+            'settings.addons.images.disable_modal' => 'no',
+        ],
+        'label' => _x('Display Images Using', 'setting label (admin-text)', 'site-reviews-images'),
+        'options' => [
+            'lightbox' => _x('Fullscreen Lightbox', 'admin-text', 'site-reviews-images'),
+            'modal' => _x('Single Modal', 'admin-text', 'site-reviews-images'),
+        ],
+        'sanitizer' => 'text',
+        'tooltip' => _x('The Single Modal will display individual images in a popup. The Fullscreen Lightbox will display the images using the full height/width of the browser and allow you to navigate between each image.', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'select',
+    ],
+    'settings.addons.images.max_file_size' => [ // @see https://github.com/dropzone/dropzone/issues/2262
+        'after' => _x('MB', 'abbreviation of megabytes (admin-text)', 'site-reviews-images'),
+        'default' => 5,
+        'label' => _x('Maximum File Size', 'setting label (admin-text)', 'site-reviews-images'),
+        'min' => 1,
+        'sanitizer' => 'min:1',
+        'tooltip' => _x('The maximum file size of images that can be uploaded', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'number',
+    ],
+    'settings.addons.images.max_files' => [
+        'after' => _x('images', 'maximum number of (admin-text)', 'site-reviews-images'),
+        'default' => 5,
+        'label' => _x('Maximum Images', 'setting label (admin-text)', 'site-reviews-images'),
+        'min' => 1,
+        'sanitizer' => 'min:1',
+        'tooltip' => _x('The maximum number of images that can be added to a review', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'number',
+    ],
+    'settings.addons.images.min_files' => [
+        'after' => _x('images', 'minimum number of (admin-text)', 'site-reviews-images'),
+        'default' => 0,
+        'label' => _x('Minimum Images', 'setting label (admin-text)', 'site-reviews-images'),
+        'min' => 0,
+        'sanitizer' => 'min:0',
+        'tooltip' => _x('The minimum number of images required for a review', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'number',
+    ],
+    'settings.addons.images.require_approval' => [
+        'default' => 'no',
+        'label' => _x('Require Image Approval', 'setting label (admin-text)', 'site-reviews-images'),
+        'sanitizer' => 'text',
+        'tooltip' => _x('Require approval for reviews with images, regardless of the rating.', 'setting description (admin-text)', 'site-reviews-images'),
+        'type' => 'yes_no',
+    ],
+];

@@ -1,4 +1,21 @@
 <?php
+add_action('after_setup_theme', 'setup_woocommerce_support');
+
+function setup_woocommerce_support()
+{
+	add_theme_support('woocommerce');
+}
+
+function enqueue_wc_variation_script()
+{
+	if (is_product()) {
+		wp_enqueue_script('wc-add-to-cart-variation');
+	}
+}
+add_action('wp_enqueue_scripts', 'enqueue_wc_variation_script');
+
+
+
 include(TEMPLATEPATH . '/shortcode/chart/chart-shortcode.php');
 include(TEMPLATEPATH . '/shortcode/muscle/anatomy.php');
 include(TEMPLATEPATH . '/shortcode/calorie/calorie-shortcode.php');
@@ -16,7 +33,18 @@ include(TEMPLATEPATH . '/shortcode/calorie/lean-body-mass-shortcode.php');
 // include(TEMPLATEPATH.'/shortcode/calorie/body-adiposity-index-shortcode.php');
 include(TEMPLATEPATH . '/shortcode/calorie/bmr-shortcode.php');
 include(TEMPLATEPATH . '/shortcode/calorie/repmax-shortcode.php');
+// include(TEMPLATEPATH . '/woocommerce/woo-json.php');
+include(TEMPLATEPATH . '/woocommerce/woo-functions.php');
+function leea_filter_post_type_args($args, $post_type)
+{
+	if ('product' === $post_type) {
+		$args['has_archive'] = false;
+		$args['rewrite']['slug'] = 'shop';
+	}
+	return $args;
+}
 
+add_filter('register_post_type_args', 'leea_filter_post_type_args', 10, 2);
 // Override Hook Breadcrum
 add_filter('wpseo_breadcrumb_links', 'customize_yoast_breadcrumb_ex_links', 20);
 function customize_yoast_breadcrumb_ex_links($links)
@@ -94,7 +122,6 @@ function enqueue_exercise_search_script()
 			'ajaxurl' => admin_url('admin-ajax.php')
 		));
 	}
-
 }
 add_action('wp_enqueue_scripts', 'enqueue_exercise_search_script');
 
@@ -177,7 +204,7 @@ function search_exercise()
 				$equipment = '';
 			}
 			$mtExercises = $wpdb->get_results($wpdb->prepare($exTag, $exID), ARRAY_A);
-			?>
+?>
 			<div class="mt flex">
 				<div class="ex-img">
 					<a target="_blank" href="<?= home_url('/exercise/' . $ex['exercise_slug']); ?>">
@@ -197,18 +224,15 @@ function search_exercise()
 					</div>
 				</div>
 			</div>
-			<?php
+		<?php
 		endforeach;
 		$output = ob_get_clean();
 		wp_send_json_success(
 			$output
 		);
 	} else {
-		wp_send_json_success(
-
-		);
+		wp_send_json_success();
 	}
-
 }
 add_action('wp_ajax_search_exercise', 'search_exercise');
 add_action('wp_ajax_nopriv_search_exercise', 'search_exercise');
@@ -235,8 +259,6 @@ function enqueue_infinite_scroll_script()
 			true
 		);
 	}
-
-
 }
 add_action('wp_enqueue_scripts', 'enqueue_infinite_scroll_script');
 
@@ -258,9 +280,9 @@ function load_more_posts()
 		while ($the_query->have_posts()):
 			$the_query->the_post();
 			$post_author_id = get_post_field('post_author', get_the_ID());
-			$post_display_name = get_the_author_meta('display_name', $post_author_id);
+			$post_display_name = get_the_author_meta('nickname', $post_author_id);
 			$post_author_url = get_author_posts_url($post_author_id);
-			?>
+		?>
 			<div class="news-it">
 				<div class="news-box">
 					<div class="featured image-fit hover-scale">
@@ -291,7 +313,7 @@ function load_more_posts()
 					</div>
 				</div>
 			</div>
-			<?php
+	<?php
 		endwhile;
 	endif;
 	die();
@@ -307,7 +329,6 @@ function custom_image_sizes_choose($sizes)
 	unset($sizes['large']);
 
 	return array('full' => __('Full Size'));
-
 }
 
 add_filter('image_size_names_choose', 'custom_image_sizes_choose');
@@ -354,7 +375,7 @@ function my_script()
 add_action('admin_footer', 'my_script');
 function custom_style_login()
 {
-	?>
+?>
 	<style type="text/css">
 		.login h1 a {
 			background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/endomondo-1.svg");
@@ -376,15 +397,16 @@ function theme_mcs_scripts()
 	wp_enqueue_style('style-slick', get_template_directory_uri() . '/assets/js/slick/slick.css');
 	wp_enqueue_style('style-slick-theme', get_template_directory_uri() . '/assets/js/slick/slick-theme.css');
 	wp_enqueue_style('style-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper-bundle.min.css');
-	wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.7.4');
-	wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.7');
+	wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.7.2');
+	wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.6');
 	wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
 	wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
-	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.9.0');
-	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.9.1');
+	wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.7.9');
+	wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '1.8.7');
 	wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
 	wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
 	wp_enqueue_style('style-regular', get_template_directory_uri() . '/assets/fonts/css/regular.css');
+	wp_enqueue_style('style-new', get_template_directory_uri() . '/assets/css/new.css');
 }
 add_action('wp_enqueue_scripts', 'theme_mcs_scripts');
 
@@ -459,16 +481,12 @@ function custom_social_share_buttons_shortcode()
 		} ?>
 	</div>
 
-	<?php
+<?php
 	return ob_get_clean();
 }
 
 function mytheme_comment($comment, $args, $depth)
 {
-	if ($comment->comment_approved == '0') {
-		return false;
-	}
-
 	if ('div' === $args['style']) {
 		$tag = 'div';
 		$add_below = 'comment';
@@ -476,512 +494,148 @@ function mytheme_comment($comment, $args, $depth)
 		$tag = 'li';
 		$add_below = 'div-comment';
 	} ?>
-	<<?php echo $tag; ?> 	<?php comment_class(empty($args['has_children']) ? '' : 'parent'); ?>
+	<<?php echo $tag; ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent'); ?>
 		id="comment-<?php comment_ID() ?>"><?php
-		  if ('div' != $args['style']) { ?>
+											if ('div' != $args['style']) { ?>
 			<div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
-		  } ?>
+																			} ?>
 			<div class="flex section-header">
 				<div class="comment-author vcard"><?php
-				$comment_author_id = $comment->user_id;
-				if ($comment_author_id && user_can($comment_author_id, 'administrator') && $args['avatar_size'] != 0) {
-					echo get_avatar($comment, $args['avatar_size']);
-				}
-				printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()); ?>
+													$comment_author_id = $comment->user_id;
+													if ($comment_author_id && user_can($comment_author_id, 'administrator') && $args['avatar_size'] != 0) {
+														echo get_avatar($comment, $args['avatar_size']);
+													}
+													printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()); ?>
 				</div><?php
-				if ($comment->comment_approved == '0') { ?>
+						if ($comment->comment_approved == '0') { ?>
 					<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.'); ?></em><br /><?php
-				} ?>
+																														} ?>
 				<div class="comment-meta commentmetadata">
 					<a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)); ?>">
 						<p class="has-ssmall-font-size"><?php
-						/* translators: 1: date, 2: time */
-						printf(
-							__('%1$s at %2$s'),
-							get_comment_date(),
-							get_comment_time()
-						); ?></p>
+														/* translators: 1: date, 2: time */
+														printf(
+															__('%1$s at %2$s'),
+															get_comment_date(),
+															get_comment_time()
+														); ?></p>
 					</a><?php
-					edit_comment_link(__('(Edit)'), '  ', ''); ?>
+						edit_comment_link(__('(Edit)'), '  ', ''); ?>
 				</div>
 			</div>
 
 			<div class="cmt-box">
 				<?php comment_text(); ?>
 			</div>
-		</div>
-		<?php if ($depth < 3): ?>
-			<div class="reply"><?php
-			comment_reply_link(
-				array_merge(
-					$args,
-					array(
-						'add_below' => $add_below,
-						'depth' => $depth,
-						'max_depth' => $args['max_depth']
-					)
-				)
-			); ?>
 			</div>
+			<?php if ($depth < 3): ?>
+				<div class="reply"><?php
+									comment_reply_link(
+										array_merge(
+											$args,
+											array(
+												'add_below' => $add_below,
+												'depth' => $depth,
+												'max_depth' => $args['max_depth']
+											)
+										)
+									); ?>
+				</div>
 		<?php endif;
-}
-
-add_action('wp_ajax_load_more_comments', 'load_more_comments');
-add_action('wp_ajax_nopriv_load_more_comments', 'load_more_comments');
-
-function load_more_comments()
-{
-	if (!isset($_POST['post_id']) || !isset($_POST['page'])) {
-		wp_send_json_error('Invalid data');
-	}
-
-	$post_id = intval($_POST['post_id']);
-	$page = intval($_POST['page']);
-	$comments_per_page = get_option('comments_per_page');
-	$displayed_ids = isset($_POST['displayed_ids']) ? array_map('intval', $_POST['displayed_ids']) : [];
-
-	$args = array(
-		'post_id' => $post_id,
-		'number' => 0,
-		'comment__not_in' => $displayed_ids,
-		'status' => 'approve',
-		'hierarchical' => 'false'
-	);
-	$comments = get_comments($args);
-
-	if (empty($comments)) {
-		wp_send_json_error('No more comments');
-	}
-
-	ob_start();
-	wp_list_comments(array(
-		'style' => 'ul',
-		'callback' => 'mytheme_comment',
-		'type' => 'all',
-		'short_ping' => true,
-		'max_depth' => 3
-	), $comments);
-	$output = ob_get_clean();
-
-	wp_send_json_success($output);
-}
-
-add_action('wp_enqueue_scripts', 'enqueue_load_more_comments_script');
-
-function enqueue_load_more_comments_script()
-{
-	$disallowed_comment_keys_list = get_option('disallowed_keys');
-	$disallowed_comment_keys_array = !empty($disallowed_comment_keys_list) ? explode("\n", $disallowed_comment_keys_list) : [];
-
-	wp_enqueue_script('load-more-comments', get_template_directory_uri() . '/assets/js/load-more-comments.js', array('jquery'), '1.0.2', true);
-	wp_localize_script('load-more-comments', 'ajax_object', array(
-		'ajax_url' => admin_url('admin-ajax.php'),
-		'ajax_nonce' => wp_create_nonce('ajax_comment_nonce'),
-		'disallowed_keys' => $disallowed_comment_keys_array,
-	));
-
-	wp_enqueue_script('ld-ajaxload', get_template_directory_uri() . '/assets/js/ajax-loadpost.js', array('jquery'), '1.0.6', true);
-	$php_array = array(
-		'admin_ajax' => admin_url('admin-ajax.php'),
-		'load_post_nonce' => wp_create_nonce('ajax_load_post_nonce'),
-	);
-	wp_localize_script('ld-ajaxload', 'ld_array', $php_array);
-}
-
-function custom_default_feed_callback()
-{
-	add_filter('pre_option_rss_use_excerpt', '__return_zero');
-
-	$template = locate_template('feed-rss2-custom-post-type.php');
-
-	if (!$template) {
-		$template = __DIR__ . '/custom-rss-feed/feed-rss2-custom-post-type.php';
-	}
-
-	load_template($template);
-}
-
-function change_default_feed_slug()
-{
-	remove_action('do_feed', 'do_feed_rss2', 10, 1);
-	remove_action('do_feed_rss2', 'do_feed_rss2', 10, 1);
-	remove_action('do_feed_rss', 'do_feed_rss', 10, 1);
-	remove_action('do_feed_atom', 'do_feed_atom', 10, 1);
-
-	add_feed('nb-feed', 'custom_default_feed_callback');
-}
-add_action('init', 'change_default_feed_slug');
-
-
-function ld_load_ajax($postid, $custom_query = null, $paged = 1)
-{
-	global $wp_query, $wp_rewrite;
-	if ($custom_query)
-		$main_query = $custom_query;
-	else
-		$main_query = $wp_query;
-
-	$post_url = get_permalink($postid);
-
-	$base_url = rtrim($post_url, '/') . '/page/%#%/';
-	$big = 999999999;
-	$total = isset($main_query->max_num_pages) ? $main_query->max_num_pages : '';
-	if ($total > 1)
-		echo '<div class="paginate_links">';
-	echo paginate_links(array(
-		'base' => $base_url,
-		'format' => '?paged=%#%',
-		'current' => max(1, $paged),
-		'total' => $total,
-		'mid_size' => '5',
-		'prev_text' => __('<', 'ld'),
-		'next_text' => __('>', 'ld'),
-	));
-	if ($total > 1)
-		echo '</div>';
-}
-function get_video($exercise = [], $grid1 = false)
-{
-
-	$width = 347;
-	$height = 194;
-
-	if ($grid1) {
-		$width = 776;
-		$height = 438;
-	}
-	$arrVideo = array();
-	if ($exercise) {
-		$arrVideo = array(
-			$exercise->video_white_male,
-			$exercise->video_green,
-			$exercise->video_transparent,
-		);
-	}
-
-	$iframe = '';
-	$video = '';
-	foreach ($arrVideo as $vid) {
-		if ($vid) {
-			$video = $vid;
 		}
-	}
 
-	if ($video) {
+		add_action('wp_ajax_load_more_comments', 'load_more_comments');
+		add_action('wp_ajax_nopriv_load_more_comments', 'load_more_comments');
 
-		$video_id = get_vimeo($video);
+		function load_more_comments()
+		{
+			if (!isset($_POST['post_id']) || !isset($_POST['page'])) {
+				wp_send_json_error('Invalid data');
+			}
 
-		if ($video_id) {
-			$iframe = sprintf(
-				'<iframe src="https://player.vimeo.com/video/%s?controls=1" width="%d" height="%d" frameborder="0" allow="autoplay;muted;"></iframe>',
-				htmlspecialchars($video_id),
-				$width,
-				$height
+			$post_id = intval($_POST['post_id']);
+			$page = intval($_POST['page']);
+			$comments_per_page = get_option('comments_per_page');
+			$displayed_ids = isset($_POST['displayed_ids']) ? array_map('intval', $_POST['displayed_ids']) : [];
+
+			$args = array(
+				'post_id' => $post_id,
+				'number' => 0,
+				'comment__not_in' => $displayed_ids,
+				'status' => 'approve',
+				'hierarchical' => 'false'
 			);
-		}
-	}
+			$comments = get_comments($args);
 
-	return $iframe;
-}
-function get_vimeo($url)
-{
-	if (preg_match('/playback\/(\d+)\//', $url, $matches)) {
-		return $matches[1];
-	}
-	return false;
-}
+			if (empty($comments)) {
+				wp_send_json_error('No more comments');
+			}
 
-add_action('wp_ajax_ajax_load_post', 'ajax_load_post_func');
-add_action('wp_ajax_nopriv_ajax_load_post', 'ajax_load_post_func');
-function ajax_load_post_func()
-{
-	global $wpdb;
-	if (!wp_verify_nonce($_REQUEST['nonce'], "ajax_load_post_nonce")) {
-		wp_send_json_error('None?');
-	}
+			ob_start();
+			wp_list_comments(array(
+				'style' => 'ul',
+				'callback' => 'mytheme_comment',
+				'type' => 'all',
+				'short_ping' => true,
+				'max_depth' => 3
+			), $comments);
+			$output = ob_get_clean();
 
-	$postid = $_POST['id'] ? $_POST['id'] : '';
-	$filter = $_POST['filter'] ? $_POST['filter'] : 1;
-
-	$queryE = "
-    SELECT DISTINCT ee.name, ee.slug
-    FROM {$wpdb->prefix}exercise_equipment_option AS eeo
-    INNER JOIN {$wpdb->prefix}exercise_equipment AS ee
-    ON eeo.equipment_id = ee.id
-    WHERE eeo.exercise_id = %d
-	";
-
-	$queryM = "
-		SELECT DISTINCT mt.name, mt.slug
-		FROM {$wpdb->prefix}exercise_primary_option AS epo
-		INNER JOIN {$wpdb->prefix}exercise_muscle_anatomy AS ma
-		ON epo.muscle_id = ma.id
-		INNER JOIN {$wpdb->prefix}exercise_muscle_type AS mt
-		ON ma.type_id = mt.id
-		WHERE epo.exercise_id = %d
-	";
-
-	$featureimg = get_field('fimg_default', 'option');
-
-	$paged = isset($_POST['ajax_paged']) ? intval($_POST['ajax_paged']) : 1;
-
-	if ($paged <= 0 || !$paged || !is_numeric($paged))
-		wp_send_json_error('Paged?');
-
-	$meta_keys = ['all_mt_list', 'all_ma_list', 'all_eq_list', 'all_ex_list'];
-
-	$meta_values = array_map(function ($key) use ($postid) {
-		return get_post_meta($postid, $key, true) ?: '';
-	}, $meta_keys);
-
-	list($mt_list, $ma_list, $eq_list, $ex_list) = $meta_values;
-
-	$mt_ids = array_filter(explode(',', $mt_list));
-	$ma_ids = array_filter(explode(',', $ma_list));
-	$eq_ids = array_filter(explode(',', $eq_list));
-	$ex_ids = array_filter(explode(',', $ex_list));
-
-	$where_conditions = ["e.slug IS NOT NULL"];
-
-	if (!empty($ex_ids)) {
-		$ex_ids_str = implode(',', array_map('intval', $ex_ids));
-		$where_conditions[] = "e.id IN ($ex_ids_str)";
-	} else {
-		if (!empty($mt_ids)) {
-			$mt_ids_str = implode(',', array_map('intval', $mt_ids));
-			$where_conditions[] = "epo.muscle_id IN (
-                        SELECT id 
-                        FROM {$wpdb->prefix}exercise_muscle_anatomy
-                        WHERE type_id IN ($mt_ids_str)
-                    )";
+			wp_send_json_success($output);
 		}
 
-		if (!empty($ma_ids)) {
-			$ma_ids_str = implode(',', array_map('intval', $ma_ids));
-			$where_conditions[] = "epo.muscle_id IN ($ma_ids_str)";
+		add_action('wp_enqueue_scripts', 'enqueue_load_more_comments_script');
+
+		function enqueue_load_more_comments_script()
+		{
+			wp_enqueue_script('load-more-comments', get_template_directory_uri() . '/assets/js/load-more-comments.js', array('jquery'), null, true);
+			wp_localize_script('load-more-comments', 'ajax_object', array(
+				'ajax_url' => admin_url('admin-ajax.php'),
+			));
 		}
 
-		if (!empty($eq_ids)) {
-			$eq_ids_str = implode(',', array_map('intval', $eq_ids));
-			$where_conditions[] = "eeo.equipment_id IN ($eq_ids_str)";
-		}
-	}
+		function add_custom_product_rating_to_loop()
+		{
+			global $product;
 
-	$where_clause = implode(' AND ', $where_conditions);
+			$product_id = $product->get_id();
 
-	$query = "
-			SELECT e.slug, e.id, e.description, e.name
-			FROM {$wpdb->prefix}exercise AS e
-			LEFT JOIN {$wpdb->prefix}exercise_primary_option AS epo ON e.id = epo.exercise_id
-			LEFT JOIN {$wpdb->prefix}exercise_equipment_option AS eeo ON e.id = eeo.exercise_id
-			WHERE $where_clause
-			GROUP BY e.id
-		";
+			$reviews = glsr_get_reviews([
+				'assigned_posts' => $product_id,
+			]);
 
-	$results = $wpdb->get_results($query);
-	$slug_to_exercise = [];
-	$slugs = [];
+			$rating_count = count($reviews['reviews']);
+			$ratings_sum = array_sum(array_column($reviews['reviews'], 'rating'));
+			$average_rating = $rating_count > 0 ? $ratings_sum / $rating_count : 0;
 
-	foreach ($results as $exIt) {
-		$slugs[] = $exIt->slug;
-		$slug_to_exercise[$exIt->slug] = [
-			'id' => $exIt->id,
-			'description' => $exIt->description,
-			'name' => $exIt->name,
-		];
-	}
+			echo '<div class="custom-product-rating">';
 
-	if ($filter == 2) {
-		sort($slugs);
-	}
-
-	$args = [
-		'post_type' => 'exercise',
-		'posts_per_page' => 10,
-		'paged' => $paged,
-		'post_name__in' => $slugs,
-		'orderby' => 'post_name__in',
-		'order' => "DESC"
-	];
-
-	if ($filter == 1) {
-		$args['orderby'] = 'post_views';
-	}
-
-	if ($filter == 3) {
-		$args['orderby'] = 'date';
-	}
-
-	if ($filter == 4) {
-		$args['orderby'] = 'comment_count';
-	}
-
-	$query_posts = new WP_Query($args);
-
-	if ($query_posts->have_posts()):
-		ob_start();
-		$max_post_count = $query_posts->post_count;
-		while ($query_posts->have_posts()):
-			$query_posts->the_post();
-
-			$slug = get_post_field('post_name');
-
-			$exercise_info = isset($slug_to_exercise[$slug]) ? $slug_to_exercise[$slug] : null;
-
-			$exercise_id = $exercise_info ? $exercise_info['id'] : '';
-
-			$iframe = '';
-
-			$contents = '';
-			if ($exercise_id) {
-				$exercise = $wpdb->get_results(
-					$wpdb->prepare("SELECT * FROM {$wpdb->prefix}exercise WHERE id = %d", $exercise_id)
-				);
-
-				$contents = $wpdb->get_results($wpdb->prepare(
-					"Select content From {$wpdb->prefix}exercise_content WHERE exercise_id = %d AND content_type = 1",
-					$exercise_id
-				), ARRAY_A);
-
-				$iframe = '';
-				if (!empty($exercise[0])) {
-					$iframe = get_video($exercise[0], true);
+			for ($i = 1; $i <= 5; $i++) {
+				if ($i <= $average_rating) {
+					echo '<span class="star filled">&#9733;</span>';
+				} else {
+					echo '<span class="star">&#9734;</span>';
 				}
 			}
 
-			$name = $exercise_info ? $exercise_info['name'] : '';
+			if ($rating_count > 0) {
+				echo '<span class="rating-count">(' . $rating_count . ')</span>';
+			} else {
+				echo '<span class="rating-count">(0)</span>';
+			}
 
-			$description = $exercise_info ? $exercise_info['description'] : '';
+			echo '</div>';
+		}
+		add_action('woocommerce_after_shop_loop_item_title', 'add_custom_product_rating_to_loop', 5);
 
-			$equipments = $wpdb->get_results($wpdb->prepare($queryE, $exercise_id));
-			$mts = $wpdb->get_results($wpdb->prepare($queryM, $exercise_id));
 
-			$featureimg = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-			?>
-				<div class="exercise__grid-item">
-					<div class="exercise__grid-item-top exercise__grid-item-top--2">
-						<h3 class="exercise__grid-item-top-content-title exercise__grid-item-top-content-title--nobd pri-color-2">
-							<a target="_blank" class="pri-color-2" href="<?= the_permalink() ?>"><?= $name ?></a>
-						</h3>
-						<div class="exercise__grid-item-top-content">
-							<div class="exercise__grid-item-top-content-video">
-								<?php if ($iframe): ?>
-									<?= $iframe ?>
-								<?php endif; ?>
-							</div>
-							<div class="exercise__grid-item-top-content-2-column flex">
-								<div class="exercise__grid-item-top-content-em">
-									<?php if (!empty($equipments)): ?>
-										<div class="exercise__grid-item-top-content-equipment flex">
-											<p class="pri-color-2">Equipment: </p>
-											<?php foreach ($equipments as $eit): ?>
-												<?php if ($eit->slug): ?>
-													<?php
-													$post_id = $wpdb->get_var(
-														$wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $eit->slug)
-													);
 
-													$link = '';
+		function add_custom_class_to_price($price_html, $product)
+		{
+			$price_html = preg_replace('/(<span class="woocommerce-Price-amount amount">)/', '<span class="woocommerce-Price-amount amount regular_price">', $price_html, 1);
+			return $price_html;
+		}
+		add_filter('woocommerce_get_price_html', 'add_custom_class_to_price', 10, 2);
+		
 
-													if ($post_id) {
-														$link = get_permalink($post_id);
-													}
-
-													if ($link):
-														?>
-														<p class=" exercise__grid-item-top-content--text">
-															<a class="sec-color-3" target="_blank" href="<?= $link ?>"><?= $eit->name ?></a>
-														</p>
-													<?php else: ?>
-														<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?></p>
-													<?php endif; ?>
-												<?php else: ?>
-													<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $eit->name ?></p>
-												<?php endif; ?>
-											<?php endforeach; ?>
-										</div>
-									<?php endif; ?>
-									<?php if (!empty($mts)): ?>
-										<div class="exercise__grid-item-top-content-muscle flex">
-											<p class="pri-color-2">Muscle: </p>
-											<?php foreach ($mts as $tit): ?>
-												<?php if ($tit->slug): ?>
-													<?php
-													$post_id = $wpdb->get_var(
-														$wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_name = %s AND post_status = 'publish'", $tit->slug)
-													);
-
-													$link = '';
-
-													if ($post_id) {
-														$link = get_permalink($post_id);
-													}
-
-													if ($link):
-														?>
-														<p class="sec-color-3 exercise__grid-item-top-content--text"><a class="sec-color-3" target="_blank"
-																href="<?= $link ?>"><?= $tit->name ?></a></p>
-													<?php else: ?>
-														<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>
-													<?php endif; ?>
-												<?php else: ?>
-													<p class="sec-color-3 exercise__grid-item-top-content--text"><?= $tit->name ?></p>
-												<?php endif; ?>
-											<?php endforeach; ?>
-										</div>
-									<?php endif; ?>
-								</div>
-								<div class="exercise__grid-item-top-content-action">
-									<a target="_blank" class="pri-color-3" href="<?= the_permalink() ?>">View
-										Exercise</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="exercise__grid-item-bottom exercise__grid-item-bottom--no-bg">
-						<h4>How to do</h4>
-						<?php if (!empty($contents)): ?>
-							<?= $contents[0]['content'] ?>
-						<?php endif; ?>
-					</div>
-				</div>
-				<?php
-		endwhile;
 		?>
-			<?php $content = ob_get_clean(); ?>
-			<?php
-			ob_start();
-			ld_load_ajax($postid, $query_posts, $paged);
-			$pagi = ob_get_clean();
-			?>
-		<?php else: ?>
-			<?php wp_send_json_error('No post?'); ?>
-		<?php endif; //End news
-	wp_send_json_success(['content' => $content, 'pagi' => $pagi]);
-	die();
-}
-
-add_action('wp_ajax_nopriv_ajax_comment', 'handle_ajax_comment');
-add_action('wp_ajax_ajax_comment', 'handle_ajax_comment');
-
-function handle_ajax_comment()
-{
-
-	$comment_data = array(
-		'comment_post_ID' => intval($_POST['comment_post_ID']),
-		'comment_author' => sanitize_text_field($_POST['author']),
-		'comment_author_email' => sanitize_email($_POST['email']),
-		'comment_content' => sanitize_textarea_field($_POST['comment']),
-		'comment_type' => '',
-		'comment_parent' => intval($_POST['comment_parent'])
-	);
-
-	$comment_id = wp_new_comment($comment_data);
-
-	if ($comment_id) {
-		wp_send_json_success();
-	} else {
-		wp_send_json_error('Error submitting comment.');
-	}
-}
-?>

@@ -185,7 +185,7 @@ $exTag = "
                                         $equipment = '';
                                     }
                                     $mtExercises = $wpdb->get_results($wpdb->prepare($exTag, $exID), ARRAY_A);
-                                    
+
                                     ?>
                                     <div class="mt flex">
                                         <div class="ex-img">

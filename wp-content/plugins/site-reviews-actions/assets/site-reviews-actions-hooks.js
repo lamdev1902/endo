@@ -1,0 +1,1 @@
+jQuery((function(){wp.hooks.addFilter("site-reviews-forms.templates","site-reviews-forms",(e=>(e.general.translatable="glsrf-field-translatable",e)))}));
