@@ -54,7 +54,7 @@ the_post();
 					} else {
 						$args = array(
 							'posts_per_page' => 1,
-							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post'),
+							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
 						);
 						$the_query = new WP_Query($args);
 						while ($the_query->have_posts()):
@@ -90,8 +90,7 @@ the_post();
 						<?php
 						$args = array(
 							'posts_per_page' => 4,
-							'offset' => 1,
-							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post'),
+							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
 						);
 						$the_query = new WP_Query($args);
 						while ($the_query->have_posts()):
@@ -155,7 +154,7 @@ the_post();
 						<?php
 						$args = array(
 							'posts_per_page' => 6,
-							'offset' => 5,
+							'offset' => 4,
 							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
 						);
 						$the_query = new WP_Query($args);
@@ -207,7 +206,7 @@ the_post();
 				<?php
 				$args = array(
 					'posts_per_page' => 5,
-					'offset' => 11,
+					'offset' => 10,
 					'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'best_exercise'),
 				);
 				$the_query = new WP_Query($args);
@@ -263,7 +262,7 @@ the_post();
 				<?php
 				$args = array(
 					'posts_per_page' => 12,
-					'offset' => 17,
+					'offset' => 16,
 					'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
 				);
 				$the_query = new WP_Query($args);
