@@ -1,0 +1,37 @@
+.modal-trans {
+	position: fixed;
+    top: 80px;
+    right: 0;
+    opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s ease-in-out 0s;
+}
+.modal-trans.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 99999;
+}
+.mot-bg {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.mot-content {
+	position: absolute;
+    top: 0;
+    right: -100%;
+    max-width: 500px;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    transition: transform 0.3s ease-in-out 0s;
+}
+.modal-trans.active .mot-content {
+	right: 0;
+}

@@ -4,6 +4,7 @@
  $Id: sitemap-builder.php 1026247 2014-11-15 16:47:36Z arnee $
 
 */
+
 /**
  * Default sitemap builder
  *
@@ -11,12 +12,14 @@
  * @package sitemap
  * @since 4.0
  */
-class GoogleSitemapGeneratorStandardBuilder {
+class GoogleSitemapGeneratorStandardBuilder
+{
 
 	/**
 	 * Creates a new GoogleSitemapGeneratorStandardBuilder instance
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		add_action("sm_build_index", array($this, "Index"), 10, 1);
 		add_action("sm_build_content", array($this, "Content"), 10, 3);
 
@@ -30,9 +33,10 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 * @param $type String The type of the sitemap
 	 * @param $params String Parameters for the sitemap
 	 */
-	public function Content($gsg, $type, $params) {
+	public function Content($gsg, $type, $params)
+	{
 
-		switch($type) {
+		switch ($type) {
 			case "post":
 				$this->BuildPosts($gsg, $params);
 				break;
@@ -57,7 +61,67 @@ class GoogleSitemapGeneratorStandardBuilder {
 			case "stories":
 				$this->BuildStories($gsg, $params);
 				break;
+			case "product":
+				$this->BuildProduct($gsg, $params);
+				break;
+			case "collection":
+				$this->BuildProductCategory($gsg, $params);
+				break;
 		}
+	}
+	public function BuildProduct($gsg, $params)
+	{
+		$args = array(
+			'post_type' => 'product',
+			'numberposts' => -1,
+			'orderby' => 'id',
+			'order' => 'DESC',
+		);
+		$products = get_posts($args);
+		if (($productCount = count($products)) > 0) {
+			foreach ($products as $product) {
+				$permalink = get_permalink($product);
+				$gsg->AddUrl(
+					$permalink,
+					$gsg->GetTimestampFromMySql($product->post_date),
+					'',
+					'',
+					$product->ID,
+					'google-product'
+				);
+				unset($product);
+			}
+		}
+
+		unset($products);
+	}
+
+	public function BuildProductCategory($gsg, $params)
+	{
+		$args = array(
+			'taxonomy' => 'product_cat',
+			'hide_empty' => false,
+		);
+		$terms = get_terms($args);
+
+		foreach ($terms as $term) {
+			$term_link = get_term_link($term);
+
+			if (!is_wp_error($term_link)) {
+				$gsg->AddUrl(
+					$term_link,
+					time(),
+					'',
+					'',
+					$term->term_id,
+					'google-product-category'
+				);
+			}
+
+			unset($term);
+		}
+
+		unset($terms);
 	}
 	/**
 	 * Generates the content for the post sitemap
@@ -65,36 +129,38 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 * @param $gsg GoogleSitemapGenerator
 	 * @param $params string
 	 */
-	public function BuildPostsNews($gsg, $params) {
+	public function BuildPostsNews($gsg, $params)
+	{
 		$args = array(
-			'post_type' => get_field('sitemap_cpt','option'),
-			'cat' => get_field('sitemap_cat','option'),
+			'post_type' => get_field('sitemap_cpt', 'option'),
+			'cat' => get_field('sitemap_cat', 'option'),
 			'suppress_filters' => false,
 			'numberposts' => get_field('sitemap_number', 'option'),
 			'orderby' => 'publish_date',
-    		'order' => 'DESC',
+			'order' => 'DESC',
 		);
 		$posts = get_posts($args);
-		if(($postCount = count($posts)) > 0) {
-			foreach($posts as $post) {
+		if (($postCount = count($posts)) > 0) {
+			foreach ($posts as $post) {
 				$permalink = get_permalink($post);
-				$gsg->AddUrl($permalink,$gsg->GetTimestampFromMySql($post->post_date_gmt),'','', $post->ID, 'google-news');
+				$gsg->AddUrl($permalink, $gsg->GetTimestampFromMySql($post->post_date_gmt), '', '', $post->ID, 'google-news');
 				unset($post);
 			}
 		}
 
 		unset($posts);
 	}
-	
-	public function BuildStories($gsg, $params) {
+
+	public function BuildStories($gsg, $params)
+	{
 
 		$webstories_plugin = WP_PLUGIN_DIR . '/web-stories';
-		if(file_exists($webstories_plugin . '/includes/Story_Query.php')){
+		if (file_exists($webstories_plugin . '/includes/Story_Query.php')) {
 			require_once($webstories_plugin . '/includes/Story_Query.php');
 
 			$level = 1;
 			$pagen = 0;
-			if(!$params) {
+			if (!$params) {
 				$postType = $params;
 			} else {
 				$level = 2;
@@ -104,16 +170,16 @@ class GoogleSitemapGeneratorStandardBuilder {
 			$offset = $numpagi * $pagen;
 
 
-			$stories = ( new Google\Web_Stories\Story_Query( [], []) )->get_stories();
+			$stories = (new Google\Web_Stories\Story_Query([], []))->get_stories();
 
-			if(($storiesCount = count($stories)) > 0) {
-				if($level == 1) {
-					$tb = ceil($storiesCount/$numpagi);
-					for($t=1; $t<= $tb; $t++) {
+			if (($storiesCount = count($stories)) > 0) {
+				if ($level == 1) {
+					$tb = ceil($storiesCount / $numpagi);
+					for ($t = 1; $t <= $tb; $t++) {
 						$gsg->AddSitemap("stories", $t);
 					}
 				} else {
-					if(file_exists($webstories_plugin . '/includes/Story_Post_Type.php')){
+					if (file_exists($webstories_plugin . '/includes/Story_Post_Type.php')) {
 						require_once($webstories_plugin . '/includes/Story_Post_Type.php');
 
 						$default_query_args = [
@@ -124,31 +190,35 @@ class GoogleSitemapGeneratorStandardBuilder {
 							'no_found_rows'    => true,
 							'offset' 		   => $offset
 						];
-	
-						$stories = ( new Google\Web_Stories\Story_Query( [], $default_query_args) )->get_stories();
-						foreach($stories AS $story) {
+
+						$stories = (new Google\Web_Stories\Story_Query([], $default_query_args))->get_stories();
+						foreach ($stories as $story) {
 							$permalink = get_permalink($story);
-							if(
+							if (
 								!empty($permalink)
 							) {
 								//ADdd the URL to the sitemap
 								$gsg->AddUrl(
 									$permalink,
-									$gsg->GetTimestampFromMySql($story->post_modified_gmt && $story->post_modified_gmt != '0000-00-00 00:00:00'? $story->post_modified_gmt : $story->post_date_gmt),'','', $story->ID, 'article');
+									$gsg->GetTimestampFromMySql($story->post_modified_gmt && $story->post_modified_gmt != '0000-00-00 00:00:00' ? $story->post_modified_gmt : $story->post_date_gmt),
+									'',
+									'',
+									$story->ID,
+									'article'
+								);
 							}
 							unset($story);
 						}
 					}
-					
 				}
 			}
 		}
-
 	}
-	public function BuildPosts($gsg, $params) {
+	public function BuildPosts($gsg, $params)
+	{
 		$level = 1;
 		$pagen = 0;
-		if(!$params) {
+		if (!$params) {
 			$postType = $params;
 		} else {
 			$level = 2;
@@ -157,62 +227,67 @@ class GoogleSitemapGeneratorStandardBuilder {
 		$numpagi = 1000;
 		$offset = $numpagi * $pagen;
 		global $sitepress, $wpdb;
-	    $language_code = ICL_LANGUAGE_CODE;
-	    $post_type = "post_$post_type";
-	 
-	    $query = "SELECT COUNT( ID )
+		$language_code = ICL_LANGUAGE_CODE;
+		$post_type = "post_$post_type";
+
+		$query = "SELECT COUNT( ID )
 	                FROM wp_posts
 	                LEFT JOIN wp_icl_translations ON wp_posts.ID = wp_icl_translations.element_id
 	                WHERE wp_icl_translations.language_code = '{$language_code}'
 	                AND post_type IN ('post','page','single_reviews','round_up','informational_posts','coupon','exercise','tool_post', 'best_exercise')
 	                AND post_status = 'publish'";
-	 
-	    $postCount = $wpdb->get_var( $query );
+
+		$postCount = $wpdb->get_var($query);
 		$homePid = 0;
 		$home = get_home_url();
-		if('page' == get_option('show_on_front') && get_option('page_on_front')) {
+		if ('page' == get_option('show_on_front') && get_option('page_on_front')) {
 			$pageOnFront = get_option('page_on_front');
 			$p = get_post($pageOnFront);
-			if($p) $homePid = $p->ID;
+			if ($p) $homePid = $p->ID;
 		}
-		if($postCount > 0) {
-			if($level == 1) {
-				$tb = ceil($postCount/$numpagi);
-				for($t=1; $t<= $tb; $t++) {
+		if ($postCount > 0) {
+			if ($level == 1) {
+				$tb = ceil($postCount / $numpagi);
+				for ($t = 1; $t <= $tb; $t++) {
 					$gsg->AddSitemap("post", $t);
 				}
 			} else {
 				$args = array(
-					'post_type' => array('post','page','single_reviews','round_up','informational_posts','coupon','exercise','tool_post', 'best_exercise'),
+					'post_type' => array('post', 'page', 'single_reviews', 'round_up', 'informational_posts', 'coupon', 'exercise', 'tool_post', 'best_exercise'),
 					'suppress_filters' => false,
 					'posts_per_page' => $numpagi,
 					'offset' => $offset
 				);
 				$posts = get_posts($args);
-				foreach($posts AS $post) {
+				foreach ($posts as $post) {
 					$permalink = get_permalink($post);
-					if(
+					if (
 						!empty($permalink)
 						&& $permalink != $home
 						&& $post->ID != $homePid
-						&& strpos( $permalink, $home) !== false
+						&& strpos($permalink, $home) !== false
 					) {
 
 						//Default Priority if auto calc is disabled
 						$priority = ($postType == 'page' ? $defaultPriorityForPages : $defaultPriorityForPosts);
 
 						//If priority calc. is enabled, calculate (but only for posts, not pages)!
-						if($priorityProvider !== null && $postType == 'post') {
+						if ($priorityProvider !== null && $postType == 'post') {
 							$priority = $priorityProvider->GetPostPriority($post->ID, $post->comment_count, $post);
 						}
 
 						//Ensure the minimum priority
-						if($postType == 'post' && $minimumPriority > 0 && $priority < $minimumPriority) $priority = $minimumPriority;
+						if ($postType == 'post' && $minimumPriority > 0 && $priority < $minimumPriority) $priority = $minimumPriority;
 
 						//ADdd the URL to the sitemap
 						$gsg->AddUrl(
 							$permalink,
-							$gsg->GetTimestampFromMySql($post->post_modified_gmt && $post->post_modified_gmt != '0000-00-00 00:00:00'? $post->post_modified_gmt : $post->post_date_gmt),'','', $post->ID, 'article');
+							$gsg->GetTimestampFromMySql($post->post_modified_gmt && $post->post_modified_gmt != '0000-00-00 00:00:00' ? $post->post_modified_gmt : $post->post_date_gmt),
+							'',
+							'',
+							$post->ID,
+							'article'
+						);
 					}
 					unset($post);
 				}
@@ -227,7 +302,8 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 *
 	 * @param $gsg GoogleSitemapGenerator
 	 */
-	public function BuildArchives($gsg) {
+	public function BuildArchives($gsg)
+	{
 		/** @var $wpdb wpdb */
 		global $wpdb;
 		$now = current_time('mysql', true);
@@ -251,13 +327,13 @@ class GoogleSitemapGeneratorStandardBuilder {
 				post_date_gmt DESC
 		");
 
-		if($archives) {
-			foreach($archives as $archive) {
+		if ($archives) {
+			foreach ($archives as $archive) {
 
 				$url = get_month_link($archive->year, $archive->month);
 
 				//Archive is the current one
-				if($archive->month == date("n") && $archive->year == date("Y")) {
+				if ($archive->month == date("n") && $archive->year == date("Y")) {
 					$changeFreq = $gsg->GetOption("cf_arch_curr");
 				} else { // Archive is older
 					$changeFreq = $gsg->GetOption("cf_arch_old");
@@ -273,26 +349,27 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 *
 	 * @param $gsg GoogleSitemapGenerator
 	 */
-	public function BuildMisc($gsg) {
+	public function BuildMisc($gsg)
+	{
 
 		$lm = get_lastpostmodified('gmt');
 
-		if($gsg->GetOption("in_home")) {
+		if ($gsg->GetOption("in_home")) {
 			$home = get_bloginfo('url');
 
 			//Add the home page (WITH a slash!)
-			if($gsg->GetOption("in_home")) {
-				if('page' == get_option('show_on_front') && get_option('page_on_front')) {
+			if ($gsg->GetOption("in_home")) {
+				if ('page' == get_option('show_on_front') && get_option('page_on_front')) {
 					$pageOnFront = get_option('page_on_front');
 					$p = get_post($pageOnFront);
-					if($p) {
+					if ($p) {
 						$gsg->AddUrl(trailingslashit($home), $gsg->GetTimestampFromMySql(($p->post_modified_gmt && $p->post_modified_gmt != '0000-00-00 00:00:00'
-								? $p->post_modified_gmt
-								: $p->post_date_gmt)), $gsg->GetOption("cf_home"), $gsg->GetOption("pr_home"));
+							? $p->post_modified_gmt
+							: $p->post_date_gmt)), $gsg->GetOption("cf_home"), $gsg->GetOption("pr_home"));
 					}
 				} else {
 					$gsg->AddUrl(trailingslashit($home), ($lm ? $gsg->GetTimestampFromMySql($lm)
-							: time()), $gsg->GetOption("cf_home"), $gsg->GetOption("pr_home"));
+						: time()), $gsg->GetOption("cf_home"), $gsg->GetOption("pr_home"));
 				}
 			}
 		}
@@ -310,7 +387,8 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 *
 	 * @param $gsg GoogleSitemapGenerator
 	 */
-	public function BuildAuthors($gsg) {
+	public function BuildAuthors($gsg)
+	{
 		/** @var $wpdb wpdb */
 		global $wpdb;
 
@@ -320,7 +398,7 @@ class GoogleSitemapGeneratorStandardBuilder {
 		$enabledPostTypes = $gsg->GetActivePostTypes();
 
 		//Ensure we count at least the posts...
-		if(count($enabledPostTypes) == 0) $enabledPostTypes[] = "post";
+		if (count($enabledPostTypes) == 0) $enabledPostTypes[] = "post";
 
 		$sql = "SELECT DISTINCT
 					u.ID,
@@ -340,8 +418,8 @@ class GoogleSitemapGeneratorStandardBuilder {
 
 		$authors = $wpdb->get_results($sql);
 
-		if($authors && is_array($authors)) {
-			foreach($authors as $author) {
+		if ($authors && is_array($authors)) {
+			foreach ($authors as $author) {
 				$url = get_author_posts_url($author->ID, $author->user_nicename);
 				$gsg->AddUrl($url, $gsg->GetTimestampFromMySql($author->last_post), $gsg->GetOption("cf_auth"), $gsg->GetOption("pr_auth"));
 			}
@@ -354,7 +432,8 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 * @param $selects string[]
 	 * @return string[]
 	 */
-	public function FilterTermsQuery($selects) {
+	public function FilterTermsQuery($selects)
+	{
 		/** @var $wpdb wpdb */
 		global $wpdb;
 		$selects[] = "
@@ -382,23 +461,24 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 * @param $gsg GoogleSitemapGenerator
 	 * @param $taxonomy string The Taxonomy
 	 */
-	public function BuildTaxonomies($gsg, $taxonomy) {
+	public function BuildTaxonomies($gsg, $taxonomy)
+	{
 
 		$enabledTaxonomies = $this->GetEnabledTaxonomies($gsg);
-		if(in_array($taxonomy, $enabledTaxonomies)) {
+		if (in_array($taxonomy, $enabledTaxonomies)) {
 
 			$excludes = array();
 
-			if($taxonomy == "category") {
+			if ($taxonomy == "category") {
 				$exclCats = $gsg->GetOption("b_exclude_cats"); // Excluded cats
-				if($exclCats) $excludes = $exclCats;
+				if ($exclCats) $excludes = $exclCats;
 			}
 
 			add_filter("get_terms_fields", array($this, "FilterTermsQuery"), 20, 2);
 			$terms = get_terms($taxonomy, array("hide_empty" => true, "hierarchical" => false, "exclude" => $excludes));
 			remove_filter("get_terms_fields", array($this, "FilterTermsQuery"), 20, 2);
 
-			foreach($terms AS $term) {
+			foreach ($terms as $term) {
 				$gsg->AddUrl(get_term_link($term, $term->taxonomy), $term->_mod_date, $gsg->GetOption("cf_tags"), $gsg->GetOption("pr_tags"));
 			}
 		}
@@ -410,16 +490,17 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 * @param GoogleSitemapGenerator $gsg
 	 * @return array
 	 */
-	public function GetEnabledTaxonomies(GoogleSitemapGenerator $gsg) {
+	public function GetEnabledTaxonomies(GoogleSitemapGenerator $gsg)
+	{
 
 		$enabledTaxonomies = $gsg->GetOption("in_tax");
-		if($gsg->GetOption("in_tags")) $enabledTaxonomies[] = "post_tag";
-		if($gsg->GetOption("in_cats")) $enabledTaxonomies[] = "category";
+		if ($gsg->GetOption("in_tags")) $enabledTaxonomies[] = "post_tag";
+		if ($gsg->GetOption("in_cats")) $enabledTaxonomies[] = "category";
 
 		$taxList = array();
-		foreach($enabledTaxonomies as $taxName) {
+		foreach ($enabledTaxonomies as $taxName) {
 			$taxonomy = get_taxonomy($taxName);
-			if($taxonomy && wp_count_terms($taxonomy->name, array('hide_empty' => true)) > 0) $taxList[] = $taxonomy->name;
+			if ($taxonomy && wp_count_terms($taxonomy->name, array('hide_empty' => true)) > 0) $taxList[] = $taxonomy->name;
 		}
 		return $taxList;
 	}
@@ -429,10 +510,11 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 *
 	 * @param $gsg GoogleSitemapGenerator
 	 */
-	public function BuildExternals($gsg) {
+	public function BuildExternals($gsg)
+	{
 		$pages = $gsg->GetPages();
-		if($pages && is_array($pages) && count($pages) > 0) {
-			foreach($pages AS $page) {
+		if ($pages && is_array($pages) && count($pages) > 0) {
+			foreach ($pages as $page) {
 				/** @var $page GoogleSitemapGeneratorPage */
 				$gsg->AddUrl($page->GetUrl(), $page->getLastMod(), $page->getChangeFreq(), $page->getPriority());
 			}
@@ -444,7 +526,8 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 *
 	 * @param $gsg GoogleSitemapGenerator
 	 */
-	public function Index($gsg) {
+	public function Index($gsg)
+	{
 		/**
 		 * @var $wpdb wpdb
 		 */
@@ -452,17 +535,19 @@ class GoogleSitemapGeneratorStandardBuilder {
 		$blogUpdate = strtotime(get_lastpostmodified('gmt'));
 
 		$gsg->AddSitemap("misc", null);
+		$gsg->AddSitemap("product", null);
+		$gsg->AddSitemap("collection", null);
 
 
 		$taxonomies = $this->GetEnabledTaxonomies($gsg);
-		foreach($taxonomies AS $tax) {
+		foreach ($taxonomies as $tax) {
 			$gsg->AddSitemap("tax", $tax, $blogUpdate);
 		}
 
 		$pages = $gsg->GetPages();
-		if(count($pages) > 0) {
-			foreach($pages AS $page) {
-				if($page instanceof GoogleSitemapGeneratorPage && $page->GetUrl()) {
+		if (count($pages) > 0) {
+			foreach ($pages as $page) {
+				if ($page instanceof GoogleSitemapGeneratorPage && $page->GetUrl()) {
 					$gsg->AddSitemap("externals", null, $blogUpdate);
 					break;
 				}
@@ -473,35 +558,35 @@ class GoogleSitemapGeneratorStandardBuilder {
 
 		$hasEnabledPostTypesPosts = false;
 		$hasPosts = false;
-		if(count($enabledPostTypes) > 0) {
+		if (count($enabledPostTypes) > 0) {
 
 			$excludedPostIDs = $gsg->GetExcludedPostIDs($gsg);
 			$exPostSQL = "";
-			if(count($excludedPostIDs) > 0) {
+			if (count($excludedPostIDs) > 0) {
 				$exPostSQL = "AND p.ID NOT IN (" . implode(",", $excludedPostIDs) . ")";
 			}
 
 			$excludedCategoryIDs = $gsg->GetExcludedCategoryIDs($gsg);
 			$exCatSQL = "";
-			if(count($excludedCategoryIDs) > 0) {
+			if (count($excludedCategoryIDs) > 0) {
 				$exCatSQL = "AND ( p.ID NOT IN ( SELECT object_id FROM {$wpdb->term_relationships} WHERE term_taxonomy_id IN (" . implode(",", $excludedCategoryIDs) . ")))";
 			}
 			$numpagi = 1000;
-		 	global $sitepress, $wpdb;
-		    $language_code = ICL_LANGUAGE_CODE;
-		    $post_type = "post_$post_type";
-		 
-		    $query = "SELECT COUNT( ID )
+			global $sitepress, $wpdb;
+			$language_code = ICL_LANGUAGE_CODE;
+			$post_type = "post_$post_type";
+
+			$query = "SELECT COUNT( ID )
 		                FROM wp_posts
 		                LEFT JOIN wp_icl_translations ON wp_posts.ID = wp_icl_translations.element_id
 		                WHERE wp_icl_translations.language_code = '{$language_code}'
 		                AND post_type IN ('post','page','single_reviews','round_up','informational_posts','coupon','exercise', 'best_exercise')
 		                AND post_status = 'publish'";
-		 
-		    $postCount = $wpdb->get_var( $query );
-			if($postCount > 0) {
-				$tb = ceil($postCount/$numpagi);
-				for($t=1; $t<= $tb; $t++) {
+
+			$postCount = $wpdb->get_var($query);
+			if ($postCount > 0) {
+				$tb = ceil($postCount / $numpagi);
+				for ($t = 1; $t <= $tb; $t++) {
 					$gsg->AddSitemap("post", $t);
 				}
 			}
@@ -511,31 +596,31 @@ class GoogleSitemapGeneratorStandardBuilder {
 				'posts_per_page' => 10,
 			);
 			$posts = get_posts($args);
-			if(($postCount = count($posts)) > 0) {
+			if (($postCount = count($posts)) > 0) {
 				$gsg->AddSitemap("publication", 'news');
 			}
 		}
-		
+
 		$webstories_plugin = WP_PLUGIN_DIR . '/web-stories';
-		if(file_exists($webstories_plugin . '/includes/Story_Query.php')){
+		if (file_exists($webstories_plugin . '/includes/Story_Query.php')) {
 			require_once($webstories_plugin . '/includes/Story_Query.php');
-			
-			$stories = ( new Google\Web_Stories\Story_Query( [], []) )->get_stories();
+
+			$stories = (new Google\Web_Stories\Story_Query([], []))->get_stories();
 			$numpagi = 1000;
 
-			if(($storiesCount = count($stories)) > 0) {
-				$tb = ceil($storiesCount/$numpagi);
-				for($t=1; $t<= $tb; $t++) {
+			if (($storiesCount = count($stories)) > 0) {
+				$tb = ceil($storiesCount / $numpagi);
+				for ($t = 1; $t <= $tb; $t++) {
 					$gsg->AddSitemap("stories", $t);
 				}
 			}
 		}
 
 		//Only include authors if there is a public post with a enabled post type
-		if($gsg->GetOption("in_auth") && $hasEnabledPostTypesPosts) $gsg->AddSitemap("authors", null, $blogUpdate);
+		if ($gsg->GetOption("in_auth") && $hasEnabledPostTypesPosts) $gsg->AddSitemap("authors", null, $blogUpdate);
 
 		//Only include archived if there are posts with postType post
-		if($gsg->GetOption("in_arch") && $hasPosts) $gsg->AddSitemap("archives", null, $blogUpdate);
+		if ($gsg->GetOption("in_arch") && $hasPosts) $gsg->AddSitemap("archives", null, $blogUpdate);
 	}
 
 	/**
@@ -547,9 +632,10 @@ class GoogleSitemapGeneratorStandardBuilder {
 	 *
 	 * @return string[]
 	 */
-	public function GetSitemapUrlForPost(array $urls, $gsg, $postID) {
+	public function GetSitemapUrlForPost(array $urls, $gsg, $postID)
+	{
 		$post = get_post($postID);
-		if($post) {
+		if ($post) {
 			$lastModified = $gsg->GetTimestampFromMySql($post->post_modified_gmt);
 
 			$url = $gsg->GetXmlUrl("pt", $post->post_type . "-" . date("Y-m", $lastModified));
@@ -560,4 +646,4 @@ class GoogleSitemapGeneratorStandardBuilder {
 	}
 }
 
-if(defined("WPINC")) new GoogleSitemapGeneratorStandardBuilder();
+if (defined("WPINC")) new GoogleSitemapGeneratorStandardBuilder();

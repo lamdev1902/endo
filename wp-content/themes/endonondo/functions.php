@@ -1,4 +1,21 @@
 <?php
+add_action('after_setup_theme', 'setup_woocommerce_support');
+
+function setup_woocommerce_support()
+{
+	add_theme_support('woocommerce');
+}
+
+function enqueue_wc_variation_script()
+{
+	if (is_product()) {
+		wp_enqueue_script('wc-add-to-cart-variation');
+	}
+}
+add_action('wp_enqueue_scripts', 'enqueue_wc_variation_script');
+
+
+
 include(TEMPLATEPATH . '/shortcode/chart/chart-shortcode.php');
 include(TEMPLATEPATH . '/shortcode/muscle/anatomy.php');
 include(TEMPLATEPATH . '/shortcode/calorie/calorie-shortcode.php');
@@ -16,7 +33,18 @@ include(TEMPLATEPATH . '/shortcode/calorie/lean-body-mass-shortcode.php');
 // include(TEMPLATEPATH.'/shortcode/calorie/body-adiposity-index-shortcode.php');
 include(TEMPLATEPATH . '/shortcode/calorie/bmr-shortcode.php');
 include(TEMPLATEPATH . '/shortcode/calorie/repmax-shortcode.php');
+// include(TEMPLATEPATH . '/woocommerce/woo-json.php');
+include(TEMPLATEPATH . '/woocommerce/woo-functions.php');
+function leea_filter_post_type_args($args, $post_type)
+{
+	if ('product' === $post_type) {
+		$args['has_archive'] = false;
+		$args['rewrite']['slug'] = 'shop';
+	}
+	return $args;
+}
 
+add_filter('register_post_type_args', 'leea_filter_post_type_args', 10, 2);
 // Override Hook Breadcrum
 add_filter('wpseo_breadcrumb_links', 'customize_yoast_breadcrumb_ex_links', 20);
 function customize_yoast_breadcrumb_ex_links($links)
@@ -385,6 +413,7 @@ function theme_mcs_scripts()
     wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
     wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
     wp_enqueue_style('style-regular', get_template_directory_uri() . '/assets/fonts/css/regular.css');
+    wp_enqueue_style('style-new', get_template_directory_uri() . '/assets/css/new.css');
 }
 add_action('wp_enqueue_scripts', 'theme_mcs_scripts');
 
@@ -1007,4 +1036,47 @@ function handle_ajax_comment()
         wp_send_json_error('Error submitting comment.');
     }
 }
+function add_custom_product_rating_to_loop()
+		{
+			global $product;
+
+			$product_id = $product->get_id();
+
+			$reviews = glsr_get_reviews([
+				'assigned_posts' => $product_id,
+			]);
+
+			$rating_count = count($reviews['reviews']);
+			$ratings_sum = array_sum(array_column($reviews['reviews'], 'rating'));
+			$average_rating = $rating_count > 0 ? $ratings_sum / $rating_count : 0;
+
+			echo '<div class="custom-product-rating">';
+
+			for ($i = 1; $i <= 5; $i++) {
+				if ($i <= $average_rating) {
+					echo '<span class="star filled">&#9733;</span>';
+				} else {
+					echo '<span class="star">&#9734;</span>';
+				}
+			}
+
+			if ($rating_count > 0) {
+				echo '<span class="rating-count">(' . $rating_count . ')</span>';
+			} else {
+				echo '<span class="rating-count">(0)</span>';
+			}
+
+			echo '</div>';
+		}
+		add_action('woocommerce_after_shop_loop_item_title', 'add_custom_product_rating_to_loop', 5);
+
+
+
+		function add_custom_class_to_price($price_html, $product)
+		{
+			$price_html = preg_replace('/(<span class="woocommerce-Price-amount amount">)/', '<span class="woocommerce-Price-amount amount regular_price">', $price_html, 1);
+			return $price_html;
+		}
+		add_filter('woocommerce_get_price_html', 'add_custom_class_to_price', 10, 2);
+		
 ?>
