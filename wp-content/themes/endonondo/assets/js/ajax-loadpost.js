@@ -1,15 +1,15 @@
 (function($) {
     $(document).ready(function() {
         $('.all__flex-item').on('click', function () {
+            var filter = $(this).data('filter');
 
-            if($(this).hasClass('filter-active')) {
+            if($(this).hasClass('filter-active') && filter < 3) {
                 return false;
             }
             
 			$('.all__flex-item').removeClass('all__flex-item--active');
 			$(this).addClass('all__flex-item--active');
 
-            var filter = $(this).data('filter');
 
             $('.all__flex-item').removeClass('filter-active');
 
@@ -18,6 +18,15 @@
                     behavior: 'smooth', 
                     block: 'start'
                 });
+                $(this).addClass('filter-active');
+                return false;
+            }
+
+            if(filter == 4 ){
+                $('.comments-section').get(0).scrollIntoView({
+                    behavior: 'smooth', 
+                    block: 'start'
+                })
                 $(this).addClass('filter-active');
                 return false;
             }
