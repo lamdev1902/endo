@@ -154,6 +154,7 @@ do_action('rss_tag_pre', 'rss2');
                 $yoast_description = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
 
                 if (!empty($yoast_description)) {
+                    $yoast_description = str_replace('%%currentyear%%', date('Y'), $yoast_description);
                     echo do_shortcode($yoast_description);
                 } else {
                     the_excerpt_rss();
@@ -200,7 +201,7 @@ do_action('rss_tag_pre', 'rss2');
                         '/<div class="wp-block-embed__wrapper">\s*https:\/\/vimeo\.com\/(\d+)(?:\?[^\s<]*)?\s*<\/div>/is',
                         function ($matches) {
                             $video_id = $matches[1]; 
-                            return '<iframe 
+                            return '<iframe class="nb-video"
                                         src="https://player.vimeo.com/video/' . esc_attr($video_id) . '?title=1&byline=1&portrait=1&dnt=false" 
                                         width="550" 
                                         height="281" 
@@ -211,23 +212,24 @@ do_action('rss_tag_pre', 'rss2');
                         },
                         $the_content
                     );
-                    // $the_content = preg_replace_callback(
-                    //     '/<div class="wp-block-embed__wrapper">\s*(?:https:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w\-]+)|https:\/\/youtu\.be\/([\w\-]+))(?:\?[^\s<]*)?\s*<\/div>/is',
-                    //     function ($matches) {
-                    //         $video_id = !empty($matches[1]) ? $matches[1] : $matches[2];
-                    //         return '<iframe 
-                    //                     width="550" 
-                    //                     height="281" 
-                    //                     src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" 
-                    //                     title="YouTube video player" 
-                    //                     frameborder="0" 
-                    //                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    //                     allowfullscreen>
-                    //                 </iframe>';
-                    //     },
-                    //     $the_content
-                    // );
-                    // $the_content = preg_replace('/<table\b[^>]*>.*?<\/table>/is', '', $the_content);
+                    $the_content = preg_replace_callback(
+                        '/<div class="wp-block-embed__wrapper">\s*(?:https:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w\-]+)|https:\/\/youtu\.be\/([\w\-]+))(?:\?[^\s<]*)?\s*<\/div>/is',
+                        function ($matches) {
+                            $video_id = !empty($matches[1]) ? $matches[1] : $matches[2];
+                            return '<iframe
+                                        class="nb-video"
+                                        width="550" 
+                                        height="281" 
+                                        src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>';
+                        },
+                        $the_content
+                    );
+                    $the_content = preg_replace('/<table\b[^>]*>.*?<\/table>/is', '', $the_content);
                     $the_content = preg_replace('/<h4[^>]*>Optimal Sets And Reps<\/h4>/i', '', $the_content);
                     $the_content = preg_replace('/<h4[^>]*><strong>Optimal Sets And Reps<\/strong><\/h4>/i', '', $the_content);
                     // $the_content = preg_replace(
