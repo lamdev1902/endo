@@ -1679,12 +1679,16 @@ h2.tag-coming {
     margin: 0 auto;
 }
 
-.comment-respond form {
-    margin-bottom: 20px;
+.comment-respond {
+    border-bottom: 1px solid var(--primary-color-2);
 }
 
-#write-comment {
-    padding-bottom: 20px;
+.commentlist .comment-respond {
+    border-bottom: none;
+}
+
+.comment-respond form {
+    margin-bottom: 20px;
 }
 
 .commentlist {
