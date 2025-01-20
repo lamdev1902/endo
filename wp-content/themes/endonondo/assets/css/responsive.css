@@ -793,6 +793,10 @@
     .all__title {
         text-align: left;
     }
+	
+	.best-exercise .best h2 {
+		padding: 0 20px;
+	}
 }
 
 @media (max-width: 390px) {

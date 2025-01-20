@@ -55,7 +55,7 @@ the_post();
 						<input type="password" name="login_pass" id="user_password" autocomplete="current-password" spellcheck="false" class="input-it input" value="" size="20">
 						<span class="pass-hide" id="togglePassword"></span>
 					</p>
-					<div class="cf-turnstile" data-sitekey="0x4AAAAAAAz8nZkyrcIEoVXd"></div>
+					<div class="cf-turnstile" data-sitekey="0x4AAAAAAA36SXtFLiwbt_yM"></div>
 					<p class="login-submit">
 						<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In">
 						<input type="hidden" name="redirect_to" value="/login">

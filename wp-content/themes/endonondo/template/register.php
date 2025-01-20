@@ -37,7 +37,7 @@ if(isset($_POST['task']) && $_POST['task'] == 'register' ) {
 		    for ($i = 0; $i < 50; $i++) {
 		        $ucode .= $characters[rand(0, strlen($characters) - 1)];
 		    }
-			update_field('field_676fcae4cccba',$ucode,'user_'.$user_id);
+			update_field('field_6789c01109ffe',$ucode,'user_'.$user_id);
 			$to = $_POST['email'];
 			$subject = "ICSI - Account Verification";
 			$message = "<h1>Hello!</h1><p>Successfully registered an account on endomondo.com, please click on the link below to confirm your account:</p><p>https://www.endomondo.com/register-verify/?uco=".$ucode."</p>";
@@ -83,7 +83,7 @@ the_post();
 							<input  name="pwd1" id="pwd1" id="passwordInput" class="input-it" type="password"/>
 							<div class="pass-hide" id="togglePassword"></div>
 						</div>
-						<div class="cf-turnstile" data-sitekey="0x4AAAAAAAz8nZkyrcIEoVXd"></div>
+						<div class="cf-turnstile" data-sitekey="0x4AAAAAAA36SXtFLiwbt_yM"></div>
 						<?php wp_nonce_field( 'post_nonce', 'post_nonce_field' ); ?>
 						<input class="submit-it register-submit" type="submit" value="Create Account"/>
 						<input type="hidden" name="task" value="register" />

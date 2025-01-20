@@ -1,3 +1,27 @@
+jQuery(document).ready(function ($) {
+	$('.quantity').each(function () {
+		var $this = $(this);
+		$this.prepend('<input type="button" value="-" class="minus button wp-element-button">');
+		$this.append('<input type="button" value="+" class="plus button wp-element-button">');
+	});
+
+	$(document).on('click', '.minus', function () {
+		var $input = $(this).siblings('input.qty');
+		var value = parseInt($input.val());
+		if (!isNaN(value) && value > 1) {
+			$input.val(value - 1).change();
+		}
+	});
+
+	$(document).on('click', '.plus', function () {
+		var $input = $(this).siblings('input.qty');
+		var value = parseInt($input.val());
+		if (!isNaN(value)) {
+			$input.val(value + 1).change();
+		}
+	});
+});
+
 jQuery(function ($) {
 
 
@@ -71,11 +95,11 @@ jQuery(function ($) {
 
 			if ($(window).width() <= 480 && $('.all__flex').length) {
 				$('.all__flex').slick({
-					slidesToShow: 2, 
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					dots: false,
 					arrows: false,
-					infinite: false, 
+					infinite: false,
 				});
 			}
 		}
@@ -456,6 +480,7 @@ function customer_review_leea() {
 		readonly: false,
 		step: 1,
 	});
+
 	$('.rating-feedback').change(function () {
 		$('.form-feedback').show();
 		$('.form-hidden-rating').val($('.rating-feedback').val());
@@ -496,3 +521,5 @@ function customer_review_leea() {
 		$('.form-customer-feedback .form-feedback, .form-customer-feedback .star-rating').hide();
 	}, false);
 }
+
+

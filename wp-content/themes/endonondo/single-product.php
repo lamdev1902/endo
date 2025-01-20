@@ -1130,6 +1130,10 @@ if ($ratingInfo) {
     font-weight: bold;
     margin-right: 8px;
   }
+
+  .ht-rating-icon .rating-box>span:first-child {
+    display: none;
+  }
 </style>
 
 <main id="main" class="product-detail-main hea">
@@ -1280,7 +1284,7 @@ if ($ratingInfo) {
       <div id="content" class="product-detail-content">
         <div class="pdc-nav">
           <a href="#pdc-des" class="nav-item active">Description</a>
-          <a href="#pdc-spec" class="nav-item">Specification</a>
+          <a href="#pdc-spec" class="nav-item">How to use</a>
           <a href="#pdc-review" class="nav-item">Review</a>
         </div>
         <div class="box-main-content">
@@ -1308,7 +1312,9 @@ if ($ratingInfo) {
 
                     <div class="features">
                       <?php if (get_field('product_features')) { ?>
-                        <h3>Key Features of Kettlebells</h3>
+                        <?php if (get_field('product_features_title')) { ?>
+                          <h3><?php the_field('product_features_title'); ?></h3>
+                        <?php } ?>
                         <?php
                         $product_features = get_field('product_features');
                         if (!empty($product_features) && is_array($product_features)) {
@@ -1384,6 +1390,12 @@ if ($ratingInfo) {
                     <div class="product-info-buy">
                       <?php the_field('product_information_buy'); ?>
                     </div>
+                  </div>
+                </div>
+                <div id="pdc-spec" class="pdc-item">
+                  <div class="pdc-box">
+                    <?php the_field('product_to_use'); ?>
+                    <?php the_field('product_reviewh'); ?>
                   </div>
                 </div>
                 <div id="pdc-review" class="pdc-item">

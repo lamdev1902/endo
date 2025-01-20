@@ -26,6 +26,7 @@
     'breeze-display-clean' => '1',
     'breeze-exclude-urls' => 
     array (
+      0 => 'https://www.endomondo.com/nb-feed',
     ),
     'cached-query-strings' => 
     array (
@@ -105,6 +106,10 @@
   ),
   'exclude_url' => 
   array (
+    0 => '/cart*',
+    1 => '/checkout*',
+    2 => '/my-account*',
+    3 => 'https://www.endomondo.com/nb-feed',
   ),
   'wp-user-roles' => 
   array (
@@ -115,6 +120,8 @@
     4 => 'subscriber',
     5 => 'wpseo_manager',
     6 => 'wpseo_editor',
+    7 => 'customer',
+    8 => 'shop_manager',
   ),
   'enabled-lazy-load' => '0',
   'use-lazy-load-native' => '0',

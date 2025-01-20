@@ -3,22 +3,17 @@
  * RSS2 Feed Template for displaying RSS2 Posts feed for the Top 10 Popular posts.
  *
  */
-
- $args = array(
-    'post_type' => ['informational_posts'],
+$args = array(
+    'post_type' => ['informational_posts','exercise'],
     'posts_per_page' => 10,
     'post_status' => 'publish',
     'orderby' => 'date',
     'order' => 'DESC',
 );
-
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
-
 header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
-$more = 1; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-
+$more = 1;
 echo '<?xml version="1.0" encoding="' . esc_attr(get_option('blog_charset')) . '"?' . '>';
-
 /**
  * Fires between the xml and rss tags in a feed.
  *
@@ -91,54 +86,6 @@ do_action('rss_tag_pre', 'rss2');
         while (have_posts()):
             the_post();
             $exerciseId = get_post_meta($post->ID, 'exercise_name', true);
-
-            if ($exerciseId) {
-                $exData = $wpdb->get_results(
-                    "SELECT * FROM {$wpdb->prefix}exercise WHERE id = " . $exerciseId,
-                    ARRAY_A
-                );
-
-                $arrVideo = array();
-                if ($exData) {
-                    $arrVideo = array(
-                        $exData[0]['video_white_male'],
-                        $exData[0]['video_green'],
-                        $exData[0]['video_transparent'],
-                    );
-
-                }
-
-                $video = '';
-                $checkPath = false;
-                $isYoutube = true;
-                foreach ($arrVideo as $vid) {
-                    if ($vid) {
-                        $video = $vid;
-                    }
-                }
-
-                if ($video) {
-                    $youtubeMatch = preg_match(
-                        '/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/',
-                        $video,
-                        $matches
-                    );
-
-                    if ($youtubeMatch) {
-                        $videoId = $matches[1];
-                        $video = 'https://www.youtube.com/embed/' . $videoId;
-                        $isYoutube = true;
-                    }
-
-                    $videoPath = parse_url($video, PHP_URL_PATH);
-                    $extension = pathinfo($videoPath, PATHINFO_EXTENSION);
-
-                    if ($extension == 'mp4') {
-                        $checkPath = true;
-                        $elemlemnt = "<video src='$video' class='nb-video'>Your browser does not support the video tag.</video>";
-                    }
-                }
-            }
             ?>
             <item>
                 <title><![CDATA[<?php echo html_entity_decode(get_the_title()); ?>]]></title>
@@ -167,19 +114,7 @@ do_action('rss_tag_pre', 'rss2');
                     <?php
                     ob_start();
                     if ($exerciseId) {
-                        if ($checkPath) {
-                            echo "<div class='exc-video'>$elemlemnt</div>";
-                        } else {
-                            if ($isYoutube) { ?>
-                                <div id="exc-container" style="padding:56.25% 0 0 0;position:relative;">
-                                    <iframe class="nb-video" id="player" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="https://www.youtube.com/embed/<?php echo esc_attr($videoId); ?>?rel=0&amp;fs=0&amp;autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&enablejsapi=1&playlist=<?php echo esc_attr($videoId); ?>" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>
-                                </div>
-                            <?php } else { ?>
-                                <div class="exc-video">
-                                    <video src="<?php echo esc_url($video); ?>">Your browser does not support the video tag.</video>
-                                </div>
-                            <?php }
-                        }
+                        get_template_part('template-parts/content', 'exercise');
                     } else { ?>
                         <figure>
                             <?php
@@ -200,7 +135,7 @@ do_action('rss_tag_pre', 'rss2');
                     $the_content = preg_replace_callback(
                         '/<div class="wp-block-embed__wrapper">\s*https:\/\/vimeo\.com\/(\d+)(?:\?[^\s<]*)?\s*<\/div>/is',
                         function ($matches) {
-                            $video_id = $matches[1]; 
+                            $video_id = $matches[1];
                             return '<iframe class="nb-video"
                                         src="https://player.vimeo.com/video/' . esc_attr($video_id) . '?title=1&byline=1&portrait=1&dnt=false" 
                                         width="550" 
@@ -257,7 +192,7 @@ do_action('rss_tag_pre', 'rss2');
                     //  '', 
                     //  $the_content
                     // );
-                    
+                
                     $the_content = preg_replace_callback(
                         '/<figure[^>]*>(?:[^<]*<(?!\/?figure)[^>]*>)*?<table.*?>.*?<\/table>(?:[^<]*<(?!\/?figure)[^>]*>)*?<\/figure>/is',
                         function ($matches) {
@@ -267,11 +202,34 @@ do_action('rss_tag_pre', 'rss2');
                     );
 
                     $the_content = preg_replace(
+                        '/<div class="wp-block-group medicine-table">.*?<\/div>/is',
+                        '',
+                        $the_content
+                    );
+                    $the_content = preg_replace(
+                        '/<div class="wp-block-group medicine-table no-scroll">.*?<\/div>/is',
+                        '',
+                        $the_content
+                    );
+                    $the_content = preg_replace(
+                        '/<div class="wp-block-group medicine-table scroll">.*?<\/div>/is',
+                        '',
+                        $the_content
+                    );
+                    $the_content = preg_replace(
+                        '/<figure[^>]*\bclass="[^"]*\bwp-block-table\b[^"]*"[^>]*>.*?<\/figure>/is',
+                        '',
+                        $the_content
+                    );
+
+                    $the_content = preg_replace(
                         '/\[anatomir\s+value="[^"]*"\]/i',
                         '',
                         $the_content
                     );
-                    
+
+                    // $the_content = preg_replace('/\s*style="[^"]*"/i', '', $the_content);
+
                     $allowed_tags = "<figure><iframe><img><a><b><strong><i><li><left><center><right><del><strike><ol><ul><u><sup><pre><code><sub><hr><h1><h2><h3><h4><h5><h6><big><small><font><p><br><span><div><video><audio><dd><dl>";
                     $the_content = htmlspecialchars_decode($the_content);
                     $the_content = strip_tags($the_content, $allowed_tags);
