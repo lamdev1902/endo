@@ -1810,6 +1810,11 @@ ul.commentlist .cancle-btn {
     background-color: #fff;
 }
 
+.best-exercise .comments-section > .container #comments {
+    padding-top: 20px;
+    border-top: 1px solid var(--primary-color-2);
+}
+
 .best-exercise .breacrump>span span:last-child {
     color: #fff;
 }
@@ -2134,7 +2139,7 @@ ul.commentlist .cancle-btn {
 }
 
 .best-exercise .exc-author {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .best-exercise .author-info p{
