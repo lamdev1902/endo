@@ -1810,7 +1810,7 @@ ul.commentlist .cancle-btn {
     background-color: #fff;
 }
 
-.best-exercise .comments-section > .container #comments {
+.container #comments {
     padding-top: 20px;
     border-top: 1px solid var(--primary-color-2);
 }
