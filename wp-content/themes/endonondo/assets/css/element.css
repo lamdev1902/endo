@@ -1679,10 +1679,6 @@ h2.tag-coming {
     margin: 0 auto;
 }
 
-.comment-respond {
-    border-bottom: 1px solid var(--primary-color-2);
-}
-
 .commentlist .comment-respond {
     border-bottom: none;
 }
@@ -1697,10 +1693,6 @@ h2.tag-coming {
 
 .form-grid.hide {
     display: none;
-}
-
-.form-grid:not(hide) {
-    margin-bottom: 20px;
 }
 
 #comments .grid-item {
@@ -1811,6 +1803,11 @@ ul.commentlist .cancle-btn {
 }
 
 .container #comments {
+    padding-top: 20px;
+    border-top: 1px solid var(--primary-color-2);
+}
+
+#comment > .commentlist {
     padding-top: 20px;
     border-top: 1px solid var(--primary-color-2);
 }
