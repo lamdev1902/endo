@@ -73,6 +73,24 @@ jQuery(function ($) {
 	});
 
 	jQuery(document).ready(function ($) {
+		const inputField = $('#feedTitle');
+		const defaultValue = inputField.data('default');
+		let timeout;
+
+		inputField.on('input', function () {
+			const newValue = inputField.val();
+
+			clearTimeout(timeout);
+
+			timeout = setTimeout(function () {
+				if (newValue !== defaultValue) {
+					if (!confirm("Are you sure you want to change this value?")) {
+						inputField.val(defaultValue);
+					}
+				}
+			}, 500);
+		});
+
 		$('#bestEx, #mt, #ma, #eq, #speEx').each(function () {
 			let selectElement = $(this);
 			let options = selectElement.find('option');
