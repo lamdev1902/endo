@@ -398,7 +398,7 @@ function theme_mcs_scripts()
     wp_enqueue_style('style-slick-theme', get_template_directory_uri() . '/assets/js/slick/slick-theme.css');
     wp_enqueue_style('style-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper-bundle.min.css');
     wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.7.4');
-    wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.8');
+    wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.4.9');
     wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
     wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
     wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '1.9.7');
