@@ -30,7 +30,7 @@ function anatomy_short_code($atts)
     ob_start();
     ?>
     <section class="exc-primary">
-        <div class="exc-container bd-bot">
+        <div class="exc-container">
             <div class="muscle-list primary-muscle">
                 <?php foreach ($arrMuscle as $nameMuscle): ?>
                     <?php
