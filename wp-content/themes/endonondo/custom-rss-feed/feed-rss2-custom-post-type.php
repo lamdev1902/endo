@@ -4,7 +4,7 @@
  *
  */
 $args = array(
-    'post_type' => ['informational_posts','exercise'],
+    'post_type' => ['informational_posts', 'exercise'],
     'posts_per_page' => 10,
     'post_status' => 'publish',
     'orderby' => 'date',
@@ -86,12 +86,18 @@ do_action('rss_tag_pre', 'rss2');
         while (have_posts()):
             the_post();
             $exerciseId = get_post_meta($post->ID, 'exercise_name', true);
+            $title = get_post_meta($post->ID, '_feed_title', true);
             ?>
             <item>
-                <title><![CDATA[<?php echo html_entity_decode(get_the_title()); ?>]]></title>
+                <title><![CDATA[<?php echo html_entity_decode($title ?: get_the_title()); ?>]]></title>
                 <link><?php the_permalink_rss(); ?></link>
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
-                <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?>
+                <pubDate>
+                    <?php
+                    $post_time_utc = get_post_time('Y-m-d H:i:s', true); // Lấy thời gian UTC
+                    $post_time_utc_minus_8 = gmdate('D, d M Y H:i:s +0000', strtotime($post_time_utc) - 8 * HOUR_IN_SECONDS);
+                    echo $post_time_utc_minus_8;
+                    ?>
                 </pubDate>
                 <dc:creator><![CDATA[<?php the_author(); ?>]]></dc:creator>
                 <?php the_category_rss('rss2'); ?>
@@ -229,7 +235,7 @@ do_action('rss_tag_pre', 'rss2');
                     );
 
                     // $the_content = preg_replace('/\s*style="[^"]*"/i', '', $the_content);
-
+                
                     $allowed_tags = "<figure><iframe><img><a><b><strong><i><li><left><center><right><del><strike><ol><ul><u><sup><pre><code><sub><hr><h1><h2><h3><h4><h5><h6><big><small><font><p><br><span><div><video><audio><dd><dl>";
                     $the_content = htmlspecialchars_decode($the_content);
                     $the_content = strip_tags($the_content, $allowed_tags);
