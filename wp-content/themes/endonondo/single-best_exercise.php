@@ -466,9 +466,41 @@ $featureimg = get_field('fimg_default', 'option');
                                 </div>
                             </div>
                             <div class="exercise__grid-item-bottom exercise__grid-item-bottom--no-bg">
-                                <h4>How to do</h4>
                                 <?php if (!empty($contents)): ?>
-                                    <?= $contents[0]['content'] ?>
+                                    <?php 
+                                        $content = $contents[0]['content']; 
+                                        preg_match_all('/<li.*?>(.*?)<\/li>/', $content, $matches);
+                                        $list_items = $matches[0];
+                                    ?>
+                                    <?php if (count($list_items) > 2): ?>
+                                        <ol>
+                                            <?= $list_items[0]; ?>
+                                            <?= str_replace(
+                                                '</li>', 
+                                                '<a target="_blank" class="pri-color-2" href="' . get_permalink() . '">.. <span class="pri-color-1">Read more<span></a></li>', 
+                                                $list_items[1]
+                                            ); ?>
+                                        </ol>
+                                    <?php else: ?>
+                                        <?php 
+                                            if (count($list_items) > 1): 
+                                                $last_item = array_pop($list_items); 
+                                                $last_item = str_replace(
+                                                    '</li>', 
+                                                    '<a target="_blank" class="pri-color-2" href="' . get_permalink() . '">.. <span class="pri-color-1">Read more<span></a></li>', 
+                                                    $last_item
+                                                );
+                                                
+                                                echo '<ol>' . implode('', $list_items) . $last_item . '</ol>';
+                                            else:
+                                                echo str_replace(
+                                                    '</li>', 
+                                                    '<a target="_blank" class="pri-color-2" href="' . get_permalink() . '">.. <span class="pri-color-1">Read more<span></a></li>', 
+                                                    $content
+                                                );
+                                            endif;
+                                        ?>
+                                    <?php endif; ?>
                                 <?php endif; ?>
                             </div>
                         </div>
