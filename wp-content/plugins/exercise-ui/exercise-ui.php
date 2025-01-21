@@ -204,7 +204,7 @@ function atn_enqueue_script()
     null
   );
   wp_enqueue_style('exercise-style', plugin_dir_url(__FILE__) . 'assets/css/exercise-main.css', array(), '1.0.3', 'all');
-  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.8', true);
+  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.9', true);
 }
 
 add_action('admin_enqueue_scripts', 'atn_enqueue_script');
