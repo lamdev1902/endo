@@ -42,7 +42,14 @@ do_action('rss_tag_pre', 'rss2');
         <link><?= home_url(); ?></link>
         <description><?php bloginfo_rss('description'); ?></description>
         <lastBuildDate>
-            <?php echo get_feed_build_date('r'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+            <?php
+            $build_date = get_feed_build_date('Y-m-d H:i:s');
+
+            $date = new DateTime($build_date, new DateTimeZone('UTC'));
+            $date->modify('-8 hours'); 
+            echo $date->format('l, j M Y H:i:s -0800');
+            ?>
+
         </lastBuildDate>
         <language><?php bloginfo_rss('language'); ?></language>
         <sy:updatePeriod>
@@ -94,10 +101,10 @@ do_action('rss_tag_pre', 'rss2');
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
                 <pubDate>
                     <?php
-                    $post_time_utc = get_post_time('Y-m-d H:i:s', true); 
-                    $date = new DateTime($post_time_utc, new DateTimeZone('UTC')); 
-                    $date->setTimezone(new DateTimeZone('Etc/GMT+8')); 
-                    echo $date->format('F j, Y g:i a');                  
+                    $post_time_utc = get_post_time('Y-m-d H:i:s', true);
+                    $date = new DateTime($post_time_utc, new DateTimeZone('UTC'));
+                    $date->modify('-8 hours'); 
+                    echo $date->format('l, j M Y H:i:s -0800');
                     ?>
                 </pubDate>
                 <dc:creator><![CDATA[<?php the_author(); ?>]]></dc:creator>
@@ -120,10 +127,8 @@ do_action('rss_tag_pre', 'rss2');
                     <![CDATA[
                     <?php
                     ob_start();
-                    if ($exerciseId) {
-                        get_template_part('template-parts/content', 'exercise');
-                    } else { ?>
-                        <figure>
+                    ?>
+                    <figure>
                             <?php
                             $image_featured = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
                             if ($image_featured) { ?>
@@ -137,7 +142,10 @@ do_action('rss_tag_pre', 'rss2');
                                 <figcaption><?php echo wp_kses_post($caption); ?></figcaption>
                             <?php } ?>
                         </figure>
-                    <?php }
+                    <?php
+                    if ($exerciseId) {
+                        get_template_part('template-parts/content', 'exercise');
+                    }
                     $the_content = get_the_content();
                     $the_content = preg_replace_callback(
                         '/<div class="wp-block-embed__wrapper">\s*https:\/\/vimeo\.com\/(\d+)(?:\?[^\s<]*)?\s*<\/div>/is',

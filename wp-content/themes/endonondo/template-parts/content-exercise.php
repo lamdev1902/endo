@@ -237,13 +237,6 @@ if ($exData):
                         <h2>Equipment</h2>
                     </div>
                     <div class="equipment-container">
-                        <div class="muscle-list equipment-list">
-                            <?php foreach ($equipmentDatas as $equipmentData): ?>
-                                <div class="equipment-item muscle-item">
-                                    <p class="has-medium-font-size"><?= $equipmentData['name'] ?></p>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
                         <div class="muscle-text exercise-equipment-start">
                             <?= $contentEquipment ?>
                         </div>

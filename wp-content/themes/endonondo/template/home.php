@@ -5,83 +5,40 @@ get_header();
 the_post();
 ?>
 <main id="content">
-	<section class="home-top enfit-post color-white pd-main">
+	<section class="home-top color-white pd-main">
 		<div class="container">
 			<div class="list-flex">
 				<div class="top-big list-flex">
 					<?php
-					$enfit = get_field('enfit_content', $pageid);
-					$intro = get_field('intro_app', 'option');
-					$explore = !empty($intro[0]['explore']) ? $intro[0]['explore'] : '';
-					$storeLink = get_field('hero_store', 'option');
-					$store = $storeLink ?: '';
-					$enfitLogo = get_field('enfit_logo', 'option');
-					if (!empty($enfit)) {
-						$enfit = $enfit[0];
+					$args = array(
+						'posts_per_page' => 1,
+						'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
+					);
+					$the_query = new WP_Query($args);
+					while ($the_query->have_posts()):
+						$the_query->the_post();
+						$post_author_id = get_post_field('post_author', $post->ID);
+						$post_display_name = get_the_author_meta('nickname', $post_author_id);
+						$post_author_url = get_author_posts_url($post_author_id);
 						?>
 						<div class="info">
 							<p class="has-x-large-font-size text-special clamp-2 mr-bottom-20 pri-color-3"><a
-									class="pri-color-3" href="<?= $explore ?>"><?= $enfit['title'] ?></a></p>
-							<p class="sec-color-2"><?php echo wp_trim_words($enfit['description'], 28); ?></p>
-							<div class="enfit-action flex">
-								<?php if ($explore): ?>
-									<a href="<?= $explore ?>" id="">Explore Now</a>
-								<?php endif; ?>
-								<?php if ($store): ?>
-									<a target="_blank" href="<?= $store ?>" class="home-store">
-										<img src="<?= get_template_directory_uri() . '/assets/images/enfit/store-home.svg' ?>"
-											alt="">
-									</a>
-								<?php endif; ?>
-							</div>
+									class="pri-color-3" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+							<p class="sec-color-2"><?php echo wp_trim_words(get_the_excerpt($post->ID), 28); ?></p>
 						</div>
 						<div class="featured image-fit hover-scale">
-							<?php $image_featured = $enfit['image']; ?>
-							<a href="<?= $explore ?>">
+							<?php $image_featured = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+							<a href="<?php the_permalink(); ?>">
 								<?php if ($image_featured): ?>
-									<img src="<?= $image_featured['url'] ?>" alt="<?= $image_featured['alt'] ?>">
+									<?php the_post_thumbnail(); ?>
 								<?php else: ?>
 									<img src="<?php echo get_field('fimg_default', 'option'); ?>" alt="">
 								<?php endif; ?>
 							</a>
-							<?php if ($enfitLogo): ?>
-								<div class="enfit-logo">
-									<img src="<?= $enfitLogo ?>" alt="">
-								</div>
-							<?php endif; ?>
 						</div>
 						<?php
-					} else {
-						$args = array(
-							'posts_per_page' => 1,
-							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
-						);
-						$the_query = new WP_Query($args);
-						while ($the_query->have_posts()):
-							$the_query->the_post();
-							$post_author_id = get_post_field('post_author', $post->ID);
-							$post_display_name = get_the_author_meta('nickname', $post_author_id);
-							$post_author_url = get_author_posts_url($post_author_id);
-							?>
-							<div class="info">
-								<p class="has-x-large-font-size text-special clamp-2 mr-bottom-20 pri-color-3"><a
-										class="pri-color-3" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-								<p class="sec-color-2"><?php echo wp_trim_words(get_the_excerpt($post->ID), 28); ?></p>
-							</div>
-							<div class="featured image-fit hover-scale">
-								<?php $image_featured = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-								<a href="<?php the_permalink(); ?>">
-									<?php if ($image_featured): ?>
-										<?php the_post_thumbnail(); ?>
-									<?php else: ?>
-										<img src="<?php echo get_field('fimg_default', 'option'); ?>" alt="">
-									<?php endif; ?>
-								</a>
-							</div>
-							<?php
-						endwhile;
-						wp_reset_query();
-					}
+					endwhile;
+					wp_reset_query();
 					?>
 				</div>
 				<div class="news-right">
@@ -90,6 +47,7 @@ the_post();
 						<?php
 						$args = array(
 							'posts_per_page' => 4,
+							'offset' => 1,
 							'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide', 'exercise', 'tool_post', 'best_exercise'),
 						);
 						$the_query = new WP_Query($args);
