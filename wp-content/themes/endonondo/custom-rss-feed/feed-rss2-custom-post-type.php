@@ -94,9 +94,10 @@ do_action('rss_tag_pre', 'rss2');
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
                 <pubDate>
                     <?php
-                    $post_time_utc = get_post_time('Y-m-d H:i:s', true); // Lấy thời gian UTC
-                    $post_time_utc_minus_8 = gmdate('D, d M Y H:i:s +0000', strtotime($post_time_utc) - 8 * HOUR_IN_SECONDS);
-                    echo $post_time_utc_minus_8;
+                    $post_time_utc = get_post_time('Y-m-d H:i:s', true); 
+                    $date = new DateTime($post_time_utc, new DateTimeZone('UTC')); 
+                    $date->setTimezone(new DateTimeZone('Etc/GMT+8')); 
+                    echo $date->format('F j, Y g:i a');                  
                     ?>
                 </pubDate>
                 <dc:creator><![CDATA[<?php the_author(); ?>]]></dc:creator>
