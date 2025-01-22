@@ -148,6 +148,10 @@ jQuery(function ($) {
 		});
 
 		$('.label-filter p').on('click', function () {
+			if($(this).hasClass('active')) {
+				return false;
+			}
+
 			$('.label-filter p').removeClass('active');
 			$(this).addClass('active');
 
