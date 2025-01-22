@@ -91,7 +91,45 @@ jQuery(function ($) {
 			}, 500);
 		});
 
-		$('#bestEx, #mt, #ma, #eq, #speEx').each(function () {
+		$('#bestEx').each(function () {
+			let selectElement = $(this);
+			let options = selectElement.find('option');
+
+			options.sort(function (a, b) {
+				return $(b).prop('selected') - $(a).prop('selected');
+			});
+
+			selectElement.html(options);
+
+			selectElement.multiselect({
+				texts: {
+					placeholder: 'Select item',
+					search: 'Find an item'
+				},
+				search: true
+			});
+
+			selectElement.on('change', function () {
+				let selectedOptions = selectElement.find('option:selected');
+				if (selectedOptions.length > 3) {
+					let lastSelectedOption = selectedOptions.last();
+					lastSelectedOption.prop('selected', false);
+
+					let value = lastSelectedOption.val();
+
+					let correspondingLi = $(this).next('.ms-options-wrap').find('ul li').filter(function () {
+						return $(this).find('input').val() === value;
+					});
+
+					correspondingLi.removeClass('selected');
+					correspondingLi.find('input').prop('checked', false);
+
+					alert('You can select up to 3 items only.');
+				}
+			});
+		});
+
+		$('#mt, #ma, #eq, #speEx').each(function () {
 			let selectElement = $(this);
 			let options = selectElement.find('option');
 
@@ -108,6 +146,19 @@ jQuery(function ($) {
 				search: true
 			});
 		});
+
+		$('.label-filter p').on('click', function () {
+			$('.label-filter p').removeClass('active');
+			$(this).addClass('active');
+
+			$('.filter-all .ft').each(function(e) {
+				if($(this).hasClass('hide')) {
+					$(this).removeClass('hide');
+				}else {
+					$(this).addClass('hide');
+				}
+			});
+		  });
 
 		$('.clearAll').on('click', function () {
 			var sel = $(this).closest('div').find('select');
