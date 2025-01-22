@@ -350,6 +350,14 @@ label {
     margin-bottom: 20px;
 }
 
+.filter-section > div {
+    padding-bottom: 20px;
+}
+
+.filter-section .best-exericse {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
 .filter-section .flex {
     align-items: center;
     gap: 12px;
@@ -486,5 +494,36 @@ label {
     padding: 6px 12px;
     cursor: pointer;
     font-size: 16px;
+}
+
+.label-filter {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.label-filter p {
+    padding: 5px 20px;
+    margin: 0;
+    border: 1px solid #000;
+    border-bottom: 0;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.label-filter p:first-child {
+    border-right: none;
+}
+
+.label-filter p.active {
+    color: #000;
+    opacity: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.ft-auto > div {
     margin-bottom: 20px;
 }

@@ -203,8 +203,8 @@ function atn_enqueue_script()
     array(),
     null
   );
-  wp_enqueue_style('exercise-style', plugin_dir_url(__FILE__) . 'assets/css/exercise-main.css', array(), '1.0.3', 'all');
-  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.0.9', true);
+  wp_enqueue_style('exercise-style', plugin_dir_url(__FILE__) . 'assets/css/exercise-main.css', array(), '1.0.4', 'all');
+  wp_enqueue_script('exercise-script', plugin_dir_url(__FILE__) . 'assets/js/function.js', array('jquery'), '1.1.0', true);
 }
 
 add_action('admin_enqueue_scripts', 'atn_enqueue_script');
@@ -242,16 +242,25 @@ function custom_add_exercise_name_field()
     'custom_render_exercise_name_field',
     'exercise',
     'normal',
-    'default'
+    'high'
   );
 
   add_meta_box(
     'exercise_meta_box',
-    'Best Exercise List',
+    'Best Exercise Option',
     'custom_render_best_exercise_option_field',
     'best_exercise',
     'normal',
-    'default'
+    'high'
+  );
+
+  add_meta_box(
+    'exercise_meta_box',
+    'All Exercise Option',
+    'custom_render_all_exercise_option_field',
+    'best_exercise',
+    'normal',
+    'high'
   );
 }
 add_action('add_meta_boxes', 'custom_add_exercise_name_field');
@@ -283,11 +292,36 @@ function custom_render_best_exercise_option_field($post)
   global $wpdb;
 
   $exercises = get_post_meta($post->ID, 'best_exercise_list', true) ? explode(',', get_post_meta($post->ID, 'best_exercise_list', true)) : [];
+  $all_exercise_names = $wpdb->get_results(
+    "SELECT * From {$wpdb->prefix}exercise",
+    ARRAY_A
+  );
+
+  ?>
+  <div class="filter-section">
+    <div class="best-exericse">
+      <label for="bestEx">Select Best Exercise:</label>
+      <select id="bestEx" name="best_exercise_list[]" multiple>
+        <?php foreach ($all_exercise_names as $exercise): ?>
+          <option value="<?php echo esc_attr($exercise['id']); ?>" <?php selected(in_array($exercise['id'], $exercises), true); ?>>
+            <?php echo $exercise['name']; ?>
+          </option>
+        <?php endforeach; ?>
+      </select>
+      <button class='clearAll'>Clear Best Exercise</button>
+    </div>
+  </div>
+  <?php
+}
+
+function custom_render_all_exercise_option_field($post)
+{
+  global $wpdb;
 
   $mt = get_post_meta($post->ID, 'all_mt_list', true) ? explode(',', get_post_meta($post->ID, 'all_mt_list', true)) : [];
   $ma = get_post_meta($post->ID, 'all_ma_list', true) ? explode(',', get_post_meta($post->ID, 'all_ma_list', true)) : [];
   $eq = get_post_meta($post->ID, 'all_eq_list', true) ? explode(',', get_post_meta($post->ID, 'all_eq_list', true)) : [];
-  $ex = get_post_meta($post->ID, 'all_eq_list', true) ? explode(',', get_post_meta($post->ID, 'all_ex_list', true)) : [];
+  $ex = get_post_meta($post->ID, 'all_ex_list', true) ? explode(',', get_post_meta($post->ID, 'all_ex_list', true)) : [];
 
 
   $all_exercise_names = $wpdb->get_results(
@@ -339,67 +373,74 @@ function custom_render_best_exercise_option_field($post)
 ";
 
   $muscle_types = $wpdb->get_results($queryMS, ARRAY_A);
+
+  $check = 1;
+
+  if(!$ex && ($mt || $eq || $ma)) {
+    $check = 2;
+  }
+
   ?>
   <div class="filter-section">
-    <div class="best-exericse">
-      <label for="bestEx">Select Best Exercise:</label>
-      <select id="bestEx" name="best_exercise_list[]" multiple>
-        <?php foreach ($all_exercise_names as $exercise): ?>
-          <option value="<?php echo esc_attr($exercise['id']); ?>" <?php selected(in_array($exercise['id'], $exercises), true); ?>>
-            <?php echo $exercise['name']; ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <button class='clearAll'>Clear Best Exercise</button>
-    </div>
-    <div class="exercise">
-      <label for="speEx">Select Exercise:</label>
-      <select id="speEx" name="all_ex_list[]" multiple>
-        <?php foreach ($all_exercise_names as $exercise): ?>
-          <option value="<?php echo esc_attr($exercise['id']); ?>" <?php selected(in_array($exercise['id'], $ex), true); ?>>
-            <?php echo $exercise['name']; ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <button class='clearAll'>Clear Exercise List</button>
-    </div>
-    <div class="mt">
-      <label for="mt">Select Muscle Type:</label>
-      <select id="mt" name="all_mt_list[]" multiple>
-        <?php foreach ($muscle_types as $idMt): ?>
-          <option value="<?php echo esc_attr($idMt['id']); ?>" <?php selected(in_array($idMt['id'], $mt), true); ?>>
-            <?php echo $idMt['name']; ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <button class='clearAll'>Clear Muscle Type</button>
-    </div>
-    <div class="ma">
-      <label for="ma">Select Muscle Anatomy:</label>
-      <select id="ma" name="all_ma_list[]" multiple>
-        <?php foreach ($muscle_anatomy as $idMa): ?>
-          <option value="<?php echo esc_attr($idMa['id']); ?>" <?php selected(in_array($idMa['id'], $ma), true); ?>>
-            <?php echo $idMa['name']; ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <button class='clearAll'>Clear Muscle Anatomy</button>
-    </div>
-    <div class="eq">
-      <label for="eq">Select Equipment:</label>
-      <select id="eq" name="all_eq_list[]" multiple>
-        <?php foreach ($equipments as $idEq): ?>
-          <option value="<?php echo esc_attr($idEq['id']); ?>" <?php selected(in_array($idEq['id'], $eq), true);
-             ; ?>>
-            <?php echo $idEq['name']; ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <button class='clearAll'>Clear Equipment</button>
+    <div class="filter-all">
+      <div class="label-filter">
+        <p class="<?= $check == 1 ? "active" : ''?>">Manual</p>
+        <p class="<?= $check == 2 ? "active" : ''?>">Auto</p>
+      </div>
+      <div class="ft-ex ft <?= $check != 1 ? "hide" : ''?>">
+        <div class="exercise">
+          <label for="speEx">Select Exercise:</label>
+          <select id="speEx" name="all_ex_list[]" multiple>
+            <?php foreach ($all_exercise_names as $exercise): ?>
+              <option value="<?php echo esc_attr($exercise['id']); ?>" <?php selected(in_array($exercise['id'], $ex), true); ?>>
+                <?php echo $exercise['name']; ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <button class='clearAll'>Clear Exercise List</button>
+        </div>
+      </div>
+      <div class="ft-auto ft <?= $check != 2 ? "hide" : ''?>">
+        <div class="mt">
+          <label for="mt">Select Muscle Type:</label>
+          <select id="mt" name="all_mt_list[]" multiple>
+            <?php foreach ($muscle_types as $idMt): ?>
+              <option value="<?php echo esc_attr($idMt['id']); ?>" <?php selected(in_array($idMt['id'], $mt), true); ?>>
+                <?php echo $idMt['name']; ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <button class='clearAll'>Clear Muscle Type</button>
+        </div>
+        <div class="ma">
+          <label for="ma">Select Muscle Anatomy:</label>
+          <select id="ma" name="all_ma_list[]" multiple>
+            <?php foreach ($muscle_anatomy as $idMa): ?>
+              <option value="<?php echo esc_attr($idMa['id']); ?>" <?php selected(in_array($idMa['id'], $ma), true); ?>>
+                <?php echo $idMa['name']; ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <button class='clearAll'>Clear Muscle Anatomy</button>
+        </div>
+        <div class="eq">
+          <label for="eq">Select Equipment:</label>
+          <select id="eq" name="all_eq_list[]" multiple>
+            <?php foreach ($equipments as $idEq): ?>
+              <option value="<?php echo esc_attr($idEq['id']); ?>" <?php selected(in_array($idEq['id'], $eq), true);
+                 ; ?>>
+                <?php echo $idEq['name']; ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <button class='clearAll'>Clear Equipment</button>
+        </div>
+      </div>
     </div>
   </div>
   <?php
 }
+
 
 
 function custom_save_exercise_name_field($post_id)
@@ -420,14 +461,14 @@ function custom_save_best_exercise_field($post_id)
     'all_ex_list'
   ];
 
-  foreach($options as $op) {
-     if(isset($_POST[$op])) {
-        update_post_meta($post_id, $op, implode(',', $_POST[$op]));
-     }else {
-        update_post_meta($post_id, $op, '');
-     }
+  foreach ($options as $op) {
+    if (isset($_POST[$op])) {
+      update_post_meta($post_id, $op, implode(',', $_POST[$op]));
+    } else {
+      update_post_meta($post_id, $op, '');
+    }
   }
-  
+
 }
 add_action('save_post_best_exercise', 'custom_save_best_exercise_field');
 

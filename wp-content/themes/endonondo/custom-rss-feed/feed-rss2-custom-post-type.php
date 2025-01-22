@@ -47,7 +47,7 @@ do_action('rss_tag_pre', 'rss2');
 
             $date = new DateTime($build_date, new DateTimeZone('UTC'));
             $date->modify('-8 hours'); 
-            echo $date->format('l, j M Y H:i:s -0800');
+            echo $date->format('D, d M Y H:i:s -0800');
             ?>
 
         </lastBuildDate>
@@ -104,7 +104,7 @@ do_action('rss_tag_pre', 'rss2');
                     $post_time_utc = get_post_time('Y-m-d H:i:s', true);
                     $date = new DateTime($post_time_utc, new DateTimeZone('UTC'));
                     $date->modify('-8 hours'); 
-                    echo $date->format('l, j M Y H:i:s -0800');
+                    echo $date->format('D, d M Y H:i:s -0800');
                     ?>
                 </pubDate>
                 <dc:creator><![CDATA[<?php the_author(); ?>]]></dc:creator>
@@ -179,9 +179,7 @@ do_action('rss_tag_pre', 'rss2');
                         },
                         $the_content
                     );
-                    $the_content = preg_replace('/<table\b[^>]*>.*?<\/table>/is', '', $the_content);
-                    $the_content = preg_replace('/<h4[^>]*>Optimal Sets And Reps<\/h4>/i', '', $the_content);
-                    $the_content = preg_replace('/<h4[^>]*><strong>Optimal Sets And Reps<\/strong><\/h4>/i', '', $the_content);
+
                     // $the_content = preg_replace(
                     //  '/<div class="wp-block-group medicine-table">.*?<\/div>/is',
                     //  '',
@@ -208,34 +206,7 @@ do_action('rss_tag_pre', 'rss2');
                     //  $the_content
                     // );
                 
-                    $the_content = preg_replace_callback(
-                        '/<figure[^>]*>(?:[^<]*<(?!\/?figure)[^>]*>)*?<table.*?>.*?<\/table>(?:[^<]*<(?!\/?figure)[^>]*>)*?<\/figure>/is',
-                        function ($matches) {
-                            return '';
-                        },
-                        $the_content
-                    );
 
-                    $the_content = preg_replace(
-                        '/<div class="wp-block-group medicine-table">.*?<\/div>/is',
-                        '',
-                        $the_content
-                    );
-                    $the_content = preg_replace(
-                        '/<div class="wp-block-group medicine-table no-scroll">.*?<\/div>/is',
-                        '',
-                        $the_content
-                    );
-                    $the_content = preg_replace(
-                        '/<div class="wp-block-group medicine-table scroll">.*?<\/div>/is',
-                        '',
-                        $the_content
-                    );
-                    $the_content = preg_replace(
-                        '/<figure[^>]*\bclass="[^"]*\bwp-block-table\b[^"]*"[^>]*>.*?<\/figure>/is',
-                        '',
-                        $the_content
-                    );
 
                     $the_content = preg_replace(
                         '/\[anatomir\s+value="[^"]*"\]/i',
@@ -243,14 +214,17 @@ do_action('rss_tag_pre', 'rss2');
                         $the_content
                     );
 
-                    // $the_content = preg_replace('/\s*style="[^"]*"/i', '', $the_content);
-                
-                    $allowed_tags = "<figure><iframe><img><a><b><strong><i><li><left><center><right><del><strike><ol><ul><u><sup><pre><code><sub><hr><h1><h2><h3><h4><h5><h6><big><small><font><p><br><span><div><video><audio><dd><dl>";
+                    $allowed_tags = '<figure><table><thead><tbody><tr><th><td><figcaption><iframe><img><a><b><strong><i><li><left><center><right><del><strike><ol><ul><u><sup><pre><code><sub><hr><h1><h2><h3><h4><h5><h6><big><small><font><p><br><span><div><video><audio><dd><dl>';
                     $the_content = htmlspecialchars_decode($the_content);
                     $the_content = strip_tags($the_content, $allowed_tags);
                     $the_content = preg_replace("/\r?\n/", "", $the_content);
                     $the_content = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', "", $the_content);
                     $the_content = preg_replace('/\s*(decoding|loading|sizes)="[^"]*"/', '', $the_content);
+                    $the_content = preg_replace('/<figure([^>]*)\sstyle="[^"]*"/i', '<figure$1', $the_content);
+                    $the_content = preg_replace('/<table\b/', '<table border="1"', $the_content);
+                    $the_content = preg_replace('/<thead\b/', '<thead align="left" ', $the_content);
+                    // $the_content = preg_replace('/<th\b/', '<th ', $the_content);
+                    // $the_content = preg_replace('/<td\b/', '<td ', $the_content);
                     $permalink = get_permalink();
                     $the_content = preg_replace_callback(
                         '/<a\s+([^>]*?)href=["\'](.*?)["\']([^>]*?)>/i',
