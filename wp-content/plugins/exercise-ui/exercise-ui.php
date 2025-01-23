@@ -242,16 +242,16 @@ function custom_add_exercise_name_field()
     'custom_render_exercise_name_field',
     'exercise',
     'normal',
-    'high'
+    'default'
   );
 
   add_meta_box(
-    'exercise_meta_box',
-    'Best Exercise Option',
+    'best_exercise_meta_box',
+    'Best Exercise',
     'custom_render_best_exercise_option_field',
     'best_exercise',
     'normal',
-    'high'
+    'default'
   );
 
   add_meta_box(
@@ -260,7 +260,7 @@ function custom_add_exercise_name_field()
     'custom_render_all_exercise_option_field',
     'best_exercise',
     'normal',
-    'high'
+    'default'
   );
 }
 add_action('add_meta_boxes', 'custom_add_exercise_name_field');
