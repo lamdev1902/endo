@@ -1286,6 +1286,10 @@ main {
         height: auto;
         right: 0;
     }
+
+    .popup .popup-bg .social {
+        margin-bottom: 16px;
+    }
 }
 
 @media (max-width: 767px) {
