@@ -645,7 +645,21 @@ function change_default_feed_slug()
     remove_action('do_feed_atom', 'do_feed_atom', 10, 1);
 
     add_feed('nb-feed', 'custom_default_feed_callback');
-    add_feed('fb-feed', 'custom_default_feed_flip_callback');
+
+    $feed = ['fb-feed','fb-feed-exercise', 'fb-feed-workouts', 'fb-feed-training', 'fb-feed-news'];
+
+    foreach($feed as $f) {
+        add_feed($f, 'custom_default_feed_flip_callback');
+    }
+
+    // add_feed('fb-feed', 'custom_default_feed_flip_callback');
+
+    // add_feed('fb-feed-exercise', 'custom_default_feed_flip_callback');
+
+    // add_feed('fb-feed-workouts', 'custom_default_feed_flip_callback');
+    // add_feed('fb-feed-training', 'custom_default_feed_flip_callback');
+    // add_feed('fb-feed-news', 'custom_default_feed_flip_callback');
+
 }
 add_action('init', 'change_default_feed_slug');
 

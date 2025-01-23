@@ -4,8 +4,23 @@
  *
  */
 
+$parts = explode('-', $feed);
+$endparts = end($parts);
+
+$op = 'rss_description';
+
+if ($endparts != 'feed') {
+    $op = $endparts . '_description';
+}
+
+$pt = ['informational_posts'];
+
+if($endparts == 'exercise') {
+    $pt = ['informational_posts', 'exercise'];
+}
+
 $args = array(
-    'post_type' => ['informational_posts'],
+    'post_type' => $pt,
     'posts_per_page' => 20,
     'post_status' => 'publish',
     'orderby' => 'date',
@@ -30,18 +45,18 @@ echo '<?xml version="1.0" encoding="' . esc_attr(get_option('blog_charset')) . '
 do_action('rss_tag_pre', 'rss2');
 ?>
 <rss version="2.0" <?php
-    /**
-     * Fires at the end of the RSS root to add namespaces.
-     *v
-     * @since 2.0.0
-     */
-    do_action('rss2_ns');
-    ?>>
+/**
+ * Fires at the end of the RSS root to add namespaces.
+ *v
+ * @since 2.0.0
+ */
+do_action('rss2_ns');
+?>>
 
     <channel>
         <title>Endomondo</title>
         <link><?= self_link(); ?></link>
-        <description><?= get_field('rss_description', 'option') ?></description>
+        <description><?= get_field($op, 'option') ?></description>
         <language><?php bloginfo_rss('language'); ?></language>
         <?php
         /**
@@ -61,7 +76,13 @@ do_action('rss_tag_pre', 'rss2');
                 <title><![CDATA[<?php echo html_entity_decode(get_the_title()); ?>]]></title>
                 <link><?php the_permalink_rss(); ?></link>
                 <guid isPermaLink="false"><?php the_guid(); ?></guid>
-                <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?>
+                <pubDate>
+                    <?php
+                    $post_time_utc = get_post_time('Y-m-d H:i:s', true);
+                    $date = new DateTime($post_time_utc, new DateTimeZone('UTC'));
+                    $date->modify('-8 hours');
+                    echo $date->format('D, d M Y H:i:s -0800');
+                    ?>
                 </pubDate>
                 <dc:creator><![CDATA[<?php the_author(); ?>]]></dc:creator>
                 <?php the_category_rss('rss2'); ?>
@@ -69,7 +90,6 @@ do_action('rss_tag_pre', 'rss2');
                     <![CDATA[
                 <?php
                 $yoast_description = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-
                 if (!empty($yoast_description)) {
                     echo $yoast_description;
                 } else {
@@ -80,8 +100,8 @@ do_action('rss_tag_pre', 'rss2');
                 </description>
                 <?php if ($image_url): ?>
                     <?php $image_type = 'image/' . pathinfo(parse_url($image_url, PHP_URL_PATH), PATHINFO_EXTENSION); ?>
-                    <enclosure url="<?php echo esc_url($image_url); ?>"
-                        type="<?php echo esc_attr($image_type); ?>" /> <?php endif; ?>
+                    <enclosure url="<?php echo esc_url($image_url); ?>" type="<?php echo esc_attr($image_type); ?>" />
+                <?php endif; ?>
                 <?php do_action('rss2_item'); ?>
             </item>
         <?php endwhile; ?>

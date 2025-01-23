@@ -49,7 +49,6 @@ do_action('rss_tag_pre', 'rss2');
             $date->modify('-8 hours'); 
             echo $date->format('D, d M Y H:i:s -0800');
             ?>
-
         </lastBuildDate>
         <language><?php bloginfo_rss('language'); ?></language>
         <sy:updatePeriod>
