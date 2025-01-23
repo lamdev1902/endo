@@ -247,7 +247,7 @@ function custom_add_exercise_name_field()
 
   add_meta_box(
     'best_exercise_meta_box',
-    'Best Exercise',
+    'Best Exercise Option',
     'custom_render_best_exercise_option_field',
     'best_exercise',
     'normal',
