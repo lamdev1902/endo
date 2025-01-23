@@ -199,10 +199,6 @@
         padding: 24px;
     }
 
-    .popup .popup-bg .popup-box .info .box .feature {
-        margin-bottom: 20px;
-    }
-
     #couponModal .coupon-top img {
         height: 41px;
         width: 131px;
@@ -900,11 +896,6 @@
 
     .coupon-item-detail .coupon-top .flex .hightlight .action .action-item {
         width: 83%;
-    }
-
-
-    .popup .popup-bg .popup-box .info .box .feature {
-        margin-bottom: 24px;
     }
 
 }

@@ -173,20 +173,19 @@
 				<div class="popup-bg">
 					<div class="popup-box list-flex">
 						<div class="featured image-fit">
-							<img class="on-pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/popup.jpg"
+							<img class="on-pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/news-popup.png"
 								alt="">
 							<img class="on-sp"
-								src="<?php echo get_template_directory_uri(); ?>/assets/images/sp-popup.jpg" alt="">
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/news-popup-mb.jpg" alt="">
 						</div>
 						<div class="info">
-							<img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg"
+							<img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/sticker-popup.svg"
 								alt="">
 							<div class="box">
 								<div class="feature">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-popup.svg"
 										alt="">
 								</div>
-								<div class="klaviyo-form-UPY2r8"></div>
 								<div class="social">
 									<p class="has-small-font-size">Follow us: </p>
 									<?php
@@ -200,7 +199,7 @@
 										<?php }
 									} ?>
 								</div>
-
+								<div class="klaviyo-form-UPY2r8"></div>
 								<p class="note has-small-font-size"><i>* <a href="https://www.endomondo.com/privacy-policy">Your privacy</a> is important to
 										us</i></p>
 							</div>

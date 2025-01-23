@@ -53,7 +53,7 @@ jQuery(function ($) {
 	});
 
 
-	$('.popup .close, .popup .popup-click').click(function () {
+	$('.popup .popup-click').click(function () {
 		$(this).closest('.popup').fadeOut();
 		return false;
 	});
