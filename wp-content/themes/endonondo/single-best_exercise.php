@@ -337,7 +337,6 @@ $featureimg = get_field('fimg_default', 'option');
 
             $args = [
                 'post_type' => 'exercise',
-                'posts_per_page' => $posts_per_page,
                 'paged' => $paged,
                 'post_name__in' => $slugs,
                 'orderby' => 'post_views'
