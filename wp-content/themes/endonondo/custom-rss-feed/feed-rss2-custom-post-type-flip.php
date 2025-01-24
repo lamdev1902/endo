@@ -27,6 +27,14 @@ $args = array(
     'order' => 'DESC',
 );
 
+if ($endparts != 'feed') {
+    $category = get_category_by_slug($endparts);
+
+    if($category) {
+        $args['cat'] = $category->term_id;
+    }
+}
+
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
 
 header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
