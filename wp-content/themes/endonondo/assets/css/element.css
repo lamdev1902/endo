@@ -2160,4 +2160,5 @@ ul.commentlist .cancle-btn {
 .exc-video iframe {
     aspect-ratio: 16/9;
     width: 100%;
+    margin-top: 6%;
 }
