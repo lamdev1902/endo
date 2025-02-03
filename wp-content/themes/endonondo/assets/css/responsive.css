@@ -793,6 +793,10 @@
 	.best-exercise .best h2 {
 		padding: 0 20px;
 	}
+
+    .single-exercise .home-main.best-exercise {
+        height: 680px !important;
+    }
 }
 
 @media (max-width: 390px) {
@@ -1379,6 +1383,10 @@
         align-items: center;
         text-align: center;
         justify-content: center;
+    }
+
+    .single-exercise .home-main.best-exercise {
+        height: 620px;
     }
 
 }

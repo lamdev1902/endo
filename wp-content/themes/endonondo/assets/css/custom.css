@@ -1310,7 +1310,7 @@ div[data-testid="form-row"]:nth-child(4) label:before {
     position: relative;
 }
 
-section.exc-hero-section:before {
+/* section.exc-hero-section:before {
     background-image: url(../images/exercise-bg.svg);
     content: "";
     position: absolute;
@@ -1321,7 +1321,7 @@ section.exc-hero-section:before {
     background-size: cover;
     background-position: center;
     z-index: 1;
-}
+} */
 
 .exc-hero-section .exc-container {
     text-align: center;
@@ -1489,7 +1489,7 @@ section.exc-hero-section:before {
     margin: 0 0px;
 }
 
-.exc-video {
+/* .exc-video {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
@@ -1505,7 +1505,7 @@ section.exc-hero-section:before {
     height: 100%;
     background: transparent;
     z-index: -999;
-}
+} */
 
 
 .exc-container .slick-prev,

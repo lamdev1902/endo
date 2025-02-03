@@ -409,16 +409,6 @@ jQuery(function ($) {
 			}
 		);
 
-		var iframe = $('.exc-hero-section iframe');
-
-		if (iframe.length > 0) {
-			var currentSrc = iframe.attr('src');
-
-			var newSrc = currentSrc + '&background=1&title=0&byline=0&portrait=0&dnt=1&controls=0&autoplay=1&muted=1';
-
-			iframe.attr('src', newSrc);
-		}
-
 
 		$('figure table').each(function () {
 			var $table = $(this);

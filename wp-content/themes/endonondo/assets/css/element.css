@@ -2142,3 +2142,22 @@ ul.commentlist .cancle-btn {
 .best-exercise .author-info p{
     margin-bottom: 0;
 }
+
+.best-exercise .exc-hero-section .exc-description > p {
+    color: var(--primary-color-3);
+}
+
+/* Exercise */
+
+.single-exercise .home-main.best-exercise {
+    height: 700px;
+}
+
+.single-exercise .home-main.best-exercise .exc-video{
+    margin-top: 20px;
+}
+
+.exc-video iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+}
