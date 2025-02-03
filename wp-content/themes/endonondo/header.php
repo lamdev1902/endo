@@ -120,7 +120,7 @@
 	<div id="wapper" class="<?php if (is_front_page()) {
 		echo 'home-main color-white';
 	}
-	elseif (basename($template) == 'single-best_exercise.php')  {
+	elseif (basename($template) == 'single-best_exercise.php' || basename($template) == 'single-exercise.php')  {
 		echo 'home-main best-exercise';
 	}
 	else {

@@ -37,25 +37,18 @@ $post_type = $post->post_type;
         }
     }
 
+    $elemlemnt = '';
     if ($video) {
-        $youtubeMatch = preg_match(
-            '/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/',
-            $video,
-            $matches
-        );
 
-        if ($youtubeMatch) {
-            $videoId = $matches[1];
-            $video = 'https://www.youtube.com/embed/' . $videoId;
-            $isYoutube = true;
-        }
+        $checkPath = true;
+        $video_id = get_vimeo($video);
 
-        $videoPath = parse_url($video, PHP_URL_PATH);
-        $extension = pathinfo($videoPath, PATHINFO_EXTENSION);
-
-        if ($extension == 'mp4') {
-            $checkPath = true;
-            $elemlemnt = "<video autoplay='autoplay' loop='loop' muted playsinline  oncontextmenu='return false;'  preload='auto' src='$video'>Your browser does not support the video tag.</video>";
+        if ($video_id) {
+            $elemlemnt = sprintf(
+                '<iframe src="https://player.vimeo.com/video/%s?controls=1&autoplay=1&muted=1" width="%d" frameborder="0" allow="autoplay;muted"></iframe>',
+                htmlspecialchars($video_id),
+                776
+            );
         }
     }
     if ($exData):
@@ -71,62 +64,14 @@ $post_type = $post->post_type;
                 </div>
             </div>
         </section>
-        <section class="exc-hero-section">
+        <section class="exc-hero-section top-best">
             <div class="container">
                 <div class="exc-container">
-                    <?php if ($checkPath): ?>
-                        <div class="exc-video">
-                            <?= $elemlemnt ?>
-                        </div>
-                    <?php else: ?>
-                        <div id="exc-container" style="padding:56.25% 0 0 0;position:relative;">
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    var player;
-
-                                    function onYouTubeIframeAPIReady() {
-                                        document.getElementById('exc-container').innerHTML = '<iframe id="player" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="https://www.youtube.com/embed/<?= $videoId ?>?rel=0&amp;fs=0&amp;autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&enablejsapi=1&playlist=<?= $videoId ?>" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>';
-                                        player = new YT.Player('player', {
-                                            events: {
-                                                'onReady': onPlayerReady,
-                                                'onStateChange': onPlayerStateChange
-                                            }
-                                        });
-                                    }
-
-                                    function onPlayerReady(event) {
-                                        var YTP = event.target;
-                                        YTP.playVideo();
-                                        setTimeout(function () {
-                                            YTP.setOption("controls", 0);
-                                            YTP.setOption("modestbranding", 1);
-                                            YTP.setOption("rel", 0);
-                                            YTP.setOption("showinfo", 0);
-                                        }, 1000);
-                                    }
-
-                                    function onPlayerStateChange(event) {
-                                        var YTP = event.target;
-                                        if (event.data === 1) {
-                                            var remains = YTP.getDuration() - YTP.getCurrentTime();
-                                            if (this.rewindTO)
-                                                clearTimeout(this.rewindTO);
-                                            this.rewindTO = setTimeout(function () {
-                                                YTP.seekTo(0);
-                                            }, (remains - 0.1) * 1000);
-                                        }
-                                    }
-
-                                    onYouTubeIframeAPIReady();
-                                });
-                            </script>
-                        </div>
-                    <?php endif; ?>
                     <div class="exc-title">
-                        <h1><?= $exData[0]['name'] ?></h1>
+                        <h1 class="pri-color-3"><?= $exData[0]['name'] ?></h1>
                     </div>
                     <div class="social mr-bottom-20">
-                        <p class="has-small-font-size pri-color-2" style="margin-bottom: 0">Follow us: </p>
+                        <p class="has-small-font-size pri-color-3" style="margin-bottom: 0">Follow us: </p>
                         <?php
                         $socials = get_field('follow_social', 'option');
                         if ($socials) {
@@ -137,9 +82,14 @@ $post_type = $post->post_type;
                             <?php }
                         } ?>
                     </div>
-                    <div class="exc-description">
+                    <div class="exc-description pri-color-3">
                         <?= $exData[0]['description'] ?>
                     </div>
+                    <?php if ($checkPath): ?>
+                        <div class="exc-video">
+                            <?= $elemlemnt ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
