@@ -2163,3 +2163,7 @@ ul.commentlist .cancle-btn {
     margin-top: 6%;
     border: 0.5px solid var(--secondary-color-1);
 }
+
+.hero-des > p {
+    color: #fff;
+}
