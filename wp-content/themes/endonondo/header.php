@@ -116,14 +116,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<?php global $template;?>
+	<?php global $template; ?>
 	<div id="wapper" class="<?php if (is_front_page()) {
 		echo 'home-main color-white';
-	}
-	elseif (basename($template) == 'single-best_exercise.php' || basename($template) == 'single-exercise.php')  {
+	} elseif (basename($template) == 'single-best_exercise.php' || basename($template) == 'single-exercise.php') {
 		echo 'home-main best-exercise';
-	}
-	else {
+	} else {
 		echo '';
 	} ?>">
 		<header id="header" class="position-relative">
@@ -143,6 +141,10 @@
 					<div class="btn-header">
 						<a href="<?php echo get_field('subscribe_link', 'option') ?>"
 							class="ed-btn btn-popup"><?php echo get_field('subscribe_title', 'option') ?></a>
+						<div class="en-logo">
+						<div class="en-logo-bg"></div>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/en-logo.svg" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -174,13 +176,15 @@
 				<div class="popup-bg">
 					<div class="popup-box list-flex">
 						<div class="featured image-fit">
-							<img class="on-pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/news-popup.png"
-								alt="">
+							<img class="on-pc"
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/news-popup.png" alt="">
 							<img class="on-sp"
-								src="<?php echo get_template_directory_uri(); ?>/assets/images/news-popup-mb.jpg" alt="">
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/news-popup-mb.jpg"
+								alt="">
 						</div>
 						<div class="info">
-							<img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/sticker-popup.svg"
+							<img class="close"
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/sticker-popup.svg"
 								alt="">
 							<div class="box">
 								<div class="feature">
@@ -200,7 +204,9 @@
 										<?php }
 									} ?>
 								</div>
-								<p class="note has-small-font-size"><i>* <a href="https://www.endomondo.com/privacy-policy">Your privacy</a> is important to
+								<p class="note has-small-font-size"><i>* <a
+											href="https://www.endomondo.com/privacy-policy">Your privacy</a> is
+										important to
 										us</i></p>
 							</div>
 						</div>
@@ -214,16 +220,16 @@
 			'post_type' => 'gp_elements',
 			'posts_per_page' => 5,
 			'meta_query' => array(
-				array(
-					'key' => 'emposition',
-					'value' => 'after_header'
-				),
-				array(
-					'key' => 'emdisplay',
-					'value' => sprintf('"%s"', $pty),
-					'compare' => 'LIKE'
+					array(
+						'key' => 'emposition',
+						'value' => 'after_header'
+					),
+					array(
+						'key' => 'emdisplay',
+						'value' => sprintf('"%s"', $pty),
+						'compare' => 'LIKE'
+					)
 				)
-			)
 		);
 		$the_query = new WP_Query($args);
 		while ($the_query->have_posts()):
@@ -235,16 +241,16 @@
 			'post_type' => 'gp_elements',
 			'posts_per_page' => 5,
 			'meta_query' => array(
-				array(
-					'key' => 'emposition',
-					'value' => 'after_header'
-				),
-				array(
-					'key' => 'display_with_id',
-					'value' => sprintf('"%s"', get_the_ID()),
-					'compare' => 'LIKE'
+					array(
+						'key' => 'emposition',
+						'value' => 'after_header'
+					),
+					array(
+						'key' => 'display_with_id',
+						'value' => sprintf('"%s"', get_the_ID()),
+						'compare' => 'LIKE'
+					)
 				)
-			)
 		);
 		$the_query = new WP_Query($args);
 		while ($the_query->have_posts()):
@@ -257,16 +263,16 @@
 				'post_type' => 'gp_elements',
 				'posts_per_page' => 5,
 				'meta_query' => array(
-					array(
-						'key' => 'emposition',
-						'value' => 'after_header'
-					),
-					array(
-						'key' => 'emdisplay',
-						'value' => 'home_page',
-						'compare' => 'LIKE'
+						array(
+							'key' => 'emposition',
+							'value' => 'after_header'
+						),
+						array(
+							'key' => 'emdisplay',
+							'value' => 'home_page',
+							'compare' => 'LIKE'
+						)
 					)
-				)
 			);
 			$the_query = new WP_Query($args);
 			while ($the_query->have_posts()):

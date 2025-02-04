@@ -154,7 +154,7 @@ $featureimg = get_field('fimg_default', 'option');
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="pri-color-3 text-center">
+                <div class="pri-color-3 text-center mr-bottom-20">
                     <?= $heroCalculator ?>
                 </div>
             </div>

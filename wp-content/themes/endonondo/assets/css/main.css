@@ -11,6 +11,7 @@
 html {
     overflow-x: hidden;
 }
+
 body {
     word-break: break-word;
     padding: 0;
@@ -314,6 +315,11 @@ main {
     flex: 1;
 }
 
+#header .container .list-flex .btn-header {
+    align-items: center;
+    position: relative;
+}
+
 #header .logo {
     display: flex;
     align-items: center;
@@ -354,13 +360,89 @@ main {
     color: var(--primary-color-3);
     background: transparent;
     cursor: pointer;
-    font-weight: 400;
-    font-size: var(--font-16);
-    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 10px;
     border: 1px solid var(--secondary-color-4);
-    line-height: 24px;
-    text-align: center;
+    line-height: 28px;
+    text-align: left;
+    min-width: 163px;
 }
+
+#header .en-logo {
+    height: 32px;
+    width: 32px;
+    right: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .en-logo .en-logo-bg {
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 20px;
+    animation: zoomLoop 2.8s ease-in-out infinite;
+    width: 100%;
+    height: 100%;
+}
+
+#header .en-logo img {
+    animation: dropDown 2.8s infinite ease-in-out;
+    position: absolute;
+    z-index: 2;
+}
+
+@keyframes zoomLoop {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0);
+    }
+
+    35% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    15% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    animation: dropDown 2s infinite ease-in-out;
+}
+
 
 #header .ed-btn:hover {
     border-color: none;
@@ -1281,7 +1363,7 @@ main {
 }
 
 @media (max-width: 834px) {
-    .popup .popup-bg .popup-box .info .close{
+    .popup .popup-bg .popup-box .info .close {
         width: auto;
         height: auto;
         right: 0;
@@ -1809,21 +1891,21 @@ main {
     margin-bottom: 0;
 }
 
-.single-main .sg-resources > h3 {
+.single-main .sg-resources>h3 {
     position: relative;
 }
 
-.single-main .sg-resources > h3::after {
+.single-main .sg-resources>h3::after {
     position: absolute;
     content: url(../images/dropdown.svg);
-    top:0;
+    top: 0;
     right: 0;
     transform: scale(1.7);
     line-height: 1.7;
     cursor: pointer;
 }
 
-.single-main .sg-resources > h3.up::after {
+.single-main .sg-resources>h3.up::after {
     transform: scale(1.7) rotate(180deg);
     line-height: 1;
 }
@@ -2138,8 +2220,8 @@ figcaption {
 }
 
 .single-main h2.list-start~h3,
-.exercise-list-start > h3,
-.exercise-equipment-start > h3,
+.exercise-list-start>h3,
+.exercise-equipment-start>h3,
 .exc-section-content .h2.list-start~h3 {
     position: relative;
 }
@@ -2149,8 +2231,8 @@ figcaption {
 }
 
 .single-main h2.list-start~h3:before,
-.exercise-list-start > h3:before,
-.exercise-equipment-start > h3:before,
+.exercise-list-start>h3:before,
+.exercise-equipment-start>h3:before,
 .exc-section-content h2.list-start~h3:before {
     counter-increment: section;
     content: counter(section) ". ";
@@ -2158,13 +2240,13 @@ figcaption {
     color: var(--primary-color-1);
 }
 
-.single-main  h2.list-step-start,
+.single-main h2.list-step-start,
 .exc-section-content h2.list-step-start {
     counter-reset: section;
 }
 
 
-.single-main  h2.list-step-start~h3:before,
+.single-main h2.list-step-start~h3:before,
 .exc-section-content h2.list-step-start~h3:before {
     counter-increment: section;
     content: "Step " counter(section) ". ";
@@ -2173,7 +2255,7 @@ figcaption {
     counter-increment: section;
 }
 
-.single-main  h2.list-end~h3,
+.single-main h2.list-end~h3,
 .exc-section-content h2.list-end~h3 {
     padding: 0 !important;
     border: none !important;
@@ -2181,7 +2263,7 @@ figcaption {
     color: #101010 !important;
 }
 
-.single-main  h2.list-end~h3:before,
+.single-main h2.list-end~h3:before,
 .exc-section-content h2.list-end~h3:before {
     display: none !important;
 }
@@ -4476,7 +4558,7 @@ figcaption {
     display: none;
 }
 
-.form-customer-feedback .form-feedback > p {
+.form-customer-feedback .form-feedback>p {
     margin-bottom: 10px;
 }
 
