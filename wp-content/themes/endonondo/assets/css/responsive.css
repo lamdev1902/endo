@@ -833,11 +833,6 @@
         flex: 1 0 50%;
     }
 
-    #header .ed-btn {
-        font-size: var(--font-14);
-        padding: 6px 16px;
-    }
-
     /* Product */
 
     .single-main .sg-right .sg-custom .sg-product-it .wp-block-column figure {
@@ -1383,6 +1378,21 @@
 
     .single-exercise .home-main.best-exercise {
         height: 620px;
+    }
+
+
+
+    #header .ed-btn {
+        font-size: 14px;
+        line-height: 22px;
+        min-width: 100px;
+        padding: 6px;
+    }
+
+    #header .en-logo {
+        width: 24px;
+        height: 24px;
+        right: 7px
     }
 
 }
