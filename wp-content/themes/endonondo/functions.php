@@ -637,6 +637,19 @@ function custom_default_feed_flip_callback()
     load_template($template);
 }
 
+function custom_default_feed_sm_callback()
+{
+    add_filter('pre_option_rss_use_excerpt', '__return_zero');
+
+    $template = locate_template('feed-rss2-custom-post-type-sm.php');
+
+    if (!$template) {
+        $template = __DIR__ . '/custom-rss-feed/feed-rss2-custom-post-type-sm.php';
+    }
+
+    load_template($template);
+}
+
 function change_default_feed_slug()
 {
     remove_action('do_feed', 'do_feed_rss2', 10, 1);
@@ -645,21 +658,13 @@ function change_default_feed_slug()
     remove_action('do_feed_atom', 'do_feed_atom', 10, 1);
 
     add_feed('nb-feed', 'custom_default_feed_callback');
+    add_feed('sn-feed', 'custom_default_feed_sm_callback');
 
     $feed = ['fb-feed','fb-feed-exercise', 'fb-feed-workouts', 'fb-feed-training', 'fb-feed-news'];
 
     foreach($feed as $f) {
         add_feed($f, 'custom_default_feed_flip_callback');
     }
-
-    // add_feed('fb-feed', 'custom_default_feed_flip_callback');
-
-    // add_feed('fb-feed-exercise', 'custom_default_feed_flip_callback');
-
-    // add_feed('fb-feed-workouts', 'custom_default_feed_flip_callback');
-    // add_feed('fb-feed-training', 'custom_default_feed_flip_callback');
-    // add_feed('fb-feed-news', 'custom_default_feed_flip_callback');
-
 }
 add_action('init', 'change_default_feed_slug');
 
