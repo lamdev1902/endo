@@ -139,7 +139,7 @@
 								src="<?php echo get_field('logo', 'option') ?>" alt=""></a>
 					</div>
 					<div class="btn-header">
-						<a href="<?php echo get_field('subscribe_link', 'option') ?>"
+						<a target="_blank" href="<?php echo get_field('subscribe_link', 'option') ?>"
 							class="ed-btn btn-popup"><?php echo get_field('subscribe_title', 'option') ?></a>
 						<div class="en-logo">
 						<div class="en-logo-bg"></div>
