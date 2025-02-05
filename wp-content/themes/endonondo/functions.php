@@ -1113,14 +1113,30 @@ function feed_title_field($post)
         <?php
 }
 
-function save_feed_title($post_id)
+function save_post_custome($post_id)
 {
-    if (!isset($_POST['feed_title'])) {
+
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
         return;
     }
 
-    $feed_title = sanitize_text_field($_POST['feed_title']);
-    update_post_meta($post_id, '_feed_title', $feed_title);
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if (isset($_POST['feed_title'])) {
+        $feed_title = sanitize_text_field($_POST['feed_title']);
+        update_post_meta($post_id, '_feed_title', $feed_title);
+    }
+
+    $post = get_post($post_id);
+    if ($post->post_status === 'publish' && $post->comment_status !== 'open') {
+        wp_update_post(array(
+            'ID' => $post_id,
+            'comment_status' => 'open',
+        ));
+    }
+    
 }
-add_action('save_post', 'save_feed_title');
+add_action('save_post', 'save_post_custome');
 ?>
