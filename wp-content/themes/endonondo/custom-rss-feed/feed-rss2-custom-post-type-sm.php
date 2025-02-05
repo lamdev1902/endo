@@ -52,8 +52,11 @@ do_action('rss_tag_pre', 'rss2');
         <language><?php bloginfo_rss('language'); ?></language>
         <ttl>15</ttl>
         <snf:logo>
-            <url><?php echo get_field('logo', 'option') ?></url>
+        <url><?php echo get_template_directory_uri(); ?>/assets/images/feed-logo.png</url>
         </snf:logo>
+        <snf:darkModeLogo>
+            <url><?php echo get_field('logo', 'option') ?></url>
+        </snf:darkModeLogo>
         <?php
         /**
          * Fires at the end of the RSS2 Feed Header.
@@ -100,7 +103,6 @@ do_action('rss_tag_pre', 'rss2');
                     <?php
                     ob_start();
                     ?>
-                    <figure>
                             <?php
                             $image_featured = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
                             if ($image_featured) { ?>
@@ -109,11 +111,7 @@ do_action('rss_tag_pre', 'rss2');
                                 <img src="<?php echo esc_url(get_field('fimg_default', 'option')); ?>" alt="">
                             <?php }
                             $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                            $caption = wp_get_attachment_caption($post_thumbnail_id);
-                            if (!empty($caption)) { ?>
-                                <figcaption><?php echo wp_kses_post($caption); ?></figcaption>
-                            <?php } ?>
-                        </figure>
+                                ?>
                     <?php
                     if ($exerciseId) {
                         get_template_part('template-parts/content', 'exercise');
