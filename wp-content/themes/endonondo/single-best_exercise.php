@@ -349,7 +349,7 @@ $featureimg = get_field('fimg_default', 'option');
             $query_posts = new WP_Query($args);
             if ($query_posts->have_posts()):
                 ?>
-                <div class="exercise__grid exercise__grid--1 grid mr-bottom-20">
+                <div class="exercise__grid exercise__grid--1 grid">
                     <?php
                     while ($query_posts->have_posts()):
                         $query_posts->the_post();
