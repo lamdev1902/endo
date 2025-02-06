@@ -2186,6 +2186,7 @@ ul.commentlist .cancle-btn {
 
 .single-exercise .bg-white {
     position: relative;
+    z-index: 1;
 }
 
 .single-exercise .bg-white::after {
