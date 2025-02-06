@@ -138,13 +138,17 @@
 					<div class="logo"><a href="<?php echo home_url(); ?>"><img
 								src="<?php echo get_field('logo', 'option') ?>" alt=""></a>
 					</div>
-					<div class="btn-header">
+					<!-- <div class="btn-header">
 						<a target="_blank" href="<?php echo get_field('subscribe_link', 'option') ?>"
 							class="ed-btn btn-popup"><?php echo get_field('subscribe_title', 'option') ?></a>
 						<div class="en-logo">
 						<div class="en-logo-bg"></div>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/en-logo.svg" alt="">
 						</div>
+					</div> -->
+					<div class="btn-header">
+						<a href="<?php echo get_field('subscribe_link', 'option') ?>"
+							class="ed-btn btn-popup"><?php echo get_field('subscribe_title', 'option') ?></a>
 					</div>
 				</div>
 			</div>

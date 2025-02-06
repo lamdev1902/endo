@@ -52,11 +52,8 @@ do_action('rss_tag_pre', 'rss2');
         <language><?php bloginfo_rss('language'); ?></language>
         <ttl>15</ttl>
         <snf:logo>
-        <url><?php echo get_template_directory_uri(); ?>/assets/images/feed-logo.png</url>
+            <url>https://www.endomondo.com/wp-content/uploads/2025/02/feed-logo.png</url>
         </snf:logo>
-        <snf:darkModeLogo>
-            <url><?php echo get_field('logo', 'option') ?></url>
-        </snf:darkModeLogo>
         <?php
         /**
          * Fires at the end of the RSS2 Feed Header.
