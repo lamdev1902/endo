@@ -737,9 +737,7 @@
         width: 155px !important;
     }
 
-    .best-exercise .best {
-        bottom: -26%;
-    }
+
 
     .best-exercise .best .exercise__grid-item-top-content-video {
         max-height: 170px;
@@ -774,10 +772,6 @@
         height: 195px;
     }
 
-    .best-exercise .all {
-        padding: 150px 0 20px 0;
-    }
-
     .exercise__grid-item-top-content-equipment {
         margin-bottom: 10px;
     }
@@ -793,18 +787,7 @@
 	.best-exercise .best h2 {
 		padding: 0 20px;
 	}
-}
-
-@media (max-width: 390px) {
-    .best-exercise .best {
-        bottom: -26%;
-    }
-}
-
-@media (max-width: 375px) {
-    .best-exercise .best {
-        bottom: -25%;
-    }
+    
 }
 
 @media (min-width: 481px) and (max-width: 834px) {
@@ -1350,17 +1333,14 @@
 
     .best .exercise__grid-item-top-content-video video,
     .best .exercise__grid-item-top-content-video iframe {
-        width: 620px;
-        height: 350px;
+        min-width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
     }
-
-    .all {
-        padding: 320px 0 20px 0;
-    }
-
 
     .exercise__grid-item-bottom {
         margin-bottom: 10px;
+        margin-top: -4px;
     }
 
     .medicine-table .wp-block-table table thead tr,

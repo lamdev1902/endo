@@ -356,7 +356,7 @@ main {
     top: -22px;
 }
 
-#header .ed-btn {
+/* #header .ed-btn {
     color: var(--primary-color-3);
     background: transparent;
     cursor: pointer;
@@ -367,6 +367,18 @@ main {
     line-height: 28px;
     text-align: left;
     min-width: 163px;
+} */
+
+#header .ed-btn {
+    color: var(--primary-color-3);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: var(--font-16);
+    padding: 10px 24px;
+    border: 1px solid var(--secondary-color-4);
+    line-height: 24px;
+    text-align: center;
 }
 
 #header .en-logo {

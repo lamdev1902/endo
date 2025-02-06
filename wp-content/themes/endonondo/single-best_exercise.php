@@ -51,7 +51,7 @@ $featureimg = get_field('fimg_default', 'option');
         <?php
         $heroCalculator = get_field('best_hero_description', $postid);
         ?>
-        <section class="hero mb">
+        <section class="hero mb  mr-bottom-20">
             <div class="page-top-white mb-top-black">
                 <div class="container">
                     <?php
@@ -248,7 +248,7 @@ $featureimg = get_field('fimg_default', 'option');
                 <?= get_field('all_exercise_title', $postid) ?: 'All Triceps Exercises' ?>
             </h2>
             <div class="pri-color-2">
-                <?= get_field('all_exercise_description', $postid); ?>
+                <p><?= get_field('all_exercise_description', $postid); ?></p>
             </div>
             <div class="all__flex flex">
                 <div class="all__flex-item all__flex-item--trending all__flex-item--active text-center filter-active"

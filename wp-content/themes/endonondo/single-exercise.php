@@ -87,7 +87,11 @@ $post_type = $post->post_type;
                     </div>
                     <?php if ($checkPath): ?>
                         <div class="exc-video">
-                            <?= $elemlemnt ?>
+                            <div class="exc-container">
+                                <div class="container">
+                                    <?= $elemlemnt ?>
+                                </div>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -103,7 +107,7 @@ $post_type = $post->post_type;
         $contentSecondary = "";
         $contentEquipment = "";
         ?>
-        <section class="exc-content">
+        <section class="exc-content bg-white">
             <div class="container">
                 <div class="exc-container">
                     <?php foreach ($contents as $content): ?>
@@ -227,7 +231,7 @@ $post_type = $post->post_type;
 
         if ($primaryDatas):
             ?>
-            <section class="exc-primary">
+            <section class="exc-primary bg-white">
                 <div class="container">
                     <div class="exc-container bd-bot">
                         <div class="muscle-title">
@@ -250,10 +254,12 @@ $post_type = $post->post_type;
                 </div>
             </section>
             <?php if (!empty($contentPrimary)): ?>
-                <div class="container">
-                    <div class="exc-container">
-                        <div class="muscle-text bd-bot exercise-list-start">
-                            <?= $contentPrimary ?>
+                <div class="ct-primary bg-white">
+                    <div class="container bg-white">
+                        <div class="exc-container">
+                            <div class="muscle-text bd-bot exercise-list-start">
+                                <?= $contentPrimary ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,7 +288,7 @@ $post_type = $post->post_type;
         }
         if ($secondaryDatas):
             ?>
-            <section class="exc-secondary">
+            <section class="exc-secondary bg-white">
                 <div class="container">
                     <div class="exc-container bd-bot">
                         <div class="muscle-title">
@@ -303,10 +309,12 @@ $post_type = $post->post_type;
                 </div>
             </section>
             <?php if (!empty($contentSecondary)): ?>
-                <div class="container">
-                    <div class="exc-container">
-                        <div class="muscle-text bd-bot exercise-list-start">
-                            <?= $contentSecondary ?>
+                <div class="ct-secondary bg-white">
+                    <div class="container ">
+                        <div class="exc-container">
+                            <div class="muscle-text bd-bot exercise-list-start">
+                                <?= $contentSecondary ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -353,7 +361,7 @@ $post_type = $post->post_type;
 
         if ($equipmentDatas):
             ?>
-            <section class="exc-equipment">
+            <section class="exc-equipment bg-white">
                 <div class="container">
                     <div class="exc-container bd-bot">
                         <div class="muscle-title">
@@ -403,7 +411,7 @@ $post_type = $post->post_type;
 
         if ($variationsDatas):
             ?>
-            <section class="exc-variations">
+            <section class="exc-variations bg-white">
                 <div class="container">
                     <div class="exc-container bd-bot">
                         <div class="muscle-title">
@@ -455,7 +463,7 @@ $post_type = $post->post_type;
 
         if ($alternativeDatas):
             ?>
-            <section class="exc-alternatives">
+            <section class="exc-alternatives bg-white">
                 <div class="container">
                     <div class="exc-container bd-bot">
                         <div class="muscle-title">
@@ -490,7 +498,7 @@ $post_type = $post->post_type;
             </section>
         <?php endif; ?>
     <?php endif; ?>
-    <section class="exc-section-content single-main">
+    <section class="exc-section-content bg-white single-main">
         <div class="container">
             <div class="exc-container bd-bot">
                 <?php the_content(); ?>
@@ -580,8 +588,10 @@ $post_type = $post->post_type;
         </aside>
     </div>
     <?php if (comments_open()): ?>
-        <div class="container">
-            <?php comments_template(); ?>
+        <div class="ss-comment bg-white">
+            <div class="container">
+                <?php comments_template(); ?>
+            </div>
         </div>
     <?php endif; ?>
 </main>
