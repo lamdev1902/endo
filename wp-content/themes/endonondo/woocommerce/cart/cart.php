@@ -49,6 +49,10 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
     .woocommerce .quantity .qty {
       padding-left: 0px;
     }
+
+    .woocommerce-cart .woocommerce table.shop_table td {
+	        width: 100% !important;
+    }
   }
 </style>
 <div class="ht-woo-header">
