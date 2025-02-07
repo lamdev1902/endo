@@ -12,6 +12,11 @@ $subscription_policy = get_field('subscription_policy', 'option');
         margin: 0 5px;
         vertical-align: middle;
     }
+    @media(max-width: 767px) {
+        .wc-block-components-address-card__edit {
+        width: 12% !important;
+        }
+    }
 </style>
 <div id="content" class="site-content home-page site-content-checkout">
     <div class="container">
