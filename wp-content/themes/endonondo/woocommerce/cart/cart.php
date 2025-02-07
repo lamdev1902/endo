@@ -20,7 +20,37 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_cart' ); 
 $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
 ?>
+<style>
+  .cart-prod-info>a {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+  }
 
+  .woocommerce .quantity .qty {
+    padding-left: 15px;
+  }
+
+  .woocommerce table.shop_table td {
+    list-style: 26px !important;
+  }
+
+  .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-family: Inter !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    text-align: center !important;
+    color: #FFF !important;
+  }
+
+  @media(max-width: 767px) {
+    .woocommerce .quantity .qty {
+      padding-left: 0px;
+    }
+  }
+</style>
 <div class="ht-woo-header">
   <h2>Your Cart</h2>
   <a href="<?=$shop_page_url?>">Continue to shopping</a>
