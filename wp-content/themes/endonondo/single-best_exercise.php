@@ -343,7 +343,8 @@ $featureimg = get_field('fimg_default', 'option');
                 'post_type' => 'exercise',
                 'paged' => $paged,
                 'post_name__in' => $slugs,
-                'orderby' => 'post_views'
+                'orderby' => 'post_views',
+                'posts_per_page' => -1,
             ];
             
             $query_posts = new WP_Query($args);
