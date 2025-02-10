@@ -472,4 +472,16 @@ function custom_save_best_exercise_field($post_id)
 }
 add_action('save_post_best_exercise', 'custom_save_best_exercise_field');
 
+function handle_scheduled_post_meta($ID)
+{
+    custom_save_best_exercise_field($ID);
+}
+add_action('future_best_exercise', 'handle_scheduled_post_meta', 10, 3);
+
+function publish_ex_post_meta($ID)
+{
+    custom_save_best_exercise_field($ID);
+}
+add_action('publish_best_exercise', 'publish_ex_post_meta', 10, 3);
+
 new Exercise_Survey_API();
