@@ -2187,7 +2187,8 @@ figcaption {
 .single-main h2.list-start,
 .exercise-list-start,
 .exercise-equipment-start,
-.exc-section-content h2.list-start {
+.exc-section-content h2.list-start,
+.exercise__grid {
     counter-reset: section;
 }
 
@@ -2233,6 +2234,7 @@ figcaption {
 
 .single-main h2.list-start~h3,
 .exercise-list-start>h3,
+.exercise__grid h3,
 .exercise-equipment-start>h3,
 .exc-section-content .h2.list-start~h3 {
     position: relative;
@@ -2245,7 +2247,8 @@ figcaption {
 .single-main h2.list-start~h3:before,
 .exercise-list-start>h3:before,
 .exercise-equipment-start>h3:before,
-.exc-section-content h2.list-start~h3:before {
+.exc-section-content h2.list-start~h3:before,
+.exercise__grid h3:before {
     counter-increment: section;
     content: counter(section) ". ";
     line-height: 32px;
