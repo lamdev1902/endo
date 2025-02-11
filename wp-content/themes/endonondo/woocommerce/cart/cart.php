@@ -45,6 +45,10 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
     color: #FFF !important;
   }
 
+  tr.woocommerce-cart-form__cart-item.cart_item td {
+    vertical-align: top;
+  }
+
   @media(max-width: 767px) {
     .woocommerce .quantity .qty {
       padding-left: 0px;
@@ -137,13 +141,24 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
               ?>
               <div class="cat-item">
                 <?php 
-                foreach ( $terms_cat as $t => $term ) {
-                  $term_link = get_term_link( $term->term_id, 'product_cat' );
-                  echo '<a href="'.$term_link.'">' . esc_html( $term->name ) . '</a>';
-                  if($t > 0) echo ' | ';
-                }
+                  $weight = $_product->get_weight();
+                  $unit   = get_option('woocommerce_weight_unit');
+                  $weight_display = !empty($weight) ? $weight . $unit : '';
+                  $category_displayed = false;
+
+                  foreach ($terms_cat as $t => $term) {
+                      if ($term->name !== 'Uncategorized') {
+                          $term_link = get_term_link($term->term_id, 'product_cat');
+                          echo '<a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a>';
+                          if ($t > 0) echo ' | ';
+                          $category_displayed = true;
+                      }
+                  }
+
+                  if ($category_displayed && !empty($weight_display)) {
+                      echo ' | <a href="#">' . esc_html($weight_display) . '</a>';
+                  }
                 ?>
-                | <a href="#">20mg</a>
               </div>
             <?php } ?>
 
