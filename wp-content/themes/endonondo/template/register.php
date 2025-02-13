@@ -110,7 +110,7 @@ the_post();
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/google1.png" /></a>
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/facebook1.png" /></a>
 				</div>
-				<div class="login-privacy">By continuing with Google, Apple, or Email, you agree to EH Project’s <a href="#">Terms of Service</a> and  <a href="#">Privacy Policy</a>.</div>
+				<div class="login-privacy"><?php  echo get_field('terms_of_use','option'); ?></div>
 			</div>
 		</div>
 		<div class="login-right">

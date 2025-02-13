@@ -46,12 +46,12 @@ the_post();
 				</div>
 				<form id="formLogin" action="" method="post">
 					<p class="login-username">
-						<label for="user_login">Username<span>*</span></label>
+						<label for="user_login">Email<span>*</span></label>
 						<input type="text" name="login_user" id="user_login" autocomplete="username" class="input-it input" value="" size="20">
 					</p>
 					<p class="login-password">
 						<label for="user_pass">Password<span>*</span></label>
-						<span class="password-note text-center"><a href="/forgot-password">Forgot password</a></span>
+						<span style="display: none" class="password-note text-center"><a href="/forgot-password">Forgot password</a></span>
 						<input type="password" name="login_pass" id="user_password" autocomplete="current-password" spellcheck="false" class="input-it input" value="" size="20">
 						<span class="pass-hide" id="togglePassword"></span>
 					</p>
@@ -70,7 +70,7 @@ the_post();
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/google1.png" /></a>
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/facebook1.png" /></a>
 				</div>
-				<div class="login-privacy">By continuing with Google, Apple, or Email, you agree to Endomondo’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</div>
+				<div class="login-privacy"><?php  echo get_field('terms_of_use','option'); ?></div>
 			</div>
 		</div>
 		<div class="login-right">

@@ -2199,3 +2199,21 @@ html {
     font-size: 16px;
     opacity: 1;
 }
+
+/* 11/02 */
+.woocommerce-MyAccount-navigation ul li{
+	margin-bottom: 20px;
+    font-weight: 500;
+}
+.woocommerce-MyAccount-navigation ul li a{
+	color: #9F9F9F;
+}
+.woocommerce-MyAccount-navigation ul li.is-active a{
+	color: #000;
+}
+.woocommerce-MyAccount-content strong{
+	font-weight: 700;
+}
+.woocommerce-MyAccount-content a{
+	color: #87AA14;
+}
