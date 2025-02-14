@@ -14,8 +14,19 @@ $subscription_policy = get_field('subscription_policy', 'option');
     }
     @media(max-width: 767px) {
         .wc-block-components-address-card__edit {
-        width: 12% !important;
+            width: 10% !important;
         }
+    }
+
+    @media(max-width: 430px) {
+        .wc-block-components-address-card__edit {
+            width: 15% !important;
+        }
+    }
+
+    .wc-block-components-spinner {
+        margin-left: -50%;
+        margin-top: -15px;
     }
 </style>
 <div id="content" class="site-content home-page site-content-checkout">

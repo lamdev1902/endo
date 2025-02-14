@@ -143,7 +143,7 @@
 			.user-menu {
 				position: fixed;
 				top: 0;
-				right: -500px;
+				right: -100%;
 				width: 500px;
 				height: 100%;
 				background: white;

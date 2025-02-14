@@ -45,6 +45,10 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
     color: #FFF !important;
   }
 
+  tr.woocommerce-cart-form__cart-item.cart_item td {
+    vertical-align: top;
+  }
+
   @media(max-width: 767px) {
     .woocommerce .quantity .qty {
       padding-left: 0px;
@@ -53,6 +57,23 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
     .woocommerce-cart .woocommerce table.shop_table td {
 	        width: 100% !important;
     }
+  }
+
+  .quantity.sold-individually .minus,
+  .quantity.sold-individually .plus {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .quantity .sold-individually {
+    pointer-events: none;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #999;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 12px;
   }
 </style>
 <div class="ht-woo-header">
@@ -137,13 +158,24 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
               ?>
               <div class="cat-item">
                 <?php 
-                foreach ( $terms_cat as $t => $term ) {
-                  $term_link = get_term_link( $term->term_id, 'product_cat' );
-                  echo '<a href="'.$term_link.'">' . esc_html( $term->name ) . '</a>';
-                  if($t > 0) echo ' | ';
-                }
+                  $weight = $_product->get_weight();
+                  $unit   = get_option('woocommerce_weight_unit');
+                  $weight_display = !empty($weight) ? $weight . $unit : '';
+                  $category_displayed = false;
+
+                  foreach ($terms_cat as $t => $term) {
+                      if ($term->name !== 'Uncategorized') {
+                          $term_link = get_term_link($term->term_id, 'product_cat');
+                          echo '<a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a>';
+                          if ($t > 0) echo ' | ';
+                          $category_displayed = true;
+                      }
+                  }
+
+                  if ($category_displayed && !empty($weight_display)) {
+                      echo ' | <a href="#">' . esc_html($weight_display) . '</a>';
+                  }
                 ?>
-                | <a href="#">20mg</a>
               </div>
             <?php } ?>
 
@@ -152,24 +184,34 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
               <div class="product-quantity-wrap">
                 <?php
                 if ( $_product->is_sold_individually() ) {
-                 $min_quantity = 1;
-                 $max_quantity = 1;
+                  $product_quantity = woocommerce_quantity_input(
+                    array(
+                      'input_name'   => "cart[{$cart_item_key}][qty]",
+                      'input_value'  => 1,
+                      'max_value'    => 1,
+                      'min_value'    => 0,
+                      'product_name' => $product_name,
+                      'classes'      => array('sold-individually')
+                    ),
+                    $_product,
+                    false
+                  );
                } else {
                  $min_quantity = 0;
                  $max_quantity = $_product->get_max_purchase_quantity();
-               }
 
-               $product_quantity = woocommerce_quantity_input(
-                 array(
-                  'input_name'   => "cart[{$cart_item_key}][qty]",
-                  'input_value'  => $cart_item['quantity'],
-                  'max_value'    => $max_quantity,
-                  'min_value'    => $min_quantity,
-                  'product_name' => $product_name,
-                ),
-                 $_product,
-                 false
-               );
+                 $product_quantity = woocommerce_quantity_input(
+                  array(
+                   'input_name'   => "cart[{$cart_item_key}][qty]",
+                   'input_value'  => $cart_item['quantity'],
+                   'max_value'    => $max_quantity,
+                   'min_value'    => $min_quantity,
+                   'product_name' => $product_name,
+                 ),
+                  $_product,
+                  false
+                );
+               }
 
             echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
             ?>
@@ -213,24 +255,33 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
           <div class="product-quantity-wrap">
             <?php
             if ( $_product->is_sold_individually() ) {
-             $min_quantity = 1;
-             $max_quantity = 1;
+              $product_quantity = woocommerce_quantity_input(
+                array(
+                  'input_name'   => "cart[{$cart_item_key}][qty]",
+                  'input_value'  => 1,
+                  'max_value'    => 1,
+                  'min_value'    => 0,
+                  'product_name' => $product_name,
+                  'classes'      => array('sold-individually')
+                ),
+                $_product,
+                false
+              );
            } else {
              $min_quantity = 0;
              $max_quantity = $_product->get_max_purchase_quantity();
+             $product_quantity = woocommerce_quantity_input(
+              array(
+               'input_name'   => "cart[{$cart_item_key}][qty]",
+               'input_value'  => $cart_item['quantity'],
+               'max_value'    => $max_quantity,
+               'min_value'    => $min_quantity,
+               'product_name' => $product_name,
+             ),
+              $_product,
+              false
+            );
            }
-
-           $product_quantity = woocommerce_quantity_input(
-             array(
-              'input_name'   => "cart[{$cart_item_key}][qty]",
-              'input_value'  => $cart_item['quantity'],
-              'max_value'    => $max_quantity,
-              'min_value'    => $min_quantity,
-              'product_name' => $product_name,
-            ),
-             $_product,
-             false
-           );
 
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 						?>
