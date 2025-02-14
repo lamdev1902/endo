@@ -72,11 +72,11 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 						<div class="info">
 							<div class="author-by" itemscope>
 								<?php if ($post_type == 'single_reviews' || $post_type == 'round_up'): ?>
-									<time class="updated has-small-font-size" datetime="<?php get_the_date('c'); ?>"
+									<time class="updated has-small-font-size" datetime="<?php the_date('c'); ?>"
 										itemprop="dateModified"><?php
 											echo __('Updated on', 'hc_theme');
 										?>
-										<?php the_modified_date('F d, Y'); ?></time>
+										<?php the_date('F d, Y'); ?></time>
 								<?php else: ?>
 									<time class="updated has-small-font-size" datetime="<?php the_modified_date('c'); ?>"
 										itemprop="dateModified"><?php
