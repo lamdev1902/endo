@@ -4,7 +4,7 @@
  *
  */
 $args = array(
-    'post_type' => ['informational_posts', 'exercise'],
+    'post_type' => ['informational_posts', 'exercise', 'best_exercise'],
     'posts_per_page' => 10,
     'post_status' => 'publish',
     'orderby' => 'date',
@@ -93,6 +93,7 @@ do_action('rss_tag_pre', 'rss2');
             the_post();
             $exerciseId = get_post_meta($post->ID, 'exercise_name', true);
             $title = get_post_meta($post->ID, '_feed_title', true);
+            $pt = $post->post_type;
             ?>
             <item>
                 <title><![CDATA[<?php echo html_entity_decode($title ?: get_the_title()); ?>]]></title>
@@ -144,6 +145,8 @@ do_action('rss_tag_pre', 'rss2');
                     <?php
                     if ($exerciseId) {
                         get_template_part('template-parts/content', 'exercise');
+                    }elseif($pt == 'best_exercise') {
+                        get_template_part('template-parts/content', 'best_exercise');
                     }
                     $the_content = get_the_content();
                     $the_content = preg_replace_callback(

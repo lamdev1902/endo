@@ -5,7 +5,7 @@
  */
 $args = array(
     'post_type' => ['informational_posts', 'exercise'],
-    'posts_per_page' => 10,
+    'posts_per_page' => 20,
     'offset' => 10,
     'post_status' => 'publish',
     'orderby' => 'date',
@@ -39,7 +39,19 @@ do_action('rss_tag_pre', 'rss2');
         <title>Endomondo</title>
         <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
         <link><?= home_url(); ?></link>
-        <description><?php bloginfo_rss('description'); ?></description>
+        <description><?php
+        $description = get_field('smartnews_description', 'option');
+        if (!empty($description)) {
+            if (strlen($description) > 100) {
+                $trimmed_description = substr($description, 0, 100);
+                echo $trimmed_description;
+            } else {
+                echo $description;
+            }
+        } else {
+            echo '';
+        }
+        ?></description>
         <lastBuildDate>
             <?php
             $build_date = get_feed_build_date('Y-m-d H:i:s');
@@ -52,7 +64,7 @@ do_action('rss_tag_pre', 'rss2');
         <language><?php bloginfo_rss('language'); ?></language>
         <ttl>15</ttl>
         <snf:logo>
-            <url>https://www.endomondo.com/wp-content/uploads/2025/02/feed-logo.png</url>
+            <url><?= get_field('feed_logo', 'option') ?></url>
         </snf:logo>
         <?php
         /**
@@ -108,7 +120,7 @@ do_action('rss_tag_pre', 'rss2');
                                 <img src="<?php echo esc_url(get_field('fimg_default', 'option')); ?>" alt="">
                             <?php }
                             $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                                ?>
+                            ?>
                     <?php
                     if ($exerciseId) {
                         get_template_part('template-parts/content', 'exercise');
@@ -219,7 +231,7 @@ do_action('rss_tag_pre', 'rss2');
                     $image_url = get_field('fimg_default', 'option');
                 }
                 ?>
-                <media:thumbnail url="<?= $image_url ?>"/>
+                <media:thumbnail url="<?= $image_url ?>" />
                 <dc:language><?php bloginfo_rss('language'); ?></dc:language>
                 <?php do_action('rss2_item'); ?>
             </item>
