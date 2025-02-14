@@ -25,6 +25,16 @@ $queryM = "
 $featureimg = get_field('fimg_default', 'option');
 ?>
 <div class="top-best">
+    <?php
+    $heroCalculator = get_field('best_hero_description', $postid);
+    ?>
+    <section class="hero mb  mr-bottom-20">
+        <div class="hero__container container">
+            <div class="hero-des pri-color-3 text-center mr-bottom-20">
+                <?= $heroCalculator ?>
+            </div>
+        </div>
+    </section>
     <?php if ($listBest): ?>
         <section class="best">
             <div class="best__container container">
@@ -77,6 +87,12 @@ $featureimg = get_field('fimg_default', 'option');
 </div>
 
 <section class="all best-ajax-section">
+    <h2 class="all__title pri-color-2 text-center">
+        <?= get_field('all_exercise_title', $postid) ?: 'All Triceps Exercises' ?>
+    </h2>
+    <div class="pri-color-2">
+        <p><?= get_field('all_exercise_description', $postid); ?></p>
+    </div>
     <div class="all__container container exc-container">
         <?php
 
