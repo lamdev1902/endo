@@ -16,7 +16,7 @@ if ($endparts != 'feed') {
 $pt = ['informational_posts'];
 
 if($endparts == 'exercise') {
-    $pt = ['informational_posts', 'exercise'];
+    $pt = ['informational_posts', 'exercise', 'best_exercise'];
 }
 
 $args = array(

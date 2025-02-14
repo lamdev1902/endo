@@ -1,59 +1,62 @@
 <?php
-$app = get_field('intro_app', 'option');
-if (!empty($app[0])):
-	$app = $app[0];
-	if (!empty($app['title'])) {
-		if (strpos($app['title'], 'Enfit') !== false) {
-			$app['title'] = str_replace('Enfit', '<strong>Enfit</strong>', $app['title']);
+if (function_exists('is_product_category') && !is_product_category()) {
+	$app = get_field('intro_app', 'option');
+	if (!empty($app[0])):
+		$app = $app[0];
+		if (!empty($app['title'])) {
+			if (strpos($app['title'], 'Enfit') !== false) {
+				$app['title'] = str_replace('Enfit', '<strong>Enfit</strong>', $app['title']);
+			}
 		}
-	}
 
-	if (!empty($app['discount'])) {
-		$app['discount'] = preg_replace('/(\d+%)/', '<strong>$1</strong>', $app['discount']);
-	}
-	$storeLink = get_field('footer_store', 'option');
-	$explore = !empty($app['explore']) ? $app['explore'] : '';
-	$store = $storeLink ?: '';
-?>
+		if (!empty($app['discount'])) {
+			$app['discount'] = preg_replace('/(\d+%)/', '<strong>$1</strong>', $app['discount']);
+		}
+		$storeLink = get_field('footer_store', 'option');
+		$explore = !empty($app['explore']) ? $app['explore'] : '';
+		$store = $storeLink ?: '';
+		?>
 
-	<section class="app-section mb">
-		<div class="container">
-			<div class="content app-content">
-				<?php if (!empty($app['title'])): ?>
-					<p class="has-x-large-font-size"><?= $app['title'] ?></p>
-				<?php endif; ?>
-				<?php if (!empty($app['description'])): ?>
-					<p><?= $app['description'] ?></p>
-				<?php endif; ?>
-				<div class="enfit-action mr-bottom-20 flex">
-					<?php if ($explore): ?>
-						<a href="<?= $explore ?>" id="">Explore Now</a>
+		<section class="app-section mb">
+			<div class="container">
+				<div class="content app-content">
+					<?php if (!empty($app['title'])): ?>
+						<p class="has-x-large-font-size"><?= $app['title'] ?></p>
 					<?php endif; ?>
-					<?php if ($store): ?>
-						<a target="_blank" href="<?= $store ?>" class="home-store">
-							<img src="<?= get_template_directory_uri() . '/assets/images/enfit/store.svg' ?>" alt="">
-						</a>
+					<?php if (!empty($app['description'])): ?>
+						<p><?= $app['description'] ?></p>
+					<?php endif; ?>
+					<div class="enfit-action mr-bottom-20 flex">
+						<?php if ($explore): ?>
+							<a href="<?= $explore ?>" id="">Explore Now</a>
+						<?php endif; ?>
+						<?php if ($store): ?>
+							<a target="_blank" href="<?= $store ?>" class="home-store">
+								<img src="<?= get_template_directory_uri() . '/assets/images/enfit/store.svg' ?>" alt="">
+							</a>
+						<?php endif; ?>
+					</div>
+					<?php if (!empty($app['discount'])): ?>
+						<p class="discount"><?= $app['discount'] ?></p>
+					<?php endif; ?>
+					<?php
+					$socials = get_field('follow_social', 'option');
+					if ($socials):
+						?>
+						<div class="social flex">
+							<p class="has-small-font-size pri-color-2" style="margin-bottom: 0">Follow us: </p>
+							<?php foreach ($socials as $social): ?>
+								<a target="_blank" href="<?php echo $social['link']; ?>"><img alt="<?= $social['icon']['alt']; ?>"
+										src="<?= $social['icon']['url']; ?>" /></a>
+							<?php endforeach; ?>
+						</div>
 					<?php endif; ?>
 				</div>
-				<?php if (!empty($app['discount'])): ?>
-					<p class="discount"><?= $app['discount'] ?></p>
-				<?php endif; ?>
-				<?php
-				$socials = get_field('follow_social', 'option');
-				if ($socials):
-				?>
-					<div class="social flex">
-						<p class="has-small-font-size pri-color-2" style="margin-bottom: 0">Follow us: </p>
-						<?php foreach ($socials as $social): ?>
-							<a target="_blank" href="<?php echo $social['link']; ?>"><img alt="<?= $social['icon']['alt']; ?>"
-									src="<?= $social['icon']['url']; ?>" /></a>
-						<?php endforeach; ?>
-					</div>
-				<?php endif; ?>
 			</div>
-		</div>
-	</section>
-<?php endif; ?>
+		</section>
+	<?php endif;
+}
+?>
 <footer id="footer">
 	<div class="ft-top">
 		<div class="container list-flex flex-two">
@@ -65,10 +68,10 @@ if (!empty($app[0])):
 					$social = get_field('social', 'option');
 					if ($social) {
 						foreach ($social as $social) {
-					?>
+							?>
 							<a target="_blank" href="<?php echo $social['link']; ?>"><img src="<?= $social['icon']['url']; ?>"
 									alt="<?= $social['icon']['alt']; ?>" /></a>
-					<?php }
+						<?php }
 					} ?>
 				</div>
 				<div class="ft-form">
@@ -222,9 +225,9 @@ $args = array(
 $the_query = new WP_Query($args);
 while ($the_query->have_posts()):
 	$the_query->the_post();
-?>
+	?>
 	<div class="ads-script"><?php echo get_field('emcode', $post->ID, false, false); ?></div>
-<?php
+	<?php
 endwhile;
 wp_reset_query();
 ?>
