@@ -105,6 +105,7 @@ $post_type = $post->post_type;
         $contentPrimary = "";
         $contentSecondary = "";
         $contentEquipment = "";
+        $c = 1;
         ?>
         <section class="exc-content bg-white">
             <div class="container">
@@ -163,8 +164,11 @@ $post_type = $post->post_type;
                             }
                             ?>
                         <?php endif; ?>
+                        <?php if ($c == 1): ?>
+                            <?php get_template_part('template-parts/content', 'enfit'); ?>
+                        <?php endif; ?>
+                        <?php $c++; ?>
                     <?php endforeach; ?>
-                    <?php get_template_part('template-parts/content', 'enfit'); ?>
                 </div>
             </div>
         </section>

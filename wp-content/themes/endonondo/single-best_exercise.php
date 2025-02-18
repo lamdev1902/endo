@@ -265,6 +265,7 @@ $featureimg = get_field('fimg_default', 'option');
                     <p class="has-medium-font-size pri-color-2">Discussion</p>
                 </div>
             </div>
+            <?php get_template_part('template-parts/content', 'enfit'); ?>
             <?php
             $posts_per_page = 10;
 
