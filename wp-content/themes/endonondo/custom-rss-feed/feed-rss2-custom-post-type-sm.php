@@ -14,6 +14,7 @@ $args = array(
 query_posts($args); // phpcs:ignore WordPress.WP.DiscouragedFunctions.query_posts_query_posts
 header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
 $more = 1;
+$i = 1;
 echo '<?xml version="1.0" encoding="' . esc_attr(get_option('blog_charset')) . '"?' . '>';
 /**
  * Fires between the xml and rss tags in a feed.
@@ -37,7 +38,6 @@ do_action('rss_tag_pre', 'rss2');
 
     <channel>
         <title>Endomondo</title>
-        <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
         <link><?= home_url(); ?></link>
         <description><?php
         $description = get_field('smartnews_description', 'option');
@@ -225,6 +225,21 @@ do_action('rss_tag_pre', 'rss2');
                     ?>
                     ]]>
                 </content:encoded>
+                <snf:analytics><![CDATA[
+    <script>
+        (function() {
+            var gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-PYTK4EMG0G";
+            document.head.appendChild(gtagScript);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PYTK4EMG0G');
+        })();
+    </script>
+]]></snf:analytics>
                 <?php rss_enclosure(); ?>
                 <?php $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 if (!$image_url) {
@@ -235,6 +250,7 @@ do_action('rss_tag_pre', 'rss2');
                 <dc:language><?php bloginfo_rss('language'); ?></dc:language>
                 <?php do_action('rss2_item'); ?>
             </item>
+            <?php $i++;?>
         <?php endwhile; ?>
 
     </channel>

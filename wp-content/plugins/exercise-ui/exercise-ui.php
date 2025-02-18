@@ -453,6 +453,15 @@ add_action('save_post_exercise', 'custom_save_exercise_name_field');
 
 function custom_save_best_exercise_field($post_id)
 {
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+    return;
+  }
+
+  $post = get_post($post_id);
+  if (!$post || in_array($post->post_status, ['auto-draft', 'inherit'])) {
+    return;
+  }
+
   $options = [
     'best_exercise_list',
     'all_mt_list',
@@ -464,24 +473,29 @@ function custom_save_best_exercise_field($post_id)
   foreach ($options as $op) {
     if (isset($_POST[$op])) {
       update_post_meta($post_id, $op, implode(',', $_POST[$op]));
-    } else {
+    } elseif (get_post_meta($post_id, $op, true) === false) {
       update_post_meta($post_id, $op, '');
     }
   }
-
 }
-add_action('save_post_best_exercise', 'custom_save_best_exercise_field');
+add_action('save_post_best_exercise', 'custom_save_best_exercise_field', 10, 2);
 
-function handle_scheduled_post_meta($ID)
+function handle_scheduled_post_meta($post_id, $post)
 {
-    custom_save_best_exercise_field($ID);
+  if ($post->post_status === 'future') {
+    custom_save_best_exercise_field($post_id);
+  }
 }
-add_action('future_best_exercise', 'handle_scheduled_post_meta', 10, 3);
+add_action('future_to_publish', 'handle_scheduled_post_meta', 10, 2);
 
-function publish_ex_post_meta($ID)
+function publish_ex_post_meta($post_id, $post)
 {
-    custom_save_best_exercise_field($ID);
+  if ($post->post_status === 'publish') {
+    custom_save_best_exercise_field($post_id);
+  }
 }
-add_action('publish_best_exercise', 'publish_ex_post_meta', 10, 3);
+add_action('draft_to_publish', 'publish_ex_post_meta', 10, 2);
+add_action('pending_to_publish', 'publish_ex_post_meta', 10, 2);
+
 
 new Exercise_Survey_API();

@@ -22,7 +22,6 @@ $post_type = $post->post_type;
     if ($exData) {
         $arrVideo = array(
             $exData[0]['video_white_male'],
-            $exData[0]['video_green'],
             $exData[0]['video_transparent'],
         );
 
