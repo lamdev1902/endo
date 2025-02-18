@@ -77,9 +77,9 @@ class Exercise extends Manage_Exercise
             $exercise_table = $wpdb->prefix . 'exercise';
             $schedule_table = $wpdb->prefix . 'exercise_schedule';
 
-            if(!empty($this->searchOption)){
+            if (!empty($this->searchOption)) {
                 $exercise_query = "SELECT id,name FROM $exercise_table WHERE id Like '%{$this->searchOption}%' OR name LIKE '%{$this->searchOption}%' OR other_name LIKE '%{$this->searchOption}%'";
-            }else {
+            } else {
                 $exercise_query = "SELECT id,name FROM $exercise_table";
             }
 
@@ -118,7 +118,7 @@ class Exercise extends Manage_Exercise
                         $note = '';
 
                         if (!empty($this->schedule)) {
-                            
+
                             $schedule = $this->schedule;
 
                             if (!empty($schedule['duration'])) {
@@ -134,7 +134,7 @@ class Exercise extends Manage_Exercise
                             if (!empty($schedule['note'][$key])) {
                                 $note = $schedule['note'][$key];
                             }
-                            if(!$this->searchOption){
+                            if (!$this->searchOption) {
                                 if (!isset($exercise_data[$exercise_id])) {
                                     $exercise_data[$exercise_id] = [
                                         'id' => $exercise_id,
@@ -146,26 +146,26 @@ class Exercise extends Manage_Exercise
                                     if ($duration) {
                                         $exercise_data[$exercise_id]['duration'] = $exercise_data[$exercise_id]['duration'] == $duration ? $exercise_data[$exercise_id]['duration'] : $duration;
                                     }
-        
+
                                     if ($reps) {
                                         $exercise_data[$exercise_id]['reps'] = $exercise_data[$exercise_id]['reps'] == $reps ? $exercise_data[$exercise_id]['reps'] : $reps;
                                     }
-        
+
                                     if ($note) {
                                         $exercise_data[$exercise_id]['note'] = $exercise_data[$exercise_id]['note'] == $note ? $exercise_data[$exercise_id]['note'] : $note;
                                     }
-        
+
                                 }
-                            }else {
+                            } else {
                                 if (isset($exercise_data[$exercise_id])) {
                                     if ($duration) {
                                         $exercise_data[$exercise_id]['duration'] = $exercise_data[$exercise_id]['duration'] == $duration ? $exercise_data[$exercise_id]['duration'] : $duration;
                                     }
-        
+
                                     if ($reps) {
                                         $exercise_data[$exercise_id]['reps'] = $exercise_data[$exercise_id]['reps'] == $reps ? $exercise_data[$exercise_id]['reps'] : $reps;
                                     }
-        
+
                                     if ($note) {
                                         $exercise_data[$exercise_id]['note'] = $exercise_data[$exercise_id]['note'] == $note ? $exercise_data[$exercise_id]['note'] : $note;
                                     }
@@ -728,6 +728,13 @@ class Exercise extends Manage_Exercise
         $imgFemale = !empty($data->image_female) ? $data->image_female : '';
         $vdWMale = !empty($data->video_white_male) ? $data->video_white_male : '';
         $vdGreen = !empty($data->video_green) ? $data->video_green : '';
+
+        if (preg_match('/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/', $vdGreen, $matches)) {
+            $video_id = $matches[1];
+            $embed_url = "https://www.youtube.com/embed/" . $video_id;
+        } else {
+            $embed_url = '';
+        }
         $vdTransparent = !empty($data->video_transparent) ? $data->video_transparent : '';
         $description = !empty($data->description) ? $data->description : '';
         $status = $data->active;
@@ -819,19 +826,15 @@ class Exercise extends Manage_Exercise
                     <div class="field">
                         <div class="field-label">
                             <label>
-                                Video Green
+                                Video Youtube
                             </label>
                         </div>
                         <div class="field-item">
                             <input type="text" name="exercise[video_green]" class="video-section" value="<?= $vdGreen ?>">
                             <div class="exercise-video-container" style="<?= $vdGreen ? 'display: block' : 'display:none'; ?>">
-                                <iframe width="560" height="315" src="<?= $vdGreen ?>" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                                <video width="560" height="315" controls style="display:none;">
-                                    <source src="" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                                    <iframe width="560" height="315" src="<?= $embed_url ?>" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -954,10 +957,10 @@ class Exercise extends Manage_Exercise
                     </div>
                     <div class="exercise-table-wrap">
                         <?php
-                        require_once (MY_PLUGIN_DIR . "/inc/options/primary_option.php");
-                        require_once (MY_PLUGIN_DIR . "/inc/options/secondary_option.php");
-                        require_once (MY_PLUGIN_DIR . "/inc/options/equipment_option.php");
-                        require_once (MY_PLUGIN_DIR . "/inc/options/content.php");
+                        require_once(MY_PLUGIN_DIR . "/inc/options/primary_option.php");
+                        require_once(MY_PLUGIN_DIR . "/inc/options/secondary_option.php");
+                        require_once(MY_PLUGIN_DIR . "/inc/options/equipment_option.php");
+                        require_once(MY_PLUGIN_DIR . "/inc/options/content.php");
                         ?>
                     </div>
                     <input type="hidden" name="id" value="<?= $id ?>" />

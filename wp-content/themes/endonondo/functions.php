@@ -710,7 +710,6 @@ function get_video($exercise = [], $grid1 = false)
     if ($exercise) {
         $arrVideo = array(
             $exercise->video_white_male,
-            $exercise->video_green,
             $exercise->video_transparent,
         );
     }
