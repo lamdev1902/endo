@@ -187,7 +187,7 @@ function rocket_woo_pagination($args)
 // Save per
 
 
-function display_percentage_on_sale_badge($html = '', $post, $product)
+function display_percentage_on_sale_badge($post, $product, $html = '')
 {
 
   if ($product->is_type('variable')) {
