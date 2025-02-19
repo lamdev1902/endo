@@ -32,7 +32,7 @@ if (empty($product) || ! $product->is_visible()) {
         <?php woocommerce_template_loop_product_thumbnail() ?>
       </a>
       <div class="pstatus-absoulte">
-        <?php echo display_percentage_on_sale_badge($html, $post, $product)
+        <?php echo display_percentage_on_sale_badge($post, $product,$html)
         ?>
         <?php if ($product->is_featured()) { ?>
           <div class="pstatus pstatus-bsell">BEST SELLER</div>
