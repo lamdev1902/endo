@@ -28,7 +28,7 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
   }
 
   .woocommerce .quantity .qty {
-    padding-left: 15px;
+    padding-left: 8px;
   }
 
   .woocommerce table.shop_table td {
@@ -72,8 +72,16 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
     color: #999;
     border: 1px solid #ddd;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .cart-prod-info>a {
+    margin-bottom: 4px !important;
+  }
+
+  .cart-item-attributes {
+    margin-bottom: -7px !important;
   }
 </style>
 <div class="ht-woo-header">
@@ -121,14 +129,16 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
                   $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
                   if ( ! $product_permalink ) {
-							echo $thumbnail; // PHPCS: XSS ok.
-						} else {
-							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
-						}
+                    echo $thumbnail; // PHPCS: XSS ok.
+                  } else {
+                    printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+                  }
 						?>
           </div>
           <div class="cart-prod-info">
             <?php
+            $product_name_clean = $_product->get_title();
+
             if ( ! $product_permalink ) {
              echo wp_kses_post( $product_name . '&nbsp;' );
            } else {
@@ -137,13 +147,30 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
                *
                * @since 2.1.0
                */
-              echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+              // echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+              echo wp_kses_post(apply_filters(
+                'woocommerce_cart_item_name',
+                sprintf('<a href="%s">%s</a>', esc_url($product_permalink), esc_html($product_name_clean)),
+                $cart_item,
+                $cart_item_key
+              ));
             }
 
             do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
             // Meta data.
             echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+
+            if (!empty($cart_item['variation']) && is_array($cart_item['variation'])) {
+              echo '<ul class="cart-item-attributes">';
+              foreach ($cart_item['variation'] as $attribute_name => $attribute_value) {
+                $clean_attribute_name = str_replace('attribute_', '', $attribute_name);
+                $attribute_label = wc_attribute_label($clean_attribute_name, $_product);
+
+                echo '<li><strong>' . esc_html($attribute_label) . ':</strong> ' . esc_html(wc_attribute_label($attribute_value, $_product)) . '</li>';
+              }
+              echo '</ul>';
+            }
 
             // Backorder notification.
             if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
@@ -375,6 +402,13 @@ $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
     timeout = setTimeout(function() {
       $("[name='update_cart']").trigger("click");
     }, 500 );
+  });
+
+  jQuery(function($) {
+    timeout = setTimeout(function() {
+      $('.sold-individually').closest('.quantity').find('.minus').css('visibility', 'hidden');
+      $('.sold-individually').closest('.quantity').find('.plus').css('visibility', 'hidden');
+    }, 100);
   });
 } );
  </script>

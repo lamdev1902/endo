@@ -12,6 +12,11 @@ $subscription_policy = get_field('subscription_policy', 'option');
         margin: 0 5px;
         vertical-align: middle;
     }
+
+    .wc-block-components-address-card__edit {
+        width: 8%;
+    }
+    
     @media(max-width: 767px) {
         .wc-block-components-address-card__edit {
             width: 10% !important;
@@ -20,7 +25,13 @@ $subscription_policy = get_field('subscription_policy', 'option');
 
     @media(max-width: 430px) {
         .wc-block-components-address-card__edit {
-            width: 15% !important;
+            width: 17% !important;
+        }
+    }
+
+    @media(max-width: 375px) {
+        .wc-block-components-address-card__edit {
+            width: 24% !important;
         }
     }
 

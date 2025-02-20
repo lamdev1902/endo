@@ -1261,6 +1261,18 @@ if ($ratingInfo) {
           <div class="ht-variations">
             <?php woocommerce_upsell_display(); ?>
           </div>
+          <?php
+          if ($product->is_sold_individually()) {
+          ?>
+            <style>
+              .quantity .minus,
+              .quantity .plus {
+                pointer-events: none;
+                opacity: 0.5;
+                visibility: hidden;
+              }
+            </style>
+          <?php } ?>
           <div class="ht-actions-woo <?php echo $product->get_type() ?>">
             <?php woocommerce_template_single_add_to_cart(); ?>
           </div>
@@ -1598,6 +1610,23 @@ if ($ratingInfo) {
 
     e.preventDefault();
 
+  });
+</script>
+<script>
+  jQuery(document).ready(function($) {
+    $('.ht-actions-woo .quantity input.qty').each(function() {
+      var maxVal = $(this).attr('max');
+
+      if (maxVal == 1) {
+        $(this).attr({
+          'type': 'number',
+          'readonly': true,
+          'min': 1,
+          'max': 1,
+          'value': 1
+        }).show();
+      }
+    });
   });
 </script>
 
