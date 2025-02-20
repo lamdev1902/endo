@@ -1385,25 +1385,30 @@ h2.tag-coming {
 
 .enfit-action a {
     display: block;
-    height: 36px;
+    height: 30px;
 }
 
 
 .enfit-action a:first-child {
     width: fit-content;
-    padding: 0 12px;
+    padding: 0 10px;
     color: #000 !important;
     font-weight: 500;
     border-radius: 6px;
     background-color: #fff;
     border: 1px solid #000;
-    line-height: 36px;
+    line-height: 29px;
     text-decoration: none !important;
+    font-size: 14px;
 }
 
 .enfit-action .home-store {
-    height: 36px;
-    width: 110px;
+    height: 30px;
+    width: 93px;
+}
+
+.enfit-action .home-store {
+    height: 100%;
 }
 
 .home .enfit-action a:first-child {
