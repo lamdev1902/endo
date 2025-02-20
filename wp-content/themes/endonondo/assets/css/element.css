@@ -1335,6 +1335,7 @@ h2.tag-coming {
 .ads__left {
     height: fit-content;
     margin: auto 0;
+    width: 50%;
 }
 
 .ads__left .ads__left--logo {
