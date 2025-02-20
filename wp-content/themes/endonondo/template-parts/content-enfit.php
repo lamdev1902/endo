@@ -18,7 +18,7 @@ if ($ads):
                             <h2>
                                 <?= $ad['title'] ?>
                             </h2>
-                            <p><?= $ad['description'] ?></p>
+                            <p class="has-small-font-size"><?= $ad['description'] ?></p>
                             <div class="enfit-action flex">
                                 <?php if ($explore): ?>
                                     <a href="<?= $explore ?>" id="">Explore Now</a>

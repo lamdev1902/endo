@@ -1325,17 +1325,19 @@ h2.tag-coming {
 .ads-enfit {
     margin-bottom: 20px;
     background: linear-gradient(180deg, #E0E1E3 0%, #FBFBFB 100%);
+    height: 272px;
 }
 
 .ads__content {
     justify-content: space-evenly;
     position: relative;
+    height: 100%;
+    align-items: center;
 }
 
 .ads__left {
     height: fit-content;
-    margin: auto 0;
-    width: 50%;
+    width: 37%;
 }
 
 .ads__left .ads__left--logo {
@@ -1352,7 +1354,8 @@ h2.tag-coming {
 }
 
 .ads__right {
-    width: 308px;
+    width: 311px;
+    height: 100%;
 }
 
 .ads__right--img {
@@ -1362,6 +1365,7 @@ h2.tag-coming {
 .ads__right img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /* Home feature logo */

@@ -661,6 +661,7 @@
     /* Ads Enfit */
     .ads-enfit {
         padding: 30px 30px 0px;
+        height: auto;;
     }
 
     .ads__content {
