@@ -1324,27 +1324,30 @@ h2.tag-coming {
 
 .ads-enfit {
     margin-bottom: 20px;
-    background-image: url(../images/ads-enfit.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(180deg, #E0E1E3 0%, #FBFBFB 100%);
 }
 
 .ads__content {
     justify-content: space-evenly;
+    position: relative;
 }
 
 .ads__left {
-    padding: 29px 0;
-    width: 50%;
+    height: fit-content;
+    margin: auto 0;
 }
 
 .ads__left .ads__left--logo {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .ads__left .ads__left--content a p {
     margin-bottom: 0;
+}
+
+.ads__left--content h2,
+.ads__left--content p {
+    margin-bottom: 18px !important;
 }
 
 .ads__right {

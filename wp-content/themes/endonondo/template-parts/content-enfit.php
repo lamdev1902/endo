@@ -15,18 +15,20 @@ if ($ads):
                             <img src="<?= get_field('enfit_logo', 'option') ?>" alt="">
                         </div>
                         <div class="ads__left--content">
-                            <h1><?= $ad['title'] ?></h1>
+                            <h2>
+                                <?= $ad['title'] ?>
+                            </h2>
                             <p><?= $ad['description'] ?></p>
                             <div class="enfit-action flex">
-								<?php if($explore): ?>
-									<a href="<?=$explore?>" id="">Explore Now</a>
-								<?php endif; ?>
-								<?php if($store): ?>
-									<a target="_blank" href="<?=$store?>" class="home-store">
-										<img src="<?= get_template_directory_uri() . '/assets/images/enfit/store.svg' ?>" alt="">
-									</a>
-								<?php endif; ?>
-							</div>
+                                <?php if ($explore): ?>
+                                    <a href="<?= $explore ?>" id="">Explore Now</a>
+                                <?php endif; ?>
+                                <?php if ($store): ?>
+                                    <a target="_blank" href="<?= $store ?>" class="home-store">
+                                        <img src="<?= get_template_directory_uri() . '/assets/images/enfit/store.svg' ?>" alt="">
+                                    </a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                     <div class="ads__right">

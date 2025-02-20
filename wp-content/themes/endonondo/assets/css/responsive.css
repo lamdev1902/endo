@@ -660,14 +660,12 @@
 
     /* Ads Enfit */
     .ads-enfit {
-        background-image: url(../images/ads-enfit-mb.svg);
-        padding: 23px 30px;
-        background-position-y: -20px;
+        padding: 30px 30px 0px;
     }
 
     .ads__content {
         flex-direction: column;
-        row-gap: 40px;
+        row-gap: 20px;
     }
 
     .ads__content .ads__left {
