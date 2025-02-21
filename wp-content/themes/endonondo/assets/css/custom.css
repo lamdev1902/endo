@@ -2448,6 +2448,39 @@ html {
 	border:none;
 	    padding: 20px 0 !important;
 }
+.woocommerce-EditAccountForm .form-row-last + .clear + .form-row-wide{
+	    position: relative;
+    margin-bottom: 46px !important;
+}
+.woocommerce-EditAccountForm .form-row-last + .clear + .form-row-wide .woocommerce-Input + span{
+	    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -31px;
+    font-size: 12px;
+	    line-height: 18px;
+}
+.woocommerce-EditAccountForm fieldset{
+	    padding: 0;
+    border: none;
+}
+.woocommerce-EditAccountForm fieldset legend{
+	font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.woocommerce-EditAccountForm .show-password-input{
+	top: 0 !important;
+    background: url(../images/account/pass-hide.svg) no-repeat center center / 24px auto;
+    width: 24px;
+    height: 24px;
+}
+.woocommerce-EditAccountForm .show-password-input:after{
+	display: none;
+}
+.woocommerce-EditAccountForm .show-password-input.display-password{
+	background-image: url(../images/account/pass-show.svg);
+}
 @media(max-width: 768px){
 	.woocommerce-account .woocommerce-MyAccount-navigation{
 		    margin-top: 0;
@@ -2474,5 +2507,30 @@ html {
 	}
 	.woocommerce-account.woocommerce-payment-methods .woocommerce-info{
 		height: 310px;
+	}
+	.woocommerce-EditAccountForm .form-row-last + .clear + .form-row-wide .woocommerce-Input + span{
+		bottom: -46px;
+	}
+	.woocommerce-EditAccountForm .form-row-last + .clear + .form-row-wide{
+		margin-bottom: 65px !important;
+	}	
+	.woocommerce-cart .cart_item{
+		border-top: 1px solid #eee;
+	}
+	.woocommerce-cart .cart_item:first-child{
+		border-top: none;
+	}
+	.woocommerce-cart .cart_item .product-quantity{
+			margin-left: 115px;
+		margin-top: -79px;
+		position: relative;
+		z-index: 10;
+	}
+	.woocommerce-cart .cart_item  .product-subtotal{
+			text-align: left !important;
+		margin-left: 115px;
+		padding: 0;
+		font-size: 16px;
+		font-weight: 700;
 	}
 }
