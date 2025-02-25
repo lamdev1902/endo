@@ -826,6 +826,14 @@ if (!empty($shop_hero)) {
               'posts_per_page' => 6,
               'orderby'        => 'date',
               'order'          => 'DESC',
+              'tax_query'      => array(
+                array(
+                  'taxonomy' => 'product_cat',
+                  'field'    => 'term_id',
+                  'terms'    => $term->term_id,
+                  'include_children' => false,
+                ),
+              ),
             );
 
             if (!empty($_GET['availability'])) {
@@ -1125,6 +1133,9 @@ if (!empty($shop_hero)) {
 
           if (!empty($categories) && !is_wp_error($categories)) {
             foreach ($categories as $category) {
+              if ($category->slug === 'uncategorized') {
+                continue;
+              }
 
               echo '<div class="swiper-slide">';
               $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);
