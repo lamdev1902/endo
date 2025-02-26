@@ -187,54 +187,99 @@ function rocket_woo_pagination($args)
 // Save per
 
 
-function display_percentage_on_sale_badge($post, $product, $html = '')
+// function display_percentage_on_sale_badge($post, $product, $html = '')
+// {
+
+//   if ($product->is_type('variable')) {
+//     $percentages = array();
+
+//     // This will get all the variation prices and loop throughout them
+//     $prices = $product->get_variation_prices();
+
+//     foreach ($prices['price'] as $key => $price) {
+//       // Only on sale variations
+//       if ($prices['regular_price'][$key] !== $price) {
+//         // Calculate and set in the array the percentage for each variation on sale
+//         $percentages[] = round(100 - (floatval($prices['sale_price'][$key]) / floatval($prices['regular_price'][$key]) * 100));
+//       }
+//     }
+//     // Displays maximum discount value
+//     $percentage = max($percentages) . '%';
+//   } elseif ($product->is_type('grouped')) {
+//     $percentages = array();
+
+//     // This will get all the variation prices and loop throughout them
+//     $children_ids = $product->get_children();
+
+//     foreach ($children_ids as $child_id) {
+//       $child_product = wc_get_product($child_id);
+
+//       $regular_price = (float) $child_product->get_regular_price();
+//       $sale_price    = (float) $child_product->get_sale_price();
+
+//       if ($sale_price != 0 || ! empty($sale_price)) {
+//         // Calculate and set in the array the percentage for each child on sale
+//         $percentages[] = round(100 - ($sale_price / $regular_price * 100));
+//       }
+//     }
+//     // Displays maximum discount value
+//     $percentage = max($percentages) . '%';
+//   } else {
+//     $regular_price = (float) $product->get_regular_price();
+//     $sale_price    = (float) $product->get_sale_price();
+
+//     if ($sale_price != 0 || ! empty($sale_price)) {
+//       $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
+//     } else {
+//       return $html;
+//     }
+//   }
+//   return '<div class="pstatus pstatus-save">' . esc_html__('SAVE', 'woocommerce') . ' ' . $percentage . '</div>'; // If needed then change or remove "up to -" text
+// }
+function display_percentage_on_sale_badge($html = '', $post, $product)
 {
+    if ($product->is_type('variable')) {
+        $percentages = array();
+        $prices = $product->get_variation_prices();
 
-  if ($product->is_type('variable')) {
-    $percentages = array();
+        foreach ($prices['price'] as $key => $price) {
+            if (!empty($prices['regular_price'][$key]) && !empty($prices['sale_price'][$key]) && $prices['regular_price'][$key] > $prices['sale_price'][$key]) {
+                $percentages[] = round(100 - (floatval($prices['sale_price'][$key]) / floatval($prices['regular_price'][$key]) * 100));
+            }
+        }
 
-    // This will get all the variation prices and loop throughout them
-    $prices = $product->get_variation_prices();
+        $percentage = !empty($percentages) ? max($percentages) . '%' : null;
+    } elseif ($product->is_type('grouped')) {
+        $percentages = array();
+        $children_ids = $product->get_children();
 
-    foreach ($prices['price'] as $key => $price) {
-      // Only on sale variations
-      if ($prices['regular_price'][$key] !== $price) {
-        // Calculate and set in the array the percentage for each variation on sale
-        $percentages[] = round(100 - (floatval($prices['sale_price'][$key]) / floatval($prices['regular_price'][$key]) * 100));
-      }
-    }
-    // Displays maximum discount value
-    $percentage = max($percentages) . '%';
-  } elseif ($product->is_type('grouped')) {
-    $percentages = array();
+        foreach ($children_ids as $child_id) {
+            $child_product = wc_get_product($child_id);
+            $regular_price = (float) $child_product->get_regular_price();
+            $sale_price = (float) $child_product->get_sale_price();
 
-    // This will get all the variation prices and loop throughout them
-    $children_ids = $product->get_children();
+            if ($sale_price > 0 && $regular_price > $sale_price) {
+                $percentages[] = round(100 - ($sale_price / $regular_price * 100));
+            }
+        }
 
-    foreach ($children_ids as $child_id) {
-      $child_product = wc_get_product($child_id);
-
-      $regular_price = (float) $child_product->get_regular_price();
-      $sale_price    = (float) $child_product->get_sale_price();
-
-      if ($sale_price != 0 || ! empty($sale_price)) {
-        // Calculate and set in the array the percentage for each child on sale
-        $percentages[] = round(100 - ($sale_price / $regular_price * 100));
-      }
-    }
-    // Displays maximum discount value
-    $percentage = max($percentages) . '%';
-  } else {
-    $regular_price = (float) $product->get_regular_price();
-    $sale_price    = (float) $product->get_sale_price();
-
-    if ($sale_price != 0 || ! empty($sale_price)) {
-      $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
+        $percentage = !empty($percentages) ? max($percentages) . '%' : null;
     } else {
-      return $html;
+        $regular_price = (float) $product->get_regular_price();
+        $sale_price = (float) $product->get_sale_price();
+
+        if ($sale_price > 0 && $regular_price > $sale_price) {
+            $percentage = round(100 - ($sale_price / $regular_price * 100)) . '%';
+        } else {
+            return $html;
+        }
     }
-  }
-  return '<div class="pstatus pstatus-save">' . esc_html__('SAVE', 'woocommerce') . ' ' . $percentage . '</div>'; // If needed then change or remove "up to -" text
+
+    if (!isset($percentage)) {
+        return $html;
+    }
+
+    return '<div class="pstatus pstatus-save">' . esc_html__('SAVE', 'woocommerce') . ' ' . $percentage . '</div>';
 }
 
 remove_action('woocommerce_external_add_to_cart', 'woocommerce_external_add_to_cart', 30);
