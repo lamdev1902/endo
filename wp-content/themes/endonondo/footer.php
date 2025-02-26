@@ -232,7 +232,6 @@ endwhile;
 wp_reset_query();
 ?>
 
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.5.0.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/rating.js?ver=1.0.0"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/chart.js"></script>
