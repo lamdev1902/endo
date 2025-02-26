@@ -37,6 +37,24 @@ class Breeze_Configuration {
 		add_action( 'wp_ajax_save_settings_tab_faq', array( &$this, 'update_options_for_faq' ) );
 		add_action( 'wp_ajax_save_settings_tab_varnish', array( &$this, 'update_options_for_varnish' ) );
 		add_action( 'wp_ajax_save_settings_tab_inherit', array( &$this, 'update_options_for_inherit' ) );
+
+		add_action( 'wp_ajax_refresh_api_token_key', array( &$this, 'regenerate_breeze_api_key' ) );
+	}
+
+	/**
+	 * Regenerate breeze API key via ajax
+	 * @return void
+	 * @throws Exception
+	 */
+	public function regenerate_breeze_api_key() {
+		breeze_is_restricted_access();
+		check_ajax_referer( '_breeze_save_options', 'security' );
+		set_as_network_screen();
+
+		$breeze_api_token      = self::breeze_generate_token();
+		$response              = array();
+		$response['new_token'] = $breeze_api_token;
+		wp_send_json( $response );
 	}
 
 	public function update_options_for_varnish() {
@@ -101,14 +119,29 @@ class Breeze_Configuration {
 			}
 		}
 
-		$iframe_lazy_load = ( isset( $_POST['bz-lazy-load-iframe'] ) ? '1' : '0' );
-		$lazy_load        = ( isset( $_POST['bz-lazy-load'] ) ? '1' : '0' );
+		$iframe_lazy_load   = ( isset( $_POST['bz-lazy-load-iframe'] ) ? '1' : '0' );
+		$iframe_lazy_videos = ( isset( $_POST['bz-lazy-load-videos'] ) ? '1' : '0' );
+		$lazy_load          = ( isset( $_POST['bz-lazy-load'] ) ? '1' : '0' );
 		if ( false === filter_var( $lazy_load, FILTER_VALIDATE_BOOLEAN ) ) {
 			$iframe_lazy_load = '0';
 		}
 
+		$separate_mobile_cache_system = ( isset( $_POST['breeze-mobile-separate'] ) ? '1' : '0' );
+		// The values for this work different on CW server.
+		// Added exception.
+		$is_cloudways_server = breeze_is_cloudways_server();
+		if ( true === $is_cloudways_server ) {
+			$mobile_cache_cw = is_breeze_mobile_cache( true );
+			if ( true === $mobile_cache_cw ) {
+				$separate_mobile_cache_system = '1';
+			} else {
+				$separate_mobile_cache_system = '0';
+			}
+		}
+
 		$basic = array(
 			'breeze-active'            => ( isset( $_POST['cache-system'] ) ? '1' : '0' ),
+			'breeze-mobile-separate'   => $separate_mobile_cache_system,
 			'breeze-cross-origin'      => ( isset( $_POST['safe-cross-origin'] ) ? '1' : '0' ),
 			'breeze-disable-admin'     => $active_cache_users,
 			'breeze-gzip-compression'  => ( isset( $_POST['gzip-compression'] ) ? '1' : '0' ),
@@ -116,10 +149,11 @@ class Breeze_Configuration {
 			'breeze-lazy-load'         => ( isset( $_POST['bz-lazy-load'] ) ? '1' : '0' ),
 			'breeze-lazy-load-native'  => ( isset( $_POST['bz-lazy-load-nat'] ) ? '1' : '0' ),
 			'breeze-lazy-load-iframes' => $iframe_lazy_load,
+			'breeze-lazy-load-videos'  => $iframe_lazy_videos,
 			'breeze-desktop-cache'     => '1',
 			'breeze-mobile-cache'      => '1',
 			'breeze-display-clean'     => '1',
-			'breeze-ttl'               => (int) $_POST['cache-ttl'],
+			'breeze-b-ttl'             => (int) $_POST['cache-ttl'],
 		);
 
 		breeze_update_option( 'basic_settings', $basic, true );
@@ -138,7 +172,7 @@ class Breeze_Configuration {
 		// Reschedule cron events
 		if ( isset( $_POST['cache-system'] ) ) {
 			Breeze_PurgeCacheTime::factory()->unschedule_events();
-			Breeze_PurgeCacheTime::factory()->schedule_events();
+			Breeze_PurgeCacheTime::factory()->schedule_events( (int) $_POST['cache-ttl'] );
 		}
 		// Add expires header
 		self::update_htaccess();
@@ -199,7 +233,7 @@ class Breeze_Configuration {
 				if ( trim( $url ) == '' ) {
 					continue;
 				}
-				$url                                              = current( explode( '?', $url, 2 ) );
+				$url = current( explode( '?', $url, 2 ) );
 				$move_to_footer_js[ sanitize_text_field( $url ) ] = sanitize_text_field( $url );
 			}
 		}
@@ -282,7 +316,7 @@ class Breeze_Configuration {
 				if ( '' === trim( $font_url ) ) {
 					continue;
 				}
-				$font_url                                          = current( explode( '?', $font_url, 2 ) );
+				$font_url = current( explode( '?', $font_url, 2 ) );
 				$preload_fonts[ sanitize_text_field( $font_url ) ] = sanitize_text_field( $font_url );
 			}
 		}
@@ -324,6 +358,7 @@ class Breeze_Configuration {
 	 * Save the Advanced option settings via Ajax call.
 	 *
 	 * @access public
+	 * @throws Exception
 	 * @since 2.0.0
 	 */
 	public function update_options_for_advanced() {
@@ -341,19 +376,41 @@ class Breeze_Configuration {
 		$response = array();
 		parse_str( $_POST['form-data'], $_POST );
 
-		$exclude_urls    = $this->string_convert_arr( sanitize_textarea_field( $_POST['exclude-urls'] ) );
-		$cache_query_str = $this->string_convert_arr( sanitize_textarea_field( $_POST['cache-query-str'] ) );
+		$exclude_urls = $this->string_convert_arr( $_POST['exclude-urls'] );
+		if ( is_array( $exclude_urls ) && ! empty( $exclude_urls ) ) {
+			foreach ( $exclude_urls as &$url_list_item ) {
+				if ( false === strpos( $url_list_item, ':' ) ) {
+					$url_list_item = esc_url( '/' . $url_list_item );
+					$url_list_item = ltrim( $url_list_item, '/' );
+				} else {
+					$url_list_item = esc_url( $url_list_item );
+				}
+			}
+		}
+
+		$cache_query_str  = $this->string_convert_arr( sanitize_textarea_field( $_POST['cache-query-str'] ) );
+		$breeze_api_token = $_POST['breeze-api-token'];
 		if ( ! empty( $exclude_urls ) ) {
 			$exclude_urls = array_unique( $exclude_urls );
 		}
 		if ( ! empty( $cache_query_str ) ) {
 			$cache_query_str = array_unique( $cache_query_str );
 		}
+		if ( empty( $breeze_api_token ) ) {
+			$breeze_api_token = self::breeze_generate_token();
+		}
 
 		$advanced = array(
-			'breeze-exclude-urls'  => $exclude_urls,
-			'cached-query-strings' => $cache_query_str,
-			'breeze-wp-emoji'      => ( isset( $_POST['breeze-wpjs-emoji'] ) ? '1' : '0' ),
+			'breeze-exclude-urls'                  => $exclude_urls,
+			'cached-query-strings'                 => $cache_query_str,
+			'breeze-wp-emoji'                      => ( isset( $_POST['breeze-wpjs-emoji'] ) ? '1' : '0' ),
+			'breeze-store-googlefonts-locally'     => ( isset( $_POST['breeze-store-googlefonts-locally'] ) ? '1' : '0' ),
+			'breeze-store-googleanalytics-locally' => ( isset( $_POST['breeze-store-googleanalytics-locally'] ) ? '1' : '0' ),
+			'breeze-store-facebookpixel-locally'   => ( isset( $_POST['breeze-store-facebookpixel-locally'] ) ? '1' : '0' ),
+			'breeze-store-gravatars-locally'       => ( isset( $_POST['breeze-store-gravatars-locally'] ) ? '1' : '0' ),
+			'breeze-enable-api'                    => ( isset( $_POST['breeze-enable-api'] ) ? '1' : '0' ),
+			'breeze-secure-api'                    => ( isset( $_POST['breeze-secure-api'] ) ? '1' : '0' ),
+			'breeze-api-token'                     => sanitize_text_field( $breeze_api_token ),
 		);
 
 		breeze_update_option( 'advanced_settings', $advanced, true );
@@ -550,71 +607,71 @@ class Breeze_Configuration {
 			$text_html_expiry = '   ExpiresByType text/html "access plus 0 seconds"' . PHP_EOL;
 
 			$args['content'] = '<IfModule mod_headers.c>' . PHP_EOL .
-			                   '   Header append Cache-Control "s-maxage=2592000"' . PHP_EOL .
-			                   '</IfModule>' . PHP_EOL .
-			                   '<IfModule mod_env.c>' . PHP_EOL .
-			                   '   SetEnv BREEZE_BROWSER_CACHE_ON 1' . PHP_EOL .
-			                   '</IfModule>' . PHP_EOL .
-			                   '<IfModule mod_expires.c>' . PHP_EOL .
-			                   '   ExpiresActive On' . PHP_EOL .
-			                   '   ExpiresDefault "access plus 1 month"' . PHP_EOL .
+							   '   Header append Cache-Control "s-maxage=2592000"' . PHP_EOL .
+							   '</IfModule>' . PHP_EOL .
+							   '<IfModule mod_env.c>' . PHP_EOL .
+							   '   SetEnv BREEZE_BROWSER_CACHE_ON 1' . PHP_EOL .
+							   '</IfModule>' . PHP_EOL .
+							   '<IfModule mod_expires.c>' . PHP_EOL .
+							   '   ExpiresActive On' . PHP_EOL .
+							   '   ExpiresDefault "access plus 1 month"' . PHP_EOL .
 
-			                   '   # Assets' . PHP_EOL .
-			                   '   ExpiresByType text/css "access plus 1 month"' . PHP_EOL .
-			                   '   ExpiresByType application/javascript "access plus 1 month"' . PHP_EOL .
-			                   '   ExpiresByType application/x-javascript "access plus 1 month"' . PHP_EOL .
-			                   '   ExpiresByType text/javascript "access plus 1 month"' . PHP_EOL .
+							   '   # Assets' . PHP_EOL .
+							   '   ExpiresByType text/css "access plus 1 month"' . PHP_EOL .
+							   '   ExpiresByType application/javascript "access plus 1 month"' . PHP_EOL .
+							   '   ExpiresByType application/x-javascript "access plus 1 month"' . PHP_EOL .
+							   '   ExpiresByType text/javascript "access plus 1 month"' . PHP_EOL .
 
-			                   '   # Media assets ' . PHP_EOL .
-			                   '   ExpiresByType audio/ogg "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType image/bmp "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType image/gif "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType image/jpeg "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType image/png "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType image/svg+xml "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType image/webp "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType video/mp4 "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType video/ogg "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType video/webm "access plus 1 year"' . PHP_EOL .
-			                   '   # Font assets ' . PHP_EOL .
-			                   '   ExpiresByType application/vnd.ms-fontobject "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType font/eot "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType font/opentype "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType application/x-font-ttf "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType application/font-woff "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType application/x-font-woff "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType font/woff "access plus 1 year"' . PHP_EOL .
-			                   '   ExpiresByType application/font-woff2 "access plus 1 year"' . PHP_EOL .
+							   '   # Media assets ' . PHP_EOL .
+							   '   ExpiresByType audio/ogg "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType image/bmp "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType image/gif "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType image/jpeg "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType image/png "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType image/svg+xml "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType image/webp "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType video/mp4 "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType video/ogg "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType video/webm "access plus 1 year"' . PHP_EOL .
+							   '   # Font assets ' . PHP_EOL .
+							   '   ExpiresByType application/vnd.ms-fontobject "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType font/eot "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType font/opentype "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType application/x-font-ttf "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType application/font-woff "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType application/x-font-woff "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType font/woff "access plus 1 year"' . PHP_EOL .
+							   '   ExpiresByType application/font-woff2 "access plus 1 year"' . PHP_EOL .
 
-			                   '   # Data interchange' . PHP_EOL .
-			                   '   ExpiresByType application/xml "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType application/json "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType application/ld+json "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType application/schema+json "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType application/vnd.geo+json "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType text/xml "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType application/rss+xml "access plus 1 hour"' . PHP_EOL .
-			                   '   ExpiresByType application/rdf+xml "access plus 1 hour"' . PHP_EOL .
-			                   '   ExpiresByType application/atom+xml "access plus 1 hour"' . PHP_EOL .
+							   '   # Data interchange' . PHP_EOL .
+							   '   ExpiresByType application/xml "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType application/json "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType application/ld+json "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType application/schema+json "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType application/vnd.geo+json "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType text/xml "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType application/rss+xml "access plus 1 hour"' . PHP_EOL .
+							   '   ExpiresByType application/rdf+xml "access plus 1 hour"' . PHP_EOL .
+							   '   ExpiresByType application/atom+xml "access plus 1 hour"' . PHP_EOL .
 
-			                   '   # Manifest files' . PHP_EOL .
-			                   '   ExpiresByType application/manifest+json "access plus 1 week"' . PHP_EOL .
-			                   '   ExpiresByType application/x-web-app-manifest+json "access plus 0 seconds"' . PHP_EOL .
-			                   '   ExpiresByType text/cache-manifest  "access plus 0 seconds"' . PHP_EOL .
+							   '   # Manifest files' . PHP_EOL .
+							   '   ExpiresByType application/manifest+json "access plus 1 week"' . PHP_EOL .
+							   '   ExpiresByType application/x-web-app-manifest+json "access plus 0 seconds"' . PHP_EOL .
+							   '   ExpiresByType text/cache-manifest  "access plus 0 seconds"' . PHP_EOL .
 
-			                   '   # Favicon' . PHP_EOL .
-			                   '   ExpiresByType image/vnd.microsoft.icon "access plus 1 week"' . PHP_EOL .
-			                   '   ExpiresByType image/x-icon "access plus 1 week"' . PHP_EOL .
-			                   '   # HTML no caching' . PHP_EOL .
-			                   $text_html_expiry .
+							   '   # Favicon' . PHP_EOL .
+							   '   ExpiresByType image/vnd.microsoft.icon "access plus 1 week"' . PHP_EOL .
+							   '   ExpiresByType image/x-icon "access plus 1 week"' . PHP_EOL .
+							   '   # HTML no caching' . PHP_EOL .
+							   $text_html_expiry .
 
-			                   '   # Other' . PHP_EOL .
-			                   '   ExpiresByType application/xhtml-xml "access plus 1 month"' . PHP_EOL .
-			                   '   ExpiresByType application/pdf "access plus 1 month"' . PHP_EOL .
-			                   '   ExpiresByType application/x-shockwave-flash "access plus 1 month"' . PHP_EOL .
-			                   '   ExpiresByType text/x-cross-domain-policy "access plus 1 week"' . PHP_EOL .
+							   '   # Other' . PHP_EOL .
+							   '   ExpiresByType application/xhtml-xml "access plus 1 month"' . PHP_EOL .
+							   '   ExpiresByType application/pdf "access plus 1 month"' . PHP_EOL .
+							   '   ExpiresByType application/x-shockwave-flash "access plus 1 month"' . PHP_EOL .
+							   '   ExpiresByType text/x-cross-domain-policy "access plus 1 week"' . PHP_EOL .
 
-			                   '</IfModule>' . PHP_EOL;
+							   '</IfModule>' . PHP_EOL;
 
 			$args['conditions'] = array(
 				'mod_expires',
@@ -644,41 +701,41 @@ class Breeze_Configuration {
 			$args['clean'] = true;
 		} else {
 			$args['content'] = '<IfModule mod_env.c>' . PHP_EOL .
-			                   '    SetEnv BREEZE_GZIP_ON 1' . PHP_EOL .
-			                   '</IfModule>' . PHP_EOL .
-			                   '<IfModule mod_deflate.c>' . PHP_EOL .
-			                   '	AddType x-font/woff .woff' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/plain' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE image/svg+xml' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/html' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/xml' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/css' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/vtt' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/x-component' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE text/javascript' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/js' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/x-httpd-php' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/x-httpd-fastphp' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/atom+xml' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/json' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/ld+json' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/x-web-app-manifest+json' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/xml' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/xhtml+xml' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/rss+xml' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/javascript' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/x-javascript' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/x-font-ttf' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/vnd.ms-fontobject' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE font/opentype' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE font/ttf' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE font/eot font/otf' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE font/otf' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE font/woff' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/x-font-woff' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE application/font-woff2' . PHP_EOL .
-			                   '	AddOutputFilterByType DEFLATE image/x-icon' . PHP_EOL .
-			                   '</IfModule>' . PHP_EOL;
+							   '    SetEnv BREEZE_GZIP_ON 1' . PHP_EOL .
+							   '</IfModule>' . PHP_EOL .
+							   '<IfModule mod_deflate.c>' . PHP_EOL .
+							   '	AddType x-font/woff .woff' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/plain' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE image/svg+xml' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/html' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/xml' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/css' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/vtt' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/x-component' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE text/javascript' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/js' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/x-httpd-php' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/x-httpd-fastphp' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/atom+xml' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/json' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/ld+json' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/x-web-app-manifest+json' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/xml' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/xhtml+xml' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/rss+xml' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/javascript' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/x-javascript' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/x-font-ttf' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/vnd.ms-fontobject' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE font/opentype' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE font/ttf' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE font/eot font/otf' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE font/otf' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE font/woff' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/x-font-woff' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE application/font-woff2' . PHP_EOL .
+							   '	AddOutputFilterByType DEFLATE image/x-icon' . PHP_EOL .
+							   '</IfModule>' . PHP_EOL;
 
 			$args['conditions'] = array(
 				'mod_deflate',
@@ -871,7 +928,7 @@ class Breeze_Configuration {
 	public static function write_htaccess( $args ) {
 		$htaccess_path = trailingslashit( ABSPATH ) . '.htaccess';
 
-		if ( ! is_super_admin() && 'cli' !== php_sapi_name()) {
+		if ( ! is_super_admin() && 'cli' !== php_sapi_name() ) {
 			return false;
 		}
 		// open htaccess file
@@ -1029,7 +1086,8 @@ class Breeze_Configuration {
 				 */
 				$all_transients = $wpdb->get_col(
 				/* translators: comment type, comment type */
-					$wpdb->prepare( "SELECT option_name FROM $wpdb->options WHERE option_name LIKE %s OR option_name LIKE %s",
+					$wpdb->prepare(
+						"SELECT option_name FROM $wpdb->options WHERE option_name LIKE %s OR option_name LIKE %s",
 						$wpdb->esc_like( '_transient_' ) . '%',
 						$wpdb->esc_like( '_site_transient_' ) . '%'
 					)
@@ -1046,9 +1104,11 @@ class Breeze_Configuration {
 					}
 
 					$data_sql = $wpdb->query(
-						$wpdb->prepare( "DELETE FROM `$wpdb->options` WHERE `option_name` LIKE %s OR `option_name` LIKE %s",
+						$wpdb->prepare(
+							"DELETE FROM `$wpdb->options` WHERE `option_name` LIKE %s OR `option_name` LIKE %s",
 							$wpdb->esc_like( '_transient_' ) . '%',
-							$wpdb->esc_like( '_site_transient_' ) . '%' )
+							$wpdb->esc_like( '_site_transient_' ) . '%'
+						)
 					);
 
 				}
@@ -1152,7 +1212,6 @@ class Breeze_Configuration {
 					delete_expired_transients( true );
 				}
 
-
 				$select_expired = $wpdb->get_results(
 					$wpdb->prepare(
 						"
@@ -1191,7 +1250,8 @@ class Breeze_Configuration {
 
 				if ( is_multisite() && true === $is_network ) {
 					$select_expired = $wpdb->get_results(
-						$wpdb->prepare( "SELECT meta_key FROM $wpdb->sitemeta WHERE ( meta_key LIKE %s OR meta_key LIKE %s ) AND UNIX_TIMESTAMP(meta_value) < UNIX_TIMESTAMP(NOW())",
+						$wpdb->prepare(
+							"SELECT meta_key FROM $wpdb->sitemeta WHERE ( meta_key LIKE %s OR meta_key LIKE %s ) AND UNIX_TIMESTAMP(meta_value) < UNIX_TIMESTAMP(NOW())",
 							'\_transient\_timeout\_%',
 							'\_site\_transient\_timeout\_%'
 						)
@@ -1205,7 +1265,6 @@ class Breeze_Configuration {
 						} else {
 							$the_transient = str_replace( '_transient_timeout_', '_transient_', $the_timer );
 						}
-
 
 						$wpdb->prepare( "DELETE FROM $wpdb->sitemeta WHERE meta_key = %s", $the_transient );
 						$wpdb->prepare( "DELETE FROM $wpdb->sitemeta WHERE meta_key = %s", $the_timer );
@@ -1284,13 +1343,13 @@ class Breeze_Configuration {
 						}
 						$total_of_tables = count( $all_db_tables );
 					}
-
 				} else {
 					$blog_id = (int) $wpdb->blogid;
 					if ( 1 === $blog_id ) {
 						$sql_get    = $wpdb->get_results(
-							$wpdb->prepare( 'SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE `TABLE_SCHEMA`=%s AND (`ENGINE`=%s OR `ENGINE`=%s OR `ENGINE`=%s)', DB_NAME, 'InnoDB', 'MyISAM', 'ARCHIVE' )
-							, OBJECT );
+							$wpdb->prepare( 'SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE `TABLE_SCHEMA`=%s AND (`ENGINE`=%s OR `ENGINE`=%s OR `ENGINE`=%s)', DB_NAME, 'InnoDB', 'MyISAM', 'ARCHIVE' ),
+							OBJECT
+						);
 						$table_list = '';
 						if ( $sql_get ) {
 							foreach ( $sql_get as $db_table ) {
@@ -1303,7 +1362,6 @@ class Breeze_Configuration {
 							}
 							$total_of_tables = count( $all_db_tables );
 						}
-
 					} else {
 						$sql_get = $wpdb->get_results(
 							$wpdb->prepare( 'SELECT `TABLE_NAME` FROM INFORMATION_SCHEMA.TABLES WHERE `TABLE_SCHEMA`=%s AND (`ENGINE`=%s OR `ENGINE`=%s OR `ENGINE`=%s) AND `TABLE_NAME` LIKE %s', DB_NAME, 'InnoDB', 'MyISAM', 'ARCHIVE', $wpdb->prefix . '%' )
@@ -1316,7 +1374,6 @@ class Breeze_Configuration {
 						}
 					}
 				}
-
 
 				if ( ! isset( $_POST['db_count'] ) ) {
 					$db_count = 0;
@@ -1333,7 +1390,10 @@ class Breeze_Configuration {
 				}
 				$db_count ++;
 				if ( isset( $only_these_tables[ $db_count ] ) ) {
-					$return_value = array( 'optmize_no' => $db_count, 'db_total' => $total_of_tables );
+					$return_value = array(
+						'optmize_no' => $db_count,
+						'db_total'   => $total_of_tables,
+					);
 				} else {
 					$return_value = true;
 				}
@@ -1397,7 +1457,8 @@ class Breeze_Configuration {
 			case 'transient':
 				$return = $wpdb->get_var(
 				/* translators: comment type, comment type */
-					$wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->options WHERE option_name LIKE %s OR option_name LIKE %s",
+					$wpdb->prepare(
+						"SELECT COUNT(*) FROM $wpdb->options WHERE option_name LIKE %s OR option_name LIKE %s",
 						$wpdb->esc_like( '_transient' ) . '%',
 						$wpdb->esc_like( '_site_transient_' ) . '%'
 					)
@@ -1493,8 +1554,9 @@ class Breeze_Configuration {
 					$return  = 0;
 					if ( 1 === $blog_id ) {
 						$sql_get    = $wpdb->get_results(
-							$wpdb->prepare( 'SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE `TABLE_SCHEMA`=%s AND (`ENGINE`=%s OR `ENGINE`=%s OR `ENGINE`=%s)', DB_NAME, 'InnoDB', 'MyISAM', 'ARCHIVE' )
-							, OBJECT );
+							$wpdb->prepare( 'SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE `TABLE_SCHEMA`=%s AND (`ENGINE`=%s OR `ENGINE`=%s OR `ENGINE`=%s)', DB_NAME, 'InnoDB', 'MyISAM', 'ARCHIVE' ),
+							OBJECT
+						);
 						$table_list = '';
 						if ( $sql_get ) {
 							foreach ( $sql_get as $db_table ) {
@@ -1506,13 +1568,11 @@ class Breeze_Configuration {
 								$return = count( $tables_list[0] );
 							}
 						}
-
 					} else {
 						$return = $wpdb->get_var(
 							$wpdb->prepare( 'SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE `TABLE_SCHEMA`=%s AND (`ENGINE`=%s OR `ENGINE`=%s OR `ENGINE`=%s) AND `TABLE_NAME` LIKE %s', DB_NAME, 'InnoDB', 'MyISAM', 'ARCHIVE', $wpdb->prefix . '%' )
 						);
 					}
-
 				}
 
 				#$return  = count( $wpdb->get_col( 'SHOW TABLES' ) );
@@ -1552,7 +1612,7 @@ class Breeze_Configuration {
 		// Analyze minification directory sizes.
 		$files_path = rtrim( WP_CONTENT_DIR, '/' ) . '/cache/breeze-minification';
 		if ( $is_subsite ) {
-			$blog_id    = get_current_blog_id();
+			$blog_id     = get_current_blog_id();
 			$files_path .= DIRECTORY_SEPARATOR . $blog_id;
 		}
 		$size_cache += breeze_get_directory_size( $files_path, array( 'index.html' ) );
@@ -1562,7 +1622,7 @@ class Breeze_Configuration {
 		//delete minify file
 		Breeze_MinificationCache::clear_minification();
 		//delete all cache
-		Breeze_PurgeCache::breeze_cache_flush();
+		Breeze_PurgeCache::breeze_cache_flush( true, true, true );
 
 		return $result;
 	}
@@ -1649,7 +1709,7 @@ class Breeze_Configuration {
 			if ( isset( $is_json['warnings'], $is_json['warnings']['security'], $is_json['warnings']['security']['malware'] ) ) {
 				$is_safe = false;
 
-				$response['message'] = '<strong>' . __( 'Important: ', 'breeze' ) . '</strong>';
+				$response['message']  = '<strong>' . __( 'Important: ', 'breeze' ) . '</strong>';
 				$response['message'] .= __( 'The CDN URL you\'ve used is insecure.', 'breeze' );
 			}
 		}
@@ -1755,10 +1815,8 @@ class Breeze_Configuration {
 					$return_value = self::optimize_database( $items[ $type ] );
 				}
 			}
-
 		}
 		// $type = array( 'revisions', 'drafted', 'trash', 'comments_trash', 'comments_spam', 'trackbacks', 'transient' );
-
 
 		echo json_encode( array( 'clear' => $return_value ) );
 		exit;
@@ -1780,6 +1838,25 @@ class Breeze_Configuration {
 		}
 
 		return $bytes;
+	}
+
+	/**
+	 * Generate a random token
+	 *
+	 * @param $length
+	 *
+	 * @return string
+	 * @throws Exception
+	 */
+	public function breeze_generate_token( $length = 12 ) {
+		$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		$token      = '';
+
+		for ( $i = 0; $i < $length; $i ++ ) {
+			$token .= $characters[ random_int( 0, strlen( $characters ) - 1 ) ];
+		}
+
+		return $token;
 	}
 
 	/**
@@ -1870,10 +1947,11 @@ class Breeze_Configuration {
 			'breeze-lazy-load'         => '0',
 			'breeze-lazy-load-native'  => '0',
 			'breeze-lazy-load-iframes' => '0',
+			'breeze-lazy-load-videos'  => '0',
 			'breeze-display-clean'     => '1',
 
 		);
-		$basic         = $default_basic;
+		$basic = $default_basic;
 
 		// Default File
 		$default_file = array(
@@ -1897,11 +1975,21 @@ class Breeze_Configuration {
 
 		$file = $default_file;
 
+		$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		$token      = '';
+
+		for ( $i = 0; $i < 12; $i ++ ) {
+			$token .= $characters[ random_int( 0, strlen( $characters ) - 1 ) ];
+		}
+
 		// Default Advanced
 		$default_advanced  = array(
 			'breeze-exclude-urls'  => array(),
 			'cached-query-strings' => array(),
 			'breeze-wp-emoji'      => '0',
+			'breeze-enable-api'    => '0',
+			'breeze-secure-api'    => '0',
+			'breeze-api-token'     => $token,
 		);
 		$default_heartbeat = array(
 			'breeze-control-heartbeat'  => '0',
@@ -1963,7 +2051,7 @@ class Breeze_Configuration {
 		// Preload default
 		$default_preload = array(
 			'breeze-preload-fonts' => array(),
-			'breeze-preload-links' => '0',
+			'breeze-preload-links' => '1',
 			'breeze-prefetch-urls' => array(),
 		);
 		$preload         = $default_preload;
@@ -2025,7 +2113,6 @@ class Breeze_Configuration {
 				$save_file['breeze-delay-js-scripts'] = $breeze_delay_js_scripts;
 				update_blog_option( $blog_id, 'breeze_file_settings', $save_file );
 			}
-
 		} else {
 			breeze_update_option( 'basic_settings', $basic );
 			breeze_update_option( 'advanced_settings', $advanced );
@@ -2076,7 +2163,6 @@ class Breeze_Configuration {
 		if ( ! empty( $basic ) && ! empty( $basic['breeze-active'] ) ) {
 			Breeze_ConfigCache::factory()->toggle_caching( true );
 		}
-
 
 		if ( is_multisite() ) {
 			if ( true === filter_var( $is_network, FILTER_VALIDATE_BOOLEAN ) || 'network' === $blog_id ) {

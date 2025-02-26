@@ -95,16 +95,12 @@ class Breeze_PurgeVarnish {
 			}
 		} else {
 			$homepage = home_url() . '/?breeze';
-			if ( isset( $_REQUEST['breeze_action'] ) && $_REQUEST['breeze_action'] == 'breeze_settings' ) {
-				if ( isset( $_POST['_breeze_nonce'] ) || wp_verify_nonce( $_POST['_breeze_nonce'], 'breeze_settings' ) ) {
-					do_action( 'breeze_clear_all_cache' );
-				}
-			}
+
 			if ( isset( $_GET['breeze_purge_cloudflare'] ) && check_admin_referer( 'breeze_purge_cache_cloudflare' ) ) {
 				$reset   = Breeze_CloudFlare_Helper::reset_all_cache();
 				$json    = json_decode( trim( $reset ), true );
 				$message = __( 'CloudWays - Cloudflare microservice was not reachable. ', 'breeze' );
-				$class   = 'notice notice-error is-dismissible breeze-notice';
+				$class   = 'notice notice-error is-dismissible breeze-notice message-clear-cache-top';
 				if ( null !== $json && json_last_error() === JSON_ERROR_NONE && isset( $json['success'] ) ) {
 					$success = filter_var( $json['success'], FILTER_VALIDATE_BOOLEAN );
 					$class   = 'notice notice-warning is-dismissible breeze-notice';
@@ -114,29 +110,40 @@ class Breeze_PurgeVarnish {
 						$class   = 'notice notice-success is-dismissible breeze-notice';
 					}
 				}
-				printf( '<div id="message-clear-cache-top" class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px; display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $class ), esc_html( $message ) );
+				printf( '<div class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px; display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $class ), esc_html( $message ) );
 			}
 
 			if ( isset( $_GET['breeze_purge'] ) && check_admin_referer( 'breeze_purge_cache' ) ) {
-				//clear varnish cache
-				$admin = new Breeze_Admin();
-				$admin->breeze_clear_varnish();
 				//clear static cache
 				$size_cache = Breeze_Configuration::breeze_clean_cache();
-				Breeze_CloudFlare_Helper::reset_all_cache();
+				$class      = 'notice notice-success is-dismissible breeze-notice message-clear-cache-top';
+				$message    = __( 'Cache data has been purged: ', 'breeze' ) . $size_cache . __( ' Kb static cache cleaned', 'breeze' );
 
-				if ( (int) $size_cache > 0 ) {
-					$class = 'notice notice-success is-dismissible breeze-notice';
-					$message =  __( 'Cache data has been purged: ', 'breeze' ) . $size_cache . __( ' Kb static cache cleaned', 'breeze' ) ;
+				printf( '<div class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px; display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $class ), esc_html( $message ) );
+				// clear varnish cache.
+				if ( is_varnish_cache_started() ) {
+					$admin              = new Breeze_Admin();
+					$varnish_response   = $admin->breeze_clear_varnish();
+					$message            = $varnish_response ? __( 'Varnish Cache has been purged.', 'breeze' ) : __( 'Problem: Varnish Cache not purged.', 'breeze' );
+					$notification_class = $varnish_response ? 'notice-success' : 'notice-error';
+					$classes            = 'notice is-dismissible breeze-notice message-clear-cache-top ' . $notification_class;
+					printf( '<div class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px;display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $classes ), esc_html( $message ) );
+				}
+				// Clear Cloudflare cache.
+				if ( Breeze_CloudFlare_Helper::is_cloudflare_enabled() ) {
+					$response           = Breeze_CloudFlare_Helper::reset_all_cache();
+					$response           = json_decode( trim( $response ), true );
+					$message            = __( 'Cloudflare cache data not purged. ', 'breeze' );
+					$notification_class = 'notice-error';
+					if ( null !== $response
+					&& json_last_error() === JSON_ERROR_NONE
+					&& isset( $response['success'] ) ) {
 
-					printf( '<div id="message-clear-cache-top" class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px; display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $class ), esc_html( $message ) );
-					#echo '<div id="message-clear-cache-top" style="margin: 10px 0px 10px 0;padding: 10px;" class="notice notice-success" ><strong>' . __( 'Cache data has been purged: ', 'breeze' ) . $size_cache . __( ' Kb static cache cleaned', 'breeze' ) . '</strong></div>';
-				} else {
-					$class = 'notice notice-success is-dismissible breeze-notice';
-					$message =  __( 'Cache data has been purged: ', 'breeze' );
-
-					printf( '<div id="message-clear-cache-top" class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px; display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $class ), esc_html( $message ) );
-					#echo '<div id="message-clear-cache-top" style="margin: 10px 0px 10px 0;padding: 10px;" class="notice notice-success" ><strong>' . __( 'Cache data has been purged.', 'breeze' ) . '</strong></div>';
+						$message            = __( 'Cloudflare cache data has been purged. ', 'breeze' );
+						$notification_class = 'notice-success';
+					}
+					$classes = 'notice is-dismissible breeze-notice message-clear-cache-top ' . $notification_class;
+					printf( '<div class="%1$s" style="margin: 10px 14px 10px 0;padding: 10px;display: none; font-weight: 600;"><p>%2$s</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>', esc_attr( $classes ), esc_html( $message ) );
 				}
 			}
 		}
@@ -181,14 +188,13 @@ class Breeze_PurgeVarnish {
 			$purgeme .= '?' . $parseUrl['query'];
 		}
 
-
-		$ssl_verification = apply_filters('breeze_ssl_check_certificate', true);
+		$ssl_verification = apply_filters( 'breeze_ssl_check_certificate', true );
 
 		if ( ! is_bool( $ssl_verification ) ) {
 			$ssl_verification = true;
 		}
 
-		if(defined('WP_DEBUG') && true === WP_DEBUG){
+		if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
 			$ssl_verification = false;
 		}
 
@@ -209,6 +215,7 @@ class Breeze_PurgeVarnish {
 			}
 			$response = wp_remote_request( $schema . $purgeme, $request_args );
 		}
+		return $response;
 	}
 
 	//check permission
@@ -331,7 +338,7 @@ class Breeze_PurgeVarnish {
 					$listofurls,
 					get_post_type_archive_link( get_post_type( $postId ) ),
 					get_post_type_archive_feed_link( get_post_type( $postId ) )
-				// Need to add in JSON?
+					// Need to add in JSON?
 				);
 			}
 			// Feeds
@@ -348,7 +355,6 @@ class Breeze_PurgeVarnish {
 			array_push(
 				$listofurls,
 				get_rest_url(),
-				home_url() . '/'
 			);
 			if ( get_option( 'show_on_front' ) == 'page' ) {
 				// Ensure we have a page_for_posts setting to avoid empty URL
@@ -356,6 +362,18 @@ class Breeze_PurgeVarnish {
 					array_push( $listofurls, get_permalink( get_option( 'page_for_posts' ) ) );
 				}
 			}
+
+			// Trim all URLs in the list to ensure clean output
+			$listofurls = array_map( 'trim', $listofurls );
+			$homepage   = trailingslashit( home_url() );
+			if ( ! in_array( $homepage, $listofurls, true ) ) {
+				// Clear the cache for homepage
+				array_push(
+					$listofurls,
+					$homepage
+				);
+			}
+
 		} else {
 			// Nothing
 			return;

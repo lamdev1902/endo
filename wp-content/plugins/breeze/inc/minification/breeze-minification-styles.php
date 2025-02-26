@@ -2,6 +2,9 @@
 /*
  *  Based on some work of autoptimize plugin
  */
+
+use MatthiasMullie\Minify;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
@@ -21,7 +24,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 	private $cssinlinesize         = '';
 	private $cssremovables         = array();
 	private $include_inline        = false;
-	private $font_swap = false;
+	private $font_swap             = false;
 	private $inject_min_late       = '';
 	private $group_css             = false;
 	private $custom_css_exclude    = array();
@@ -33,6 +36,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 	private $original_content      = '';
 	private $show_original_content = 0;
 	private $do_process            = false;
+	private $dontmove              = false;
 
 
 	//Reads the page and collects style tags
@@ -103,7 +107,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 		if ( $excludeCSS !== '' ) {
 			$this->dontmove = array_filter( array_map( 'trim', explode( ',', $excludeCSS ) ) );
 		} else {
-			$this->dontmove = '';
+			$this->dontmove = array();
 		}
 		// should we defer css?
 		// value: true/ false
@@ -211,16 +215,15 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 								$is_elementor_exception = true;
 							}
 
-							if(false === $is_elementor_exception){
+							if ( false === $is_elementor_exception ) {
 								$this->css[] = array( $media, 'INLINE;' . $code );
-							}else{
+							} else {
 								if ( false === strpos( $code, '.elementor-' ) ) {
-							$this->css[] = array( $media, 'INLINE;' . $code );
-						} else {
-							$tag = '';
-						}
-					}
-
+									$this->css[] = array( $media, 'INLINE;' . $code );
+								} else {
+									$tag = '';
+								}
+							}
 						} else {
 							$tag = '';
 						}
@@ -258,9 +261,9 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 			} else {
 				//<link>
 				if ( $css !== false && file_exists( $css ) && is_readable( $css ) ) {
-					$cssPath  = $css;
-					$css      = $this->fixurls( $cssPath, file_get_contents( $cssPath ) );
-					$css      = preg_replace( '/\x{EF}\x{BB}\x{BF}/', '', $css );
+					$cssPath = $css;
+					$css     = $this->fixurls( $cssPath, file_get_contents( $cssPath ) );
+					$css     = preg_replace( '/\x{EF}\x{BB}\x{BF}/', '', $css );
 					if (
 						false !== strpos( $css, '.elementor-products-grid ul.products.elementor-grid li.product' ) ||
 						false !== strpos( $css, 'li.product,.woocommerce-page ul.products[class*=columns-] li.product' )
@@ -273,7 +276,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 						$css                   = $tmpstyle;
 						$this->alreadyminified = true;
 					} elseif ( $this->can_inject_late( $cssPath, $css ) ) {
-						$css = '%%INJECTLATER' . breeze_HASH . '%%' . base64_encode( $cssPath ) . '|' . md5( $css ) . '%%INJECTLATER%%';
+						$css = '%%INJECTLATER' . breeze_HASH . '%%' . base64_encode( $cssPath ) . '|' . hash( 'sha512', $css ) . '%%INJECTLATER%%';
 					}
 				} else {
 					// Couldn't read CSS. Maybe getpath isn't working?
@@ -294,10 +297,8 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 					if ( $is_elementor_exception && false !== strpos( $css, 'li.product,.woocommerce-page ul.products[class*=columns-] li.product' ) ) {
 						$this->csscode['all'] .= "\n/*FILESTART*/" . "@media {$elem}{" . $css . '}'; // TODO aici se strica
 					} else {
-						$this->csscode[$elem] .= "\n/*FILESTART*/" . "@media {$elem}{" . $css . '}';
+						$this->csscode[ $elem ] .= "\n/*FILESTART*/" . "@media {$elem}{" . $css . '}';
 					}
-
-
 				}
 			} else {
 				foreach ( $media as $elem ) {
@@ -310,7 +311,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 			$md5list = array();
 			$tmpcss  = $this->csscode;
 			foreach ( $tmpcss as $media => $code ) {
-				$md5sum    = md5( $code );
+				$md5sum    = hash('sha512', $code);
 				$medianame = $media;
 				foreach ( $md5list as $med => $sum ) {
 					// If same code
@@ -352,7 +353,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 									$code                  = $tmpstyle;
 									$this->alreadyminified = true;
 								} elseif ( $this->can_inject_late( $path, $code ) ) {
-									$code = '%%INJECTLATER' . breeze_HASH . '%%' . base64_encode( $path ) . '|' . md5( $code ) . '%%INJECTLATER%%';
+									$code = '%%INJECTLATER' . breeze_HASH . '%%' . base64_encode( $path ) . '|' . hash('sha512', $code) . '%%INJECTLATER%%';
 								}
 								if ( ! empty( $code ) ) {
 									$tmp_thiscss = preg_replace( '#(/\*FILESTART\*/.*)' . preg_quote( $import, '#' ) . '#Us', '/*FILESTART2*/' . $code . '$1', $thiscss );
@@ -385,11 +386,11 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 			$mhtmlcount = 0;
 			foreach ( $this->csscode as &$code ) {
 				// Check for already-minified code
-				$hash   = md5( $code );
+				$hash   = hash('sha512', $code);
 				$ccheck = new Breeze_MinificationCache( $hash, 'css' );
 				if ( $ccheck->check() ) {
 					$code                          = $ccheck->retrieve();
-					$this->hashmap[ md5( $code ) ] = $hash;
+					$this->hashmap[ hash('sha512', $code) ] = $hash;
 					continue;
 				}
 				unset( $ccheck );
@@ -417,7 +418,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 							}
 						}
 						if ( $ipath != false && preg_match( '#\.(jpe?g|png|gif|bmp)$#i', $ipath ) && file_exists( $ipath ) && is_readable( $ipath ) && filesize( $ipath ) <= $datauri_max_size ) {
-							$ihash  = md5( $ipath );
+							$ihash  = hash('sha512', $ipath);
 							$icheck = new Breeze_MinificationCache( $ihash, 'img' );
 							if ( $icheck->check() ) {
 								// we have the base64 image in cache
@@ -497,10 +498,16 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 				}
 				// Minify
 				if ( ( $this->alreadyminified !== true ) && ( apply_filters( 'breeze_css_do_minify', true ) ) ) {
-					if ( class_exists( 'Minify_CSS_Compressor' ) ) {
-						$tmp_code = trim( Minify_CSS_Compressor::process( $code ) );
+
+					if ( class_exists( 'MatthiasMullie\Minify\CSS' ) ) {
+						//$tmp_code = trim( Minify_CSS_Compressor::process( $code ) );
+						$minifier = new MatthiasMullie\Minify\CSS();
+						$minifier->add( $code );
+						$tmp_code = $minifier->minify();
+
 					} elseif ( class_exists( 'CSSmin' ) ) {
 						$cssmin = new CSSmin();
+
 						if ( method_exists( $cssmin, 'run' ) ) {
 							$tmp_code = trim( $cssmin->run( $code ) );
 						} elseif ( @is_callable( array( $cssmin, 'minify' ) ) ) {
@@ -518,14 +525,14 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 					$code = $tmp_code;
 					unset( $tmp_code );
 				}
-				$this->hashmap[ md5( $code ) ] = $hash;
+				$this->hashmap[ hash('sha512', $code) ] = $hash;
 			}
 			unset( $code );
 		} else {
 			foreach ( $this->css_group_val as $value ) {
 				$media  = substr( $value, 0, strpos( $value, '_breezecssgroup_' ) );
 				$css    = substr( $value, strpos( $value, '_breezecssgroup_' ) + strlen( '_breezecssgroup_' ) );
-				$hash   = md5( $css );
+				$hash   = hash('sha512', $css);
 				$ccheck = new Breeze_MinificationCache( $hash, 'css' );
 				if ( $ccheck->check() ) {
 					$css_exist           = $ccheck->retrieve();
@@ -534,8 +541,13 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 				}
 				unset( $ccheck );
 				// Minify
-				if ( class_exists( 'Minify_CSS_Compressor' ) ) {
-					$tmp_code = trim( Minify_CSS_Compressor::process( $css ) );
+
+				if ( class_exists( 'MatthiasMullie\Minify\CSS' ) ) {
+					//$tmp_code = trim( Minify_CSS_Compressor::process( $css ) );
+					$minifier = new MatthiasMullie\Minify\CSS();
+					$minifier->add( $css );
+					$tmp_code = $minifier->minify();
+
 				} elseif ( class_exists( 'CSSmin' ) ) {
 					$cssmin = new CSSmin();
 					if ( method_exists( $cssmin, 'run' ) ) {
@@ -567,7 +579,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 		if ( $this->datauris ) {
 			// MHTML Preparation
 			$this->mhtml = "/*\r\nContent-Type: multipart/related; boundary=\"_\"\r\n\r\n" . $this->mhtml . "*/\r\n";
-			$md5         = md5( $this->mhtml );
+			$md5         = hash('sha512', $this->mhtml );
 			$cache       = new Breeze_MinificationCache( $md5, 'txt' );
 			if ( ! $cache->check() ) {
 				// Cache our images for IE
@@ -590,8 +602,8 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 			}
 
 			$whole_css_file = $this->append_font_swap( $whole_css_file );
-			$md5   = md5( $whole_css_file );
-			$cache = new Breeze_MinificationCache( $md5, 'css' );
+			$md5            = hash('sha512', $whole_css_file);
+			$cache          = new Breeze_MinificationCache( $md5, 'css' );
 			if ( ! $cache->check() ) {
 				// Cache our code
 				$cache->cache( $whole_css_file, 'text/css' );
@@ -678,14 +690,19 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 					$defer_inline_code = $this->defer_inline;
 					$defer_inline_code = apply_filters( 'breeze_filter_css_defer_inline', $defer_inline_code );
 					if ( ! empty( $defer_inline_code ) ) {
-						$iCssHash  = md5( $defer_inline_code );
+						$iCssHash  = hash('sha512', $defer_inline_code);
 						$iCssCache = new Breeze_MinificationCache( $iCssHash, 'css' );
 						if ( $iCssCache->check() ) {
 							// we have the optimized inline CSS in cache
 							$defer_inline_code = $iCssCache->retrieve();
 						} else {
-							if ( class_exists( 'Minify_CSS_Compressor' ) ) {
-								$tmp_code = trim( Minify_CSS_Compressor::process( $this->defer_inline ) );
+
+							if ( class_exists( 'MatthiasMullie\Minify\CSS' ) ) {
+								//$tmp_code = trim( Minify_CSS_Compressor::process( $this->defer_inline ) );
+								$minifier = new MatthiasMullie\Minify\CSS();
+								$minifier->add( $this->defer_inline );
+								$tmp_code = $minifier->minify();
+
 							} elseif ( class_exists( 'CSSmin' ) ) {
 								$cssmin   = new CSSmin();
 								$tmp_code = trim( $cssmin->run( $defer_inline_code ) );
@@ -733,14 +750,19 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 					$defer_inline_code = $this->defer_inline;
 					$defer_inline_code = apply_filters( 'breeze_filter_css_defer_inline', $defer_inline_code );
 					if ( ! empty( $defer_inline_code ) ) {
-						$iCssHash  = md5( $defer_inline_code );
+						$iCssHash  = hash('sha512', $defer_inline_code);
 						$iCssCache = new Breeze_MinificationCache( $iCssHash, 'css' );
 						if ( $iCssCache->check() ) {
 							// we have the optimized inline CSS in cache
 							$defer_inline_code = $iCssCache->retrieve();
 						} else {
-							if ( class_exists( 'Minify_CSS_Compressor' ) ) {
-								$tmp_code = trim( Minify_CSS_Compressor::process( $this->defer_inline ) );
+
+							if ( class_exists( 'MatthiasMullie\Minify\CSS' ) ) {
+								//$tmp_code = trim( Minify_CSS_Compressor::process( $this->defer_inline ) );
+								$minifier = new MatthiasMullie\Minify\CSS();
+								$minifier->add( $this->defer_inline );
+								$tmp_code = $minifier->minify();
+
 							} elseif ( class_exists( 'CSSmin' ) ) {
 								$cssmin   = new CSSmin();
 								$tmp_code = trim( $cssmin->run( $defer_inline_code ) );
@@ -821,7 +843,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 				} else {
 					// relative URL
 					$newurl = preg_replace( '/https?:/', '', str_replace( ' ', '%20', breeze_WP_ROOT_URL . str_replace( '//', '/', $dir . '/' . $url ) ) );
-					$hash   = md5( $url );
+					$hash   = hash('sha512', $url);
 					$code   = str_replace( $matches[0][ $k ], $hash, $code );
 					if ( ! empty( $removedQuotes ) ) {
 						$replace[ $hash ] = 'url(\'' . $newurl . '\')';
@@ -848,7 +870,7 @@ class Breeze_MinificationStyles extends Breeze_MinificationBase {
 			// no match with whitelist
 			return false;
 		} else {
-			if ( is_array( $this->dontmove ) ) {
+			if ( is_array( $this->dontmove ) && ! empty( $this->dontmove ) ) {
 				foreach ( $this->dontmove as $match ) {
 					if ( strpos( $tag, $match ) !== false ) {
 						//Matched something
