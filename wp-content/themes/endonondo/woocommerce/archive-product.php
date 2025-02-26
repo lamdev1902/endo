@@ -1148,7 +1148,10 @@ if (!empty($shop_hero)) {
               echo '<div class="product-cat-infor">';
               echo '<div>';
               echo '<a class="product-cat-title" href="' . esc_url(get_term_link($category)) . '"><h2>' . esc_html($category->name) . '</h2></a>';
-              echo '<p>' . esc_html($short_description) . '</p>';
+              $short_description = category_description($category->term_id);
+              if (!empty($short_description)) {
+                  echo '<p>' . $short_description . '</p>';
+              }
               echo '</div>';
               echo '<a class="product-cat-link" href="' . esc_url(get_term_link($category)) . '">Shop now</a>';
               echo '</div>';
