@@ -2054,4 +2054,67 @@ button.buy-now {
 	    background-image: url(../images/app-mobile-new.png);
 	}
 }
-
+/* 26/02*/
+.woocommerce ul.products li.product .woocommerce-loop-product__link:hover .woocommerce-loop-product__title{
+  color:#000 !important;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link{
+  transition: all 0.3s;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__link:hover{
+  transform: scale(1.05);
+}
+.ht-actions-woo button.ht_buy_now_button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover{
+      background: #3c3e40 !important;
+}
+.ht-actions-woo button.single_add_to_cart_button:hover{
+    border-color: #3c3e40 !important;
+}
+.pdc-review-list .pdc-list-review:hover, .pdc-sumary-right .item.active:hover{
+  background: #3c3e40 !important;
+  border-color: #3c3e40 !important;
+}
+.pdc-review-list .pdc-list-review{
+  z-index: 4;
+}
+.container-cat .hero-item img{
+  filter: grayscale(100%)  !important;
+}
+.container-cat .hero-item img:hover{
+  filter: none  !important;
+}
+.app-section{
+  background-image: url(../images/app-desktop.png);
+}
+.tax-product_cat.woocommerce-page .product-filters select#price,
+.tax-product_cat.woocommerce-page .product-filters #sort-by,
+.tax-product_cat.woocommerce-page .product-filters select#availability{
+  min-width: 150px;
+}
+@media(max-width: 1200px){
+  .tax-product_cat.woocommerce-page .product-filters select#price,
+  .tax-product_cat.woocommerce-page .product-filters #sort-by,
+  .tax-product_cat.woocommerce-page .product-filters select#availability{
+    min-width: 140px;
+  }
+}
+@media(max-width: 834px){
+  .app-section{
+  background-image: url(../images/app-tablet.png);
+}
+@media (max-width: 767px) {
+  .woocommerce-cart .woocommerce table.shop_table td:after{
+    display: none;
+  }
+  .woocommerce-cart .cart-collaterals .cart_totals table td,
+  .woocommerce-cart .woocommerce table.shop_table td{
+    box-shadow: none;
+  }
+  .woocommerce-cart .woocommerce table.shop_table td{
+    background: none !important;
+  }
+}
+@media(max-width: 480px){
+  .app-section{
+  background-image: url(../images/app-mobile.png) !important;
+}

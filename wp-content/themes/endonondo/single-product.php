@@ -1277,10 +1277,13 @@ if ($ratingInfo) {
             <?php woocommerce_template_single_add_to_cart(); ?>
           </div>
           <div class="pdt-sdes"><?php the_field('description_short'); ?></div>
-          <?php $advc = get_field('adcontent', 'option');
-          if ($advc) { ?>
-            <div class="text-more"><?php echo $advc; ?></div>
-          <?php } ?>
+          <?php 
+            $on_off_adc = get_field('on_off_adc', $pid);
+            if($on_off_adc == true){
+              $advc = get_field('adcontent', 'option');
+              if ($advc) { ?>
+              <div class="text-more"><?php echo $advc; ?></div>
+          <?php } } ?>
 
           <?php
           $WC_Structured_Data = new WC_Structured_Data();

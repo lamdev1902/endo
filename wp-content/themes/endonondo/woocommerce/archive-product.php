@@ -985,25 +985,26 @@ if (!empty($shop_hero)) {
           </div>
         </div>
       <?php } ?>
-      <div class="faqs">
-        <div class="container">
-          <h3>Frequently Asked Questions</h3>
-          <?php
-          foreach ($faqs as $faq) {
-          ?>
-            <div>
-              <div class="question">
-                <span><?php echo $faq['question']; ?></span>
+      <?php if($faqs){ ?>
+        <div class="faqs">
+          <div class="container">
+            <h3>Frequently Asked Questions</h3>
+            <?php
+            foreach ($faqs as $faq) {
+            ?>
+              <div>
+                <div class="question">
+                  <span><?php echo $faq['question']; ?></span>
+                </div>
+                <div class="answer">
+                  <span><?php echo $faq['answer']; ?></span>
+                </div>
               </div>
-              <div class="answer">
-                <span><?php echo $faq['answer']; ?></span>
-              </div>
-            </div>
 
-          <?php } ?>
+            <?php } ?>
+          </div>
         </div>
-      </div>
-
+      <?php } ?>
       <?php if ($disclaimer) { ?>
         <div class="resource">
           <div class="container">
@@ -1147,7 +1148,10 @@ if (!empty($shop_hero)) {
               echo '<div class="product-cat-infor">';
               echo '<div>';
               echo '<a class="product-cat-title" href="' . esc_url(get_term_link($category)) . '"><h2>' . esc_html($category->name) . '</h2></a>';
-              echo '<p>' . esc_html($short_description) . '</p>';
+              $short_description = category_description($category->term_id);
+              if (!empty($short_description)) {
+                  echo '<p>' . $short_description . '</p>';
+              }
               echo '</div>';
               echo '<a class="product-cat-link" href="' . esc_url(get_term_link($category)) . '">Shop now</a>';
               echo '</div>';
