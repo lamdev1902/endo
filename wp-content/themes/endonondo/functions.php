@@ -406,7 +406,7 @@ function theme_mcs_scripts()
     wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
     wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
     wp_enqueue_style('style-regular', get_template_directory_uri() . '/assets/fonts/css/regular.css');
-    wp_enqueue_style('style-new', get_template_directory_uri() . '/assets/css/new.css');
+    wp_enqueue_style('style-new', get_template_directory_uri() . '/assets/css/new.css', '', '6.8.0');
 }
 add_action('wp_enqueue_scripts', 'theme_mcs_scripts');
 
