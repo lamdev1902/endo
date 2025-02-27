@@ -24,10 +24,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Breeze_PurgeCache {
 
+	/**
+	 * Temporary page/post/cpt ID list of already cache cleared.
+	 */
+	private array $cleared_extra_items = array();
+
 	public function set_action() {
 		add_action( 'pre_post_update', array( $this, 'purge_post_on_update' ), 10, 1 );
 		add_action( 'save_post', array( $this, 'purge_post_on_update' ), 10, 1 );
 		add_action( 'save_post', array( $this, 'purge_post_on_update_content' ), 9, 3 );
+		add_action( 'edited_term', array( $this, 'purge_term_on_update' ), 9, 3 );
 		add_action( 'wp_trash_post', array( $this, 'purge_post_on_update' ), 10, 1 );
 		add_action( 'wp_trash_post', array( $this, 'purge_post_on_trash' ), 9, 1 );
 		add_action( 'comment_post', array( $this, 'purge_post_on_new_comment' ), 10, 3 );
@@ -39,6 +45,54 @@ class Breeze_PurgeCache {
 
 		add_action( 'switch_theme', array( &$this, 'clear_local_cache_on_switch' ), 9, 3 );
 		add_action( 'customize_save_after', array( &$this, 'clear_customizer_cache' ), 11, 1 );
+	}
+
+	/**
+	 * Detects pages with the latest comments block and clears their cache.
+	 *
+	 * This method scans the content of published posts to find pages that contain
+	 * the latest comments block (`<!-- wp:latest-comments -->`). If such pages are found,
+	 * it purges their Cloudflare cache and removes local cache files.
+	 *
+	 * @return void
+	 */
+	private function detect_comments_page_clear_cache(): void {
+		global $wpdb;
+
+		$query = "SELECT ID
+			FROM `$wpdb->posts`
+			WHERE post_content LIKE '%<!-- wp:latest-comments %>'
+			AND post_status = 'publish'";
+
+		$results = $wpdb->get_results( $query ); // phpcs:ignore
+
+		$pages_list = array();
+
+		if ( $results ) {
+			foreach ( $results as $result ) {
+				$page_id       = $result->ID;
+				$get_permalink = get_permalink( $page_id );
+				if ( false !== $get_permalink && ! in_array( $page_id, $this->cleared_extra_items, true ) ) {
+					$pages_list[]                = $get_permalink;
+					$this->cleared_extra_items[] = $page_id;
+				}
+			}
+		}
+
+		if ( ! empty( $pages_list ) ) {
+			// CLear Cloudflare, if enabled.
+			Breeze_CloudFlare_Helper::purge_cloudflare_cache_urls( $pages_list );
+
+			// Remove local cache file.
+			foreach ( $pages_list as $url_path ) {
+				$this->clear_local_cache_for_urls( array( $url_path ) );
+
+				$main     = new Breeze_PurgeVarnish();
+				$item_url = untrailingslashit( $url_path ) . '/?breeze';
+				$main->purge_cache( $item_url );
+			}
+		}
+
 	}
 
 	/**
@@ -66,7 +120,7 @@ class Breeze_PurgeCache {
 		//delete minify
 		Breeze_MinificationCache::clear_minification();
 		//clear normal cache
-		Breeze_PurgeCache::breeze_cache_flush();
+		Breeze_PurgeCache::breeze_cache_flush( true, true, true );
 		//do_action( 'breeze_clear_all_cache' );
 	}
 
@@ -90,6 +144,7 @@ class Breeze_PurgeCache {
 
 	//    Automatically purge all file based page cache on post changes
 	public function purge_post_on_update( $post_id ) {
+
 		$post_type = get_post_type( $post_id );
 
 		if ( ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || 'revision' === $post_type ) {
@@ -109,6 +164,21 @@ class Breeze_PurgeCache {
 
 		if ( did_action( 'edit_post' ) ) {
 			return;
+		}
+
+		// File based caching only
+		if ( ! empty( Breeze_Options_Reader::get_option_value( 'breeze-active' ) ) ) {
+			self::breeze_cache_flush( $do_cache_reset, $clear_wp_cache );
+		}
+	}
+
+	//    Automatically purge all file based term cache on post changes
+	public function purge_term_on_update() {
+
+		$do_cache_reset = true;
+		$clear_wp_cache = true;
+		if ( defined( 'RedisCachePro\Version' ) ) {
+			$clear_wp_cache = false;
 		}
 
 		// File based caching only
@@ -139,8 +209,14 @@ class Breeze_PurgeCache {
 				return;
 			}
 
-			$this->purge_cloudflare_cache( $post_id );
+			$list_of_urls = $this->collect_urls_for_cache_purge( $post_id );
 
+			if ( ! empty( $list_of_urls ) ) {
+				// Purge local cache for the URLs list.
+				$this->clear_local_cache_for_urls( $list_of_urls );
+				// Purge CF cache.
+				Breeze_CloudFlare_Helper::purge_cloudflare_cache_urls( $list_of_urls );
+			}
 		}
 
 	}
@@ -153,13 +229,21 @@ class Breeze_PurgeCache {
 	 * @return void
 	 */
 	public function purge_post_on_trash( int $post_id ) {
-		$this->purge_cloudflare_cache( $post_id );
+		$list_of_urls = $this->collect_urls_for_cache_purge( $post_id );
+
+		if ( ! empty( $list_of_urls ) ) {
+			// Purge local cache for the URLs list.
+			$this->clear_local_cache_for_urls( $list_of_urls );
+			// Purge CF cache.
+			Breeze_CloudFlare_Helper::purge_cloudflare_cache_urls( $list_of_urls );
+		}
+
 	}
 
-	private function purge_cloudflare_cache( $post_id ) {
+	private function collect_urls_for_cache_purge( $post_id ): array {
 
 		if ( false === get_permalink( $post_id ) ) {
-			return;
+			return array();
 		}
 		// Reset CloudFlare cache.
 		$get_permalink = get_permalink( $post_id );
@@ -253,7 +337,6 @@ class Breeze_PurgeCache {
 		array_push(
 			$list_of_urls,
 			get_rest_url(),
-			home_url() . '/'
 		);
 		if ( 'page' === get_option( 'show_on_front' ) ) {
 			// Ensure we have a page_for_posts setting to avoid empty URL
@@ -262,7 +345,42 @@ class Breeze_PurgeCache {
 			}
 		}
 
-		Breeze_CloudFlare_Helper::purge_cloudflare_cache_urls( $list_of_urls );
+		// Trim all URLs in the list to ensure clean output
+		$list_of_urls = array_map( 'trim', $list_of_urls );
+
+		$homepage = trailingslashit( home_url() );
+		if ( ! in_array( $homepage, $list_of_urls, true ) ) {
+			// Clear the cache for homepage
+			array_push(
+				$list_of_urls,
+				$homepage
+			);
+		}
+
+		return $list_of_urls;
+	}
+
+	/**
+	 * Clears the local cache for the specified URLs.
+	 *
+	 * @param array $list_of_urls An array of URLs for which the local cache should be cleared.
+	 *
+	 * @return void
+	 */
+	private function clear_local_cache_for_urls( array $list_of_urls ) {
+		global $wp_filesystem;
+		if ( empty( $wp_filesystem ) ) {
+			require_once ABSPATH . '/wp-admin/includes/file.php';
+			WP_Filesystem();
+		}
+
+		if ( ! empty( $list_of_urls ) ) {
+			foreach ( $list_of_urls as $local_url ) {
+				if ( $wp_filesystem->exists( breeze_get_cache_base_path() . hash( 'sha512', $local_url ) ) ) {
+					$wp_filesystem->rmdir( breeze_get_cache_base_path() . hash( 'sha512', $local_url ), true );
+				}
+			}
+		}
 	}
 
 	public function purge_post_on_new_comment( $comment_ID, $approved, $commentdata ) {
@@ -275,17 +393,11 @@ class Breeze_PurgeCache {
 
 			Breeze_CloudFlare_Helper::purge_cloudflare_cache_urls( array( get_permalink( $post_id ) ) );
 
-			global $wp_filesystem;
-
-			if ( empty( $wp_filesystem ) ) {
-				require_once( ABSPATH . '/wp-admin/includes/file.php' );
-				WP_Filesystem();
-			}
-
 			$url_path = get_permalink( $post_id );
-			if ( $wp_filesystem->exists( breeze_get_cache_base_path() . md5( $url_path ) ) ) {
-				$wp_filesystem->rmdir( breeze_get_cache_base_path() . md5( $url_path ), true );
-			}
+			// Purge local cache for the URLs list.
+			$this->clear_local_cache_for_urls( array( $url_path ) );
+
+			$this->detect_comments_page_clear_cache();
 		}
 	}
 
@@ -297,50 +409,50 @@ class Breeze_PurgeCache {
 			if ( ! empty( $comment ) ) {
 				$post_id = $comment->comment_post_ID;
 
-				global $wp_filesystem;
-
-				WP_Filesystem();
-
 				$url_path = get_permalink( $post_id );
-
 				Breeze_CloudFlare_Helper::purge_cloudflare_cache_urls( array( $url_path ) );
-
-				if ( $wp_filesystem->exists( breeze_get_cache_base_path() . md5( $url_path ) ) ) {
-					$wp_filesystem->rmdir( breeze_get_cache_base_path() . md5( $url_path ), true );
-				}
+				$this->clear_local_cache_for_urls( array( $url_path ) );
 			}
+
+			$this->detect_comments_page_clear_cache();
 		}
 	}
 
 	/**
-	 * Clear Breeze & Wordpress Cache
+	 * Clear Breeze & WordPress Cache
 	 *
 	 * @param $flush_cache
 	 * @param $clear_ocp
 	 *
 	 * @return void
 	 */
-	public static function breeze_cache_flush( $flush_cache = true, $clear_ocp = true ) {
-		global $wp_filesystem, $post;
+	public static function breeze_cache_flush( $flush_cache = true, $clear_ocp = true, $purge_all_html_folder = false ) {
+		global $post;
 		if ( true === Breeze_CloudFlare_Helper::is_log_enabled() ) {
 			error_log( '######### PURGE LOCAL CACHE HTML ###: ' . var_export( 'true', true ) );
 		}
-		require_once( ABSPATH . 'wp-admin/includes/file.php' );
 
-		WP_Filesystem();
+		if ( true === $purge_all_html_folder ) {
+			global $wp_filesystem;
 
-		$cache_path = breeze_get_cache_base_path( is_network_admin() );
-		$wp_filesystem->rmdir( untrailingslashit( $cache_path ), true );
+			if ( empty( $wp_filesystem ) ) {
+				require_once ABSPATH . '/wp-admin/includes/file.php';
+				WP_Filesystem();
+			}
 
-		if ( true === $flush_cache && ! empty( $post ) ) {
+			$cache_path = breeze_get_cache_base_path( is_network_admin() );
+			$wp_filesystem->rmdir( untrailingslashit( $cache_path ), true );
+		}
+
+		if ( true === $flush_cache && ! empty( $post ) && is_object( $post ) ) {
 			$post_type = get_post_type( $post->ID );
 
-			$flush_cache = true;
+			$flush_cache         = true;
 			$ignore_object_cache = array(
 				'tribe_events',
 				'shop_order',
 			);
-			if ( in_array( $post_type, $ignore_object_cache ) ) {
+			if ( in_array( $post_type, $ignore_object_cache, true ) ) {
 				$flush_cache = false;
 			}
 		}
@@ -349,12 +461,12 @@ class Breeze_PurgeCache {
 			$flush_cache = false;
 		}
 
-		if ( function_exists( 'wp_cache_flush' ) && true === $flush_cache && true === $clear_ocp  ) {
+		if ( function_exists( 'wp_cache_flush' ) && true === $flush_cache && true === $clear_ocp ) {
 			if ( true === Breeze_CloudFlare_Helper::is_log_enabled() ) {
 				error_log( '######### PURGE OBJECT CACHE ###: ' . var_export( 'true', true ) );
 			}
 			#if ( ! defined( 'RedisCachePro\Version' ) && ! defined( 'WP_REDIS_VERSION' ) ) {
-				wp_cache_flush();
+			wp_cache_flush();
 			#}
 
 		}

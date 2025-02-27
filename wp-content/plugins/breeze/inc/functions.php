@@ -97,7 +97,6 @@ function breeze_current_user_type( $as_dir = true ) {
 		}
 	}
 
-
 	return '';
 }
 
@@ -128,7 +127,6 @@ function breeze_all_wp_user_roles() {
 
 function breeze_all_user_folders() {
 	$all_roles = breeze_all_wp_user_roles();
-
 
 	$roles = array(
 		'',
@@ -319,7 +317,6 @@ function breeze_is_restricted_access( $bool_response = false ) {
 		} else {
 			return true;//restrict the access.
 		}
-
 	}
 
 	if ( true === $bool_response ) {
@@ -356,7 +353,7 @@ function breeze_which_role_folder( $hash = '' ) {
 }
 
 
-function breeze_load_delay_script(){
+function breeze_load_delay_script() {
 
 	$delay_script_js = <<<SCRIPT_TEST
 		<script>
@@ -403,7 +400,7 @@ function breeze_currency_switcher_cache() {
 
 				$the_path = strtoupper( $the_path );
 				if ( array_key_exists( $the_path, $county_list ) ) {
-					$currency = $currency.$the_path;
+					$currency = $currency . $the_path;
 
 				}
 			}
@@ -411,7 +408,11 @@ function breeze_currency_switcher_cache() {
 	}
 
 	if ( function_exists( 'weglot_get_current_language' ) ) {
-		$currency = $currency.weglot_get_current_language();
+		$currency = $currency . weglot_get_current_language();
+	}
+
+	if ( isset( $_COOKIE['aelia_cs_selected_currency'] ) ) {
+		$currency = trim( $_COOKIE['aelia_cs_selected_currency'] );
 	}
 
 	if ( is_string( $currency ) && ! empty( $currency ) ) {
@@ -430,7 +431,8 @@ function breeze_is_script_ignored_from_delay( $script = '' ) {
 	}
 
 	$not_delayed     = false;
-	$scripts_ignored = apply_filters( 'default_scripts_gnore_from_delay',
+	$scripts_ignored = apply_filters(
+		'default_scripts_gnore_from_delay',
 		array(
 			'gtag(',
 			'ga(',
@@ -447,7 +449,6 @@ function breeze_is_script_ignored_from_delay( $script = '' ) {
 				$not_delayed = true;
 				break;
 			}
-
 		}
 
 		return $not_delayed;
@@ -708,4 +709,256 @@ function breeze_all_country_codes() {
 		'ZM' => 'Zambia',
 		'ZW' => 'Zimbabwe',
 	);
+}
+
+/**
+ * Load Mobile Detect library based on PHP version
+ *
+ * @return \Breeze\Detection\MobileDetect|false
+ */
+function breeze_mobile_detect_library() {
+	$call_class     = false;
+	$path_to_plugin = dirname( __FILE__, 2 ) . '/';
+
+	if ( ! class_exists( '\Breeze\Detection\MobileDetect' ) ) {
+		if ( version_compare( PHP_VERSION, '7.3.0' ) >= 0 && version_compare( PHP_VERSION, '8.0.0', '<' ) ) {
+			// Mobile detect 3.74
+			require_once( $path_to_plugin . 'vendor-extra/mobiledetect/build/php7/vendor/autoload.php' );
+			$call_class = true;
+		}
+
+		if ( version_compare( PHP_VERSION, '8.0.0' ) >= 0 ) {
+			// Mobile detect 4.8
+			require_once( $path_to_plugin . 'vendor-extra/mobiledetect/build/php8/vendor/autoload.php' );
+			$call_class = true;
+		}
+	}
+
+	if ( class_exists( '\Breeze\Detection\MobileDetect' ) ) {
+		$call_class = true;
+	}
+
+	if ( true === $call_class ) {
+		return new \Breeze\Detection\MobileDetect;
+	}
+
+	return false;
+
+}
+
+/**
+ * Get the device type.
+ *
+ * @return string
+ */
+function breeze_mobile_detect( $as_folder = true ) {
+	if ( false === is_breeze_mobile_cache() ) {
+		return '';
+	}
+	$device_type = '';
+
+	// Cloudways server variable.
+	if ( true === breeze_is_cloudways_server() ) {
+		$get_cloudways_type = breeze_cache_type_return();
+		if ( 'T' === $get_cloudways_type ) {
+			$device_type = 'tablet';
+		} elseif ( 'M' === $get_cloudways_type ) {
+			$device_type = 'mobile';
+		}
+	} else {
+		/**
+		 * \Detection\MobileDetect object
+		 */
+		$is_library = breeze_mobile_detect_library();
+
+		if ( false !== $is_library ) {
+			try {
+				if ( ! isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
+					$_SERVER['HTTP_USER_AGENT'] = 'empty_agent';
+				}
+				$is_library->setUserAgent( $_SERVER['HTTP_USER_AGENT'] );
+				//code...
+				$device_type = ( $is_library->isMobile() ? ( $is_library->isTablet() ? 'tablet' : 'mobile' ) : '' ); // last one can be 'desktop'
+			} catch ( \Exception $e ) {
+				// handle exception
+				$device_type = '';
+			}
+		}
+	}
+
+	if ( true === $as_folder && ! empty( $device_type ) ) {
+		$device_type = $device_type . '_';
+	}
+
+	return $device_type;
+}
+
+/**
+ * Detect if mobile cache is enabled.
+ *
+ * @param bool $just_cw_server To check for Mobile Cache option value only from CW server or also Breeze options.
+ *
+ * @return bool|mixed
+ */
+function is_breeze_mobile_cache( $just_cw_server = false ) {
+	$accepted_cloudways_values = array(
+		'desktop',
+		'tablet',
+		'mobile',
+	);
+	if ( isset( $_SERVER['HTTP_X_DEVICE_TYPE'] ) && in_array( $_SERVER['HTTP_X_DEVICE_TYPE'], $accepted_cloudways_values, true ) ) {
+		return true;
+	}
+
+	// just return false if the server is not CLoudWays.
+	if ( true === $just_cw_server ) {
+		return false;
+	}
+
+	if ( isset( $GLOBALS['breeze_config']['cache_options']['breeze-mobile-separate'] ) ) {
+		return filter_var( $GLOBALS['breeze_config']['cache_options']['breeze-mobile-separate'], FILTER_VALIDATE_BOOLEAN );
+	}
+
+	return false;
+}
+
+/**
+ * Identify server type, Cloudways or other.
+ *
+ * @return bool
+ */
+function breeze_is_cloudways_server() {
+
+	if (
+		false !== strpos( $_SERVER['DOCUMENT_ROOT'], 'cloudwaysapps' ) ||
+		false !== strpos( $_SERVER['DOCUMENT_ROOT'], 'cloudwaysstagingapps' ) ||
+		! empty( getenv( 'FPC_ENV' ) )
+	) {
+		return true;
+	}
+
+	return false;
+}
+
+function breeze_cache_type_return() {
+	$accepted_cloudways_values = array(
+		'desktop',
+		'tablet',
+		'mobile',
+	);
+	/**
+	 * D = Desktop
+	 * T = Tablet
+	 * M = Mobile phone
+	 */
+	$return_type = 'D';
+	if ( isset( $_SERVER['HTTP_X_DEVICE_TYPE'] ) && in_array( $_SERVER['HTTP_X_DEVICE_TYPE'], $accepted_cloudways_values, true ) ) {
+		$cache_type = trim( $_SERVER['HTTP_X_DEVICE_TYPE'] );
+
+		if ( 'tablet' === $cache_type ) {
+			$return_type = 'T';
+		} elseif ( 'mobile' === $cache_type ) {
+			$return_type = 'M';
+		}
+	}
+
+	return $return_type;
+}
+
+function breeze_page_provided_headers() {
+	$headers_output        = array();
+	$headers_output_return = array();
+	if ( ! function_exists( 'apache_request_headers' ) ) {
+
+		foreach ( $_SERVER as $key => $value ) {
+			if ( 'HTTP_' === mb_strtoupper( substr( $key, 0, 5 ) ) ) {
+				$key                    = str_replace( ' ', '-', ucwords( strtolower( str_replace( '_', ' ', substr( $key, 5 ) ) ) ) );
+				$headers_output[ $key ] = $value;
+			} else {
+				$headers_output[ $key ] = $value;
+			}
+		}
+	} else {
+		$headers_output = apache_request_headers();
+	}
+
+	if ( ! empty( $headers_output ) ) {
+		foreach ( $headers_output as $header_key => $heaver_value ) {
+			$headers_output_return[ strtolower( $header_key ) ] = $heaver_value;
+		}
+	}
+
+	return $headers_output_return;
+}
+
+function breeze_org_versions() {
+
+	$url = 'https://api.wordpress.org/plugins/info/1.0/breeze.json?fields=versions';
+
+	$response = wp_remote_get( $url );
+	if ( is_wp_error( $response ) ) {
+		return false;
+	}
+
+	$response_body = json_decode( wp_remote_retrieve_body( $response ), true );
+
+	// Get all versions
+	$versions = array_keys( $response_body['versions'] );
+
+	// Sort versions in descending order
+	usort( $versions, 'version_compare' );
+
+	$current_version_index = array_search( BREEZE_VERSION, $versions ) + 1;
+
+	$prev_5_versions = array_slice( $versions, $current_version_index - 5, 5 );
+
+	$prev_5_versions = array_reverse( $prev_5_versions );
+
+	return $prev_5_versions;
+}
+
+/**
+ * Check if WooCommerce is active.
+ */
+if ( ! function_exists( 'is_woocommerce_active' ) ) {
+	function is_woocommerce_active() {
+		$active_plugins = (array) get_option( 'active_plugins', array() );
+		if ( is_multisite() ) {
+			$active_plugins = array_merge( $active_plugins, get_site_option( 'active_sitewide_plugins', array() ) );
+		}
+
+		if ( in_array( 'woocommerce/woocommerce.php', $active_plugins ) || array_key_exists( 'woocommerce/woocommerce.php', $active_plugins ) || class_exists( 'WooCommerce' ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+/**
+ * Check if the directory is empty or not.
+ *
+ * @param string $dir Directory to check string absolute path.
+ *
+ * @return bool
+ */
+function breeze_is_folder_empty( string $dir = '' ): bool {
+	if ( empty( $dir ) ) {
+		return false;
+	}
+
+	if ( ! is_dir( $dir ) ) {
+		return false;// folder does not exist.
+	}
+
+	global $wp_filesystem;
+	if ( empty( $wp_filesystem ) ) {
+		require_once ABSPATH . '/wp-admin/includes/file.php';
+		WP_Filesystem();
+	}
+
+	// This will return an array with the contents or empty.
+	$files = $wp_filesystem->dirlist( $dir );
+
+	return empty( $files );  // True if the dirlist is empty, false otherwise
 }

@@ -137,6 +137,10 @@ class Breeze_Minify {
 			}
 
 			if ( ! empty( Breeze_Options_Reader::get_option_value( 'breeze-minify-css' ) ) ) {
+				// JS/CSS minifier library
+
+				include_once( BREEZE_PLUGIN_DIR . 'vendor/autoload.php' );
+
 				include_once( BREEZE_PLUGIN_DIR . 'inc/minification/breeze-minification-styles.php' );
 				if ( defined( 'breeze_LEGACY_MINIFIERS' ) ) {
 					if ( ! class_exists( 'Minify_CSS_Compressor' ) ) {
@@ -300,6 +304,8 @@ class Breeze_Minify {
 
 			$is_caching_on = $is_found;
 		}
+
+		//TODO: Move the store files locally function here in case it won't work where it is originally
 
 		if ( ! empty( $conf ) && false === $is_caching_on && is_user_logged_in() ) {
 			$content = apply_filters( 'breeze_html_after_minify', $content );
