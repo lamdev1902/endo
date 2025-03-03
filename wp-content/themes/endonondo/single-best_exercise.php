@@ -529,20 +529,7 @@ $featureimg = get_field('fimg_default', 'option');
         <div class="container">
             <div class="exc-container bd-bot">
                 <?php the_content(); ?>
-                <?php
-                if (get_field('enable_source', 'option') == true) {
-                    ?>
-                    <div class="sg-resources mr-bottom-20 pd-main">
-                        <h3 class="pri-color-2">Resources</h3>
-                        <div class="intro">
-                            <?= get_field('source_intro', 'option'); ?>
-                        </div>
-                        <?php $source_content = get_field('source_content', $postid);
-                        if ($source_content)
-                            echo $source_content;
-                        ?>
-                    </div>
-                <?php } ?>
+                <?php get_template_part('template-parts/content', 'resource'); ?>
             </div>
         </div>
     </section>
