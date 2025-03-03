@@ -142,7 +142,7 @@ the_post();
 				if ($social) {
 					foreach ($social as $social) {
 						?>
-						<a target="_blank" href="<?php echo $social['link']; ?>"><img alt="<?= $social['icon']['alt']; ?>"
+						<a target="_blank" href="<?php echo $social['link']; ?>"><img width="20" height="20" alt="<?= $social['icon']['alt']; ?>"
 								src="<?= $social['icon']['url']; ?>" /></a>
 					<?php }
 				} ?>

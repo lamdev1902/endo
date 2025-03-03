@@ -39,11 +39,6 @@
 	<link rel="icon" href="<?= (get_field('favicon_256', 'option')) ? get_field('favicon_256', 'option') : "#"; ?>"
 		sizes="256x256" />
 	<meta name="msapplication-TileImage" content="<?php echo get_field('favicon_512', 'option'); ?>" />
-
-	<script src="https://www.youtube.com/iframe_api"></script>
-	<script type="text/javascript"
-		src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.5.0.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<meta name="msapplication-TileImage" content="<?php echo get_field('favicon_size_270', 'option'); ?>" />
 	<?php
 	$pty = get_post_type();

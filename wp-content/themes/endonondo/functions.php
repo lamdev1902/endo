@@ -397,9 +397,9 @@ function theme_mcs_scripts()
     wp_enqueue_style('style-slick', get_template_directory_uri() . '/assets/js/slick/slick.css');
     wp_enqueue_style('style-slick-theme', get_template_directory_uri() . '/assets/js/slick/slick-theme.css');
     wp_enqueue_style('style-swiper', get_template_directory_uri() . '/assets/js/swiper/swiper-bundle.min.css');
-    wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.8.1');
-    wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.9.5');
-    wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
+    wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.8.2');
+    wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.9.6');
+    wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.6');
     wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
     wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '2.1.1');
     wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '2.0.1');
@@ -1151,4 +1151,97 @@ function redirect_lostpassword_reset() {
     }
 }
 add_action('login_init', 'redirect_lostpassword_reset');
+
+function custom_enqueue_scripts() {
+	wp_enqueue_script('jquery');
+
+
+    // Slick slider
+    wp_enqueue_script(
+        'slick-js',
+        get_template_directory_uri() . '/assets/js/slick/slick.js',
+        array('jquery'), // Phụ thuộc vào jQuery
+        null,
+        true // Load ở footer
+    );
+
+    // Rating
+    wp_enqueue_script(
+        'rating-js',
+        get_template_directory_uri() . '/assets/js/rating.js',
+        array('jquery'),
+        '1.0.0',
+        true
+    );
+
+    // Chart.js
+    wp_enqueue_script(
+        'chart-js',
+        get_template_directory_uri() . '/assets/js/chart.js',
+        array(),
+        null,
+        true
+    );
+
+    // Custom script
+    wp_enqueue_script(
+        'custom-js',
+        get_template_directory_uri() . '/assets/js/custom.js',
+        array('jquery'),
+        '1.3.0',
+        true
+    );
+
+    // jQuery Validate từ CDN
+    if(is_singular('tool_post')) {
+		wp_enqueue_script(
+        'jquery-validate',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js',
+        array('jquery'),
+        '1.19.5',
+        true
+    );
+	}
+	
+	wp_enqueue_script(
+        'swiper-js',
+        get_template_directory_uri() . '/assets/js/swiper/swiper-bundle.min.js',
+        array('jquery'),
+        null,
+        true
+    );
+
+    // Klaviyo script (async)
+    wp_enqueue_script(
+        'klaviyo-js',
+        'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj',
+        array(),
+        null,
+        true
+    );
+    add_filter('script_loader_tag', function ($tag, $handle) {
+        if ($handle === 'klaviyo-js') {
+            return str_replace(' src', ' async src', $tag);
+        }
+        return $tag;
+    }, 10, 2);
+
+    if(is_singular("coupon")){
+		    wp_enqueue_script(
+        'jquery-modal',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js',
+        array('jquery'),
+        '0.9.1',
+        true
+    );
+		wp_enqueue_style('jquery-modal-css', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css', array(), '0.9.1');
+	}
+	
+
+	if(is_singular('exercise') || is_singular('best_exercse')) {
+		wp_enqueue_script('youtube-iframe-api', 'https://www.youtube.com/iframe_api', array(), null, true);
+	}
+    
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_scripts');
 ?>

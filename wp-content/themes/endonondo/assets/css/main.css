@@ -56,7 +56,6 @@ main {
 }
 
 .image-fit {
-    display: block;
     overflow: hidden;
 }
 
@@ -802,10 +801,6 @@ main {
     font-style: normal;
 }
 
-.social a img {
-    width: 20px;
-    height: 20px;
-}
 
 @media (max-width: 1279px) {
     #footer .ft-top .ft-info .ft-form input[type="email"] {
@@ -2158,11 +2153,6 @@ figcaption {
     text-decoration: underline;
 }
 
-
-.single-main .sg-right .sg-custom .single-featured img {
-    width: 100%;
-    display: block;
-}
 
 figcaption {
     color: var(--secondary-color-3);
@@ -4261,16 +4251,6 @@ figcaption {
     top: 2px;
     padding-left: 2px;
     cursor: pointer;
-}
-
-#at-box img,
-#eb-box img {
-    width: 16px;
-    height: 16px;
-}
-
-.fact-label p.has-large-font-size {
-    margin-bottom: var(--mr-main)
 }
 
 

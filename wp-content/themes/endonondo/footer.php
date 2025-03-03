@@ -46,7 +46,7 @@ if (function_exists('is_product_category') && !is_product_category()) {
 						<div class="social flex">
 							<p class="has-small-font-size pri-color-2" style="margin-bottom: 0">Follow us: </p>
 							<?php foreach ($socials as $social): ?>
-								<a target="_blank" href="<?php echo $social['link']; ?>"><img alt="<?= $social['icon']['alt']; ?>"
+								<a target="_blank" href="<?php echo $social['link']; ?>"><img width="20" height="20" alt="<?= $social['icon']['alt']; ?>"
 										src="<?= $social['icon']['url']; ?>" /></a>
 							<?php endforeach; ?>
 						</div>
@@ -69,7 +69,7 @@ if (function_exists('is_product_category') && !is_product_category()) {
 					if ($social) {
 						foreach ($social as $social) {
 							?>
-							<a target="_blank" href="<?php echo $social['link']; ?>"><img src="<?= $social['icon']['url']; ?>"
+							<a target="_blank" href="<?php echo $social['link']; ?>"><img width="20" height="20" src="<?= $social['icon']['url']; ?>"
 									alt="<?= $social['icon']['alt']; ?>" /></a>
 						<?php }
 					} ?>
@@ -130,16 +130,6 @@ $post_type = get_field('cra_with_cpt', 'option');
 if (in_array(get_post_type(), $post_type) == true)
 	include "hcfunction/customer-feedback.php";
 ?>
-
-<script type="text/javascript"
-	src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper/swiper-bundle.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/rating.js?ver=1.0.0"></script>
-
-
-<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RG9krj"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <?php
 $pty = get_post_type();
 $args = array(
@@ -231,13 +221,6 @@ while ($the_query->have_posts()):
 endwhile;
 wp_reset_query();
 ?>
-
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.5.0.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/chart.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/rating.js?ver=1.0.0"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js?v=1.2.9"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
 <?php wp_footer(); ?>
 </body>
 

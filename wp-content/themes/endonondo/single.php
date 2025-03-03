@@ -116,11 +116,11 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 									<?php if ($enable_fcgroup == '1') { ?>
 										<span id="at-box"><img
 												src="<?php echo get_template_directory_uri(); ?>/assets/images/author.svg"
-												alt="Fact checked"></span>
+												alt="Fact checked" width="16" height="16"></span>
 									<?php } elseif ($enable_fcgroup == '2') { ?>
 										<span id="eb-box"><img
 												src="<?php echo get_template_directory_uri(); ?>/assets/images/eb.svg"
-												alt="Fact checked"></span>
+												alt="Fact checked" width="16" height="16"></span>
 									<?php } ?>
 								<?php endif; ?>
 							</div>
@@ -155,7 +155,7 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 					if ($socials) {
 						foreach ($socials as $social) {
 							?>
-							<a target="_blank" href="<?php echo $social['link']; ?>"><img alt="<?= $social['icon']['alt']; ?>"
+							<a target="_blank" href="<?php echo $social['link']; ?>"><img width="20" height="20" alt="<?= $social['icon']['alt']; ?>"
 									src="<?= $social['icon']['url']; ?>" /></a>
 						<?php }
 					} ?>
@@ -164,12 +164,12 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 					<?php if (!$disableFeature): ?>
 						<div class="single-featured">
 							<figure class="wp-block-image size-full">
-								<?php $image_featured = wp_get_attachment_url(get_post_thumbnail_id($postid));
+								<?php 
 
-								if ($image_featured) {
+								if (has_post_thumbnail()) {
 									?>
 									<div class="image-fit">
-										<img src="<?php echo $image_featured; ?>" alt="">
+										<img src="<?php the_post_thumbnail(); ?>" alt="">
 									</div>
 								<?php } else { ?>
 									<div class="image-fit">
