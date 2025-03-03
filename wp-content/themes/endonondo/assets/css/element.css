@@ -2223,3 +2223,21 @@ ul.commentlist .cancle-btn {
     left: 0;
     z-index: -1;
 }
+
+/* About Our Expert */
+.aoe {
+    padding: 24px;
+    background-color: #F8F8F8;
+    margin-bottom: 20px;
+}
+
+.aoe__top {
+    margin-bottom: 24px;
+    gap: 12px;
+    align-items: center;
+}
+
+.aoe__top h3,
+.aoe__bottom p {
+    margin-bottom: 0;
+}

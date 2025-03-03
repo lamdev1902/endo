@@ -51,7 +51,7 @@ the_post();
 					</p>
 					<p class="login-password">
 						<label for="user_pass">Password<span>*</span></label>
-						<span style="display: none" class="password-note text-center"><a href="/forgot-password">Forgot password</a></span>
+						<span class="password-note text-center"><a href="/forgot-password">Forgot password</a></span>
 						<input type="password" name="login_pass" id="user_password" autocomplete="current-password" spellcheck="false" class="input-it input" value="" size="20">
 						<span class="pass-hide" id="togglePassword"></span>
 					</p>
@@ -66,9 +66,9 @@ the_post();
 					<span>or</span>
 				</div>
 				<div class="login-other">
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/apple1.png" /></a>
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/google1.png" /></a>
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/account/facebook1.png" /></a>
+					<?php //echo do_shortcode([nextend_social_login login="1" link="1" unlink="1" heading="Connect Social Accounts"]); ?>
 				</div>
 				<div class="login-privacy"><?php  echo get_field('terms_of_use','option'); ?></div>
 			</div>

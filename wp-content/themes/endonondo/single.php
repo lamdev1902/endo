@@ -187,6 +187,30 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
 							<?php the_field('adcontent', 'option'); ?>
 						</div>
 					<?php endif; ?>
+					<?php if ($post_type == 'single_reviews' || $post_type == 'round_up'): ?>
+						<?php 
+							$aoe_keys = ['aoe_title', 'aoe_description', 'aoe_user'];
+							$aoe_values = array_map(fn($key) => get_field($key, $postid), $aoe_keys);
+							if (array_filter($aoe_values, fn($value) => empty($value)) === []) :
+								[$title, $description, $user] = $aoe_values;
+						?>
+						<div class="aoe">
+							<div class="aoe__top flex">
+								<div class="aoe__logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/e-logo.png" width="36" height="36" alt="">
+								</div>
+								<div class="aoe__title">
+									<h3><?=$title?></h3>
+								</div>
+							</div>
+							<div class="aoe__bottom"> 
+								<?php if(!empty($user['display_name'])): ?>
+									<p><?=$user['display_name'].', '.$description?></p>
+								<?php endif;?>
+							</div>
+						</div>
+						<?php endif;?>
+					<?php endif; ?>
 					<?php get_template_part('template-parts/content', 'enfit'); ?>
 					<div class="sg-editor">
 						<?php the_content(); ?>

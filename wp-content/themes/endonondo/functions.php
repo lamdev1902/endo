@@ -401,7 +401,7 @@ function theme_mcs_scripts()
     wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.9.5');
     wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.3.5');
     wp_enqueue_style('tool-css', get_template_directory_uri() . '/shortcode/calorie/assets/css/tool.css', '', '1.0.5');
-    wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '2.1.0');
+    wp_enqueue_style('style-element', get_template_directory_uri() . '/assets/css/element.css', '', '2.1.1');
     wp_enqueue_style('style-responsive', get_template_directory_uri() . '/assets/css/responsive.css', '', '2.0.1');
     wp_enqueue_style('style-awesome', get_template_directory_uri() . '/assets/fonts/css/fontawesome.css');
     wp_enqueue_style('style-solid', get_template_directory_uri() . '/assets/fonts/css/solid.css');
@@ -1143,4 +1143,12 @@ function save_post_custome($post_id)
     
 }
 add_action('save_post', 'save_post_custome');
+
+function redirect_lostpassword_reset() {
+    if (isset($_GET['action']) && $_GET['action'] === 'rp') {
+        wp_redirect(site_url('/forgot-password/?key=' . $_GET['key'] . '&login=' . $_GET['login']));
+        exit;
+    }
+}
+add_action('login_init', 'redirect_lostpassword_reset');
 ?>

@@ -242,7 +242,7 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
                                             <div class="date has-small-font-size pri-color-2 <?php if ($date_type == 1 && $date_current > $date_ex)
                                                 echo 'has-expired'; ?>">
                                                 Expired:
-                                                <?php if ($date_type == 1)
+                                                <?php if ($date_type == 1 && $date_change)
                                                     echo $date_change->format('F d, Y');
                                                 else
                                                     echo "Doesn't expire"; ?>
@@ -331,7 +331,7 @@ $enable_fcgroup = get_field('enable_fcgroup', $postid);
                                                         <div class="date has-small-font-size <?php if ($date_type == 1 && $date_current > $date_ex)
                                                             echo 'has-expired'; ?>">
                                                             Expired:
-                                                            <?php if ($date_ex)
+                                                            <?php if ($date_ex && $date_change)
                                                                 echo $date_change->format('F d, Y');
                                                             else
                                                                 echo "Doesn't expire"; ?>

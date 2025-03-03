@@ -1,5 +1,15 @@
 <?php 
 /* Template Name: Password */
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['new_password'])) {
+    $user = check_password_reset_key($_GET['key'], $_GET['login']);
+    if (!is_wp_error($user)) {
+        reset_password($user, $_POST['new_password']);
+        wp_redirect(site_url('/login'));
+        exit;
+    } else {
+        $error = "Password change failed, please check information again";
+    }
+}
 $pageid = get_the_ID();
 get_header(); 
 the_post();
@@ -9,15 +19,29 @@ the_post();
     <div class="login-box list-flex">
 		<div class="login-left">
 			<div class="login-form">
+				<?php if(isset($_GET['login']) && isset($_GET['key'])) { ?>
+				<h1 class="title">Enter a new password.</h1>
+				<form id="resetPassForm" method="post">
+					<div class="password-box">
+						<label>New Password<span>*</span></label>
+						<input id="passwordInput" class="input-it" type="password" name="new_password" />
+						<div class="pass-hide" id="togglePassword"></div>
+					</div>
+					<div class="password-box">
+						<label>Confirm Password<span>*</span></label>
+						<input id="RepasswordInput" class="input-it" type="password" name="re_new_pass" />
+						<div class="pass-hide" id="togglePassword2"></div>
+					</div>
+					<div class="form-btn">
+						<a href="#" class="form-btn-it">Cancel</a>
+						<input class="submit-it" type="submit" value="Save"/>
+					</div>
+				</form>
+				<?php } else { ?>
 				<h1 class="title">Forgot Password</h1>
 				<div class="pass-code pass-code-first">
 					<p>Enter your email to change new password</p>
 				</div>
-<!-- 				<h1 class="title">Verify your email and enter a new password.</h1> -->
-<!-- 				<div class="pass-code">
-					<p>We've sent a code to</p>
-					<p>loremipsum@gmail.com <a href="#">Edit</a></p>
-				</div> -->
 				<div class="pass-code">
 				<?php 
 					if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['user_login'])) {
@@ -44,20 +68,7 @@ the_post();
                         <input class="submit-it" type="submit" value="Send Reset Link"/>
                     </div>
                 </form>
-				
-<!-- 				<form>
-					<label>Code<span>*</span></label>
-					<input class="input-it" type="text" placeholder="Your Code"/>
-					<div class="password-box">
-						<label>Password<span>*</span></label>
-						<input id="passwordInput" class="input-it" type="password"/>
-						<div class="pass-hide" id="togglePassword"></div>
-					</div>
-					<div class="form-btn">
-						<a href="#" class="form-btn-it">Cancel</a>
-						<input class="submit-it" type="submit" value="Confirm and Log In"/>
-					</div>
-				</form> -->
+            	<?php } ?>		
 			</div>
 		</div>
 		<div class="login-right">
@@ -68,8 +79,9 @@ the_post();
 <?php get_footer(); ?>
 <script>
 	jQuery(function($){
-		$('#togglePassword').click(function(){
-			var passwordInput = $('#passwordInput');
+		$('.pass-hide').click(function(){
+			var par = $(this).parents('.password-box');
+			var passwordInput = par.find('.input-it');
 			if (passwordInput.attr('type') === 'password') {
 			  passwordInput.attr('type', 'text');
 			  $(this).addClass('active');
@@ -77,6 +89,16 @@ the_post();
 			  passwordInput.attr('type', 'password'); 
 			  $(this).removeClass('active');
 			}
-		 });
+		});
+		$("#resetPassForm").validate({
+		  rules: {
+		    new_password: "required",
+		    re_new_pass: {
+		      required: true,
+		      equalTo: "#passwordInput"
+		    },
+		    pwd1: "required"
+		  }
+		});
 	})
 </script>
