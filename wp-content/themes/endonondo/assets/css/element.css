@@ -2514,6 +2514,10 @@ ul.commentlist .cancle-btn {
     width: 100%;
 }
 
+.coachcmt__block .slick-list {
+    padding: 0px 100px 20px;
+}
+
 .coachcmt__list .slick-slide {
     margin: 0 15px;
 }

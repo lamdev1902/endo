@@ -32,7 +32,7 @@ get_header(); ?>
                     $socials = get_field('follow_social', 'option');
                     if ($socials):
                         ?>
-                        <div class="social">
+                        <div class="social mr-bottom-20 flex">
                             <p class="has-small-font-size pri-color-3" style="margin-bottom: 0">Follow us: </p>
                             <?php foreach ($socials as $social): ?>
                                 <a target="_blank" href="<?php echo $social['link']; ?>"><img
