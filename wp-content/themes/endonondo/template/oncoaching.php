@@ -25,7 +25,7 @@ get_header(); ?>
                 <div class="coachhero__text">
                     <div class="coachhero__logo">
                         <img width="274" height="40"
-                            src="<?= get_template_directory_uri() . '/assets/image/oncoach-logo.svg' ?>" alt="">
+                            src="<?= get_template_directory_uri() . '/assets/images/oncoach-logo.svg' ?>" alt="">
                     </div>
                     <h1 class="pri-color-3 has-x-large-font-size"><?= the_title() ?></h1>
                     <?php
