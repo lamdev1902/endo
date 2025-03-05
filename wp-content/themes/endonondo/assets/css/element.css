@@ -1408,7 +1408,7 @@ h2.tag-coming {
     width: 93px;
 }
 
-.enfit-action .home-store img{
+.enfit-action .home-store img {
     height: 100%;
 }
 
@@ -2240,4 +2240,314 @@ ul.commentlist .cancle-btn {
 .aoe__top h3,
 .aoe__bottom p {
     margin-bottom: 0;
+}
+
+/* On Coaching */
+
+/* Hero */
+.coachhero__container {
+    max-width: 1172px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.coachhero__top {
+    padding: 80px 0;
+}
+
+.coachhero__text {
+    margin-right: 40px;
+}
+
+.coachhero .social img {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(32%) saturate(5901%) hue-rotate(34deg) brightness(92%) contrast(84%);
+}
+
+.coachhero__description p {
+    color: #fff;
+}
+
+.coachhero__action a {
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 15px 31px;
+    background-color: #fff;
+    color: #000;
+}
+
+.coachhero__bottom {
+    gap: 44px;
+    padding-bottom: 40px;
+}
+
+
+.coachhero__img {
+    display: flex;
+    position: relative;
+    flex: 1.02;
+}
+
+.coachhero__image-first,
+.coachhero__image-second {
+    display: flex;
+    align-items: flex-end;
+    width: 82.5%;
+}
+
+.coachhero__image-first {
+    width: 82.5%
+}
+
+.coachhero__image-second {
+    position: absolute;
+    width: 48%;
+    right: 0;
+}
+
+.coachhero__image-first img,
+.coachhero__image-second img {
+    width: 100%;
+}
+
+/* Coach Box */
+.coachbox {
+    padding: 80px 0;
+}
+
+.coachbox h2 {
+    width: 40%;
+    margin: 0 auto 40px;
+}
+
+.coachbox__item {
+    padding: 16px 32px;
+    border-radius: 6px;
+    border: 1px solid var(--secondary-color-2);
+    background-color: #000;
+}
+
+.coachbox__item p {
+    color: #fff;
+}
+
+.coachbox__item--white {
+    background-color: #fff;
+}
+
+.coachbox__item--white p {
+    color: #000;
+}
+
+.coachbox__item img,
+.coachbox__item p {
+    margin-bottom: 16px;
+}
+
+/* Coach User */
+.coachuser {
+    min-height: 718px;
+    background-image: url(../images/coachuser-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.coachuser__content {
+    position: absolute;
+    max-width: 1100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coachuser__item {
+    display: flex !important;
+    min-height: 444px;
+    align-items: end;
+}
+
+.coachuser__item-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 0 0;
+    min-height: 404px;
+}
+
+.coachuser__item-right {
+    width: 43.7%;
+    position: relative;
+}
+
+.coachuser__avt {
+    height: 404px;
+    width: 100%;
+    background-color: #121212;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+}
+
+.coachuser__avt img {
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    top: -108px;
+}
+
+.coachuser__fitnessitem {
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coachuser__fitnessitem p {
+    margin-bottom: 0;
+}
+
+.coachuser .slick-prev,
+.coachuser .slick-next {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--primary-color-1);
+    top: 55%;
+}
+
+.coachuser .slick-prev {
+    left: -75px;
+}
+
+.coachuser .slick-right {
+    right: -75px;
+}
+
+.coachuser .slick-next:before,
+.coachuser .slick-prev:before {
+    display: inline-block;
+    content: url(../images/next-coach.svg);
+    transform: scale(.8);
+}
+
+.coachuser .slick-prev:before {
+    transform: rotate(180deg) scale(.8);
+}
+
+/* Coach Plan */
+
+.coachplan {
+    padding: 80px 0;
+}
+
+.coachplan__item {
+    column-gap: 40px;
+    margin-bottom: 40px;
+}
+
+.coachplan__item--special {
+    flex-direction: row-reverse;
+}
+
+.coachplan__content {
+    flex: 1.5;
+}
+
+.coachplan__image {
+    flex: 1;
+}
+
+.coachplan.single-main .coachplan__item:not(.coachplan__item--special) ul {
+    padding-left: 30px;
+}
+
+.coachplan.single-main .coachplan__item:not(.coachplan__item--special) ul li::before {
+    position: absolute;
+    content: "___";
+    color: var(--primary-color-1);
+    left: -30px;
+    top: -0.4rem;
+    background: none;
+    width: auto;
+}
+
+.coachtest {
+    background-image: url(../images/coachuser-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 502px;
+    position: relative;
+    margin-bottom: calc(502px * 50 / 100);
+}
+
+.coachtest__content {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 1100px;
+    width: 100%;
+}
+
+.coachtest__list {
+    column-gap: 30px;
+}
+
+.coachtest__item {
+    flex: 1;
+}
+
+.coachtest__statistics p {
+    margin-bottom: 16px;
+}
+
+.coachcmt__block {
+    position: absolute;
+    bottom: -30%;
+    width: 100%;
+}
+
+.coachcmt__list .slick-slide {
+    margin: 0 15px;
+}
+
+.coachcmt__list .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.coachcmt__item {
+    flex: 1;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 24px 60px 0px rgba(10, 10, 10, 0.12);
+}
+
+.coachcmt__item .rating-symbol {
+    color: var(--primary-color-1);
+}
+
+.coachcalendy {
+    background-image: url(../images/calendy-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 0 80px;
+}
+
+.coachcalendy__step {
+    column-gap: 20px;
+}
+
+.coachcalendy__item {
+    background-color: #000;
+    padding: 32px;
 }

@@ -60,6 +60,37 @@ jQuery(function ($) {
 
 
 	jQuery(document).ready(function ($) {
+
+		$('.coachuser__list').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: false,
+			arrows: true,
+			dots: true,
+		});
+
+		$('.coachcmt__list').slick({
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: false,
+			arrows: false,
+			dots: false,
+			centerMode: true,
+			centerPadding: '100px',
+		});
+
+		$('.coachcmt__rate').each(function() {
+			var ratingValue = $(this).val(); 
+			$(this).rating({
+				maxRating: 5,
+				initialRating: ratingValue, 
+				readonly: true,
+				step: 1,
+			});
+		});
+
 		function initializeSlick() {
 			if ($(window).width() <= 834 && $('.exercise__flex--3').length) {
 				if (!$('.exercise__flex--3').hasClass('slick-initialized')) {
@@ -445,10 +476,10 @@ jQuery(function ($) {
 		}
 	});
 
-	customer_review_leea();
+	customer_review_leea($);
 })
 
-function customer_review_leea() {
+function customer_review_leea($) {
 	$('.customer-ftoggle').click(function () {
 		$('html').css('overflow', 'hidden');
 		$(this).addClass('ani-right');
@@ -457,7 +488,7 @@ function customer_review_leea() {
 		$('.form-customer-feedback').addClass('ani-fade');
 		return false;
 	});
-	$('.form-customer-feedback .close-btn').click(function () {
+	$('.form-customer-feedback .close-btn').click(function ($) {
 		$('.customer-ftoggle').removeClass('ani-right');
 		$('.customer-feedback').removeClass('ani-fade');
 		$('.form-customer-feedback').removeClass('ani-fade');
