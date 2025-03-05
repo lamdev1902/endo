@@ -480,18 +480,18 @@ function custom_save_best_exercise_field($post_id)
 }
 add_action('save_post_best_exercise', 'custom_save_best_exercise_field', 10, 2);
 
-function handle_scheduled_post_meta($post_id, $post)
+function handle_scheduled_post_meta($post)
 {
   if ($post->post_status === 'future') {
-    custom_save_best_exercise_field($post_id);
+    custom_save_best_exercise_field($post->ID);
   }
 }
 add_action('future_to_publish', 'handle_scheduled_post_meta', 10, 2);
 
-function publish_ex_post_meta($post_id, $post)
+function publish_ex_post_meta($post)
 {
   if ($post->post_status === 'publish') {
-    custom_save_best_exercise_field($post_id);
+    custom_save_best_exercise_field($post->ID);
   }
 }
 add_action('draft_to_publish', 'publish_ex_post_meta', 10, 2);

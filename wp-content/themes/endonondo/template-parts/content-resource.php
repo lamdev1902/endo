@@ -1,4 +1,8 @@
 <?php
+if($pageid) {
+    $postid = $pageid;
+}
+
 $source_content = get_field('source_content', $postid);
 if (get_field('enable_source', 'option') == true && $source_content) {
     ?>

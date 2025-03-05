@@ -203,19 +203,22 @@ ol {
 
 
 .single-main ol,
-.exc-container ol {
+.exc-container ol,
+.oncoaching ol{
     list-style: decimal;
 }
 
 .single-main ul,
 .single-main ol,
-.author-content ul {
+.author-content ul,
+.oncoaching ul {
     padding-left: 18px;
 }
 
 .single-main ul li,
 .exc-container ul li,
-.author-content ul li {
+.author-content ul li,
+.oncoaching ul li {
     position: relative;
 }
 
@@ -226,7 +229,8 @@ ol {
 
 .single-main ul li::before,
 .exc-container ul li::before,
-.author-content ul li::before {
+.author-content ul li::before,
+.oncoaching ul li::before {
     position: absolute;
     content: "";
     width: 8px;

@@ -1330,7 +1330,9 @@ div[data-testid="form-row"]:nth-child(4) label:before {
 
 
 .exc-container ol,
-.exc-container ul {
+.exc-container ul,
+.oncoaching ol,
+.oncoaching ul {
     padding-left: 20px;
 }
 
