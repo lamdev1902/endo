@@ -2515,7 +2515,7 @@ ul.commentlist .cancle-btn {
 }
 
 .coachcmt__block .slick-list {
-    padding: 0px 100px 20px;
+    padding: 0px 100px 20px !important;
 }
 
 .coachcmt__list .slick-slide {
