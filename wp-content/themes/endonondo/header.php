@@ -119,7 +119,7 @@
 	<?php global $template; ?>
 	<div id="wapper" class="<?php if (is_front_page()) {
 		echo 'home-main color-white';
-	} elseif (basename($template) == 'single-best_exercise.php' || basename($template) == 'single-exercise.php') {
+	} elseif (basename($template) == 'single-best_exercise.php' || basename($template) == 'single-exercise.php' || basename($template) == 'oncoaching.php') {
 		echo 'home-main best-exercise';
 	} else {
 		echo '';
