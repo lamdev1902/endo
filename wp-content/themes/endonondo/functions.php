@@ -1151,4 +1151,388 @@ function redirect_lostpassword_reset() {
     }
 }
 add_action('login_init', 'redirect_lostpassword_reset');
+
+
+function custom_csv_upload_menu() {
+    add_menu_page(
+        'Import CSV',
+        'Import CSV',
+        'manage_options',
+        'custom-csv-import',
+        'custom_csv_upload_page'
+    );
+}
+add_action('admin_menu', 'custom_csv_upload_menu');
+
+function custom_csv_upload_page() {
+    ?>
+    <div class="wrap">
+        <h2>Import Multiple CSV Files into Database</h2>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="csv_files[]" accept=".csv" multiple required>
+            <input type="submit" name="submit_csv" value="Upload CSVs" class="button button-primary">
+        </form>
+        <?php custom_handle_csv_upload(); ?>
+    </div>
+    <?php
+}
+
+function custom_handle_csv_upload() {
+    if (isset($_POST['submit_csv']) && !empty($_FILES['csv_files']['tmp_name'][0])) {
+        require_once ABSPATH . 'wp-load.php';
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+
+        global $wpdb;
+        $files = $_FILES['csv_files'];
+        $file_count = count($files['name']);
+        $file_list = array_combine($files['name'], $files['tmp_name']); // Create file list
+
+        echo "<p><strong>Processing {$file_count} file CSV...</strong></p>";
+
+        // Check if add-nutrition.csv and add-ingredients.csv exist
+        if (!array_key_exists('add-nutrition.csv', $file_list) || 
+            !array_key_exists('add-ingredients.csv', $file_list) || 
+            !array_key_exists('add-directions.csv', $file_list)) {
+            echo "<p style='color: red;'>Error: You must upload all three files 'add-nutrition.csv', 'add-ingredients.csv', end 'add-directions.csv'!</p>";
+            return;
+        }
+       
+        $wpdb->query('START TRANSACTION');
+        $success = true;
+
+        if (!process_csv_file('add-nutrition.csv', $file_list['add-nutrition.csv'], $wpdb->prefix . "nutrition", 61)) {
+            $success = false;
+        }
+
+        if (!process_ingredients_csv_file('add-ingredients.csv', $file_list['add-ingredients.csv'], $wpdb->prefix . "ingredients", 546)) {
+            $success = false;
+        }
+
+        if (!process_directions_csv_file('add-directions.csv', $file_list['add-directions.csv'], $wpdb->prefix . "nutrition_directions", 2)) {
+            $success = false;
+        }
+
+        // Handling other CSV files
+        foreach ($file_list as $file_name => $file_tmp) {
+            if (in_array($file_name, ['add-nutrition.csv', 'add-ingredients.csv', 'add-directions.csv'])) continue;
+
+            $table_name = $wpdb->prefix . sanitize_title_with_dashes(str_replace('.csv', '', $file_name));
+            if (!process_csv_file($file_name, $file_tmp, $table_name, null)) {
+                $success = false;
+            }
+        }
+
+        // Rollback if error, Commit if success
+        if (!$success) {
+            $wpdb->query('ROLLBACK');
+            echo "<p style='color: red;'>Import failed! All data was discarded.</p>";
+        } else {
+            $wpdb->query('COMMIT');
+            echo "<p style='color: green;'>Import completed successfully!</p>";
+        }
+    }
+}
+
+function process_csv_file($file_name, $file_tmp, $table_name, $start_row = 61) {
+    global $wpdb;
+
+    if (pathinfo($file_name, PATHINFO_EXTENSION) !== 'csv') {
+        echo "<p style='color: red;'>Error: {$file_name} not CSV file.</p>";
+        return false;
+    }
+
+    try {
+        $handle = fopen($file_tmp, "r");
+        if ($handle === FALSE) {
+            echo "<p style='color: red;'>Error: Cannot open file {$file_name}</p>";
+            return false;
+        }
+
+        $row_index = 0;
+        $headers = [];
+
+
+        // Specify columns
+        $meals_columns = [14, 15, 16, 17, 18];
+        $diets_columns = [28, 29, 30, 31, 32, 33, 34, 35, 36];
+        $cooking_method_columns = [40, 41, 42];
+        $main_ingredients_columns = [48, 49, 50, 51, 52];
+        echo "<p style='color: blue;'>Importing data from {$file_name}...</p>";
+
+        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            if ($row_index == 0) {
+                $headers = array_slice($row, 1);
+                $headers = array_map('sanitize_title_with_dashes', $headers);
+            } elseif ($row_index >= $start_row) {
+                $row_data = array_slice($row, 1);
+
+                if (empty(array_filter($row_data))) {
+                    continue;
+                }
+
+                $nutrition_data = [
+                    'id'              => sanitize_text_field($row[1] ?? ''),
+                    'recipe_name'     => sanitize_text_field($row[2] ?? ''),
+                    'description'     => sanitize_text_field($row[3] ?? ''),
+                    'image_landscape' => sanitize_text_field($row[4] ?? ''),
+                    'image_portrait'  => sanitize_text_field($row[5] ?? ''),
+                    // 'document'        => sanitize_text_field($row[6] ?? ''),
+                    'total_time'      => sanitize_text_field($row[7] ?? ''),
+                    'calories'        => sanitize_text_field($row[8] ?? ''),
+                    'servings'        => sanitize_text_field($row[9] ?? '')
+                ];
+
+                // Check if data actually exists before inserting
+                if (empty(array_filter($nutrition_data))) {
+                    // echo "<p style='color: orange;'>Skip empty lines at {$file_name}</p>";
+                    continue;
+                }
+
+                // Enter data into database
+                $result = $wpdb->insert($table_name, $nutrition_data);
+
+                if ($result === false) {
+                    echo "<p style='color: red;'>Error while entering data {$table_name} at line {$row_index}: " . $wpdb->last_error . "</p>";
+                    fclose($handle);
+                    return false;
+                }
+
+                // Process wp_nutrition_meal table if importing add-nutrition.csv
+                if ($file_name === 'add-nutrition.csv') {
+                    $nutrition_id = $wpdb->insert_id;
+
+                    foreach ($meals_columns as $col_index) {
+                        if (isset($row_data[$col_index])) {
+                            $meal_id = sanitize_text_field($row_data[$col_index]);
+
+                            if (!empty($meal_id)) {
+                                $meal_insert = $wpdb->insert(
+                                    $wpdb->prefix . "nutrition_meal",
+                                    [
+                                        'nutrition_id' => $nutrition_id,
+                                        'meal_id' => $meal_id
+                                    ]
+                                );
+
+                                if ($meal_insert === false) {
+                                    echo "<p style='color: red;'>Error entering data into nutrition_meal at line {$row_index}: " . $wpdb->last_error . "</p>";
+                                    fclose($handle);
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+
+                    foreach ($diets_columns as $col_index_2) {
+                        if (isset($row_data[$col_index_2])) {
+                            $diet_id = sanitize_text_field($row_data[$col_index_2]);
+
+                            if (!empty($diet_id)) {
+                                $diet_insert = $wpdb->insert(
+                                    $wpdb->prefix . "nutrition_diets",
+                                    [
+                                        'nutrition_id' => $nutrition_id,
+                                        'diets_id' => $diet_id
+                                    ]
+                                );
+
+                                if ($diet_insert === false) {
+                                    echo "<p style='color: red;'>Error entering data into nutrition_diets at line {$row_index}: " . $wpdb->last_error . "</p>";
+                                    fclose($handle);
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+
+                    foreach ($cooking_method_columns as $col_index_3) {
+                        if (isset($row_data[$col_index_3])) {
+                            $cooking_method_id = sanitize_text_field($row_data[$col_index_3]);
+
+                            if (!empty($cooking_method_id)) {
+                                $cooking_method_insert = $wpdb->insert(
+                                    $wpdb->prefix . "nutrition_cooking_methods",
+                                    [
+                                        'nutrition_id' => $nutrition_id,
+                                        'cooking_methods_id' => $cooking_method_id
+                                    ]
+                                );
+
+                                if ($cooking_method_insert === false) {
+                                    echo "<p style='color: red;'>Error entering data into nutrition_cooking_methods at line {$row_index}: " . $wpdb->last_error . "</p>";
+                                    fclose($handle);
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+
+                    foreach ($main_ingredients_columns as $col_index_4) {
+                        if (isset($row_data[$col_index_4])) {
+                            $main_ingredients_id = sanitize_text_field($row_data[$col_index_4]);
+
+                            if (!empty($main_ingredients_id)) {
+                                $main_ingredients_insert = $wpdb->insert(
+                                    $wpdb->prefix . "nutrition_main_ingredients",
+                                    [
+                                        'nutrition_id' => $nutrition_id,
+                                        'main_ingredients_id' => $main_ingredients_id
+                                    ]
+                                );
+
+                                if ($main_ingredients_insert === false) {
+                                    echo "<p style='color: red;'>Error entering data into nutrition_main_ingredients at line {$row_index}: " . $wpdb->last_error . "</p>";
+                                    fclose($handle);
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            $row_index++;
+        }
+
+        fclose($handle);
+        echo "<p style='color: green;'>Import {$file_name} success on the board {$table_name}!</p>";
+        return true;
+
+    } catch (Exception $e) {
+        echo "<p style='color: red;'>Error in processing {$file_name}: " . $e->getMessage() . "</p>";
+        return false;
+    }
+}
+
+
+function process_ingredients_csv_file($file_name, $file_tmp, $table_name, $start_row) {
+    global $wpdb;
+
+    if (pathinfo($file_name, PATHINFO_EXTENSION) !== 'csv') {
+        echo "<p style='color: red;'>Error: {$file_name} not CSV file.</p>";
+        return false;
+    }
+
+    try {
+        $handle = fopen($file_tmp, "r");
+        if ($handle === FALSE) {
+            echo "<p style='color: red;'>Error: Cannot open file {$file_name}</p>";
+            return false;
+        }
+
+        $row_index = 0;
+        echo "<p style='color: blue;'>Importing data from {$file_name}...</p>";
+
+        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            if ($row_index >= $start_row) {
+                $ingredient_data = [
+                    'ingredient_id'         => sanitize_text_field($row[4] ?? ''),
+                    'ingredient_name'       => sanitize_text_field($row[1] ?? ''),
+                    'ingredient_value'      => sanitize_text_field($row[2] ?? ''),
+                    'ingredient_measurement'=> sanitize_text_field($row[3] ?? '')
+                ];
+
+                if (empty(array_filter($ingredient_data))) {
+                    // echo "<p style='color: orange;'>Skip empty lines at {$file_name}.</p>";
+                    continue;
+                }
+
+                $result = $wpdb->insert($table_name, $ingredient_data);
+
+                if ($result === false) {
+                    echo "<p style='color: red;'>Error while entering data {$table_name} at line {$row_index}: " . $wpdb->last_error . "</p>";
+                    fclose($handle);
+                    return false;
+                }
+
+                // Get the newly created ingredient_id
+                $ingredient_id = $wpdb->insert_id;
+
+                // Get nutrition_id from column K
+                $nutrition_id = sanitize_text_field($row[10] ?? '');
+
+                // If nutrition_id has a value, add to wp_nutrition_ingredients table
+                if (!empty($nutrition_id)) {
+                    $nutrition_ingredient_insert = $wpdb->insert(
+                        $wpdb->prefix . "nutrition_ingredients",
+                        [
+                            'ingredient_id' => $ingredient_id,
+                            'nutrition_id'  => $nutrition_id
+                        ]
+                    );
+
+                    if ($nutrition_ingredient_insert === false) {
+                        echo "<p style='color: red;'>Error importing data into wp_nutrition_ingredients at line {$row_index}: " . $wpdb->last_error . "</p>";
+                        fclose($handle);
+                        return false;
+                    }
+                }
+            }
+
+            $row_index++;
+        }
+
+        fclose($handle);
+        echo "<p style='color: green;'>Import {$file_name} success on the board {$table_name}!</p>";
+        return true;
+
+    } catch (Exception $e) {
+        echo "<p style='color: red;'>Error in processing {$file_name}: " . $e->getMessage() . "</p>";
+        return false;
+    }
+}
+
+function process_directions_csv_file($file_name, $file_tmp, $table_name, $start_row) {
+    global $wpdb;
+
+    if (pathinfo($file_name, PATHINFO_EXTENSION) !== 'csv') {
+        echo "<p style='color: red;'>Error: {$file_name} not CSV file.</p>";
+        return false;
+    }
+
+    try {
+        $handle = fopen($file_tmp, "r");
+        if ($handle === FALSE) {
+            echo "<p style='color: red;'>Error: Unable to open file {$file_name}</p>";
+            return false;
+        }
+
+        $row_index = 0;
+        echo "<p style='color: blue;'>Importing data from {$file_name}...</p>";
+
+        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            if ($row_index >= $start_row) {
+                $direction_data = [
+                    'nutrition_id'           => sanitize_text_field($row[0] ?? ''),
+                    'direction_description'  => sanitize_text_field($row[1] ?? ''),
+                    'direction_step_number'  => sanitize_text_field($row[2] ?? '')
+                ];
+
+                if (empty(array_filter($direction_data))) {
+                    // echo "<p style='color: orange;'>Skip empty lines at {$file_name}.</p>";
+                    continue;
+                }
+
+                $result = $wpdb->insert($table_name, $direction_data);
+
+                if ($result === false) {
+                    echo "<p style='color: red;'>Error while entering data {$table_name} at line {$row_index}: " . $wpdb->last_error . "</p>";
+                    fclose($handle);
+                    return false;
+                }
+            }
+
+            $row_index++;
+        }
+
+        fclose($handle);
+        echo "<p style='color: green;'>Import {$file_name} success on the board {$table_name}!</p>";
+        return true;
+
+    } catch (Exception $e) {
+        echo "<p style='color: red;'>Error in processing {$file_name}: " . $e->getMessage() . "</p>";
+        return false;
+    }
+}
+
 ?>
