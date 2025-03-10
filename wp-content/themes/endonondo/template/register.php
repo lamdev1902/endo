@@ -39,7 +39,7 @@ if(isset($_POST['task']) && $_POST['task'] == 'register' ) {
 		    }
 			update_field('field_6789c01109ffe',$ucode,'user_'.$user_id);
 			$to = $_POST['email'];
-			$subject = "ICSI - Account Verification";
+			$subject = "Endomondo - Account Verification";
 			$message = "<h1>Hello!</h1><p>Successfully registered an account on endomondo.com, please click on the link below to confirm your account:</p><p>https://www.endomondo.com/register-verify/?uco=".$ucode."</p>";
 
 			if(sendMail($to, $subject, $message) == true) {
