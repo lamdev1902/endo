@@ -343,6 +343,7 @@ $term_parent_custom = get_term_by('id', $term_parent, 'category');
 							wp_localize_script('infinite-scroll', 'infinite_scroll_params', array(
 								'ajaxurl' => admin_url('admin-ajax.php'),
 								'query_vars' => array(
+									'post_type' => array('post', 'informational_posts', 'round_up', 'single_reviews', 'step_guide','coupon','exercise'),
 									'cat' => $term_id,
 									'post__not_in' => $notIn
 								),

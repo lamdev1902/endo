@@ -1144,11 +1144,4 @@ function save_post_custome($post_id)
 }
 add_action('save_post', 'save_post_custome');
 
-function redirect_lostpassword_reset() {
-    if (isset($_GET['action']) && $_GET['action'] === 'rp') {
-        wp_redirect(site_url('/forgot-password/?key=' . $_GET['key'] . '&login=' . $_GET['login']));
-        exit;
-    }
-}
-add_action('login_init', 'redirect_lostpassword_reset');
 ?>
